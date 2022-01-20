@@ -231,17 +231,36 @@
             }
         }
         
-        #window1 {
+        .window {
+            animation: transitionInLogoImg;
+            animation-duration: 0.75s;
+            margin: 1.5vw;
+            text-align: left;
+            position: absolute;
             border: white solid 7px;
-            position: relative;
-            color: white;
-            background-color: rgba(255, 208, 0, 0.671);
-            top: 0%;
-            width: 15%;
-            padding-bottom: 15%;
         }
         
-        .articleText#window1text {
+        #window1 {
+            color: white;
+            background-color: rgba(255, 208, 0, 0.671);
+            top: 35vh;
+            left: 40.25vw;
+            width: 15vw;
+            padding-bottom: 15vw;
+        }
+        
+        #window2 {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.6);
+            top: 10vh;
+            left: 25vw;
+            width: 20vw;
+            padding-bottom: 10vw;
+        }
+        
+        .article {
+            animation: transitionInText;
+            animation-duration: 0.75s;
             font-family: 'KyoboHandwriting2020A';
             font-weight: normal;
             font-style: normal;
@@ -253,19 +272,45 @@
         }
         
         .readMore {
+            animation: transitionInText;
+            animation-duration: 0.75s;
             font-family: 'KyoboHandwriting2020A';
             size: inherit;
             position: absolute;
-            font-size: 90%;
-            right: 0%;
-            bottom: 0%;
-            margin: 7%;
-            color: rgb(193, 225, 255)
+            font-size: 0.9vw;
+            right: 0.2vw;
+            bottom: 0vw;
+            margin: 0.3vw;
+            color: rgb(180, 219, 255)
+        }
+        
+        @keyframes transitionInText {
+            0% {
+                font-size: 0rem;
+            }
+            100% {
+                font-size: 1rem;
+            }
         }
         
         #logoImg {
+            animation: transitionInLogoImg;
+            animation-duration: 0.75s;
+            position: absolute;
+            top: 1vh;
             width: auto !important;
         }
+        
+        @keyframes transitionInLogoImg {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @media (max-width: 680px) {}
     </style>
 </head>
 
@@ -283,11 +328,19 @@
             <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-purple.png'>
             -->
         </center>
-        <div id="window1">
-            <div id="window1text" class="articleText">
-                우리는 결국 세상의 <br>영원한 이방인일 것이고,<br> 우리는 다른 이들을 끝내<br>이해하지 못할 것이다.<br>이것이 이 일종의<br>동인 잡지를 펴내고자 한<br>이유이다...
+        <div id="windows">
+            <div id="window1" class="window">
+                <div id="window1text" class="article">
+                    우리는 결국 세상의<br>영원한 이방인일 것이고,<br>우리는 다른 이들을 끝내<br>이해하지 못할 것이다.<br>이것이 이 일종의<br>동인 잡지를 펴내고자 한<br>이유이다...
+                </div>
+                <div class="readMore">마저 읽기</div>
             </div>
-            <div class="readMore">마저 읽기</div>
+            <div id="window2" class="window">
+                <div id="window2text" class="article">
+                    가끔 이상에만 빠져 일을 완성하지<br>못할 때가 많다. 설렘에 설레발치다<br>결국 계획 단계에서 그쳐버린<br>많은 프로젝트들이 있었다...
+                </div>
+                <div class="readMore">마저 읽기</div>
+            </div>
         </div>
     </div>
     <script>
@@ -303,6 +356,7 @@
         wall.style.height = height + 1;
         var logoImg = document.getElementById("logoImg")
         logoImg.style.height = height / 10;
+        var windows = document.getElementById("windows")
     </script>
 </body>
 
