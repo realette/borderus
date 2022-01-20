@@ -125,8 +125,8 @@
         
         #box {
             animation: transitionInBox, transitionInBoxTrans, transitionInBoxRemove;
-            animation-duration: 1s, 0.5s, 0.25s;
-            animation-delay: 0s, 0s, 1.26s;
+            animation-duration: 1s, 0.5s, 1ms;
+            animation-delay: 0s, 0s, 1.1s;
             animation-fill-mode: forwards;
             top: 0px;
             left: 0px;
@@ -187,6 +187,12 @@
             }
         }
         
+        body {
+            align-self: center;
+            animation: transitionInlogoImg;
+            animation-duration: 1s;
+        }
+        
         #wall {
             animation: transitionInWall, transitionInWallTrans;
             animation-duration: 1s, 0.5s;
@@ -218,6 +224,17 @@
             }
         }
         
+        @keyframes transitionInFloor {
+            0% {
+                width: 100%;
+                height: 1vh;
+            }
+            100% {
+                width: 100%;
+                height: 24vh;
+            }
+        }
+        
         @keyframes transitionInWallTrans {
             0% {
                 opacity: 0%;
@@ -232,8 +249,6 @@
         }
         
         .window {
-            animation: transitionInLogoImg;
-            animation-duration: 0.75s;
             margin: 1.5vw;
             text-align: left;
             position: absolute;
@@ -244,7 +259,7 @@
             color: white;
             background-color: rgba(255, 208, 0, 0.671);
             top: 35vh;
-            left: 40.25vw;
+            left: 50.5vw;
             width: 15vw;
             padding-bottom: 15vw;
         }
@@ -253,14 +268,30 @@
             color: white;
             background-color: rgba(255, 255, 255, 0.6);
             top: 10vh;
-            left: 25vw;
+            left: 31vw;
             width: 20vw;
             padding-bottom: 10vw;
         }
         
+        #window3 {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.6);
+            top: 10vh;
+            left: 53.5vw;
+            width: 12vw;
+            padding-bottom: 10vw;
+        }
+        
+        #window4 {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.6);
+            top: 35vh;
+            left: 31vw;
+            width: 17vw;
+            padding-bottom: 15vw;
+        }
+        
         .article {
-            animation: transitionInText;
-            animation-duration: 0.75s;
             font-family: 'KyoboHandwriting2020A';
             font-weight: normal;
             font-style: normal;
@@ -272,8 +303,6 @@
         }
         
         .readMore {
-            animation: transitionInText;
-            animation-duration: 0.75s;
             font-family: 'KyoboHandwriting2020A';
             size: inherit;
             position: absolute;
@@ -294,10 +323,9 @@
         }
         
         #logoImg {
-            animation: transitionInLogoImg;
-            animation-duration: 0.75s;
             position: absolute;
             top: 1vh;
+            left: 45vw;
             width: auto !important;
         }
         
@@ -310,6 +338,30 @@
             }
         }
         
+        @keyframes transitionInBody {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(0.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        #floor {
+            animation: transitionInFloor, transitionInWallTrans;
+            animation-duration: 1s, 0.5s;
+            position: fixed;
+            scale: fixed;
+            bottom: 0%;
+            left: 0%;
+            width: 100vw;
+            height: 24vh;
+            background-color: black;
+        }
+        
         @media (max-width: 680px) {}
     </style>
 </head>
@@ -317,7 +369,7 @@
 <body>
     <div id="box"></div>
     <div id="wall">
-        <center id="iconImg">
+        <div id="iconImg">
             <img id="logoImg" src='https://realette.github.io/borderus/xpednfl-ash-green.png'>
             <!--
             <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl.png'>
@@ -327,7 +379,7 @@
             <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-pale-purple.png'>
             <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-purple.png'>
             -->
-        </center>
+        </div>
         <div id="windows">
             <div id="window1" class="window">
                 <div id="window1text" class="article">
@@ -341,6 +393,21 @@
                 </div>
                 <div class="readMore">마저 읽기</div>
             </div>
+            <div id="window3" class="window">
+                <div id="window3text" class="article">
+                    내용 3 <br> 3번째 수록작
+                </div>
+                <div class="readMore">마저 읽기</div>
+            </div>
+            <div id="window4" class="window">
+                <div id="window4text" class="article">
+                    내용 4 <br> 4번째 수록작
+                </div>
+                <div class="readMore">마저 읽기</div>
+            </div>
+        </div>
+        <div id="floor">
+
         </div>
     </div>
     <script>
