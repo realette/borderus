@@ -120,7 +120,7 @@
             z-index: 1;
             position: fixed;
             left: 0pt;
-            right 0pt;
+            right: 0pt;
             background-color: #1e1e1e;
             fill: none;
         }
@@ -430,12 +430,6 @@
             <div id="shadow1" class="shadow">
 
             </div>
-            <div id="shadow2" class="shadow">
-
-            </div>
-            <div id="shadow3" class="shadow">
-
-            </div>
             <div id="shadow4" class="shadow">
 
             </div>
@@ -458,6 +452,19 @@
         var logoImg = document.getElementById("logoImg")
         logoImg.style.height = height / 10;
         var windows = document.getElementById("windows")
+
+        document.getElementById("window1").onclick = function() {
+            self.location = "https://realette.github.io/borderus/1-JWK-1"
+        }
+        document.getElementById("window2").onclick = function() {
+            self.location = ""
+        }
+        document.getElementById("window3").onclick = function() {
+            self.location = ""
+        }
+        document.getElementById("window4").onclick = function() {
+            self.location = ""
+        }
     </script>
 </body>
 
