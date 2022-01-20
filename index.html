@@ -117,6 +117,7 @@
         }
         
         #box {
+            z-index: 1;
             position: fixed;
             left: 0pt;
             right 0pt;
@@ -183,6 +184,7 @@
         }
         
         #wall {
+            z-index: 3;
             position: fixed;
             top: 0px;
             left: 0px;
@@ -249,6 +251,30 @@
             100% {
                 transform: translateX(0);
             }
+        }
+        
+        .shadow {
+            z-index: 3;
+            position: absolute;
+            transform: skew(20deg);
+        }
+        
+        #shadow1 {
+            color: white;
+            background-color: rgba(255, 208, 0, 0.3);
+            top: 80vh;
+            left: 56.5vw;
+            width: 15vw;
+            padding-bottom: 20vh;
+        }
+        
+        #shadow4 {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.3);
+            top: 80vh;
+            left: 37vw;
+            width: 17vw;
+            padding-bottom: 20vh;
         }
         
         #window1 {
@@ -353,6 +379,7 @@
             width: 100vw;
             height: 24vh;
             background-color: black;
+            z-index: 2;
         }
         
         @media (max-width: 680px) {}
@@ -397,6 +424,20 @@
                     내용 4 <br> 4번째 수록작
                 </div>
                 <div class="readMore">마저 읽기</div>
+            </div>
+        </div>
+        <div id="shadows">
+            <div id="shadow1" class="shadow">
+
+            </div>
+            <div id="shadow2" class="shadow">
+
+            </div>
+            <div id="shadow3" class="shadow">
+
+            </div>
+            <div id="shadow4" class="shadow">
+
             </div>
         </div>
         <div id="floor">
