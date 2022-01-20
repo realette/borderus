@@ -14,7 +14,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <script>
         if (window.console != undefined) {
-            console.log('%c                   ', 'font-size:800px; background:url(https://realette.github.io/borderus/xpednfl.png) no-repeat;');
+            console.log('%c          ', 'font-size:400px; background:url(https://realette.github.io/borderus/xpednfl-min.png) no-repeat;');
         }
     </script>
     <link rel="icon" type="image/png" href="https://realette.github.io/borderus/xpednfl-ico-file/001.png" sizes="192x192">
@@ -247,17 +247,24 @@
             font-style: normal;
             position: absolute;
             margin: 7%;
-            font-size: 130%;
+            max-width: 100%;
+            height: auto !important;
+            font-size: 1.3vw;
         }
         
         .readMore {
             font-family: 'KyoboHandwriting2020A';
+            size: inherit;
             position: absolute;
             font-size: 90%;
             right: 0%;
             bottom: 0%;
             margin: 7%;
             color: rgb(193, 225, 255)
+        }
+        
+        #logoImg {
+            width: auto !important;
         }
     </style>
 </head>
@@ -266,7 +273,7 @@
     <div id="box"></div>
     <div id="wall">
         <center id="iconImg">
-            <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-green.png'>
+            <img id="logoImg" src='https://realette.github.io/borderus/xpednfl-ash-green.png'>
             <!--
             <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl.png'>
             <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-green.png'>
@@ -294,6 +301,8 @@
         var wall = document.getElementById("wall");
         wall.style.width = width + 1;
         wall.style.height = height + 1;
+        var logoImg = document.getElementById("logoImg")
+        logoImg.style.height = height / 10;
     </script>
 </body>
 
