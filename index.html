@@ -14,8 +14,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <script>
         if (window.console != undefined) {
-            setTimeout(console.log.bind(console, "%cTISTORY", "font:8em Arial;color:#EC6521;font-weight:bold"), 0);
-            setTimeout(console.log.bind(console, "%c  나를 표현하는 블로그", "font:2em sans-serif;color:#333;"), 0);
+            console.log('%c                   ', 'font-size:800px; background:url(https://realette.github.io/borderus/xpednfl.png) no-repeat;');
         }
     </script>
     <link rel="icon" type="image/png" href="https://realette.github.io/borderus/xpednfl-ico-file/001.png" sizes="192x192">
@@ -103,6 +102,20 @@
         }, 67);
     </script>
     <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'GowunBatang-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
         html {
             animation: transitionInHtmlColor;
             animation-duration: 1ms;
@@ -190,7 +203,6 @@
         }
         
         #iconImg {
-            scale: inherit;
             position: relative;
             top: 0%;
         }
@@ -218,6 +230,35 @@
                 -webkit-filter: blur(0px);
             }
         }
+        
+        #window1 {
+            border: white solid 7px;
+            position: relative;
+            color: white;
+            background-color: rgba(255, 208, 0, 0.671);
+            top: 0%;
+            width: 15%;
+            padding-bottom: 15%;
+        }
+        
+        .articleText#window1text {
+            font-family: 'KyoboHandwriting2020A';
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            margin: 7%;
+            font-size: 130%;
+        }
+        
+        .readMore {
+            font-family: 'KyoboHandwriting2020A';
+            position: absolute;
+            font-size: 90%;
+            right: 0%;
+            bottom: 0%;
+            margin: 7%;
+            color: rgb(193, 225, 255)
+        }
     </style>
 </head>
 
@@ -235,6 +276,12 @@
             <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-purple.png'>
             -->
         </center>
+        <div id="window1">
+            <div id="window1text" class="articleText">
+                우리는 결국 세상의 <br>영원한 이방인일 것이고,<br> 우리는 다른 이들을 끝내<br>이해하지 못할 것이다.<br>이것이 이 일종의<br>동인 잡지를 펴내고자 한<br>이유이다...
+            </div>
+            <div class="readMore">마저 읽기</div>
+        </div>
     </div>
     <script>
         const width = window.innerWidth || document.documentElement.clientWidth ||
