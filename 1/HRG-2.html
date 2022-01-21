@@ -1,0 +1,61 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title></title>
+    <!--테두우리 1호지 홍록기의 첫번째 글-->
+    <meta name="author" content="Yeong-wook Joo and Roggi Hong">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="https://realette.github.io/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                'https://realette.github.io/borderus/xpednfl-ico-file/001.png',
+                'https://realette.github.io/borderus/xpednfl-ico-file/021.png',
+                'https://realette.github.io/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1></h1>
+    <h4></h4>
+    <div id="text">
+        꿈이라는 것은 어렸을 때부터 직업으로만 배워왔다. 하지만 '꿈'의 사전적 정의는 세 가지가 있는데 그 중 '실현하고 싶은 이상이나 희망'이 이에 해당한다. 생각해보면 우리는 우리의 깐깐한 이상이나 희망을 쟁취하기 위해 노력하고 있는 것 아닌가, 그렇다면 그런 이상을 달성하기는 무척 어려운 일 아닌가. 여기서 급조히 내린 결론은 꿈이라는 것은 달성하기 매우 어려운 고지라는 것이다. 달성하지 못 했다 하더라도 잘못한 것이 아니다. 원래 어려웠던 등반이었으니
+        말이다.
+    </div>
+</body>
