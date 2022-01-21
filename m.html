@@ -69,11 +69,18 @@
             top: 0%;
         }
         
+        #windows {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
         .window {
             margin: 1.5vw;
             text-align: left;
-            position: absolute;
-            border: white solid 7px;
+            border: white solid 3px;
         }
         
         .shadow {
@@ -103,36 +110,28 @@
         #window1 {
             color: white;
             background-color: rgba(255, 208, 0, 0.671);
-            top: 35vh;
-            left: 50.5vw;
-            width: 15vw;
+            width: 90%;
             padding-bottom: 15vw;
         }
         
         #window2 {
             color: white;
             background-color: rgba(255, 255, 255, 0.6);
-            top: 10vh;
-            left: 31vw;
-            width: 20vw;
+            width: 90%;
             padding-bottom: 10vw;
         }
         
         #window3 {
             color: white;
             background-color: rgba(255, 255, 255, 0.6);
-            top: 10vh;
-            left: 53.5vw;
-            width: 12vw;
+            width: 90%;
             padding-bottom: 10vw;
         }
         
         #window4 {
             color: white;
             background-color: rgba(255, 255, 255, 0.6);
-            top: 35vh;
-            left: 31vw;
-            width: 17vw;
+            width: 90%;
             padding-bottom: 15vw;
         }
         
@@ -141,27 +140,21 @@
             font-weight: normal;
             font-style: normal;
             position: absolute;
-            margin: 7%;
+            padding: 2%;
             max-width: 100%;
-            height: auto !important;
-            font-size: 1.3vw;
+            font-size: 4vw;
         }
         
         .readMore {
             font-family: 'KyoboHandwriting2020A';
             size: inherit;
-            position: absolute;
-            font-size: 0.9vw;
-            right: 0.2vw;
-            bottom: 0vw;
+            font-size: 1vw;
+            text-align: right;
             margin: 0.3vw;
             color: rgb(180, 219, 255);
         }
         
         #logoImg {
-            position: absolute;
-            top: 1.75vh;
-            left: 45vw;
             width: auto !important;
         }
         
@@ -183,18 +176,19 @@
 <body>
     <div id="box"></div>
     <div id="wall">
-        <div id="iconImg">
-            <img id="logoImg" src='https://realette.github.io/borderus/xpednfl-ash-green.png'>
-            <!--
-            <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl.png'>
-            <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-green.png'>
-            <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-red.png'>
-            <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-hot-pink.png'>
-            <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-pale-purple.png'>
-            <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-purple.png'>
-            -->
-        </div>
+
         <div id="windows">
+            <div id="iconImg">
+                <img id="logoImg" src='https://realette.github.io/borderus/xpednfl-ash-green.png'>
+                <!--
+                <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl.png'>
+                <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-green.png'>
+                <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-red.png'>
+                <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-hot-pink.png'>
+                <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-pale-purple.png'>
+                <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-purple.png'>
+                -->
+            </div>
             <div id="window1" class="window">
                 <div id="window1text" class="article">
                     우리는 결국 세상의 영원한 이방인일 것이고, 우리는 다른 이들을 끝내 이해하지 못할 것이다. 이것이 이 일종의 동인 잡지를 펴내고자 한이유이다...
