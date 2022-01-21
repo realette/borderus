@@ -81,6 +81,7 @@
             margin: 1.5vw;
             text-align: left;
             border: white solid 3px;
+            position: relative;
         }
         
         .shadow {
@@ -90,20 +91,15 @@
         }
         
         #shadow1 {
-            color: white;
-            background-color: rgba(255, 208, 0, 0.3);
-            top: 80vh;
-            left: 56.5vw;
-            width: 15vw;
-            padding-bottom: 20vh;
+            display: none;
         }
         
         #shadow4 {
             color: white;
             background-color: rgba(255, 255, 255, 0.3);
             top: 80vh;
-            left: 37vw;
-            width: 17vw;
+            left: 20vw;
+            width: 100vw;
             padding-bottom: 20vh;
         }
         
@@ -111,28 +107,28 @@
             color: white;
             background-color: rgba(255, 208, 0, 0.671);
             width: 90%;
-            padding-bottom: 15vw;
+            padding-bottom: 18vw;
         }
         
         #window2 {
             color: white;
             background-color: rgba(255, 255, 255, 0.6);
             width: 90%;
-            padding-bottom: 10vw;
+            padding-bottom: 18vw;
         }
         
         #window3 {
             color: white;
             background-color: rgba(255, 255, 255, 0.6);
             width: 90%;
-            padding-bottom: 10vw;
+            padding-bottom: 18vw;
         }
         
         #window4 {
             color: white;
             background-color: rgba(255, 255, 255, 0.6);
             width: 90%;
-            padding-bottom: 15vw;
+            padding-bottom: 18vw;
         }
         
         .article {
@@ -147,11 +143,11 @@
         
         .readMore {
             font-family: 'KyoboHandwriting2020A';
-            size: inherit;
             font-size: 1vw;
-            text-align: right;
-            margin: 0.3vw;
             color: rgb(180, 219, 255);
+            position: absolute;
+            bottom: 0;
+            right: 1%;
         }
         
         #logoImg {
@@ -161,10 +157,10 @@
         #floor {
             animation: transitionInFloor, transitionInWallTrans;
             animation-duration: 1s, 0.5s;
-            position: fixed;
+            position: absolute;
             scale: fixed;
             bottom: 0%;
-            left: 0%;
+            left: -1%;
             width: 100vw;
             height: 24vh;
             background-color: #111111;
