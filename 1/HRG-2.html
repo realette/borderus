@@ -47,15 +47,78 @@
         }, 1000);
     </script>
     <style>
-
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @import url('//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
+        p {
+            margin-top: 5pt;
+            margin-bottom: 5pt;
+        }
+        
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang', serif;
+            font-size: 15pt;
+            padding-left: 30%;
+            padding-right: 30%;
+        }
+        
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+        
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @import url('//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 10000pt;
+                font-family: 'Iropke Batang', serif;
+                font-size: 15pt;
+                padding-left: 4%;
+                padding-right: 4%;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <h1></h1>
-    <h4></h4>
+    <h1 id="title">제목을 입력하십시오...</h1>
+    <h4 id="writer">작성: 홍록기</h4>
     <div id="text">
-        꿈이라는 것은 어렸을 때부터 직업으로만 배워왔다. 하지만 '꿈'의 사전적 정의는 세 가지가 있는데 그 중 '실현하고 싶은 이상이나 희망'이 이에 해당한다. 생각해보면 우리는 우리의 깐깐한 이상이나 희망을 쟁취하기 위해 노력하고 있는 것 아닌가, 그렇다면 그런 이상을 달성하기는 무척 어려운 일 아닌가. 여기서 급조히 내린 결론은 꿈이라는 것은 달성하기 매우 어려운 고지라는 것이다. 달성하지 못 했다 하더라도 잘못한 것이 아니다. 원래 어려웠던 등반이었으니
-        말이다.
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;꿈이라는 것은 어렸을 때부터 직업으로만 배워왔다. 하지만 '꿈'의 사전적 정의는 세 가지가 있는데 그 중 '실현하고 싶은 이상이나 희망'이 이에 해당한다. 생각해보면 우리는 우리의 깐깐한 이상이나 희망을 쟁취하기 위해 노력하고 있는 것 아닌가, 그렇다면 그런 이상을 달성하기는 무척 어려운 일 아닌가. 여기서 급조히 내린 결론은 꿈이라는 것은 달성하기 매우 어려운 고지라는 것이다. 달성하지
+            못 했다 하더라도 잘못한 것이 아니다. 원래 어려웠던 등반이었으니 말이다.
+        </p>
     </div>
 </body>
+
+</html>
