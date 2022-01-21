@@ -397,7 +397,7 @@
             }
             #box {
                 z-index: 1;
-                position: fixed;
+                position: absolute;
                 left: 0;
                 top: 0;
                 background-color: #1e1e1e;
@@ -460,7 +460,7 @@
             }
             #wall {
                 z-index: 3;
-                position: fixed;
+                position: absolute;
                 top: 0px;
                 left: 0px;
                 width: 100%;
@@ -516,7 +516,7 @@
             .window {
                 margin: 1.5vw;
                 text-align: left;
-                position: fixed;
+                position: absolute;
                 border: white solid 3px;
             }
             @keyframes slideInFromLeft {
@@ -529,13 +529,14 @@
             }
             .shadow {
                 z-index: 3;
-                position: fixed;
+                position: absolute;
                 transform: skew(40deg);
             }
             #shadow1 {
                 display: none;
             }
             #shadow4 {
+                display: none;
                 color: white;
                 background-color: rgba(255, 255, 255, 0.3);
                 top: 80vh;
@@ -579,7 +580,7 @@
                 font-family: 'KyoboHandwriting2020A';
                 font-weight: normal;
                 font-style: normal;
-                position: fixed;
+                position: absolute;
                 margin: 7%;
                 max-width: 100%;
                 height: auto !important;
@@ -587,7 +588,7 @@
             }
             .readMore {
                 font-family: 'KyoboHandwriting2020A';
-                position: fixed;
+                position: absolute;
                 font-size: 0.3vw;
                 right: 0.4vw;
                 bottom: -0.3vw;
@@ -603,7 +604,7 @@
                 }
             }
             #logoImg {
-                position: fixed;
+                position: absolute;
                 top: 0vh;
                 left: 32vw;
                 width: auto !important;
@@ -627,7 +628,7 @@
             #floor {
                 animation: transitionInFloor 1s;
                 position: fixed;
-                scale: fixed;
+                scale: absolute;
                 bottom: 0;
                 background-color: #111111;
                 z-index: 2;
