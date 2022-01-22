@@ -22,7 +22,7 @@
         var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(navigator.userAgent.toLowerCase()));
 
         if (!mobile) {
-            window.location.href = "https://realette.github.io/borderus/";
+            window.location.href = "https://realette.github.io/borderus";
         }
     </script>
     <script>
@@ -50,7 +50,6 @@
         html {
             overflow: hidden;
             background-color: #1e1e1e;
-            animation: transitionInLogoImg, transitionInText;
         }
         
         body {
@@ -63,7 +62,7 @@
             position: fixed;
             top: 0px;
             left: 0px;
-            top: 50%;
+            top: 51%;
             left: 50%;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
@@ -74,7 +73,6 @@
         
         #iconImg {
             position: relative;
-            top: 0%;
         }
         
         #windows {
@@ -164,9 +162,7 @@
         }
         
         #logoImg {
-            top: 1%;
-            width: 22.5%;
-            height: auto !important;
+            width: auto !important;
         }
         
         #floor {
@@ -245,8 +241,10 @@
         box.style.height = height + 1;
         var wall = document.getElementById("wall");
         wall.style.width = width + 1;
-
+        wall.style.height = height + 1;
+        var logoImg = document.getElementById("logoImg")
         logoImg.style.height = height / 10;
+
         var windows = document.getElementById("windows")
 
         document.getElementById("window1").onclick = function() {
