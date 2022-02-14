@@ -416,13 +416,32 @@
             position: fixed;
             top: 5%;
             right: 0;
-            width: 7vh;
-            height: 4vh;
+            width: 9vh;
+            height: 6vh;
             background-color: #7DA89B;
-            font-size: 3vw;
+            font-size: 4vh;
             text-align: center;
-            border-radius: 33%;
+            border-top-left-radius: 20%;
+            border-bottom-left-radius: 20%;
             z-index: 1;
+        }
+        
+        #modal {
+            background-color: rgba(255, 255, 255, 0.5);
+            right: 2vw;
+            top: 14%;
+            padding: 20px;
+            border: 1px solid #7DA89B;
+            width: 15%;
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
         }
     </style>
 </head>
@@ -431,6 +450,9 @@
     <div id="box"></div>
     <div id="toggle">
         2
+    </div>
+    <div id="modal">
+
     </div>
     <div id="wall">
         <div id="iconImg">
@@ -507,6 +529,9 @@
         }
         document.getElementById("window4").onclick = function() {
             self.location = "https://realette.github.io/borderus/1/HRG-2"
+        }
+        document.getElementById("toggle").onclick = function() {
+            document.getElementById("modal").style.display = 'block'
         }
     </script>
 </body>
