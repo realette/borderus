@@ -7,8 +7,8 @@
     nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
 
 <head>
-    <title>테두리, 우리</title>
-    <!--테두우리 1호지-->
+    <title>테두리, 우리 - 2호지</title>
+    <!--테두우리 2호지-->
 
     <meta name="google-site-verification" content="VLvmsWTyMd_fp8asxnmXSunvK4U7HGvYcoz7PXcAaGg">
     <meta name="author" content="Yeong-wook Joo and Roggi Hong">
@@ -414,6 +414,9 @@
         }
         
         #toggle {
+            font-family: 'GowunBatang-Bold';
+            font-weight: bolder;
+            font-style: normal;
             position: fixed;
             top: 5%;
             right: 0;
@@ -430,14 +433,49 @@
         #modal {
             position: fixed;
             visibility: hidden;
+            display: none;
             opacity: 0;
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: #7da89b9f;
             right: 0;
             top: 13%;
             width: 9vh;
-            height: 15vh;
+            height: 12vh;
             border-radius: 1vh;
             z-index: 6;
+        }
+        
+        .oneho {
+            font-family: 'GowunBatang-Bold';
+            font-weight: bolder;
+            font-style: normal;
+            position: relative;
+            left: 12.5%;
+            top: 1.25vh;
+            width: 7vh;
+            height: 4vh;
+            background-color: #887DAD;
+            font-size: 2.2vh;
+            text-align: center;
+            border-radius: 0.3vh;
+            z-index: 6;
+            line-height: 4vh;
+        }
+        
+        .nooneho {
+            font-family: 'GowunBatang-Bold';
+            font-weight: bolder;
+            font-style: normal;
+            position: relative;
+            left: 12.5%;
+            top: 2.5vh;
+            width: 7vh;
+            height: 4vh;
+            background-color: #887DAD;
+            font-size: 1.9vh;
+            text-align: center;
+            border-radius: 0.3vh;
+            z-index: 6;
+            line-height: 4vh;
         }
     </style>
 </head>
@@ -449,7 +487,8 @@
     <div id="box"></div>
 
     <div id="modal">
-        <div id="1"></div>
+        <div class="oneho" id="oneho">1호지</div>
+        <div class="nooneho" id="allho">전체보기</div>
     </div>
     <div id="wall">
         <div id="iconImg">
@@ -533,11 +572,13 @@
             if (c == 1) {
                 document.getElementById("modal").style.visibility = 'visible';
                 document.getElementById("modal").style.opacity = '1';
+                document.getElementById("modal").style.display = 'block';
                 c++;
                 console.log(c);
             } else if (c >= 2) {
                 document.getElementById("modal").style.visibility = 'hidden';
                 document.getElementById("modal").style.opacity = '0';
+                document.getElementById("modal").style.display = 'none';
                 c = 1;
                 console.log(c);
             }
