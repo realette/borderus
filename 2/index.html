@@ -424,7 +424,7 @@
             text-align: center;
             border-top-left-radius: 1vh;
             border-bottom-left-radius: 1vh;
-            z-index: 3;
+            z-index: 6;
         }
         
         #modal {
@@ -437,13 +437,13 @@
             width: 9vh;
             height: 15vh;
             border-radius: 1vh;
-            z-index: 3;
+            z-index: 6;
         }
     </style>
 </head>
 
 <body>
-    <div id="toggle">
+    <div id="toggle" onclick="toggle()">
         2
     </div>
     <div id="box"></div>
@@ -527,11 +527,20 @@
         document.getElementById("window4").onclick = function() {
             self.location = "https://realette.github.io/borderus/1/HRG-2"
         }
-        var toggle = document.getElementById("toggle")
-        toggle.onclick = function() {
-            console.log("okay")
-            document.getElementById("modal").style.visibility = 'visible';
-            document.getElementById("modal").style.opacity = '1';
+        var c = 1;
+
+        function toggle() {
+            if (c == 1) {
+                document.getElementById("modal").style.visibility = 'visible';
+                document.getElementById("modal").style.opacity = '1';
+                c++;
+                console.log(c);
+            } else if (c >= 2) {
+                document.getElementById("modal").style.visibility = 'hidden';
+                document.getElementById("modal").style.opacity = '0';
+                c = 1;
+                console.log(c);
+            }
         }
     </script>
 </body>
