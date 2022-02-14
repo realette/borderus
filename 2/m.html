@@ -1,0 +1,273 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>테두리, 우리</title>
+    <!--테두우리 1호지-->
+    <meta name="author" content="Yeong-wook Joo and Roggi Hong">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <script>
+        var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(navigator.userAgent.toLowerCase()));
+
+        if (!mobile) {
+            window.location.href = "https://realette.github.io/borderus";
+        }
+    </script>
+    <script>
+        if (window.console != undefined) {
+            console.log('%c          ', 'font-size:400px; background:url(https://realette.github.io/borderus/xpednfl-min.png) no-repeat;');
+        }
+    </script>
+    <link rel="icon" type="image/png" href="https://realette.github.io/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'GowunBatang-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        html {
+            overflow: hidden;
+            background-color: #1e1e1e;
+        }
+        
+        body {
+            position: fixed;
+            align-self: center;
+        }
+        
+        #wall {
+            z-index: 3;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            top: 51%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+        
+        #iconImg {
+            position: relative;
+        }
+        
+        #windows {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .window {
+            margin: 1.5vw;
+            text-align: left;
+            border: white solid 3px;
+            position: relative;
+        }
+        
+        .shadow {
+            z-index: 3;
+            position: absolute;
+            transform: skew(20deg);
+        }
+        
+        #shadow1 {
+            display: none;
+        }
+        
+        #shadow4 {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.3);
+            top: 80vh;
+            left: 20vw;
+            width: 100vw;
+            padding-bottom: 18vh;
+        }
+        
+        #window1 {
+            color: white;
+            background-color: rgba(255, 208, 0, 0.671);
+            width: 90%;
+            padding-bottom: 18vw;
+        }
+        
+        #window2 {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.6);
+            width: 90%;
+            padding-bottom: 18vw;
+        }
+        
+        #window3 {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.6);
+            width: 90%;
+            padding-bottom: 8vw;
+        }
+        
+        #window4textTitle {
+            margin-top: 0pt;
+            margin-bottom: 6pt;
+        }
+        
+        #window4 {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.6);
+            width: 90%;
+            padding-bottom: 32vw;
+        }
+        
+        .article {
+            font-family: 'KyoboHandwriting2020A';
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            padding: 2%;
+            max-width: 100%;
+            font-size: 4vw;
+        }
+        
+        .readMore {
+            font-family: 'KyoboHandwriting2020A';
+            font-size: 2.5vw;
+            color: rgb(180, 219, 255);
+            position: absolute;
+            bottom: 1%;
+            right: 1%;
+        }
+        
+        #logoImg {
+            width: auto !important;
+        }
+        
+        #floor {
+            position: absolute;
+            scale: fixed;
+            bottom: 0%;
+            left: -1%;
+            width: 100vw;
+            height: 24vh;
+            background-color: #111111;
+            z-index: 2;
+        }
+        
+        #toggle {
+            position: fixed;
+            top: 5%;
+            right: 0;
+            width: 9vh;
+            height: 6vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <div id="toggle">
+        2
+    </div>
+    <div id="wall">
+
+        <div id="windows">
+            <div id="iconImg">
+                <img id="logoImg" src='https://realette.github.io/borderus/xpednfl-ash-green.png'>
+                <!--
+                <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl.png'>
+                <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-green.png'>
+                <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-red.png'>
+                <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-hot-pink.png'>
+                <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-pale-purple.png'>
+                <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-purple.png'>
+                -->
+            </div>
+            <div id="window1" class="window">
+                <div id="window1text" class="article">
+                    우리는 결국 세상의 영원한 이방인일 것이고, 우리는 다른 이들을 끝내 이해하지 못할 것이다. 이것이 이 일종의 동인 잡지를 펴내고자 한 이유이다...
+                </div>
+                <div class="readMore">마저 읽기</div>
+            </div>
+            <div id="window2" class="window">
+                <div id="window2text" class="article">
+                    가끔 이상에만 빠져 일을 완성하지 못할 때가 많다. 설렘에 설레발치다 결국 계획 단계에서 그쳐버린 많은 프로젝트들이 있었다...
+                </div>
+                <div class="readMore">마저 읽기</div>
+            </div>
+            <div id="window3" class="window">
+                <div id="window3text" class="article">
+                    시작하며..<br>
+                </div>
+                <div class="readMore">마저 읽기</div>
+            </div>
+            <div id="window4" class="window">
+                <div id="window4text" class="article">
+                    <p id="window4textTitle">달콤한 꿈을 꾸었다</p>
+                    당신의 꿈은 무엇인가. '꿈'의 사전적 정의는 세 가지다. 잘 때 꾸는 꿈, 흔히 직업으로 통용되는 의미의 꿈, 이상향 그 자체로써의 꿈, 이렇게 세 가지가 있지만 우린 꿈을 어렸을 때부터... </div>
+                <div class="readMore">마저 읽기</div>
+            </div>
+        </div>
+        <div id="shadows">
+            <div id="shadow1" class="shadow">
+
+            </div>
+            <div id="shadow4" class="shadow">
+
+            </div>
+        </div>
+        <div id="floor">
+
+        </div>
+    </div>
+    <script>
+        const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        var box = document.getElementById("box");
+        box.style.width = width + 1;
+        box.style.height = height + 1;
+        var wall = document.getElementById("wall");
+        wall.style.width = width + 1;
+        wall.style.height = height + 1;
+        var logoImg = document.getElementById("logoImg");
+        logoImg.style.height = height / 10;
+        var windows = document.getElementById("windows");
+        document.getElementById("window1").onclick = function() {
+            self.location = "https://realette.github.io/borderus/1/JYW-1"
+        }
+        document.getElementById("window2").onclick = function() {
+            self.location = "https://realette.github.io/borderus/1/JYW-2"
+        }
+        document.getElementById("window3").onclick = function() {
+            self.location = "https://realette.github.io/borderus/1/HRG-1"
+        }
+        document.getElementById("window4").onclick = function() {
+            self.location = "https://realette.github.io/borderus/1/HRG-2"
+        }
+    </script>
+</body>
+
+
+</html>

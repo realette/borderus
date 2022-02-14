@@ -1,0 +1,143 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>창간사</title>
+    <!--테두우리 1호지 주영욱의 첫번째 글-->
+    <meta name="author" content="Yeong-wook Joo">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="https://realette.github.io/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                'https://realette.github.io/borderus/xpednfl-ico-file/001.png',
+                'https://realette.github.io/borderus/xpednfl-ico-file/021.png',
+                'https://realette.github.io/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Iropke Batang';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+        }
+        
+        p {
+            margin-top: 5pt;
+            margin-bottom: 5pt;
+        }
+        
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 15pt;
+            padding-left: 30%;
+            padding-right: 30%;
+        }
+        
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+        
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Iropke Batang';
+                font-style: normal;
+                font-weight: 400;
+                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+            }
+            p {
+                margin-top: 5pt;
+                margin-bottom: 5pt;
+            }
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 150%;
+                font-family: 'Iropke Batang';
+                font-size: 12pt;
+                padding-left: 4%;
+                padding-right: 4%;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">시작하며...</h1>
+    <h4 id="writer">작성: 주영욱</h4>
+    <div id="text">
+
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;우리는 결국 세상의 영원한 이방인일 것이고, 우리는 다른 이들을 끝내 이해하지 못할 것이다. 이것이 이 일종의 동인 잡지를 펴내고자 한 이유이다. 우리는 우리들 각자의 언어로 말한다. 각자는 아마 굴복할지언정 지배될 수는 없는 세상의 마지막 미개척지로 남게 될 것이다. 보이지만 절대 닿지 않는 상태로 살아가게 될테니 서로 먼 데 앉아 쳐다보기만 한 세상과 나는 그럴만한 이유가 있었던 것이다.
+            그렇지만, 그러므로 우리는 한계점을 넘고, 제한선을 넘어, 경계면을 지나 다른 이를 들여다보기를 바라게 된다. 각자의 경계와 한계, 테두리를 인정하고 서로를 들여다보고자 한다. 그렇게, 우리의 테두리는 하나의 창이 된다.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;텓우리를 만들자고 제의한 것은 이곳이 이에 동감하는 이들의 테두리가 되기를 바라는 마음에서였다, 창이 되기를 바라는 마음에서였다. 그리고 나는 지금 그 시작 앞에 서 있다. 틀린 해석은 이제 다른 해석이 되었고 나는 다양한 해석이라고 부른다. 내가 글을 쓸 때, 영상을 만들 때, 또 무언가를 만들 때 가장 기쁜 점은 하나를 만듦으로써 78억 개의 가능성이 생겨난다는 점이다. 나는 이 곳이
+            서로를 이해할 수 없을 다양한 사람의 다양한 표현을 들을 수 있는 곳이 되길 바란다. 테두리로서, 그래야만 한다고 생각한다. 그래서 이 곳에서 나는 다양한 매체를 통해 우리를 들여다볼 창을 내는 것이다.
+        </p>
+
+    </div>
+</body>
+
+</html>
