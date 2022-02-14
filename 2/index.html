@@ -204,6 +204,7 @@
         }
         
         body {
+            display: unset;
             align-self: center;
             margin: 0;
         }
@@ -423,28 +424,30 @@
             text-align: center;
             border-top-left-radius: 1vh;
             border-bottom-left-radius: 1vh;
-            z-index: 1;
+            z-index: 3;
         }
         
         #modal {
             position: fixed;
-            display: none;
+            visibility: hidden;
+            opacity: 0;
             background-color: rgba(255, 255, 255, 0.5);
             right: 0;
             top: 13%;
             width: 9vh;
             height: 15vh;
             border-radius: 1vh;
-            z-index: 1;
+            z-index: 3;
         }
     </style>
 </head>
 
 <body>
-    <div id="box"></div>
     <div id="toggle">
         2
     </div>
+    <div id="box"></div>
+
     <div id="modal">
         <div id="1"></div>
     </div>
@@ -524,8 +527,11 @@
         document.getElementById("window4").onclick = function() {
             self.location = "https://realette.github.io/borderus/1/HRG-2"
         }
-        document.getElementById("toggle").onclick = function() {
-            document.getElementById("modal").style.display = 'block'
+        var toggle = document.getElementById("toggle")
+        toggle.onclick = function() {
+            console.log("okay")
+            document.getElementById("modal").style.visibility = 'visible';
+            document.getElementById("modal").style.opacity = '1';
         }
     </script>
 </body>
