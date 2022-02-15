@@ -132,8 +132,8 @@
             }
             #audio {
                 position: relative;
-                top: 1vw;
-                right: 1vw;
+                top: 0;
+                right: 2%;
             }
         }
     </style>
@@ -142,10 +142,10 @@
 <body>
 
     <h1 id="title">문과의 시간에 대한 음악</h1>
+    <h4 id="writer">작성: 권준민</h4>
     <audio id="audio" controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 1000)">
         <source src="https://realette.github.io/borderus/2/tick-TaCk-tAlk.mp3" type="audio/mp3">
     </audio>
-    <h4 id="writer">작성: 권준민</h4>
     <div id="text">
 
         <p>&nbsp;&nbsp;&nbsp;&nbsp;만약에 시간이 물리학에서 에너지로서 존재 한다면, 가장 물리단위량이 큰 에너지라도 말할수 있을지도 모른다. 만약에 시간이 생명체라고 가정하면, 먹이 피라미드의 최상위 포식자 일지도 모른다. 만약에 시간이 정신과에서 약으로 쓰인다면, 그만큼 좋은 약은 없을 것이다.(시간이 약이다) 그 아무리 강력한 원자 폭탄이 떨어져 그 지역이 순식간에 방사능 물질로 오염이 된다 해도, 가만히 두다보면, 언젠가는
