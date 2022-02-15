@@ -129,7 +129,9 @@
 </head>
 
 <body>
-    <audio controls="controls" src="https://realette.github.io/borderus/2/tick-TaCk-tAlk.mp3" autoplay></audio>
+    <audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 1000)">
+        <source src="https://realette.github.io/borderus/2/tick-TaCk-tAlk.mp3" type="audio/mp3">
+    </audio>
     <h1 id="title">문과의 시간에 대한 음악</h1>
     <h4 id="writer">작성: 권준민</h4>
     <div id="text">
