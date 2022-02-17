@@ -7,9 +7,9 @@
     nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
 
 <head>
-    <title>테두리, 우리</title>
-    <!--테두우리 1호지-->
-    <meta name="author" content="Yeong-wook Joo and Roggi Hong">
+    <title>테두리, 우리 - 2호지</title>
+    <!--테두우리 2호지-->
+    <meta name="author" content="eong-wook Joo, Roggi Hong and Junmin Kwon">
     <meta name="viewport" content="width=divice-width, initial-scale=1.0">
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta http-equiv="Content-Style-Type" content="text/css">
@@ -22,7 +22,7 @@
         var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(navigator.userAgent.toLowerCase()));
 
         if (!mobile) {
-            window.location.href = "https://realette.github.io/borderus";
+            window.location.href = "https://realette.github.io/borderus/";
         }
     </script>
     <script>
@@ -49,7 +49,7 @@
         
         html {
             overflow: hidden;
-            background-color: #1e1e1e;
+            background-color: #3D3D35;
         }
         
         body {
@@ -86,14 +86,14 @@
         .window {
             margin: 1.5vw;
             text-align: left;
-            border: white solid 3px;
+            border: #88A88F solid 3px;
             position: relative;
         }
         
         .shadow {
             z-index: 3;
             position: absolute;
-            transform: skew(20deg);
+            transform: skew(33deg);
         }
         
         #shadow1 {
@@ -102,44 +102,45 @@
         
         #shadow4 {
             color: white;
-            background-color: rgba(255, 255, 255, 0.3);
-            top: 80vh;
-            left: 20vw;
+            background-color: rgb(248, 255, 244);
+            top: 85vh;
+            left: 23vw;
             width: 100vw;
-            padding-bottom: 18vh;
+            padding-bottom: 12vh;
+            filter: blur(2px);
         }
         
         #window1 {
-            color: white;
-            background-color: rgba(255, 208, 0, 0.671);
+            color: black;
+            background-color: rgb(250, 255, 252);
             width: 90%;
-            padding-bottom: 18vw;
+            padding-bottom: 25vw;
         }
         
         #window2 {
-            color: white;
-            background-color: rgba(255, 255, 255, 0.6);
+            color: black;
+            background-color: rgb(250, 255, 252);
             width: 90%;
-            padding-bottom: 18vw;
+            padding-bottom: 25vw;
         }
         
         #window3 {
-            color: white;
-            background-color: rgba(255, 255, 255, 0.6);
+            color: black;
+            background-color: rgb(250, 255, 252);
             width: 90%;
-            padding-bottom: 8vw;
+            padding-bottom: 20vw;
         }
         
-        #window4textTitle {
+        .windowTextTitle {
             margin-top: 0pt;
             margin-bottom: 6pt;
         }
         
         #window4 {
-            color: white;
-            background-color: rgba(255, 255, 255, 0.6);
+            color: black;
+            background-color: rgb(250, 255, 252);
             width: 90%;
-            padding-bottom: 32vw;
+            padding-bottom: 20vw;
         }
         
         .article {
@@ -155,7 +156,7 @@
         .readMore {
             font-family: 'KyoboHandwriting2020A';
             font-size: 2.5vw;
-            color: rgb(180, 219, 255);
+            color: rgb(45, 48, 43);
             position: absolute;
             bottom: 1%;
             right: 1%;
@@ -169,19 +170,91 @@
             position: absolute;
             scale: fixed;
             bottom: 0%;
-            left: -1%;
+            left: 0;
             width: 100vw;
-            height: 24vh;
-            background-color: #111111;
+            height: 18vh;
+            background-color: #7a7e73;
             z-index: 2;
+        }
+        
+        #toggle {
+            font-family: 'GowunBatang-Bold';
+            font-weight: bolder;
+            font-style: normal;
+            position: fixed;
+            top: 2.5%;
+            right: 0;
+            width: 6vh;
+            height: 4vh;
+            background-color: #b5d6bc;
+            font-size: 2.67vh;
+            text-align: center;
+            border-top-left-radius: 0.66vh;
+            border-bottom-left-radius: 0.66vh;
+            z-index: 6;
+        }
+        
+        #modal {
+            position: fixed;
+            visibility: hidden;
+            display: none;
+            opacity: 0;
+            background-color: #b5d6bcd5;
+            right: 0;
+            top: 7.5%;
+            width: 6vh;
+            height: 9.23vh;
+            border-radius: 0.66vh;
+            z-index: 6;
+        }
+        
+        .oneho {
+            font-weight: bolder;
+            font-style: normal;
+            position: relative;
+            left: 4.7%;
+            top: 0.25vh;
+            width: 5.5vh;
+            height: 3.75vh;
+            background-color: #887DAD;
+            font-size: 2vh;
+            text-align: center;
+            border-radius: 0.5vh;
+            z-index: 6;
+            line-height: 3.5vh;
+        }
+        
+        .nooneho {
+            font-family: 'GowunBatang-Bold';
+            font-weight: bolder;
+            font-style: normal;
+            position: relative;
+            left: 4.7%;
+            top: 1.5vh;
+            width: 5.5vh;
+            height: 3.75vh;
+            background-color: #887DAD;
+            font-size: 1.5vh;
+            text-align: center;
+            border-radius: 0.5vh;
+            z-index: 6;
+            line-height: 3.5vh;
         }
     </style>
 </head>
 
 <body>
+    <div id="toggle" onclick="toggle()">
+        2
+    </div>
     <div id="box"></div>
-    <div id="wall">
 
+    <div id="modal">
+        <div class="oneho" id="oneho">1호지</div>
+        <div class="nooneho" id="allho">전체보기</div>
+    </div>
+
+    <div id="wall">
         <div id="windows">
             <div id="iconImg">
                 <img id="logoImg" src='https://realette.github.io/borderus/xpednfl-ash-green.png'>
@@ -196,26 +269,30 @@
             </div>
             <div id="window1" class="window">
                 <div id="window1text" class="article">
-                    우리는 결국 세상의 영원한 이방인일 것이고, 우리는 다른 이들을 끝내 이해하지 못할 것이다. 이것이 이 일종의 동인 잡지를 펴내고자 한 이유이다...
+                    <p class="windowTextTitle" id="window1textTitle">글</p>
+                    요즘 글이 잘 써지지 않는다. 언제부턴가 글을 쓰기 싫다는 생각이 들었다. 처음 내가 글을 쓰기 시작했을 때 글의 목적은 그저 감정 쓰레기통...
                 </div>
                 <div class="readMore">마저 읽기</div>
             </div>
             <div id="window2" class="window">
                 <div id="window2text" class="article">
-                    가끔 이상에만 빠져 일을 완성하지 못할 때가 많다. 설렘에 설레발치다 결국 계획 단계에서 그쳐버린 많은 프로젝트들이 있었다...
+                    <p class="windowTextTitle" id="window1textTitle">정보 민주주의</p>
+                    너무 많은 정보가 돌아다닌다. "아는 것이 힘이다"라는 문장은 현대 문명을 관통한다. 그러나 모르는 것은 동시에 커다란 장애가 되기 시작한다...
                 </div>
                 <div class="readMore">마저 읽기</div>
             </div>
             <div id="window3" class="window">
                 <div id="window3text" class="article">
-                    시작하며..<br>
+                    <p class="windowTextTitle" id="window3textTitle">창과 삶에 대한 수기</p>
+                    무엇이고 싶은 마음이 들 때가 있다. 사람은 철저히 혼자일 수 밖에는 없는 것이다. 무엇이고 싶지 않을 때도 있을...
                 </div>
                 <div class="readMore">마저 읽기</div>
             </div>
             <div id="window4" class="window">
                 <div id="window4text" class="article">
-                    <p id="window4textTitle">달콤한 꿈을 꾸었다</p>
-                    당신의 꿈은 무엇인가. '꿈'의 사전적 정의는 세 가지다. 잘 때 꾸는 꿈, 흔히 직업으로 통용되는 의미의 꿈, 이상향 그 자체로써의 꿈, 이렇게 세 가지가 있지만 우린 꿈을 어렸을 때부터... </div>
+                    <p class="windowTextTitle" id="window4textTitle">문과의 시간에 대한 음악</p>
+                    이처럼 우리는 어느 한순간도 시간의 영향을 끼치지 않은 적이 없다...
+                </div>
                 <div class="readMore">마저 읽기</div>
             </div>
         </div>
@@ -244,16 +321,41 @@
         logoImg.style.height = height / 10;
         var windows = document.getElementById("windows");
         document.getElementById("window1").onclick = function() {
-            self.location = "https://realette.github.io/borderus/1/JYW-1"
+            self.location = "https://realette.github.io/borderus/2/HRG-1"
         }
         document.getElementById("window2").onclick = function() {
-            self.location = "https://realette.github.io/borderus/1/JYW-2"
+            self.location = "https://realette.github.io/borderus/2/JYW-1"
         }
         document.getElementById("window3").onclick = function() {
-            self.location = "https://realette.github.io/borderus/1/HRG-1"
+            self.location = "https://realette.github.io/borderus/2/JYW-2"
         }
         document.getElementById("window4").onclick = function() {
-            self.location = "https://realette.github.io/borderus/1/HRG-2"
+            self.location = "https://realette.github.io/borderus/2/KJM-1"
+        }
+
+        var c = 1;
+
+        function toggle() {
+            if (c == 1) {
+                document.getElementById("modal").style.visibility = 'visible';
+                document.getElementById("modal").style.opacity = '1';
+                document.getElementById("modal").style.display = 'block';
+                c++;
+                console.log(c);
+            } else if (c >= 2) {
+                document.getElementById("modal").style.visibility = 'hidden';
+                document.getElementById("modal").style.opacity = '0';
+                document.getElementById("modal").style.display = 'none';
+                c = 1;
+                console.log(c);
+            }
+        }
+
+        document.getElementById("oneho").onclick = function() {
+            self.location = "https://realette.github.io/borderus/1"
+        }
+        document.getElementById("allho").onclick = function() {
+            self.location = "https://realette.github.io/borderus/allhoji"
         }
     </script>
 </body>
