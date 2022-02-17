@@ -160,52 +160,6 @@
             animation-fill-mode: forwards;
         }
         
-        @keyframes transitionInBox {
-            0% {
-                width: 10%;
-                height: 10%;
-            }
-            100% {
-                width: 100%;
-                height: 100%;
-            }
-        }
-        
-        @keyframes transitionInBoxTrans {
-            0% {
-                opacity: 0%;
-                filter: blur(10px);
-                -webkit-filter: blur(10px);
-            }
-            100% {
-                opacity: 100%;
-                filter: blur(0px);
-                -webkit-filter: blur(0px);
-            }
-        }
-        
-        @keyframes transitionInBoxRemove {
-            0% {
-                opacity: 100%;
-                visibility: visible;
-                display: block;
-            }
-            100% {
-                opacity: 0%;
-                visibility: hidden;
-                display: none;
-            }
-        }
-        
-        @keyframes transitionInHtmlColor {
-            from {
-                background-color: white;
-            }
-            to {
-                background-color: #1e1e1e;
-            }
-        }
-        
         body {
             align-self: center;
             margin: 0;
@@ -230,55 +184,11 @@
             top: 0%;
         }
         
-        @keyframes transitionInWall {
-            0% {
-                width: 0%;
-                height: 0%;
-            }
-            100% {
-                width: 100%;
-                height: 100%;
-            }
-        }
-        
-        @keyframes transitionInFloor {
-            0% {
-                width: 100%;
-                height: 1vh;
-            }
-            100% {
-                width: 100%;
-                height: 24vh;
-            }
-        }
-        
-        @keyframes transitionInWallTrans {
-            0% {
-                opacity: 0%;
-                filter: blur(10px);
-                -webkit-filter: blur(10px);
-            }
-            100% {
-                opacity: 100%;
-                filter: blur(0px);
-                -webkit-filter: blur(0px);
-            }
-        }
-        
         .window {
             margin: 1.5vw;
             text-align: left;
             position: absolute;
             border: white solid 7px;
-        }
-        
-        @keyframes slideInFromLeft {
-            0% {
-                transform: translateX(-300%);
-            }
-            100% {
-                transform: translateX(0);
-            }
         }
         
         .shadow {
@@ -367,38 +277,11 @@
             color: rgb(180, 219, 255);
         }
         
-        @keyframes transitionInText {
-            0% {
-                font-size: 0rem;
-            }
-            100% {
-                font-size: 1rem;
-            }
-        }
-        
         #logoImg {
             position: absolute;
             top: 1.75vh;
             left: 45vw;
             width: auto !important;
-        }
-        
-        @keyframes transitionInLogoImg {
-            0% {
-                transform: scale(0);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-        
-        @keyframes transitionInBody {
-            0% {
-                transform: scale(0);
-            }
-            100% {
-                transform: scale(1);
-            }
         }
         
         #floor {
@@ -550,21 +433,21 @@
         var wall = document.getElementById("wall");
         wall.style.width = width + 1;
         wall.style.height = height + 1;
-        var logoImg = document.getElementById("logoImg")
+        var logoImg = document.getElementById("logoImg");
         logoImg.style.height = height / 10;
-        var windows = document.getElementById("windows")
+        var windows = document.getElementById("windows");
 
         document.getElementById("window1").onclick = function() {
-            self.location = "https://realette.github.io/borderus/1/JYW-1"
+            self.location = "https://realette.github.io/borderus/1/JYW-1";
         }
         document.getElementById("window2").onclick = function() {
-            self.location = "https://realette.github.io/borderus/1/JYW-2"
+            self.location = "https://realette.github.io/borderus/1/JYW-2";
         }
         document.getElementById("window3").onclick = function() {
-            self.location = "https://realette.github.io/borderus/1/HRG-1"
+            self.location = "https://realette.github.io/borderus/1/HRG-1";
         }
         document.getElementById("window4").onclick = function() {
-            self.location = "https://realette.github.io/borderus/1/HRG-2"
+            self.location = "https://realette.github.io/borderus/1/HRG-2";
         }
 
         var c = 1;
@@ -586,10 +469,10 @@
         }
 
         document.getElementById("twoho").onclick = function() {
-            self.location = "https://realette.github.io/borderus/2"
+            self.location = "https://realette.github.io/borderus/2";
         }
         document.getElementById("allho").onclick = function() {
-            self.location = "https://realette.github.io/borderus/allhoji"
+            self.location = "https://realette.github.io/borderus/allhoji";
         }
     </script>
 </body>
