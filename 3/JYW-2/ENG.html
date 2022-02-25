@@ -25,33 +25,6 @@
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Pragma" content="no-cache">
     <link rel="icon" type="image/png" href="https://realette.github.io/borderus/xpednfl-ico-file/001.png" sizes="192x192">
-    <script>
-        var favicon_images = [
-                'https://realette.github.io/borderus/xpednfl-ico-file/001.png',
-                'https://realette.github.io/borderus/xpednfl-ico-file/021.png',
-                'https://realette.github.io/borderus/xpednfl-ico-file/041.png',
-            ],
-
-            image_counter = 0; // To keep track of the current image
-
-        setInterval(function() {
-            // remove current favicon
-            if (document.querySelector("link[rel='icon']") !== null)
-                document.querySelector("link[rel='icon']").remove();
-            if (document.querySelector("link[rel='shortcut icon']") !== null)
-                document.querySelector("link[rel='shortcut icon']").remove();
-
-            // add new favicon image
-            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
-
-            // If last image then goto first image
-            // Else go to next image    
-            if (image_counter == favicon_images.length - 1)
-                image_counter = 0;
-            else
-                image_counter++;
-        }, 1000);
-    </script>
     <style>
         @font-face {
             font-family: 'KyoboHandwriting2020A';
@@ -68,8 +41,8 @@
         }
         
         p {
-            margin-top: 50pt;
-            margin-bottom: 50pt;
+            margin-top: 25pt;
+            margin-bottom: 25pt;
         }
         
         #text {
@@ -80,7 +53,7 @@
             font-size: 15pt;
             padding-left: 25%;
             padding-right: 25%;
-            padding-bottom: 20vw;
+            padding-bottom: 15vw;
         }
         
         #title {
@@ -132,8 +105,8 @@
                 src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
             }
             p {
-                margin-top: 50pt;
-                margin-bottom: 50pt;
+                margin-top: 25pt;
+                margin-bottom: 25pt;
             }
             #text {
                 letter-spacing: 1pt;
@@ -143,7 +116,7 @@
                 font-size: 12pt;
                 padding-left: 4%;
                 padding-right: 4%;
-                padding-bottom: 4vw;
+                padding-bottom: 10vw;
             }
             #title {
                 font-family: 'KyoboHandwriting2020A';
@@ -153,6 +126,7 @@
             #writer {
                 font-family: 'KyoboHandwriting2020A';
                 padding-left: 2%;
+                margin: 0;
             }
             #Audiobox {
                 position: relative;
@@ -191,15 +165,17 @@
     <div id="Audiobox">
         <div id="AudioboxTitle">Song: No surprises by Radiohead</div>
         <audio id="audio" controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 1000)">
-        <source src="https://realette.github.io/borderus/3/Radiohead-NoSurprises.mp3" type="audio/mp3">
-    </audio>
-        <div id="text">
-            <p id="1">&nbsp;&nbsp;&nbsp;&nbsp; It will be cruel, poetic or blind.<br> The answer is justice and peace. To make a peace, there is nuclear weapon. To make a justice, there is unavoidable power. People force justice and peace. But, they are still worthy?<br>
-            </p>
-            <p id="2">&nbsp;&nbsp;&nbsp;&nbsp;</p>
-            <p id="3">&nbsp;&nbsp;&nbsp;&nbsp;</p>
-            <p id="4">&nbsp;&nbsp;&nbsp;&nbsp;</p>
-        </div>
+            <source src="https://realette.github.io/borderus/3/Radiohead-NoSurprises.mp3" type="audio/mp3">
+        </audio>
+    </div>
+    <div id="text">
+        <p id="1">&nbsp;&nbsp;&nbsp;&nbsp; It will be cruel, poetic or blind.<br> The answer is justice and peace. To make a peace, there is nuclear weapon. To make a justice, there is unavoidable power. People force justice and peace. But, they are still worthy?
+            <br>
+        </p>
+        <p id="2">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <p id="3">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <p id="4">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
 </body>
 <script>
     document.getElementById("AudioboxTitle").onclick = function() {
