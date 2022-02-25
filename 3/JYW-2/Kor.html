@@ -107,6 +107,11 @@
             top: 0;
         }
         
+        #lang {
+            position: relative;
+            left: 2%;
+        }
+        
         @media screen and (max-width: 768px) {
             @font-face {
                 font-family: 'KyoboHandwriting2020A';
@@ -162,6 +167,10 @@
                 position: relative;
                 top: 0;
             }
+            #lang {
+                position: relative;
+                left: 2%;
+            }
         }
     </style>
 </head>
@@ -169,6 +178,11 @@
 <body>
     <h1 id="title">나는 키예프인이다</h1>
     <h4 id="writer">작성: 주영욱</h4>
+    <div id="lang">
+        <button id="Kor">한국어</button>
+        <button id="Eng">English</button>
+        <button id="Ukr">український</button>
+    </div>
     <div id="Audiobox">
         <div id="AudioboxTitle">노래: Radiohead의 No surprises </div>
         <audio id="audio" controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 1000)">
@@ -191,5 +205,16 @@
         </p>
     </div>
 </body>
+<script>
+    document.getElementById("Kor").onclick = function() {
+        self.location = ("https://realette.github.io/borderus/3/JYW-2/KOR");
+    }
+    document.getElementById("Eng").onclick = function() {
+        self.location = ("https://realette.github.io/borderus/3/JYW-2/ENG");
+    }
+    document.getElementById("Ukr").onclick = function() {
+        self.location = ("https://realette.github.io/borderus/3/JYW-2/UKR")
+    }
+</script>
 
 </html>
