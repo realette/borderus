@@ -162,6 +162,7 @@
                 text-align: center;
                 font-family: 'Iropke Batang';
                 font-size: 12pt;
+                z-index: 10;
             }
             #audio {
                 position: relative;
@@ -184,7 +185,7 @@
         <button id="Ukr">український</button>
     </div>
     <div id="Audiobox">
-        <div id="AudioboxTitle">노래: Radiohead의 No surprises </div>
+        <div id="AudioboxTitle">노래: Radiohead의 No surprises</div>
         <audio id="audio" controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 1000)">
         <source src="https://realette.github.io/borderus/3/Radiohead-NoSurprises.mp3" type="audio/mp3">
     </audio>
@@ -206,6 +207,10 @@
     </div>
 </body>
 <script>
+    document.getElementById("AudioboxTitle").onclick = function() {
+        window.open("https://www.youtube.com/watch?v=u5CVsCnxyXg", "_blank");
+    }
+
     document.getElementById("Kor").onclick = function() {
         self.location = ("https://realette.github.io/borderus/3/JYW-2/KOR");
     }
