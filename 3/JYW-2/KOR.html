@@ -61,6 +61,33 @@
             src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
         }
         
+        body {
+            margin: 0;
+        }
+        
+        .bgbbox {
+            position: fixed;
+            z-index: -1;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .bgb {
+            position: relative;
+            height: 25vh;
+            width: 100vw;
+        }
+        
+        #bgb1,
+        #bgb2 {
+            background-color: #f5f9ff;
+        }
+        
+        #bgb3,
+        #bgb4 {
+            background-color: #fffcef;
+        }
+        
         p {
             margin-top: 25pt;
             margin-bottom: 25pt;
@@ -125,6 +152,31 @@
                 font-weight: 400;
                 src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
             }
+            body {
+                margin: 0;
+                background-color: ffffff;
+            }
+            .bgbbox {
+                position: fixed;
+                z-index: 5;
+                height: 100vh;
+                width: 100vw;
+            }
+            .bgb {
+                position: relative;
+                height: 25vh;
+                width: 100vw;
+            }
+            #bgb1,
+            #bgb4 {
+                background-color: transparent;
+            }
+            #bgb2 {
+                background-color: #88bfff1f;
+            }
+            #bgb3 {
+                background-color: #ffe7861e;
+            }
             p {
                 margin-top: 25pt;
                 margin-bottom: 25pt;
@@ -176,6 +228,13 @@
 </head>
 
 <body>
+    <div class="bgbbox">
+        <div class="bgb" id="bgb1"></div>
+        <div class="bgb" id="bgb2"></div>
+        <div class="bgb" id="bgb3"></div>
+        <div class="bgb" id="bgb4"></div>
+    </div>
+
     <h1 id="title">나는 키예프 시민이다</h1>
     <h4 id="writer">작성: 주영욱</h4>
     <div id="lang">
