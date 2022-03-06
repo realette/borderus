@@ -182,7 +182,7 @@
             font-weight: bolder;
             font-style: normal;
             position: fixed;
-            top: 3.8787%;
+            top: 3.77%;
             right: 0;
             width: 6vh;
             height: 4vh;
@@ -192,9 +192,18 @@
             border-top-left-radius: 0.66vh;
             border-bottom-left-radius: 0.66vh;
             z-index: 6;
-            border-top: 2px solid black;
-            border-left: 2px solid black;
-            border-bottom: 2px solid black;
+        }
+        
+        #toggleDot {
+            position: absolute;
+            z-index: 7;
+            right: 9px;
+            top: 2.5%;
+            background-color: red;
+            color: red;
+            width: 9px;
+            height: 9px;
+            border-radius: 1vh;
         }
         
         #modal {
@@ -249,7 +258,10 @@
 <body>
     <div id="toggle" onclick="toggle()">
         2
+
     </div>
+    <div id="toggleDot"></div>
+
     <div id="toggleShadow"></div>
     <div id="box"></div>
 
