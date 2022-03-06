@@ -213,7 +213,7 @@
             opacity: 0;
             background-color: #b5d6bcd5;
             right: 0;
-            top: 7.5%;
+            top: 8.87%;
             width: 6vh;
             height: 9.23vh;
             border-radius: 0.66vh;
@@ -349,6 +349,9 @@
             self.location = "https://realette.github.io/borderus/2/KJM-1"
         }
 
+
+        var d = 1;
+
         var c = 1;
 
         function toggle() {
@@ -356,6 +359,8 @@
                 document.getElementById("modal").style.visibility = 'visible';
                 document.getElementById("modal").style.opacity = '1';
                 document.getElementById("modal").style.display = 'block';
+                document.getElementById("toggleDot").style.visibility = 'hidden'
+                d = 0;
                 c++;
                 console.log(c);
             } else if (c >= 2) {
