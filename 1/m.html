@@ -191,7 +191,7 @@
             font-weight: bolder;
             font-style: normal;
             position: fixed;
-            top: 2.5%;
+            top: 3.77%;
             right: 0;
             width: 6vh;
             height: 4vh;
@@ -201,6 +201,18 @@
             border-top-left-radius: 0.66vh;
             border-bottom-left-radius: 0.66vh;
             z-index: 6;
+        }
+        
+        #toggleDot {
+            position: absolute;
+            z-index: 7;
+            right: 9px;
+            top: 2%;
+            background-color: red;
+            color: red;
+            width: 9px;
+            height: 9px;
+            border-radius: 1vh;
         }
         
         #modal {
@@ -256,6 +268,7 @@
     <div id="toggle" onclick="toggle()">
         1
     </div>
+    <div id="toggleDot"></div>
     <div id="box"></div>
 
     <div id="modal">
@@ -338,6 +351,8 @@
             self.location = "https://realette.github.io/borderus/1/HRG-2"
         }
 
+        var d = 1;
+
         var c = 1;
 
         function toggle() {
@@ -345,6 +360,8 @@
                 document.getElementById("modal").style.visibility = 'visible';
                 document.getElementById("modal").style.opacity = '1';
                 document.getElementById("modal").style.display = 'block';
+                document.getElementById("toggleDot").style.visibility = 'hidden'
+                d = 0;
                 c++;
                 console.log(c);
             } else if (c >= 2) {
@@ -355,6 +372,7 @@
                 console.log(c);
             }
         }
+
 
         document.getElementById("twoho").onclick = function() {
             self.location = "https://realette.github.io/borderus/2"

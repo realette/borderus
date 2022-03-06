@@ -313,6 +313,18 @@
             z-index: 6;
         }
         
+        #toggleDot {
+            position: absolute;
+            z-index: 7;
+            right: 0;
+            top: 4.3%;
+            background-color: red;
+            color: red;
+            width: 12px;
+            height: 12px;
+            border-radius: 1vh;
+        }
+        
         #modal {
             position: fixed;
             visibility: hidden;
@@ -367,6 +379,7 @@
     <div id="toggle" onclick="toggle()">
         2
     </div>
+    <div id="toggleDot"></div>
     <div id="box"></div>
 
     <div id="modal">
@@ -453,13 +466,17 @@
         document.getElementById("window4").onclick = function() {
             self.location = "https://realette.github.io/borderus/2/KJM-1"
         }
+
         var c = 1;
+        var d = 1;
 
         function toggle() {
             if (c == 1) {
                 document.getElementById("modal").style.visibility = 'visible';
                 document.getElementById("modal").style.opacity = '1';
                 document.getElementById("modal").style.display = 'block';
+                document.getElementById("toggleDot").style.visibility = 'hidden'
+                d = 0;
                 c++;
                 console.log(c);
             } else if (c >= 2) {
