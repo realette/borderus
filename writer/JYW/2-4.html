@@ -1,0 +1,163 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>창과 삶에 대한 수기</title>
+    <!--테두우리 2호지 주영욱의 두 번째 글-->
+    <meta name="author" content="Yeong-wook Joo">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="https://realette.github.io/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                'https://realette.github.io/borderus/xpednfl-ico-file/001.png',
+                'https://realette.github.io/borderus/xpednfl-ico-file/021.png',
+                'https://realette.github.io/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Iropke Batang';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+        }
+        
+        p {
+            margin-top: 20pt;
+            margin-bottom: 20pt;
+        }
+        
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 15pt;
+            padding-left: 20%;
+            padding-right: 20%;
+            padding-bottom: 30vw;
+        }
+        
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+        
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Iropke Batang';
+                font-style: normal;
+                font-weight: 400;
+                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+            }
+            p {
+                margin-top: 20pt;
+                margin-bottom: 20pt;
+            }
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 150%;
+                font-family: 'Iropke Batang';
+                font-size: 12pt;
+                padding-left: 4%;
+                padding-right: 4%;
+                padding-bottom: 4vw;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">창과 삶에 대한 수기</h1>
+    <h4 id="writer">작성: 주영욱</h4>
+    <div id="text">
+        <p>무엇이고 싶은 마음이 들 때가 있다.<br> 사람은 철저히 혼자일 수 밖에는 없는 것이다.<br> 무엇이고 싶지 않을 때도 있을 것이다.<br> 결국 부딪히지 않음으로서 세상에서 배제될 수도 있다.<br> 감각은 서로의 껍데기를 발견할 지언정 서로의 본질을 보지 못한다.<br> 마음 속의 '상호'적이라 생각한 호의와 마음은 모두 철저히 스스로 발견한 스스로의 생각일 뿐이다.<br> 하나의 자아는 결국 두꺼운 유리인 셈이다.<br>            그것은 각기 다른 빛들을 각자 나름의 방식으로 굴절시킨다.<br> 그렇게 인식하게 된다.<br> 자신이 내보낸 의미도 다른 이는 다시 그의 창으로 굴절시킬 것이기에 완전한 소통이란 불가하다.<br> 쇼펜하우어의 말을 빌려 개념이란 "표상의 표상"이고, 우리는 의사소통에 있어 상대방에 대해 정확히 아는 것이 전혀 없다.<br> 세계는 표상이 되고 개념이 되고 말이 되고 진동이 되고 화학 물질이 되어 다시 말이 되고 개념이 되는
+            동안 많은 창을 지난다.<br> 감각은 그야말로 실재적이고 외부적인 창이고, 생각과 인식은 추상적이고 본질적인 창으로서 편지를 보낸다.<br> 편지의 내용은 토막나 있다. 창을 지나면서 오류는 증폭된다.<br> 한 사람은 결국 필히 멸하게 될 것이다.<br> 그는, 그녀는, 그것은 곤두박질쳐 아래로 내려간다.<br> 이것을 아래라고 부를 수 있을지 모르겠다. <br> 그것은 이해하지 못하는 경로로 항상 뻗어나가고 있었다.<br>            결국 그것이 멸하고 우리가 발견하는 것은 인간이라는 형태의 어떤 것에 불과하다.<br></p>
+
+        <p>이상이란 무엇이어야 하는가?<br> 궁극적 이상은 존재하던 단어였나?<br> 그것은 하나가 그 하나를 완성함인가?<br> 하나이고자 한 것이 하나로 되는 것인가?<br> 하나이고자 생긴 것이 자신을 파괴함과는 다른 일인가?<br></p>
+
+        <p>삶이란 무엇이어야 하는가?<br> 그것은 완성에 대한 논의인가?<br> 파괴에 대한 논의인가?<br> 그것이 그것임에 대한 논의인가?<br> 그것은 그저 거품 덩어리에 불과한가?<br> 무엇이고 싶지 않은 하나의 거품을 보라.<br> 그것은 결국 그것이다. 그것은 언제나 그것일 것이다.<br> 하여튼 그것은 항상 그것이다.<br> 그것은 우리를 떠돈다. 그것은 항상 그것 그 자체인 상태로, 극복되지 못한 상태로 있다.<br> 그것은
+            아마 무엇이든 세계 그 자체에 가장 가까울 것이다.<br> 우린 그것에 가치를 부여할 것이다.<br> 당신의 창에 들어온 그것의 빛은 영원히 남아 그것을 그것으로 있게한다.<br> 다만 대부분 지워버린다.<br> 창으로 빛이 들어오는 한 빛은 절대 사라지지 않는다.<br> 그것은 항상 그것인 채로 있었으나, 우리가 그것을 없앤 척 할 뿐이다.<br> 어딘가를 떠돌 것이고, 언젠가에도 있을 것이다.<br></p>
+
+        <p>죽음은 파괴에 대한 논의인가?<br> 결과에 대한 논의인가?<br> 생각에 대한 논의인가?<br> 죽는다는 것은 모호한 구석이 많다.<br> 인간으로서 필멸하고 그것으로서 불멸한다.<br></p>
+
+        <p>세계는 전적으로 눈을 떠야만 볼 수 있고 눈을 뜬 후 부터 세계가 있다고도 할 수 있다.<br> 그 이전에 그는 없었고, 그의 세계 또한 없게 된다.<br> 한편 그의 세계가 없을 때는 없다.<br> 그는 있기 때문이다.<br> 그의 세계에서는 그에게 시작과 끝이 없다.<br> 그는 멸하여지는 일이 없다.<br> 그는 항상 있었고, 항상 있을 것이며, 아무도 그를 보지 못할 것이다.<br> 나는 눈을 떴을 때부터 있었다.<br> 그때를
+            기억하지 못하지만 기억할 때 이미 있었다<br> 나의 세계에서 나는 영원하다.<br> 그래서 더 유리된 것인가.<br></p>
+
+        <p>창의 중심에는 무엇이 있는가.<br> 그것은 무엇보다 나일 것 같다.<br> 그러나, 다시 생각해보면 이것은 무엇보다 내가 아니다.<br> 밖에 있는 모든 것들, 보이는 범위의 모든 빛들이 엉켜있는 것처럼 보인다.<br> 그것은 무엇보다 그 자리에서 보이는 세계 그 자체인 것이다.<br> 그렇다면 나의 창 그 바깥이 나란 말인가?<br> 그것은 어쩌면 맞는 말이다.<br> 이렇게 보니 나의 창안에서 빛이 나와 모든 것을 비추는 것
+            같기도 하다.<br> 사실 안이 무엇인가?<br> 바깥이 무엇인가?<br> 안이라는 것은 없다.<br> 바깥이라는 것도 없다.<br> 당신은 문을 열고 나갔을 지언정 그곳은 안이다.<br> 결국 구별할 수 없는 둘 중에 한 세계로 들어간 것은 분명하다.<br> 안과 밖은 무척이나 상대적이고, 우리가 이 개념을 사용하는 것은 오만하다.<br> 그것이 그것인 것처럼, 우리는 이런 질문을 하지 않을 수 없다.<br> 나의 창이 '나'
+            그 자체인 어떤 것인가? 하는 질문말이다.<br> 나와 그 밖의 세계에 대한 논의보다는 말끔해보인다.<br> 그것은 안과 밖이 없이 하나의 창이고 하나의 문이기 때문이다.<br> 그것은 경계다.<br> 두 공간을 잇는, 혹은 두 공간으로 만든 경계다. 또는 그것을 그것으로 만든 점 혹은 선, 면 그런 어떤 것으로 묘사될 어떤 것이다.<br></p>
+
+        <p>말하듯이, 그것은 모든 여부와 상관없이 항상 그것이고, 그것일 대로 그것일 것이다.<br> 나는 그 자체로, 나로 존재한다는 것이 중요하다.<br> 창이 있는 한 그것은 '나'로 경계 지을 것이다.<br> 둘 중 어느 쪽이든 하나가 세계이고 빛의 원천인 한 하나는 투영할 것이다.<br></p>
+
+        <p>언제부터 미래는 결정되었다.<br> 그러나 우리는 그것을 감히 볼 자격이 없다.<br> 능력도 더불어 없다.<br> 그렇게 되는 한 우리는 우리의 결정과 자유의지를 높이 칭송할 것이다.<br> 만약 결정된 미래를 본다고 하더라도 그것 또한 하나의 결정이며 우리의 결정이 옳은지 지켜보는 것은 다른 결정과 다를 것이 없다.<br> 한 가지 확실한 것은 ― 받아들이기에따라 당연한 말일 수도 있지만― 내가 나인 한 나는 불멸한다.<br>            그리고 한 쪽이 그 존립을 인정받으면, 창에 의해 그 반대쪽도 보장 받는다.<br> 반대로 내가 아닌 것이 확립되면 나의 존재가 인정된다.<br> 그도 그럴 것이, 여집합이란 것 한 '집합'의 반대에 대한 것이기 때문이다.<br> 그렇기에 나와 세계, 다르게 보면 나와 내가 아닌 그것.<br> 그들이 서로의 존재를 인정하며 영원한 균형을 맞추는 것이다.<br></p>
+
+        <p>이후는, 아니 이전인가?<br> 아마 이것은 글의 시작이오, 끝이 될 것이다.<br> 내용은 이렇다.<br> 나는 내가 어떤 세계인지 알고 싶어졌다.<br> 나는 나인 그것을 찾는 것이다.<br> 찾을 것이고, 증명할 길은 전혀 없는 망상 속을 떠도는 것을 알고, 그렇게 할 것이다.<br> 그리고 이렇게 쓸 것이다.<br> 이야기의 시작에 또는 끝에,<br></p>
+
+        <p>Reverse ⓐ</p>
+
+    </div>
+</body>
+
+</html>

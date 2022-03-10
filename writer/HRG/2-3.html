@@ -1,0 +1,144 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>시작하며...</title>
+    <!--테두우리 2호지 홍록기의 글-->
+    <meta name="author" content="Roggi Hong">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="https://realette.github.io/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                'https://realette.github.io/borderus/xpednfl-ico-file/001.png',
+                'https://realette.github.io/borderus/xpednfl-ico-file/021.png',
+                'https://realette.github.io/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Iropke Batang';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+        }
+        
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 15pt;
+            padding-left: 30%;
+            padding-right: 30%;
+            padding-bottom: 30vw;
+        }
+        
+        p {
+            margin-top: 5pt;
+            margin-bottom: 5pt;
+        }
+        
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+        
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Iropke Batang';
+                font-style: normal;
+                font-weight: 400;
+                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+            }
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 150%;
+                font-family: 'Iropke Batang', serif;
+                font-size: 12pt;
+                padding-left: 4%;
+                padding-right: 4%;
+                padding-bottom: 4vw;
+            }
+            p {
+                margin-top: 5pt;
+                margin-bottom: 5pt;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">글</h1>
+    <h4 id="writer">작성: 홍록기</h4>
+    <div id="text">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;요즘 글이 잘 써지지 않는다. 언제부턴가 글을 쓰기 싫다는 생각이 들었다. 처음 내가 글을 쓰기 시작했을 때 글의 목적은 그저 감정 쓰레기통이었다. 어느것 하나 게워낼 데 없는 자의 고함이었다. 지금 내 글들을 모아 놓는 노트의 이름은 '글'이지만 한창 글을 끄적이기 시작했을 때의 이름은 감정노트였다. (지금 보면 중2병이 심하게 왔었던 것 같다, 정말정말 심각하게... 퍽퍽👊🤦‍♂️)
+            여튼 처음 시작은 나 좋자고 글을 쓰기 시작한 거였다. 온전히 나를 위한 글만을 썼다. 그렇게 차곡차곡 글들이 모이기 시작하니까 어느새 필력이 생기고 글이 느는 것이 보였다. 그렇게 글 노트에 120개 언저리 정도 되는 글이 쌓였을 때 쯤부터 내가 생각하는 '글다운 글'을 쓸 수 있게 되었다. 그렇게 부담감이 생겼다. 언젠가 친구한테 우스갯소리로 "이것이 창작의 고통인가? ㅋㅋ"하며 글 고민을 얘기하기도 했다. 원래는 글을
+            적고 난 후에 항상 날짜를 기록하고 글의 제목을 지었다. 하지만 가면 갈수록 글의 제목을 짓는 것이 귀찮아졌고 내 감정과 감상을 담은 글들이 한 문장이나 단어로 정형화되는 것이 싫었다. 그렇게 점점 무제의 글들이 많아져가는 찰나에 부담감이 생겼다. 위에서 글을 쓴 다음에는 날짜와 제목을 기록한더랬다. 새로운 글을 쓸 때면 자연스레 전에 썼던 글의 길이와 날짜를 확인하고 치장스럽게 꾸며 놓은 제목을 보고서 부담감을 느낀다. 그때
+            나는 '글은 이 정도 길이는 돼야지'라는 멍청한 생각이 무의식 속에 존재했던 것 같다. 그에 따라 긴 글을 써야겠다는 생각과 더 자주 글을 써야겠다는 생각이 안 들 수가 없었다. 그 부담감을 업고 글을 썼다. 사실 업었다기 보다는 글을 쓰기 싫어졌다는 마음을 스스로 외면하고 듣지 않은 것이었다. 글을 쓰기 싫어졌다는 마음을 인정하기 싫었으니 자연스레 그 원인도 찾을 수가 없었다. 그렇게 글을 쓰기 싫은 마음을 스스로에게 꾹꾹
+            숨긴 채 글을 써오다가 어느 순간 글이 싫어졌다는 것을 깨달았다. 곧바로 액션을 취했다. 인스타그램에서 팔로우 하는 작가님들 중 몇 분만을 빼고 전부 팔로우 취소라는 중대결정을 감행했다. 글로 인해 받게 되는 자극을 최대한 줄이기 위한 노력이었고 나로써는 힘든 결정이었다. 그리고 글 또한 쓰고 싶을 때만 쓰기로 했다. 가끔 이 정도로 오랫동안 글을 쓰지 않으면 필력이 퇴화하는 것 아닌가 하는 생각이 드는 것 외엔 딱히 자극
+            받을 일이 없다. 다행이인 일이다. 그러나 난 여전히 글을 쓸 때 부담스럽다. 어쩌면 나에게 글을 쓴다는 일은 항상 이 부담을 포함하는 행위였을지도 모른다. 왜냐하면 나는 글을 그렇게 써왔고, 그렇게 쓰고 있고, 그렇게 쓰진 않을 것이기 때문이다.</p>
+    </div>
+</body>
+
+</html>
