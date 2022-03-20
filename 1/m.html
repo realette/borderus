@@ -224,42 +224,82 @@
             right: 0;
             top: 8.87%;
             width: 6vh;
-            height: 9.23vh;
+            height: fit-content;
             border-radius: 0.66vh;
             z-index: 6;
         }
         
-        .twoho {
-            font-weight: bolder;
-            font-style: normal;
-            position: relative;
-            left: 4.7%;
-            top: 0.25vh;
-            width: 5.5vh;
-            height: 3.75vh;
-            background-color: #887DAD;
-            font-size: 2vh;
-            text-align: center;
-            border-radius: 0.5vh;
-            z-index: 6;
-            line-height: 3.5vh;
-        }
-        
-        .nooneho {
+        #oneho {
             font-family: 'GowunBatang-Bold';
             font-weight: bolder;
             font-style: normal;
             position: relative;
             left: 4.7%;
-            top: 1.5vh;
+            top: 0;
+            width: 5.5vh;
+            height: 3.75vh;
+            background-color: #887DAD;
+            font-size: 2vh;
+            text-align: center;
+            border-radius: 0.3vh;
+            z-index: 6;
+            line-height: 4vh;
+            margin-top: 0.25vh;
+            margin-bottom: 0.25vh;
+        }
+        
+        #twoho {
+            font-family: 'GowunBatang-Bold';
+            font-weight: bolder;
+            font-style: normal;
+            position: relative;
+            left: 4.7%;
+            top: 0;
+            width: 5.5vh;
+            height: 3.75vh;
+            background-color: #887DAD;
+            font-size: 2vh;
+            text-align: center;
+            border-radius: 0.3vh;
+            z-index: 6;
+            line-height: 4vh;
+            margin-bottom: 0.25vh;
+        }
+        
+        #threeho {
+            font-family: 'GowunBatang-Bold';
+            font-weight: bolder;
+            font-style: normal;
+            position: relative;
+            left: 4.7%;
+            top: 0;
+            width: 5.5vh;
+            height: 3.75vh;
+            background-color: #887DAD;
+            font-size: 2vh;
+            text-align: center;
+            border-radius: 0.3vh;
+            z-index: 6;
+            line-height: 4vh;
+            margin-bottom: 0.25vh;
+        }
+        
+        #allho {
+            font-family: 'GowunBatang-Bold';
+            font-weight: bolder;
+            font-style: normal;
+            position: relative;
+            left: 4.7%;
+            top: 0;
             width: 5.5vh;
             height: 3.75vh;
             background-color: #887DAD;
             font-size: 1.5vh;
             text-align: center;
-            border-radius: 0.5vh;
+            border-radius: 0.3vh;
             z-index: 6;
-            line-height: 3.5vh;
+            line-height: 4vh;
+            margin-bottom: 0.25vh;
         }
     </style>
 </head>
@@ -272,8 +312,10 @@
     <div id="box"></div>
 
     <div id="modal">
-        <div class="twoho" id="twoho">2호지</div>
-        <div class="nooneho" id="allho">전체보기</div>
+        <div id="oneho">1호지</div>
+        <div id="twoho">2호지</div>
+        <div id="threeho">3호지</div>
+        <div id="allho">전체보기</div>
     </div>
     <div id="wall">
 
@@ -374,8 +416,14 @@
         }
 
 
+        document.getElementById("oneho").onclick = function() {
+            self.location = "https://realette.github.io/borderus/1"
+        }
         document.getElementById("twoho").onclick = function() {
             self.location = "https://realette.github.io/borderus/2"
+        }
+        document.getElementById("threeho").onclick = function() {
+            self.location = "https://realette.github.io/borderus/3"
         }
         document.getElementById("allho").onclick = function() {
             self.location = "https://realette.github.io/borderus/allhoji"

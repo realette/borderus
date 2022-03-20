@@ -145,7 +145,7 @@
             position: fixed;
             left: 0pt;
             right: 0pt;
-            background-color: #3D3D35;
+            background-color: #d1cfc2;
             fill: none;
         }
         
@@ -183,10 +183,10 @@
         }
         
         .window {
-            margin: 1.5vw;
+            margin: 5pt;
             text-align: left;
             position: absolute;
-            border: #88A88F solid 7px;
+            border: #818181 solid 7px;
         }
         
         .shadow {
@@ -196,62 +196,75 @@
         }
         
         #shadow1 {
-            background-color: rgb(248, 255, 244);
+            background-color: rgba(212, 245, 255, 0.24);
             top: 80vh;
-            left: 59vw;
-            width: 15vw;
+            left: 50vw;
+            width: 22.5vw;
             padding-bottom: 20vh;
-            filter: blur(2px);
+            filter: blur(2.5px);
         }
         
         #shadow4 {
-            background-color: rgb(248, 255, 244);
+            background-color: rgba(212, 245, 255, 0.24);
             top: 80vh;
-            left: 35.5vw;
-            width: 22vw;
+            left: 37vw;
+            width: 11.5vw;
             padding-bottom: 20vh;
-            filter: blur(2px);
+            filter: blur(2.5px);
         }
         
         #window1 {
             color: black;
-            background-color: rgb(250, 255, 252);
-            top: 35.5vh;
-            left: 52vw;
-            width: 15vw;
-            padding-bottom: 14vw;
+            background-color: rgb(238, 225, 49);
+            top: 41.5vh;
+            left: 43.5vw;
+            width: 23vw;
+            padding-bottom: 21.5vh;
         }
         
         #window2 {
             color: black;
-            background-color: rgb(250, 255, 252);
-            top: 35.5vh;
-            left: 28.5vw;
-            width: 22vw;
-            padding-bottom: 14vw;
+            background-color: rgb(110, 173, 255);
+            top: 15vh;
+            left: 43.5vw;
+            width: 23vw;
+            padding-bottom: 23.5vh;
         }
         
         #window3 {
             color: black;
-            background-color: rgb(250, 255, 252);
-            top: 10vh;
-            left: 49vw;
-            width: 18vw;
-            padding-bottom: 11vw;
+            background-color: rgba(110, 173, 255, 0);
+            top: 15vh;
+            left: 30vw;
+            width: 12vw;
+            padding-bottom: 48vh;
+        }
+        
+        #window3B1 {
+            position: absolute;
+            top: 0vh;
+            left: 0;
+            width: 12vw;
+            height: 24vh;
+            background-color: rgb(110, 173, 255);
+        }
+        
+        #window3B2 {
+            position: absolute;
+            top: 24vh;
+            left: 0;
+            width: 12vw;
+            height: 24vh;
+            background-color: rgb(238, 225, 49);
         }
         
         .windowTextTitle {
             margin-top: 0pt;
-            margin-bottom: 6pt;
+            margin-bottom: 2pt;
         }
         
         #window4 {
-            color: black;
-            background-color: rgb(250, 255, 252);
-            top: 10vh;
-            left: 28.5vw;
-            width: 19vw;
-            padding-bottom: 11vw;
+            visibility: hidden;
         }
         
         .article {
@@ -259,7 +272,7 @@
             font-weight: normal;
             font-style: normal;
             position: absolute;
-            margin: 7%;
+            margin: 7pt;
             max-width: 100%;
             height: auto !important;
             font-size: 1.3vw;
@@ -281,6 +294,7 @@
             top: 1.75vh;
             left: 45vw;
             width: auto !important;
+            filter: invert(75%) drop-shadow(2px 2px 3px #706f6788);
         }
         
         #floor {
@@ -292,7 +306,7 @@
             left: 0%;
             width: 100vw;
             height: 24vh;
-            background-color: #7a7e73;
+            background-color: rgb(102, 97, 44);
             z-index: 2;
         }
         
@@ -305,7 +319,7 @@
             right: 0;
             width: 9vh;
             height: 6vh;
-            background-color: #b5d6bc;
+            background-color: #EEE131;
             font-size: 4vh;
             text-align: center;
             border-top-left-radius: 1vh;
@@ -330,65 +344,106 @@
             visibility: hidden;
             display: none;
             opacity: 0;
-            background-color: #b5d6bcd5;
+            background-color: #eee131af;
             right: 0;
             top: 13%;
             width: 9vh;
-            height: 12vh;
+            height: fit-content;
             border-radius: 1vh;
             z-index: 6;
         }
         
-        .oneho {
+        #oneho {
             font-family: 'GowunBatang-Bold';
             font-weight: bolder;
             font-style: normal;
             position: relative;
             left: 12.5%;
-            top: 1.25vh;
+            top: 0;
             width: 7vh;
             height: 4vh;
-            background-color: #887DAD;
+            background-color: #afab7d;
             font-size: 2.2vh;
             text-align: center;
             border-radius: 0.3vh;
             z-index: 6;
             line-height: 4vh;
+            margin-top: 1.25vh;
+            margin-bottom: 1.25vh;
         }
         
-        .nooneho {
+        #twoho {
             font-family: 'GowunBatang-Bold';
             font-weight: bolder;
             font-style: normal;
             position: relative;
             left: 12.5%;
-            top: 2.5vh;
+            top: 0;
             width: 7vh;
             height: 4vh;
-            background-color: #887DAD;
+            background-color: #afab7d;
+            font-size: 2.2vh;
+            text-align: center;
+            border-radius: 0.3vh;
+            z-index: 6;
+            line-height: 4vh;
+            margin-bottom: 1.25vh;
+        }
+        
+        #threeho {
+            font-family: 'GowunBatang-Bold';
+            font-weight: bolder;
+            font-style: normal;
+            position: relative;
+            left: 12.5%;
+            top: 0;
+            width: 7vh;
+            height: 4vh;
+            background-color: #afab7d;
+            font-size: 2.2vh;
+            text-align: center;
+            border-radius: 0.3vh;
+            z-index: 6;
+            line-height: 4vh;
+            margin-bottom: 1.25vh;
+        }
+        
+        #allho {
+            font-family: 'GowunBatang-Bold';
+            font-weight: bolder;
+            font-style: normal;
+            position: relative;
+            left: 12.5%;
+            top: 0vh;
+            width: 7vh;
+            height: 4vh;
+            background-color: #afab7d;
             font-size: 1.9vh;
             text-align: center;
             border-radius: 0.3vh;
             z-index: 6;
             line-height: 4vh;
+            margin-bottom: 1.25vh;
         }
     </style>
 </head>
 
 <body>
     <div id="toggle" onclick="toggle()">
-        2
+        3
     </div>
     <div id="toggleDot"></div>
     <div id="box"></div>
 
     <div id="modal">
-        <div class="oneho" id="oneho">1호지</div>
-        <div class="nooneho" id="allho">전체보기</div>
+        <div id="oneho">1호지</div>
+        <div id="twoho">2호지</div>
+        <div id="threeho">3호지</div>
+        <div id="allho">전체보기</div>
     </div>
     <div id="wall">
         <div id="iconImg">
-            <img id="logoImg" src='https://realette.github.io/borderus/xpednfl-ash-green.png'>
+            <img id="logoImg" src='https://realette.github.io/borderus/xpednfl-pale-purple.png'>
             <!--
             <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl.png'>
             <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-green.png'>
@@ -414,8 +469,10 @@
                 <div class="readMore">마저 읽기</div>
             </div>
             <div id="window3" class="window">
+                <div id="window3B1"></div>
+                <div id="window3B2"></div>
                 <div id="window3text" class="article">
-                    <p class="windowTextTitle" id="window3textTitle">나는 키예프 시민이다</p>
+                    <p class="windowTextTitle" id="window3textTitle">나는 키이우 시민이다</p>
                     잔인할 수 있고, 시적이며 눈이 멀어있는 것. 그것은 정의와 평화다. 평화를 위해 핵무기가 있고, 정의를 위해 초월적인 힘이 있다. 사람들은 정의와 평화를 강요하지만, 그것들이 아직도 가치가 있을까? 우리는 핵무기를 '전쟁억제력'이라고 부르는 게 당연한 시대에...
                 </div>
                 <div class="readMore">마저 읽기</div>
@@ -490,6 +547,12 @@
 
         document.getElementById("oneho").onclick = function() {
             self.location = "https://realette.github.io/borderus/1"
+        }
+        document.getElementById("twoho").onclick = function() {
+            self.location = "https://realette.github.io/borderus/2"
+        }
+        document.getElementById("threeho").onclick = function() {
+            self.location = "https://realette.github.io/borderus/3"
         }
         document.getElementById("allho").onclick = function() {
             self.location = "https://realette.github.io/borderus/allhoji"

@@ -49,7 +49,7 @@
         
         html {
             overflow: hidden;
-            background-color: #3D3D35;
+            background-color: #D1CFC2;
         }
         
         body {
@@ -86,7 +86,7 @@
         .window {
             margin: 1.5vw;
             text-align: left;
-            border: #88A88F solid 3px;
+            border: #818181 solid 3px;
             position: relative;
         }
         
@@ -102,8 +102,8 @@
         
         #shadow4 {
             color: white;
-            background-color: rgb(248, 255, 244);
-            top: 85vh;
+            background-color: rgba(255, 253, 225, 0.253);
+            top: 94vh;
             left: 23vw;
             width: 100vw;
             padding-bottom: 12vh;
@@ -112,23 +112,23 @@
         
         #window1 {
             color: black;
-            background-color: rgb(250, 255, 252);
+            background-color: #6EADFF;
             width: 90%;
-            padding-bottom: 25vw;
+            padding-bottom: 31vw;
         }
         
         #window2 {
             color: black;
-            background-color: rgb(250, 255, 252);
+            background-color: #6EADFF;
             width: 90%;
-            padding-bottom: 25vw;
+            padding-bottom: 32vw;
         }
         
         #window3 {
             color: black;
-            background-color: rgb(250, 255, 252);
+            background-color: #EEE131;
             width: 90%;
-            padding-bottom: 20vw;
+            padding-bottom: 37vw;
         }
         
         .windowTextTitle {
@@ -137,10 +137,7 @@
         }
         
         #window4 {
-            color: black;
-            background-color: rgb(250, 255, 252);
-            width: 90%;
-            padding-bottom: 20vw;
+            display: none;
         }
         
         .article {
@@ -164,6 +161,7 @@
         
         #logoImg {
             width: auto !important;
+            filter: invert(75%) drop-shadow(2px 2px 3px #706f6788);
         }
         
         #floor {
@@ -173,7 +171,7 @@
             left: 0;
             width: 100vw;
             height: 18vh;
-            background-color: #7a7e73;
+            background-color: #66612C;
             z-index: 2;
         }
         
@@ -211,46 +209,86 @@
             visibility: hidden;
             display: none;
             opacity: 0;
-            background-color: #b5d6bcd5;
+            background-color: #eee131af;
             right: 0;
             top: 8.87%;
             width: 6vh;
-            height: 9.23vh;
+            height: fit-content;
             border-radius: 0.66vh;
             z-index: 6;
         }
         
-        .oneho {
-            font-weight: bolder;
-            font-style: normal;
-            position: relative;
-            left: 4.7%;
-            top: 0.25vh;
-            width: 5.5vh;
-            height: 3.75vh;
-            background-color: #887DAD;
-            font-size: 2vh;
-            text-align: center;
-            border-radius: 0.5vh;
-            z-index: 6;
-            line-height: 3.5vh;
-        }
-        
-        .nooneho {
+        #oneho {
             font-family: 'GowunBatang-Bold';
             font-weight: bolder;
             font-style: normal;
             position: relative;
             left: 4.7%;
-            top: 1.5vh;
+            top: 0;
             width: 5.5vh;
             height: 3.75vh;
-            background-color: #887DAD;
+            background-color: #afab7d;
+            font-size: 2vh;
+            text-align: center;
+            border-radius: 0.3vh;
+            z-index: 6;
+            line-height: 4vh;
+            margin-top: 0.25vh;
+            margin-bottom: 0.25vh;
+        }
+        
+        #twoho {
+            font-family: 'GowunBatang-Bold';
+            font-weight: bolder;
+            font-style: normal;
+            position: relative;
+            left: 4.7%;
+            top: 0;
+            width: 5.5vh;
+            height: 3.75vh;
+            background-color: #afab7d;
+            font-size: 2vh;
+            text-align: center;
+            border-radius: 0.3vh;
+            z-index: 6;
+            line-height: 4vh;
+            margin-bottom: 0.25vh;
+        }
+        
+        #threeho {
+            font-family: 'GowunBatang-Bold';
+            font-weight: bolder;
+            font-style: normal;
+            position: relative;
+            left: 4.7%;
+            top: 0;
+            width: 5.5vh;
+            height: 3.75vh;
+            background-color: #afab7d;
+            font-size: 2vh;
+            text-align: center;
+            border-radius: 0.3vh;
+            z-index: 6;
+            line-height: 4vh;
+            margin-bottom: 0.25vh;
+        }
+        
+        #allho {
+            font-family: 'GowunBatang-Bold';
+            font-weight: bolder;
+            font-style: normal;
+            position: relative;
+            left: 4.7%;
+            top: 0;
+            width: 5.5vh;
+            height: 3.75vh;
+            background-color: #afab7d;
             font-size: 1.5vh;
             text-align: center;
-            border-radius: 0.5vh;
+            border-radius: 0.3vh;
             z-index: 6;
-            line-height: 3.5vh;
+            line-height: 4vh;
+            margin-bottom: 0.25vh;
         }
     </style>
 </head>
@@ -263,14 +301,16 @@
     <div id="box"></div>
 
     <div id="modal">
-        <div class="oneho" id="oneho">1호지</div>
-        <div class="nooneho" id="allho">전체보기</div>
+        <div id="oneho">1호지</div>
+        <div id="twoho">2호지</div>
+        <div id="threeho">3호지</div>
+        <div id="allho">전체보기</div>
     </div>
 
     <div id="wall">
         <div id="windows">
             <div id="iconImg">
-                <img id="logoImg" src='https://realette.github.io/borderus/xpednfl-ash-green.png'>
+                <img id="logoImg" src='https://realette.github.io/borderus/xpednfl-pale-purple.png'>
                 <!--
                 <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl.png'>
                 <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-green.png'>
@@ -296,7 +336,7 @@
             </div>
             <div id="window3" class="window">
                 <div id="window3text" class="article">
-                    <p class="windowTextTitle" id="window3textTitle">나는 키예프 시민이다</p>
+                    <p class="windowTextTitle" id="window3textTitle">나는 키이우 시민이다</p>
                     잔인할 수 있고, 시적이며 눈이 멀어있는 것. 그것은 정의와 평화다. 평화를 위해 핵무기가 있고, 정의를 위해 초월적인 힘이 있다. 사람들은 정의와 평화를 강요하지만, 그것들이 아직도 가치가 있을까? 우리는 핵무기를 '전쟁억제력'이라고 부르는 게 당연한 시대에...
                 </div>
                 <div class="readMore">마저 읽기</div>
@@ -370,6 +410,12 @@
 
             document.getElementById("oneho").onclick = function() {
                 self.location = "https://realette.github.io/borderus/1"
+            }
+            document.getElementById("twoho").onclick = function() {
+                self.location = "https://realette.github.io/borderus/2"
+            }
+            document.getElementById("threeho").onclick = function() {
+                self.location = "https://realette.github.io/borderus/3"
             }
             document.getElementById("allho").onclick = function() {
                 self.location = "https://realette.github.io/borderus/allhoji"
