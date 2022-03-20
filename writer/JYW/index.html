@@ -61,6 +61,15 @@
             font-style: normal;
         }
         
+        #text {
+            font-family: 'GowunBatang-Bold';
+            position: absolute;
+            top: 11%;
+            transform: translateX(-50%);
+            left: 50%;
+            font-size: 3vmin;
+        }
+        
         #logoImg {
             position: absolute;
             height: 72.8px;
@@ -72,27 +81,71 @@
         
         #chartSite {
             position: absolute;
+            top: 17%;
             left: 50%;
-            transform: translateX(-67%);
-            margin-top: 10vh;
+            transform: translateX(-50%);
             text-align: center;
         }
         
         .site {
-            width: 100%;
-            position: relative;
-            padding: 3vmin;
-            margin: 1.5vmin;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 50vmin;
+            height: fit-content;
+            margin-top: 10px;
+            margin-bottom: 10px;
             background-color: #7DA89B;
             font-family: 'GowunBatang-Bold';
             font-weight: bolder;
             font-style: normal;
             font-size: 3vh;
         }
+        
+        @media screen and (max-width: 768px) {
+            #text {
+                font-family: 'GowunBatang-Bold';
+                width: fit-content;
+                position: absolute;
+                top: 9%;
+                transform: translateX(-50%);
+                left: 50%;
+                font-size: 5vmin;
+            }
+            #logoImg {
+                position: absolute;
+                height: 72.8px;
+                left: 50%;
+                top: 1%;
+                transform: translateX(-50%);
+                width: auto !important;
+            }
+            #chartSite {
+                position: absolute;
+                top: 12%;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+                width: 75%;
+            }
+            .site {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                width: 100%;
+                height: fit-content;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                background-color: #7DA89B;
+                font-family: 'GowunBatang-Bold';
+                font-weight: bolder;
+                font-style: normal;
+                font-size: 3vh;
+            }
+        }
     </style>
 </head>
 
 <body>
+
     <div id="iconImg">
         <img id="logoImg" src='https://realette.github.io/borderus/xpednfl-ash-green.png'>
         <!--
@@ -104,6 +157,7 @@
         <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-purple.png'>
         -->
     </div>
+    <div id="text">작가별 분류: 주영욱의 글 모음</div>
     <div id="chartSite">
         <div class="Site" id="1">창간사</div>
 
