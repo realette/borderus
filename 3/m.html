@@ -103,10 +103,10 @@
         #shadow4 {
             color: white;
             background-color: rgba(255, 253, 225, 0.253);
-            top: 94vh;
+            bottom: 0;
             left: 23vw;
             width: 100vw;
-            padding-bottom: 12vh;
+            padding-bottom: 11vh;
             filter: blur(2px);
         }
         
@@ -296,7 +296,7 @@
             transform: translateX(-50%);
             text-align: center;
             position: absolute;
-            bottom: 4vmin;
+            bottom: 7vmin;
             z-index: 7;
             width: fit-content;
         }
@@ -304,6 +304,11 @@
         a {
             text-decoration: none;
             color: black;
+        }
+        
+        hr {
+            background-color: black;
+            border: black 0.3px solid;
         }
     </style>
 </head>
@@ -372,7 +377,7 @@
                 </div>
             </div>
             <div id="floor"></div>
-            <div id="bottomText"><strong><a href="https://realette.github.io/borderus/about" target="_blank">About - 우리와 테ㄷ우리에 대하여</a> | <a href="https://realette.github.io/borderus/contact" target="_blank">Contact - 우리와 함께</a></strong></div>
+            <div id="bottomText"><strong><a href="https://realette.github.io/borderus/about" target="_blank">About - 우리와 테ㄷ우리에 대하여</a> <hr> <a href="https://realette.github.io/borderus/contact" target="_blank">Contact - 우리와 함께</a></strong></div>
         </div>
         <script>
             const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
