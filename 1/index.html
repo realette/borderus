@@ -395,6 +395,24 @@
             margin-bottom: 1.25vh;
         }
         
+        #writerho {
+            font-family: 'GowunBatang-Bold';
+            font-weight: bolder;
+            font-style: normal;
+            position: relative;
+            left: 12.5%;
+            top: 0;
+            width: 7vh;
+            height: 4vh;
+            background-color: #887DAD;
+            font-size: 2.2vh;
+            text-align: center;
+            border-radius: 0.3vh;
+            z-index: 6;
+            line-height: 4vh;
+            margin-bottom: 1.25vh;
+        }
+        
         #allho {
             font-family: 'GowunBatang-Bold';
             font-weight: bolder;
@@ -425,6 +443,7 @@
         <div id="oneho">1호지</div>
         <div id="twoho">2호지</div>
         <div id="threeho">3호지</div>
+        <div id="writerho">작가별</div>
         <div id="allho">전체보기</div>
     </div>
     <div id="wall">
@@ -533,6 +552,9 @@
         }
         document.getElementById("threeho").onclick = function() {
             self.location = "https://realette.github.io/borderus/3"
+        }
+        document.getElementById("writerho").onclick = function() {
+            self.location = "https://realette.github.io/borderus/writer"
         }
         document.getElementById("allho").onclick = function() {
             self.location = "https://realette.github.io/borderus/allhoji"
