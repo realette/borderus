@@ -63,11 +63,13 @@
         
         #text {
             font-family: 'GowunBatang-Bold';
-            position: absolute;
-            top: 11%;
+            position: relative;
+            top: 10vmin;
             transform: translateX(-50%);
             left: 50%;
             font-size: 3vmin;
+            width: fit-content;
+            height: fit-content;
         }
         
         #logoImg {
@@ -80,18 +82,19 @@
         }
         
         #chartSite {
-            position: absolute;
-            top: 17%;
+            position: relative;
+            top: 12vmin;
             left: 50%;
             transform: translateX(-50%);
+            width: fit-content;
             text-align: center;
         }
         
         .site {
             padding-top: 10px;
             padding-bottom: 10px;
-            width: 50vmin;
-            height: fit-content;
+            width: 15vmin;
+            height: 5vmin;
             margin-top: 10px;
             margin-bottom: 10px;
             background-color: #7DA89B;
@@ -104,11 +107,11 @@
         @media screen and (max-width: 768px) {
             #text {
                 font-family: 'GowunBatang-Bold';
-                width: fit-content;
-                position: absolute;
-                top: 9%;
+                position: relative;
+                top: 18vmin;
                 transform: translateX(-50%);
                 left: 50%;
+                width: fit-content;
                 font-size: 5vmin;
             }
             #logoImg {
@@ -120,12 +123,12 @@
                 width: auto !important;
             }
             #chartSite {
-                position: absolute;
-                top: 12%;
+                position: relative;
+                top: 18vmin;
                 left: 50%;
                 transform: translateX(-50%);
                 text-align: center;
-                width: 75%;
+                width: 50%;
             }
             .site {
                 padding-top: 10px;
