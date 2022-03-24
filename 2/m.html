@@ -22,16 +22,16 @@
         var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(navigator.userAgent.toLowerCase()));
 
         if (!mobile) {
-            window.location.href = "https://realette.github.io/borderus/2";
+            window.location.href = "/borderus/2";
         }
     </script>
 
     <script>
         if (window.console != undefined) {
-            console.log('%c          ', 'font-size:400px; background:url(https://realette.github.io/borderus/xpednfl-min.png) no-repeat;');
+            console.log('%c          ', 'font-size:400px; background:url(/borderus/xpednfl-min.png) no-repeat;');
         }
     </script>
-    <link rel="icon" type="image/png" href="https://realette.github.io/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
 
     <style>
         @font-face {
@@ -353,14 +353,16 @@
     <div id="wall">
         <div id="windows">
             <div id="iconImg">
-                <img id="logoImg" src='https://realette.github.io/borderus/xpednfl-ash-green.png' alt="잿빛 초록색의 테두우리 로고 이미지, 테두리라는 글자에서 ㄷ옆에 ㅇ이 함께 초성으로 있는 형태이다. ">
+                <a href="/borderus/about.html" target="_blank">
+                    <img id="logoImg" src='/borderus/xpednfl-ash-green.png' alt="잿빛 초록색의 테두우리 로고 이미지, 테두리라는 글자에서 ㄷ옆에 ㅇ이 함께 초성으로 있는 형태이다. ">
+                </a>
                 <!--
-                <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl.png'>
-                <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-green.png'>
-                <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-red.png'>
-                <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-hot-pink.png'>
-                <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-pale-purple.png'>
-                <img width="192/2" height="108/2" src='https://realette.github.io/borderus/xpednfl-ash-purple.png'>
+                <img width="192/2" height="108/2" src='/borderus/xpednfl.png'>
+                <img width="192/2" height="108/2" src='/borderus/xpednfl-ash-green.png'>
+                <img width="192/2" height="108/2" src='/borderus/xpednfl-ash-red.png'>
+                <img width="192/2" height="108/2" src='/borderus/xpednfl-hot-pink.png'>
+                <img width="192/2" height="108/2" src='/borderus/xpednfl-pale-purple.png'>
+                <img width="192/2" height="108/2" src='/borderus/xpednfl-ash-purple.png'>
                 -->
             </div>
             <div id="window1" class="window">
@@ -401,7 +403,7 @@
             </div>
         </div>
         <div id="floor"></div>
-        <div id="bottomText"><strong><a href="https://realette.github.io/borderus/about" target="_blank">About - 우리와 테ㄷ우리에 대하여</a> <hr> <a href="https://realette.github.io/borderus/contact" target="_blank">Contact - 우리와 함께</a></strong></div>
+        <div id="bottomText"><strong><a href="/borderus/about" target="_blank">About - 우리와 테ㄷ우리에 대하여</a> <hr> <a href="/borderus/contact" target="_blank">Contact - 우리와 함께</a></strong></div>
     </div>
     <script>
         const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -416,16 +418,16 @@
         logoImg.style.height = height / 10;
         var windows = document.getElementById("windows");
         document.getElementById("window1").onclick = function() {
-            self.location = "https://realette.github.io/borderus/writer/HRG/2-3"
+            self.location = "/borderus/writer/HRG/2-3"
         }
         document.getElementById("window2").onclick = function() {
-            self.location = "https://realette.github.io/borderus/writer/JYW/2-3"
+            self.location = "/borderus/writer/JYW/2-3"
         }
         document.getElementById("window3").onclick = function() {
-            self.location = "https://realette.github.io/borderus/writer/JYW/2-4"
+            self.location = "/borderus/writer/JYW/2-4"
         }
         document.getElementById("window4").onclick = function() {
-            self.location = "https://realette.github.io/borderus/writer/KJM/2-1"
+            self.location = "/borderus/writer/KJM/2-1"
         }
 
         var d = 1;
@@ -452,19 +454,19 @@
 
 
         document.getElementById("oneho").onclick = function() {
-            self.location = "https://realette.github.io/borderus/1"
+            self.location = "/borderus/1"
         }
         document.getElementById("twoho").onclick = function() {
-            self.location = "https://realette.github.io/borderus/2"
+            self.location = "/borderus/2"
         }
         document.getElementById("threeho").onclick = function() {
-            self.location = "https://realette.github.io/borderus/3"
+            self.location = "/borderus/3"
         }
         document.getElementById("writerho").onclick = function() {
-            self.location = "https://realette.github.io/borderus/writer"
+            self.location = "/borderus/writer"
         }
         document.getElementById("allho").onclick = function() {
-            self.location = "https://realette.github.io/borderus/allhoji"
+            self.location = "/borderus/allhoji"
         }
     </script>
 </body>
