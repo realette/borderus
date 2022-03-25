@@ -458,22 +458,35 @@
             text-decoration: none;
             color: black;
         }
+        
+        .ho {
+            color: black;
+        }
     </style>
 </head>
 
 <body>
-    <div id="toggle" onclick="toggle()">
+    <div id="toggle" onclick="toggle()" style="cursor: hand;">
         3
     </div>
     <div id="toggleDot"></div>
     <div id="box"></div>
-
     <div id="modal">
-        <div id="oneho">1호지</div>
-        <div id="twoho">2호지</div>
-        <div id="threeho">3호지</div>
-        <div id="writerho">작가별</div>
-        <div id="allho">전체보기</div>
+        <a href="/borderus/1" target="_self" class="ho">
+            <div id="oneho">1호지</div>
+        </a>
+        <a href="/borderus/2" target="_self" class="ho">
+            <div id="twoho">2호지</div>
+        </a>
+        <a href="/borderus/3" target="_self" class="ho">
+            <div id="threeho">3호지</div>
+        </a>
+        <a href="/borderus/writer" target="_self" class="ho">
+            <div id="writerho">작가별</div>
+        </a>
+        <a href="/borderus/allhoji" target="_self" class="ho">
+            <div id="allho">전체보기</div>
+        </a>
     </div>
     <div id="wall">
 
@@ -491,36 +504,36 @@
             -->
         </div>
         <div id="windows">
-            <div id="window1" class="window">
-                <div id="window1text" class="article">
-                    <p class="windowTextTitle" id="window1textTitle">비행기 사람들</p>
-                    평화에 굴복한 적이 많았다. 그는. 그러나 그는 덜 굴복하던 사람들 중 하나였다. 그래서 그는 손쉽게 비정상으로 분류할 수 있는 인물이었다. 평화는 평화에 굴복한 이들이 행하는가?...
+            <a href="/borderus/writer/JYW/3-5" target="_self">
+                <div id="window1" class="window">
+                    <div id="window1text" class="article">
+                        <p class="windowTextTitle" id="window1textTitle">비행기 사람들</p>
+                        평화에 굴복한 적이 많았다. 그는. 그러나 그는 덜 굴복하던 사람들 중 하나였다. 그래서 그는 손쉽게 비정상으로 분류할 수 있는 인물이었다. 평화는 평화에 굴복한 이들이 행하는가?...
+                    </div>
+                    <div class="readMore">마저 읽기</div>
                 </div>
-                <div class="readMore">마저 읽기</div>
-            </div>
-            <div id="window2" class="window">
-                <div id="window2text" class="article">
-                    <p class="windowTextTitle" id="window1textTitle">대한민국은 아직 휴전국가이다</p>
-                    1953년 정전 협정을 맺은 이후 대한민국은 휴전국가이다. 휴전은 종전을 의미하는 것이 아니다. 정전 협정을 맺은지 어느새 70년이 다 되어간다. 전쟁의 기억을 가진 사람들이 점차 줄어들기 시작하면서...
+            </a>
+            <a href="/borderus/writer/HRG/3-4" target="_self">
+                <div id="window2" class="window">
+                    <div id="window2text" class="article">
+                        <p class="windowTextTitle" id="window1textTitle">대한민국은 아직 휴전국가이다</p>
+                        1953년 정전 협정을 맺은 이후 대한민국은 휴전국가이다. 휴전은 종전을 의미하는 것이 아니다. 정전 협정을 맺은지 어느새 70년이 다 되어간다. 전쟁의 기억을 가진 사람들이 점차 줄어들기 시작하면서...
+                    </div>
+                    <div class="readMore">마저 읽기</div>
                 </div>
-                <div class="readMore">마저 읽기</div>
-            </div>
-            <div id="window3" class="window">
-                <div id="window3B1"></div>
-                <div id="window3B2"></div>
-                <div id="window3text" class="article">
-                    <p class="windowTextTitle" id="window3textTitle">나는 키이우 시민이다</p>
-                    잔인할 수 있고, 시적이며 눈이 멀어있는 것. 그것은 정의와 평화다. 평화를 위해 핵무기가 있고, 정의를 위해 초월적인 힘이 있다. 사람들은 정의와 평화를 강요하지만, 그것들이 아직도 가치가 있을까? 우리는 핵무기를 '전쟁억제력'이라고 부르는 게 당연한 시대에...
+            </a>
+            <a href="/borderus/writer/JYW/3-6" target="_self">
+                <div id="window3" class="window">
+                    <div id="window3B1"></div>
+                    <div id="window3B2"></div>
+                    <div id="window3text" class="article">
+                        <p class="windowTextTitle" id="window3textTitle">나는 키이우 시민이다</p>
+                        잔인할 수 있고, 시적이며 눈이 멀어있는 것. 그것은 정의와 평화다. 평화를 위해 핵무기가 있고, 정의를 위해 초월적인 힘이 있다. 사람들은 정의와 평화를 강요하지만, 그것들이 아직도 가치가 있을까? 우리는 핵무기를 '전쟁억제력'이라고 부르는 게 당연한 시대에...
+                    </div>
+                    <div class="readMore">마저 읽기</div>
                 </div>
-                <div class="readMore">마저 읽기</div>
-            </div>
-            <div id="window4" class="window">
-                <div id="window4text" class="article">
-                    <p class="windowTextTitle" id="window4textTitle"></p>
-                    ...
-                </div>
-                <div class="readMore">마저 읽기</div>
-            </div>
+            </a>
+
         </div>
         <div id="shadows">
             <div id="shadow1" class="shadow">
@@ -549,16 +562,6 @@
         logoImg.style.height = height / 10;
         var windows = document.getElementById("windows")
 
-        document.getElementById("window1").onclick = function() {
-            self.location = "/borderus/writer/JYW/3-5.html"
-        }
-        document.getElementById("window2").onclick = function() {
-            self.location = "/borderus/writer/HRG/3-4.html"
-        }
-        document.getElementById("window3").onclick = function() {
-            self.location = "/borderus/writer/JYW/3-6"
-        }
-
 
         var c = 1;
         var d = 1;
@@ -579,22 +582,6 @@
                 c = 1;
                 console.log(c);
             }
-        }
-
-        document.getElementById("oneho").onclick = function() {
-            self.location = "/borderus/1"
-        }
-        document.getElementById("twoho").onclick = function() {
-            self.location = "/borderus/2"
-        }
-        document.getElementById("threeho").onclick = function() {
-            self.location = "/borderus/3"
-        }
-        document.getElementById("writerho").onclick = function() {
-            self.location = "/borderus/writer"
-        }
-        document.getElementById("allho").onclick = function() {
-            self.location = "/borderus/allhoji"
         }
     </script>
 </body>
