@@ -1,0 +1,173 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>방랑자에게 보내는 편지</title>
+    <!--테두우리 4호지 주영욱의 두번째 글-->
+    <meta name="author" content="Yeong-wook Joo">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                '/borderus/xpednfl-ico-file/001.png',
+                '/borderus/xpednfl-ico-file/021.png',
+                '/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Iropke Batang';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+        }
+        
+        p {
+            margin-top: 50pt;
+            margin-bottom: 50pt;
+        }
+        
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 15pt;
+            padding-left: 25%;
+            padding-right: 25%;
+            padding-bottom: 20vw;
+        }
+        
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+        
+        u {
+            text-decoration: underline 0.5px;
+            text-underline-offset: -13.5pt;
+        }
+        
+        #titleU {
+            text-decoration: underline 2px;
+            text-underline-offset: -18.5pt;
+        }
+        
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Iropke Batang';
+                font-style: normal;
+                font-weight: 400;
+                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+            }
+            p {
+                margin-top: 50pt;
+                margin-bottom: 50pt;
+            }
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 150%;
+                font-family: 'Iropke Batang';
+                font-size: 12pt;
+                padding-left: 4%;
+                padding-right: 4%;
+                padding-bottom: 4vw;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+            u {
+                text-decoration: underline 0.7px;
+                text-underline-offset: -12pt;
+            }
+            #titleU {
+                text-decoration: underline 2px;
+                text-underline-offset: -18.5pt;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">방랑자에게 보내는 편지</h1>
+    <h4 id="writer">작성: 주영욱</h4>
+    <div id="text">
+
+        <p id="1">&nbsp;&nbsp;&nbsp;&nbsp;나난난님이 있던 하모니어스는 참 조화로운 곳이었습니다.
+            <br>지금도 하모니어스는 변치 않고 그대로 있지만, 그때의 시간들을 되돌릴 수는 없을 테니 제가 하모니어스에 계속해서 남아있어도 영원히 하모니어스가 그리울 겁니다.
+            <br>우리의 시간이 이 곳을 영원한 고향으로 남겨놓을 거예요.
+            <br>언젠가 다시 볼 일이 있었으면 좋겠습니다.
+        </p>
+        <p id="2">&nbsp;&nbsp;&nbsp;&nbsp; 허먼 멜빌이 그런 말을 했다죠?
+            <br>"인생은 집을 향한 여행이다"
+            <br>돌아가서 쉴 공간은 있었지만 그렇게 자리를 내어줄 마음의 공간이 없었을 때, 내가 떠난 이 여행이 공허하고 답답해질 때마다 이 말이 생각나더군요. 우리는 집을 향해 여행을 하고 있는 겁니다. 그 길에서 길을 잘못들었나, 혹시 여태까지 평생 걸어온 길의 반대쪽이 나의집인가 막막하게 걸어가다 비슷한 표정으로 걷고 있는 사람들을 마주칠 때면 우리는 묘한 동질감을 느끼며 서로 따라가봅니다. 누군가는 그 길로 평생을 걸어가기도
+            하죠. 누군가는 잠시 함께 머무르고 또 언젠가는 떠날 겁니다. 그러면 우리는 방랑자들끼리 모자를 들어올리며 가볍게 인사하겠죠.
+        </p>
+        <p id="3">&nbsp;&nbsp;&nbsp;&nbsp; 우리는 길에서 만났습니다. 또한 길에서 만나게 될 겁니다. 다시 스쳐지나갈지, 오래 머무르게 될지 모르겠지만, 저는 당신을 느끼고, 당신은 제가 돌아갈 곳이 있다는 인상을 남기는 사람입니다. 실제로 그렇지 않다고 해도 제 기억 속에서 말이죠.
+            <br>당신에게도 제가 언젠가 그 길 한복판 어디론가 돌아갈, 돌아갈 수 있다는, 그런 곳으로 남기를 바랍니다. 우리가 어디서 만났는지 결국 찾지 못하게 될 지라도, 저는 언제든지 돌아갈 수 있는 곳이기를 바랍니다.
+            <br>집으로 향하는 길이 맞는지 헷갈릴 때면 나난난님도 이 문장을 떠올리셨으면 좋겠네요.
+            <br>인생은 집을 향한 여행입니다. 인생은 속도도, 방향도 아니라 여러분이 언젠가 향할, 그 곳을 향한 여행이라고 생각해요.
+            <br>나난난님의 여행을 축복합니다. 그리고 언젠가 길 위에서 만나면 그 긴 얘기를 해주세요.
+        </p>
+    </div>
+</body>
+
+</html>
