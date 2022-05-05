@@ -412,6 +412,7 @@
 
     document.getElementById("nextp").onclick = function() {
         page++;
+        self.location = "#title";
         console.log(page);
         if (page == 1) {
             $("#prevp").css("visibility", "hidden");
@@ -429,6 +430,7 @@
     };
     document.getElementById("prevp").onclick = function() {
         page--;
+        self.location = "#title";
         console.log(page);
         if (page == 1) {
             $("#prevp").css("visibility", "hidden");
