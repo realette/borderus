@@ -1,0 +1,233 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>시안</title>
+    <!--테두우리 4호지 주영욱의 다섯번째 글-->
+    <meta name="author" content="Yeong-wook Joo">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                '/borderus/xpednfl-ico-file/001.png',
+                '/borderus/xpednfl-ico-file/021.png',
+                '/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Iropke Batang';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+        }
+        
+        p {
+            margin-top: 50pt;
+            margin-bottom: 50pt;
+        }
+        
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 15pt;
+            padding-left: 25%;
+            padding-right: 25%;
+            padding-bottom: 20vw;
+        }
+        
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+        
+        u {
+            text-decoration: underline 0.5px;
+            text-underline-offset: -13.5pt;
+        }
+        
+        #titleU {
+            text-decoration: underline 2px;
+            text-underline-offset: -18.5pt;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+            width: fit-content;
+        }
+        
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Iropke Batang';
+                font-style: normal;
+                font-weight: 400;
+                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+            }
+            p {
+                margin-top: 50pt;
+                margin-bottom: 50pt;
+            }
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 150%;
+                font-family: 'Iropke Batang';
+                font-size: 12pt;
+                padding-left: 4%;
+                padding-right: 4%;
+                padding-bottom: 4vw;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+            u {
+                text-decoration: underline 0.7px;
+                text-underline-offset: -12pt;
+            }
+            #titleU {
+                text-decoration: underline 2px;
+                text-underline-offset: -18.5pt;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+                width: fit-content;
+            }
+            .right-align {
+                text-align: right;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title"></h1>
+    <h4 id="writer"><a target="_blank" href="/borderus/writer/JYW">작성: 주영욱</a></h4>
+    <div id="text">
+        <p id="1">
+            <div class="right-align">창 밖을 보고 있었다.
+                <br>어차피 지워버릴 거.
+                <br>왜 쓰나.
+                <br>어차피 무너뜨릴 거.
+                <br>왜 쌓나.
+                <br>어차피 죽어버릴 거.
+                <br>...
+            </div>
+            <div>창은 이 도시의 전경을 그려 놓았는데,
+                <br>나는 내가 그 위에 그린 한 인간을 보고 있다.
+                <br>
+            </div>
+            <div class="right-align">
+                <br>아까만 해도 보였는데, 벌써 지워버렸다.
+                <br>왜 그렸나.
+                <br>어차피...
+            </div>
+        </p>
+        <p id="2">
+            <div>
+                끝이 없이 펼쳐진 안개같았다.
+                <br>안개는 끝을 막아 버린 것 뿐이다.
+                <br>
+                <br>안개는 도시를 둥글게 감아돌았다.
+                <br>이 곳 날씨가 오래 전부터 이랬다면, 옛날 사람들은 저 끝이 세상이 끝이라 생각했겠지.
+                <br>
+                <br>이제 와서 창을 열고 싶지는 않았다.
+                <br>
+                <br>여름이라고는 부르고 싶지 않다.
+                <br>너무 이르기도 하고, 단편적인 서술이니 말이다.
+                <br>단 두 글자에 이 날씨를 담고 싶지 않다.
+                <br>
+                <br>파랑의 시간이라 할 만큼 짙게 깔린 파랑이
+                <br>어둠에 눌려있다.
+                <br>이 시간이 파랑의 시간다운 시간이면서도,
+                <br>그가 이곳을 떠나야 하는 시간이다.
+                <br>
+                <br>창을 열지는 않았지만, 확실하다. 청량할 듯 묵직하고, 텁텁한,
+                <br>마치 미숫가루를 탄 듯한 사이다같은 바람이 불테다.
+                <br>
+                <br>막은 구름이 하늘을 빽빽히 막아섰기에,
+                <br>안개의 끝은 땅과 분간할 수가 없었다.
+                <br>
+                <br>세계가 몰락한다면, 이곳이 가장 마지막으로 가라앉을 땅이라는 점은 분명해보였다.
+            </div>
+        </p>
+        <p id="3">
+            <div>더는 볼 수 없었다.
+                <br>나는 창 밖을 모두 지워버리고 그 위에 이 인간의 얼굴로 낙서를 해버렸다. 나는 돌아서서 걸어나왔다.
+                <br>
+                <br>일단 돌아섰지만 막상 할 일은 없었다.
+                <br>나는 낙서나 구경해야겠다면 인간의 얼굴로 뒤덮인 창을 얼굴로 마주했다.
+                <br>그 몇 발자국 걸어나왔다고 얼굴이 희미했다.
+                <br>나는 눈을 찡그려야 했다.
+                <br>눈을 찡그리니 보일 듯 했다.
+                <br>어쩌면 찡그려서 잘 보이는 게 아니라 찡그리니, 눈을 감았을 때처럼 상상으로 희미한 부분을 채우기 시작한 것 같았다.
+                <br>
+                <br>부자연스럽게 경직된 손과 어깨 그리고 목.
+                <br>보면 볼 수록 장난감같다는 생각이 들었다. 방 안 쪽에서 희미하게 들려오는 노래를 흥얼거렸다.
+                <br>
+            </div>
+        </p>
+    </div>
+</body>
+
+</html>

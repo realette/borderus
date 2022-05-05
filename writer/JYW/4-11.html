@@ -1,0 +1,173 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>시안</title>
+    <!--테두우리 4호지 주영욱의 다섯번째 글-->
+    <meta name="author" content="Yeong-wook Joo">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                '/borderus/xpednfl-ico-file/001.png',
+                '/borderus/xpednfl-ico-file/021.png',
+                '/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Iropke Batang';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+        }
+        
+        p {
+            margin-top: 50pt;
+            margin-bottom: 50pt;
+        }
+        
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 15pt;
+            padding-left: 25%;
+            padding-right: 25%;
+            padding-bottom: 20vw;
+        }
+        
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+        
+        u {
+            text-decoration: underline 0.5px;
+            text-underline-offset: -13.5pt;
+        }
+        
+        #titleU {
+            text-decoration: underline 2px;
+            text-underline-offset: -18.5pt;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+            width: fit-content;
+        }
+        
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Iropke Batang';
+                font-style: normal;
+                font-weight: 400;
+                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+            }
+            p {
+                margin-top: 50pt;
+                margin-bottom: 50pt;
+            }
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 150%;
+                font-family: 'Iropke Batang';
+                font-size: 12pt;
+                padding-left: 4%;
+                padding-right: 4%;
+                padding-bottom: 4vw;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+            u {
+                text-decoration: underline 0.7px;
+                text-underline-offset: -12pt;
+            }
+            #titleU {
+                text-decoration: underline 2px;
+                text-underline-offset: -18.5pt;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">시안</h1>
+    <h4 id="writer"><a target="_blank" href="/borderus/writer/JYW">작성: 주영욱</a></h4>
+    <div id="text">
+        <p id="1">&nbsp;&nbsp;&nbsp;&nbsp;항상 놀란 것처럼 눈을 휘둥그레 뜨고, 1분에도 수십 번씩 눈을 깜빡이며 나를 바라보는 이 소녀의 이름은 시안이다. 매우 행복해 '보이는' 그의 표정은 항상 과장되어 보일 정도이다. 그녀는 즐거움 찾아 이곳저곳 떠돌았다고 들었는데, 드디어 나에게도 왔다.<br>나에게 관심이 많은가보다. 휘둥그레 치켜 뜬 과장된 미소가 계속 나를 향하고 있으니 말이다. 눈도 크지만, 웃을 때 벌어지는 입은
+            또 얼마나 큰가. 모든 동작이 함박웃음 같아서 나도 웃음이 날 뻔 했다.<br>드디어 나에게도 이 소녀가 왔구나. 나는 눈을 마주칠 수도 없었다. 이 소녀 덕분에 아마 나는 곧 내면의 자유를 느끼게 될 것이다.<br>그의 얼굴은 새하얗고 예뻤다. 이름처럼 왠지 시원한 기분도 들었다. 그녀가 움직일 때마다 소름이 돋는 기분까지 느껴질 정도니 이름 참 잘 지었다. 이 아이만 여기 계속 있으면 내 기침도 멈춰줄 거 같았다.<br>난
+            가만히 누워있었다. 계속 쳐다보는 그를 나도 계속 마주보기에는 부담스러울 정도로 미모는 하얗고 조각된 것처럼 완벽했다. 인간의 끝에 있는 것 같았다. 그가 다가오고 있다. 좀 떨어져서 보고 있을 때, 그가 다가오면 무서울 것 같았다. 그러나 막상 다가오니 행복했다. 내 모든 감정을 포기하게 될 정도였다.<br>나는 순순히 받아들였다. 그의 얼굴에 미소가 번졌다. 소리내어 웃진 않았지만 소리내어 웃을 때보다도 훨씬 행복해 보였다.<br>그가
+            내 목에 손을 댔다. 서늘한 기운이 들었으나 막상 댔을 때는 그렇지도 않았다. 오히려 미지근 했다. 그가 가까이 있으니 정말 몽롱해지고 정신이 혼미해졌다. 그의 손은 점점 더 뜨겁게 느껴졌다. 그 쪽을 통해 빨려 들어가는 듯한 기분이 들었다. 말 그대로 붕 뜨는 것 같았다. 이미 내맡긴 지 오래였다. 그렇게 하니 편안하고 아늑했다. 그가 손을 떼려고 할 때쯤에는 거의 움직일 수가 없었다. 그가 스스륵 나의 눈을 감겨주었다.
+            그 어떤 자장가보다도 황홀했다.</p>
+        </p>
+    </div>
+</body>
+
+</html>
