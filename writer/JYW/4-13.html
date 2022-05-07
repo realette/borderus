@@ -1,291 +1,34 @@
-<html>
-<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
-    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
-    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
-
-<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
-    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
-
-<head>
-    <title>형식이 내용에 기여하는 방법</title>
-    <!--테두우리 4호지 주영욱의 일곱번째 글-->
-    <meta name="author" content="Yeong-wook Joo">
-    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
-    <meta http-equiv="Content-Style-Type" content="text/css">
-    <meta http-equiv="Reply-To" content="nether423@outlook.com">
-    <meta http-equiv="Email" content="nether423@outlook.com">
-    <meta http-equiv="imagetoolbar" content="no">
-    <meta http-equiv="Cache-Control" content="no-cache">
-    <meta http-equiv="Pragma" content="no-cache">
-    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script>
-        var favicon_images = [
-                '/borderus/xpednfl-ico-file/001.png',
-                '/borderus/xpednfl-ico-file/021.png',
-                '/borderus/xpednfl-ico-file/041.png',
-            ],
-
-            image_counter = 0; // To keep track of the current image
-
-        setInterval(function() {
-            // remove current favicon
-            if (document.querySelector("link[rel='icon']") !== null)
-                document.querySelector("link[rel='icon']").remove();
-            if (document.querySelector("link[rel='shortcut icon']") !== null)
-                document.querySelector("link[rel='shortcut icon']").remove();
-
-            // add new favicon image
-            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
-
-            // If last image then goto first image
-            // Else go to next image    
-            if (image_counter == favicon_images.length - 1)
-                image_counter = 0;
-            else
-                image_counter++;
-        }, 1000);
-    </script>
-    <style>
-        @font-face {
-            font-family: 'KyoboHandwriting2020A';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-        
-        @font-face {
-            font-family: 'Iropke Batang';
-            font-style: normal;
-            font-weight: 400;
-            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
-        }
-        
-        p {
-            margin-top: 50pt;
-            margin-bottom: 50pt;
-        }
-        
-        #text {
-            letter-spacing: 1pt;
-            word-spacing: -1pt;
-            line-height: 150%;
-            font-family: 'Iropke Batang';
-            font-size: 15pt;
-            padding-left: 25%;
-            padding-right: 25%;
-            padding-bottom: 20vw;
-        }
-        
-        #title {
-            font-family: 'KyoboHandwriting2020A';
-            padding-left: 2%;
-            padding-top: 2%;
-        }
-        
-        #writer {
-            font-family: 'KyoboHandwriting2020A';
-            padding-left: 2%;
-        }
-        
-        u {
-            text-decoration: underline 0.5px;
-            text-underline-offset: -13.5pt;
-        }
-        
-        #titleU {
-            text-decoration: underline 2px;
-            text-underline-offset: -18.5pt;
-        }
-        
-        a {
-            text-decoration: none;
-            color: black;
-            width: fit-content;
-        }
-        
-        .rightalign {
-            text-align: right;
-        }
-        
-        .centeralign {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        q {
-            width: fit-content;
-            padding-left: 25%;
-            padding-right: 25%;
-            font-style: italic;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        #btnbar {
-            position: fixed;
-            height: 25pt;
-            width: 100%;
-            left: 0;
-            bottom: 0;
-            background-color: #d5d2bf;
-            z-index: 10;
-        }
-        
-        #prevp {
-            cursor: hand;
-            margin-right: 50pt;
-        }
-        
-        #nextp {
-            cursor: hand;
-            margin-left: 50pt;
-        }
-        
-        @media screen and (max-width: 768px) {
-            @font-face {
-                font-family: 'KyoboHandwriting2020A';
-                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
-                font-weight: normal;
-                font-style: normal;
-            }
-            @font-face {
-                font-family: 'Iropke Batang';
-                font-style: normal;
-                font-weight: 400;
-                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
-            }
-            p {
-                margin-top: 50pt;
-                margin-bottom: 50pt;
-            }
-            #text {
-                letter-spacing: 1pt;
-                word-spacing: -1pt;
-                line-height: 150%;
-                font-family: 'Iropke Batang';
-                font-size: 12pt;
-                padding-left: 4%;
-                padding-right: 4%;
-                padding-bottom: 60pt;
-            }
-            #title {
-                font-family: 'KyoboHandwriting2020A';
-                padding-left: 2%;
-                padding-top: 2%;
-            }
-            #writer {
-                font-family: 'KyoboHandwriting2020A';
-                padding-left: 2%;
-            }
-            u {
-                text-decoration: underline 0.7px;
-                text-underline-offset: -12pt;
-            }
-            #titleU {
-                text-decoration: underline 2px;
-                text-underline-offset: -18.5pt;
-            }
-            a {
-                text-decoration: none;
-                color: black;
-                width: fit-content;
-            }
-            .rightalign {
-                text-align: right;
-            }
-            .centeralign {
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            q {
-                padding-left: 2%;
-                padding-right: 2%;
-                width: fit-content;
-                font-style: italic;
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            #btnbar {
-                position: fixed;
-                height: 30pt;
-                width: 100%;
-                left: 0;
-                bottom: 0;
-                background-color: #d5d2bf;
-                z-index: 10;
-            }
-            #barinnerbox {
-                width: fit-content;
-                position: relative;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
-            #prevp {
-                font-size: 15pt;
-                cursor: hand;
-                margin-right: 15pt;
-            }
-            #pagen {
-                font-size: 15pt;
-            }
-            #nextp {
-                font-size: 15pt;
-                cursor: hand;
-                margin-left: 15pt;
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <h1 id="title">형식이 내용에 기여하는 방법</h1>
-    <h4 id="writer"><a target="_blank" href="/borderus/writer/JYW">작성: 주영욱</a></h4>
-    <div id="text">
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <br>다루고자 하는 것.
-                    <br>문학과 예술 (특히 미술) 작품 내에서 작품 그 자체가 아니라 외적인 요소(형식)가 어떻게 그 작품의 내적인 요소(내용)에 기여하는 지
-                    <br>그 방법과 이유를 역사/사회적 맥락에서 이해해보도록 하겠습니다.
-                </div>
-                <div class="swiper-slide"><br>이 내용을 다루는 이유
-                    <br>영상과 웹을 다루며 미디어와 매체에 대한 관심이 컸고, 글을 쓰거나 그림을 그리고 영상을 만드는 다양한 종류의 창작 활동에
-                    <br>흥미를 느끼기 때문에, 지속적으로 형식과 내용과의 관계에도 관심을 갖고 있었습니다. 그러던 중, 문학 시간에 '사평역에서'와
-                    <br>'납작납작' 그리고 사각사각 소리가 나는 듯한 시(사과를 먹는다)를 배우면서 '문학에서도 작품 외적인 요소가 작품 내부
-                    <br>그리고 작품을 받아들이는 독자의 시선에도 강한 영향을 미치게 되는구나'라는 점을 인식하여 이에 대해 관련 내용을 찾아보고
-                    <br>이렇게 우리반 친구들에게 발표까지 해보게 되었습니다. 수업 안 해서 기뻐요? 그냥 수업이라고 생각하세요. 흥미로운 내용이긴한데
-                    <br>재밌지는 않을겁니다 ㅋㅋ최대한 안 졸리게 해봄!</div>
-                <div class="swiper-slide"><br>1. 제목의 역사
-                    <br>일단 미술사로 출발합니다. 미술과 문학은 서로 어떤 관계에 있다? 서로 영감을 주고 받으며 상보적인 관계에 있다~ 기억나죠?
-                    <br>우리가 서양 미술사를 보면 대부분 떠올리는 이미지는 이런 거죠.</div>
-                <div class="swiper-slide"><img src="https://postfiles.pstatic.net/MjAxOTEyMjZfMjQ3/MDAxNTc3MzM0MzkzNzIw._zIPo_yYW5gMRpH3-lj1SmA3vhsBBR-kgx-ldvw1lW8g.SIOCh7uAmwB4qTTEjCx8_WE5EJsmTgNbtpNfHin6YSUg.JPEG.nadal_2020wkid/1024px-Last_Supper_by_Leonardo_da_Vinci.jpg?type=w966"></div>
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
-        </div>
-    </div>
-    <script type="module">
-        import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js';
-    </script>
-</body>
-
-</html>
+형식이 내용에 기여하는 방법
+<br>
+<br>다루고자 하는 것.
+<br>문학과 예술 (특히 미술) 작품 내에서 작품 그 자체가 아니라 외적인 요소(형식)가 어떻게 그 작품의 내적인 요소(내용)에 기여하는 지
+<br>그 방법과 이유를 역사/사회적 맥락에서 이해해보도록 하겠습니다.
+<br>
+<br>이 내용을 다루는 이유
+<br>영상과 웹을 다루며 미디어와 매체에 대한 관심이 컸고, 글을 쓰거나 그림을 그리고 영상을 만드는 다양한 종류의 창작 활동에
+<br>흥미를 느끼기 때문에, 지속적으로 형식과 내용과의 관계에도 관심을 갖고 있었습니다. 그러던 중, 문학 시간에 '사평역에서'와
+<br>'납작납작' 그리고 사각사각 소리가 나는 듯한 시(사과를 먹는다)를 배우면서 '문학에서도 작품 외적인 요소가 작품 내부
+<br>그리고 작품을 받아들이는 독자의 시선에도 강한 영향을 미치게 되는구나'라는 점을 인식하여 이에 대해 관련 내용을 찾아보고
+<br>이렇게 우리반 친구들에게 발표까지 해보게 되었습니다. 수업 안 해서 기뻐요? 그냥 수업이라고 생각하세요. 흥미로운 내용이긴한데
+<br>재밌지는 않을겁니다 ㅋㅋ최대한 안 졸리게 해봄!
+<br>
+<br>1. 제목의 역사
+<br>일단 미술사로 출발합니다. 미술과 문학은 서로 어떤 관계에 있다? 서로 영감을 주고 받으며 상보적인 관계에 있다~ 기억나죠?
+<br>우리가 서양 미술사를 보면 대부분 떠올리는 이미지는 보통 이런 거죠. 인물이 있거나 사물이 있거나 뭐 건물, 자연물 등이 하나의 피사체가
+<br>피사체가 되어서 그 형태를 그려내는 것.
+<br>그런데 이 그림들은 어떤가요?
+<br>우리가 아는 전형적인 '그림'이라는 인식에 비해서 이 그림들은 뭐가 대조적으로 나타나나요?
+<br>바로 글씨들이죠! 텍스트가 이미지와 결합되어 있는 형태로 있다는 점이 큰 차이라고 생각하는데
+<br>우리가 어릴 때는 그림을 설명하고 싶어서 그림 안에 글씨를 써넣었을 지는 몰라도 왜 우리는 이러한 형태를 이질적으로 느끼고,
+<br>그림다운 그림에 가까우려면 텍스트가 그림에 포함되어서는 안되어야 한다고 느낄까요? 근원은 르네상스.
+<br>르네상스 시대 들어서 눈에 보이지 않는 것은 그림에서 배제되기 시작했습니다. 그럼 글은 어디로 갔을까요?
+<br>맞죠 제목으로 갔죠. 그림에서 모두 설명하지 않고 제목으로 설명하거나, 부제를 따로 달거나 하는 방식으로 내용을 채웁니다.
+<br>문학에서는 어떤가요? 내용을 보면 아리송하다가도 제목과 연결지으면 그때서야 이해가 되는 경우가 있고, 부제가 작품을 설명하는 작품이
+<br>있습니다. '토라'는 구약성서의 첫 다섯 편으로 그 유명한 창세기가 토라에 속해있는데, 토라는 원래 이름이 없어서, 책의 첫 단어로 등장하는
+<br>Be-reshit이라고 불렸다고 합니다. 문학에서도 제목이라는 개념은 꽤나 현대에 가까이 와서야 확립된 개념입니다.
+<br>문학에서 제목은 언제부터 확립되기 시작했을까요? 최초의 제목이 뭐다! 라고 말하기는 어렵지만, 현대에 우리가 생각하는 제목에
+<br>가까워지게 된 건 지점은 바로 책의 형식에 관련합니다.
+<br>예전에는 이런 책을 썼죠. 두루마리라고 부르는 형태로, 말 그대로 엮여 있어 넘겨보는 책이 아니라 한 장의 긴 면을 감아놓은 형태.
+<br>우리가 책이라고 하면 100% 이런 책일 겁니다. 코덱스라고 부르는 형태인데, 그냥 우리가 아는 그 책입니다.
+<br>근데 둘의 차이가 뭐죠? 바로 표지입니다. 코덱스 형태의 책이 확립되면서, 책은 현대 우리가 아는 형식을 갖추게 됩니다.
+<br>첫 장과 끝 장을 가지는 위계 질서를 얻고, 첫 장에는 제목을 달게 되죠.
