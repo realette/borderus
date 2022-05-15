@@ -22,6 +22,15 @@
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
+        var page = 1;
+
+        onload = function() {
+            $("#prevp").css("visibility", "hidden");
+            $(".page").css("display", "none");
+            $("#p1").css("display", "block");
+        };
+    </script>
+    <script>
         var favicon_images = [
                 '/borderus/xpednfl-ico-file/001.png',
                 '/borderus/xpednfl-ico-file/021.png',
@@ -102,7 +111,7 @@
         
         a {
             text-decoration: none;
-            color: black;
+            color: inherit;
             width: fit-content;
         }
         
@@ -192,7 +201,7 @@
             }
             a {
                 text-decoration: none;
-                color: black;
+                color: inherit;
                 width: fit-content;
             }
             .rightalign {
@@ -406,27 +415,33 @@
             <br>더운데 추웠다. 그냥 가만히 두기로 했다.
             <br>아무래도 상관 없었다.
             <br>더 이상은 별 의미 없었다.
+            <br>
             <br>마지막으로 의미를 열심히 찾아보았지만 찾아지지 않았다. 있지도 않고 그래서 찾아질 수도 없고. 만들어내기도 싫었다.
-            <br>구름처럼 답답하게 살고 싶진 않다. 구름을 숭배하는 낙관주의자들아. 너희들의 신이 무엇을 가렸는지 봐라. 이 곳의 땅에서, 땅끝을 가린, 그렇게 끝을 막은. 동시에 하늘을 끝도 닫은.
+            <br>구름처럼 답답하게 살고 싶진 않다. 구름을 숭배하는 낙관주의자들아. 너희들의 신이 무엇을 가렸는지 봐라.
+            <br>이 곳의 땅에서, 땅끝을 가린,
+            <br>그렇게 끝을 막은. 동시에 하늘의 끝도 닫은.
             <br>너희의 신은 도착할 곳이 없다며 무한한 하늘을 막아버린 게 아닌가.
-            <br>자연은 그 자체로 그러한 것이다. 그러나 구름이 한 짓을 봐라. 숭배할 대상이 없다며 살아있는 나무를 조각내어 그 비좁은 나무 조각에 모든 가치를 욱여넣고, 숭배할 대상이 없다며 동물을 죽여 피를 뿌리고, 제물이 없다며 인간까지 죽여 바치는 것과 무엇이 그렇게 다르단 말이냐.
+            <br>자연은 그 자체로 그러한 것이다. 그러나 구름이 한 짓을 봐라.
+            <br>숭배할 대상이 없다며 살아있는 나무를 조각내어 그 비좁은 나무 조각에 모든 가치를 욱여넣고, 숭배할 대상이 없다며 동물을 죽여 피를 뿌리고, 제물이 없다며 인간까지 죽여 바치는 것과 무엇이 그렇게 다르단 말이냐.
             <br>무엇을 믿어왔는가. 무엇을 향해 살아왔는가.
             <br>어떤 조각에 대의를 때려넣었나.
         </div>
         <div id="p7" class="page">
             마침 고개를 드니 뉴스에는 떨어지는 미사일이 나오고, 곧이어, 명품을 두른 배우가 나왔다. 뉴스가 끝난 모양인지 곧이어 나온 광고에는 아이들이 굶어 죽어가고 있었다. 그 다음 광고에서는 어떤 직장인이 '소확행'이라며 퇴근하고 영상을 시청하며 맥주를 마시고, e북 광고에는 '멋진 신세계'가 스쳐지나가고, 마침 노래에선 "♪ freedom to obey ♬"를 외치고 있었다. 반복재생인가 생각이 들 때쯤 다시 뉴스가 나왔다. 뉴스는 끝난 게 아니라
-            중간 광고였나 보다. 뉴스엔 뒷돈 받은 국회의원과 모두가 혐오할 것인 대통령이 나온다. 도저히 두고 볼 수가 없어, 하늘과 동시에 처분받은 구름과 같은 형벌을 내리기로 했다.
+            중간 광고였나 보다. 뉴스엔 뒷돈 받은 국회의원과 결국에는 모두가 혐오하게 될 대통령이 나온다. 도저히 두고 볼 수가 없어, 하늘과 동시에 처분받은 구름과 같은 형벌을 내리기로 했다.
+            <br>
             <br>집행관은 나다.
             <br>나는 그에게 어둠을 선사한다.
-            <br>어둠은 하늘을 담재운 뒤 구름의 마이크를 꺼버리고선, 뒷골목, 입을 열어도 들어줄 사람 없는 사람들 찾아 곁에 걸터않는다. 창에 커튼을 치고 거울을 들여놓는다. 그리고 어둠은 그저 앉아 있을 뿐이다. 그를 내몰기 위해 '시대처럼 올 아침'을 머금은 항아리를 터뜨리려 해도, 숙연히 받아들인다. 그뿐인가. 어둠은 깡패들에게 상점을 털 기회를 준다. 어린 학생들이 담배를 물 아늑한 공간을 마련한다.
+            <br>어둠은 하늘을 담재운 뒤 구름의 마이크를 꺼버리고선, 뒷골목, 입을 열어도 들어줄 사람 없는 사람들 찾아 곁에 걸터 앉는다. 창에 커튼을 치고 거울을 들여놓는다. 그리고 어둠은 그저 앉아 있을 뿐이다. 그를 내몰기 위해 '시대처럼 올 아침'을 머금은 항아리를 터뜨리려 해도, 숙연히 받아들인다. 그뿐인가. 어둠은 깡패들에게 상점을 털 기회를 준다. 어린 학생들이 담배를 물 아늑한 공간을 마련한다.
             <br>어둠은 두려움을 가져오고, 동시에 용기를 준다.
             <br>이제는 아나키스트들의 깃발이 이해된다.
             <br>
             <br>어둠의 집행 후 눈은 조용해졌지만, 귀는 여전히 작게 반짝이는 노래에 들썩이고 있었다.
         </div>
         <div id="p8" class="page">
-            <q>♪ Dream, America dream... ♬</q> 그러고 보니, 어릴 적엔 무서울 때 눈을 감았던 것 같다.
-            <br>나는 보이지 않는 것을 믿을 수 없은 능력을 가졌던 걸까.
+            <q>♪ Dream, America dream... ♬</q>
+            <br>그러고 보니, 어릴 적엔 무서울 때 눈을 감았던 것 같다.
+            <br>나는 보이지 않는 것을 믿을 수 없는 능력을 가졌던 걸까.
             <br>보이지 않는 것을 믿을 자격이 없었던 걸까.
             <br>
             <br>한 가지 확실한 건, 잃어버려야 찾을 수 있다는 것이다.
@@ -455,12 +470,16 @@
             <br>이것이 더 적절할 수 있다.
             <br>익숙할 수록 형식에 가깝고, 우리는 형식을 배제시켜놓고 들여다 본다. 그래서 단순한 몇 마디를 우리는 그리도 오래 들여다 보는 것 아닌가.
             <br>지금이 바로 이 경우다.
+            <br>
             <br>한 마디로, "맑았다."
+            <br>
             <br>어둠이 눈을 가리고 끝을 막은 구름은 사라졌다.
             <br>손바닥으로 태양을 가리면 태양은 사라진다.
             <br>이제는 없는 것이다.
+            <br>
             <br>손을 내리면 태양이 생겨난다.
             <br>그때는 있는 것이다.
+            <br>
             <br>"보는 것이 곧 믿는 것일지니..."
             <br>나는 보는 것이 믿는 것이고, 보지 않는 것이 믿지 않는 것이라 본다.
             <br>보이는 것은 믿어지는 것이고, 보이지 않는 것은 믿어지지 않는 것인가?
@@ -469,6 +488,7 @@
         <div id="p10" class="page">
             문득 눈을 떠보니 천장에는 벽부터 드리워져 오르는
             <br>불빛이 있다. 아마 컴퓨터겠지.
+            <br>
             <br>나를 등지고 있지만, 불빛은 일렁인다.
             <br>빛은 또 하나의 끝이다.
             <br>빛이 닿으면 결정해버린다. 빛이 망치다.
@@ -477,13 +497,16 @@
             <br>
             <br>당신은 무얼 찾아왔는가?
             <br>당신은 끝을 향해왔나? 이야기의 결말, 목적, 교훈, 의미같은 것?
+            <br>
             <br>...
+            <br>
             <br>그게 무슨 의미겠는가.
+            <br>
             <br>당신은
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 잃어버려졌고,
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 또, 무언가
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            잃어버렸다.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 잃어버려졌고,
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 또, 무언가
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 잃어버렸다.
+            <br>
             <br>당신의 빛이 닿을 그 끝을, 구름을, 안개를 찾아 이 곳에 온 것 아니겠는가.
             <br>
             <br>하지만 이 곳 하늘을 보라. 끝 없는, 끝이 의미 없는 어둠이다.
@@ -494,44 +517,73 @@
         <div id="p11" class="page">
             불빛이 사그라든다. 업데이트를 마친 모양이다.
             <br>빛은 종말은 결국 와버렸다.
+            <br><br>
             <br>모두,
             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 지워져있다.
+            <br><br>
             <br>순간은 영원해지고,
+            <br><br>
             <br>우린,
             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 이걸 위해 살아왔는가.
+            <br><br>
             <br>이렇게,
             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 다 지워지는 걸 보려고,
+            <br><br>
             <br>모든 결론이, 의미가 허물어지는 것을 보려고?
-            <br>
+            <br><br>
+            <br><br>
             <br>경계가 허물어진다.
+            <br>
             <br>이제는 창도 거울도 없다.
-            <br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
             <br>아무 것도 아니다. 하하. 아무 것도.
-            <br>
+            <br><br>
+            <br><br>
             <br>그게 다,
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 무슨 소용인가.
-            <br>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 무슨 소용인가.
+            <br><br>
+            <br><br>
+            <br><br>
             <br>...
+            <br><br>
             <br>그게 다...
-            <br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
             <br>...
+            <br><br><br><br><br>
+            <br><br><br><br><br>
             <br>어차피...
+            <br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br>
             <br>...
+            <br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br>
             <br>.
         </div>
         <div id="p12" class="page">
 
         </div>
         <div id="p13" class="page">
-            그리고, 아침이다.
+
         </div>
         <div id="p14" class="page">
 
         </div>
         <div id="p15" class="page">
-
+            그리고, 아침이다.
         </div>
         <div id="p16" class="page">
+
+        </div>
+        <div id="p17" class="page">
+
+        </div>
+        <div id="p18" class="page">
             P.S. 'The end'라고 쓰고 싶지는 않다.
             <br>끝은 열어놓을 예정이다.
             <br>
@@ -543,14 +595,6 @@
     </div>
 </body>
 <script>
-    var page = 1;
-
-    onload = function() {
-        $("#prevp").css("visibility", "hidden");
-        $(".page").css("display", "none");
-        $("#p1").css("display", "block");
-    };
-
     document.getElementById("nextp").onclick = function() {
         page++;
         self.location = "#title";
@@ -566,8 +610,16 @@
             $("#nextp").css("visibility", "visible");
             if (page == 12) {
                 $("html").css("background-color", "black");
+                $("#writer").css("color", "white");
+                $("#title").css("color", "white");
+            } else if (page == 13) {
+                $("html").css("background-color", "#4682b4");
+                $("#title").css("color", "black");
+                $("#writer").css("color", "black");
             } else {
                 $("html").css("background-color", "white");
+                $("#title").css("color", "black");
+                $("#writer").css("color", "black");
             }
         };
         $("#pagen").text(page);
@@ -587,6 +639,19 @@
         } else {
             $("#prevp").css("visibility", "visible");
             $("#nextp").css("visibility", "visible");
+            if (page == 12) {
+                $("html").css("background-color", "black");
+                $("#writer").css("color", "white");
+                $("#title").css("color", "white");
+            } else if (page == 13) {
+                $("html").css("background-color", "#4682b4");
+                $("#title").css("color", "black");
+                $("#writer").css("color", "black");
+            } else {
+                $("html").css("background-color", "white");
+                $("#title").css("color", "black");
+                $("#writer").css("color", "black");
+            }
         };
         $("#pagen").text(page);
         $(".page").css("display", "none");
