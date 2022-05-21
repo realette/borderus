@@ -126,7 +126,6 @@
         }, 67);
     </script>
     <style>
-        /*
         @font-face {
             font-family: 'KyoboHandwriting2020A';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
@@ -146,7 +145,6 @@
             position: fixed;
             left: 0pt;
             right: 0pt;
-            background-color: #d1cfc2;
             fill: none;
         }
         
@@ -187,7 +185,7 @@
             margin: 5pt;
             text-align: left;
             position: absolute;
-            border: #818181 solid 7px;
+            border: #515151 solid 7px;
         }
         
         .shadow {
@@ -198,74 +196,79 @@
         
         #shadow1 {
             background-color: rgba(212, 245, 255, 0.24);
-            top: 80vh;
-            left: 50vw;
-            width: 22.5vw;
+            top: 85vh;
+            left: 65.25vw;
+            width: 14vw;
             padding-bottom: 20vh;
             filter: blur(2.5px);
         }
         
         #shadow4 {
             background-color: rgba(212, 245, 255, 0.24);
-            top: 80vh;
-            left: 37vw;
-            width: 11.5vw;
-            padding-bottom: 20vh;
+            top: 85vh;
+            left: 29vw;
+            width: 33vw;
+            padding-bottom: 12.5vh;
             filter: blur(2.5px);
         }
         
         #window1 {
             color: black;
-            background-color: #dfd65e;
-            top: 41.5vh;
-            left: 43.5vw;
-            width: 23vw;
-            padding-bottom: 21.5vh;
+            background-color: rgb(197, 222, 255);
+            top: 15vh;
+            left: 41vw;
+            width: 33vw;
+            padding-bottom: 9.5vh;
         }
         
         #window2 {
             color: black;
-            background-color: rgb(110, 173, 255);
+            background-color: rgb(197, 222, 255);
             top: 15vh;
-            left: 43.5vw;
-            width: 23vw;
-            padding-bottom: 23.5vh;
+            left: 24.5vw;
+            width: 15vw;
+            padding-bottom: 26vh;
         }
         
         #window3 {
             color: black;
-            background-color: rgba(110, 173, 255, 0);
-            top: 15vh;
-            left: 30vw;
-            width: 12vw;
-            padding-bottom: 48vh;
+            background-color: rgb(197, 222, 255);
+            top: 27.75vh;
+            left: 41vw;
+            width: 33vw;
+            padding-bottom: 13.25vh;
         }
         
-        #window3B1 {
-            position: absolute;
-            top: 0vh;
-            left: 0;
-            width: 12vw;
-            height: 24vh;
-            background-color: rgb(110, 173, 255);
+        #window4 {
+            color: black;
+            background-color: rgb(197, 222, 255);
+            top: 60.25vh;
+            left: 24.5vw;
+            width: 34vw;
+            padding-bottom: 9.75vh;
         }
         
-        #window3B2 {
-            position: absolute;
-            top: 24vh;
-            left: 0;
-            width: 12vw;
-            height: 24vh;
-            background-color: #dfd65e;
+        #window5 {
+            color: black;
+            background-color: rgb(197, 222, 255);
+            top: 44vh;
+            left: 60vw;
+            width: 14vw;
+            padding-bottom: 26vh;
+        }
+        
+        #window6 {
+            color: black;
+            background-color: rgb(197, 222, 255);
+            top: 44vh;
+            left: 24.5vw;
+            width: 34vw;
+            padding-bottom: 13.25vh;
         }
         
         .windowTextTitle {
             margin-top: 0pt;
             margin-bottom: 2pt;
-        }
-        
-        #window4 {
-            visibility: hidden;
         }
         
         .article {
@@ -306,8 +309,8 @@
             bottom: 0%;
             left: 0%;
             width: 100vw;
-            height: 24vh;
-            background-color: rgb(102, 97, 44);
+            height: 20vh;
+            background-color: #7ba434;
             z-index: 2;
         }
         
@@ -462,7 +465,7 @@
         
         .ho {
             color: black;
-        }*/
+        }
     </style>
 </head>
 
@@ -471,7 +474,7 @@
         3
     </div>
     <div id="toggleDot"></div>
-    <div id="box"></div>
+    <div id="box"><img src="./bg.jpg"></div>
     <div id="modal">
         <a href="/borderus/1" target="_self" class="ho">
             <div id="oneho">1호지</div>
@@ -492,7 +495,7 @@
     <div id="wall">
         <div id="iconImg">
             <a href="/borderus" target="_blank">
-                <img id="logoImg" src='/borderus/xpednfl-ash-green.png'>
+                <img id="logoImg" src='../xpednfl-ash-green.png'>
             </a>
             <!--
             <img width="192/2" height="108/2" src='/borderus/xpednfl.png'>
@@ -508,7 +511,7 @@
                 <div id="window1" class="window">
                     <div id="window1text" class="article">
                         <p class="windowTextTitle" id="window1textTitle">밤과 새벽</p>
-                        ...
+                        나지막이 깔린 짙은 흑막, 안개 너머를 향해 걸음을 젖힌다...
                     </div>
                     <div class="readMore">마저 읽기</div>
                 </div>
@@ -517,7 +520,7 @@
                 <div id="window2" class="window">
                     <div id="window2text" class="article">
                         <p class="windowTextTitle" id="window1textTitle">22320116</p>
-                        ...
+                        "생일이 끝나서 서운하다" 생일이 끝나고 그의 심정을 압축적으로 묘사하는 그의 짧은 회고였다. 그 말 속에는 수만가지 감정이 녹아있음을...
                     </div>
                     <div class="readMore">마저 읽기</div>
                 </div>
@@ -526,34 +529,34 @@
                 <div id="window3" class="window">
                     <div id="window3text" class="article">
                         <p class="windowTextTitle" id="window3textTitle">마지막 파괴</p>
-                        ...
+                        오늘, 한 인간이 세상을 등졌다. 나는 떨리는 마음으로 펜을 들고, 펜은 무거운 마음으로 종이에서 떨어지지 않는구나...
                     </div>
                     <div class="readMore">마저 읽기</div>
                 </div>
             </a>
             <a href="/borderus/writer/JYW/4-12" target="_self">
-                <div id="window3" class="window">
-                    <div id="window3text" class="article">
-                        <p class="windowTextTitle" id="window3textTitle">¶ 염세주의자의 찬가</p>
-                        ...
+                <div id="window4" class="window">
+                    <div id="window4text" class="article">
+                        <p class="windowTextTitle" id="window4textTitle">¶ 염세주의자의 찬가</p>
+                        창 밖을 보고 있었다. 어차피 지워버릴 거. 왜 쓰나. 어차피...
                     </div>
                     <div class="readMore">마저 읽기</div>
                 </div>
             </a>
             <a href="/borderus/writer/PSA/4-1" target="_self">
-                <div id="window3" class="window">
-                    <div id="window3text" class="article">
-                        <p class="windowTextTitle" id="window3textTitle">내가 내어 줄 수 있는 것</p>
-                        ...
+                <div id="window5" class="window">
+                    <div id="window5text" class="article">
+                        <p class="windowTextTitle" id="window5textTitle">내가 내어 줄 수 있는 것</p>
+                        사람마다 마음 속에 자신이 미래에 해보고 싶은 것들, 이른바 버킷리스트가 하나씩은 있을 것이다. 나 또한 내 버킷리스트가 있고...
                     </div>
                     <div class="readMore">마저 읽기</div>
                 </div>
             </a>
             <a href="/borderus/writer/YYJ/4-1" target="_self">
-                <div id="window3" class="window">
-                    <div id="window3text" class="article">
-                        <p class="windowTextTitle" id="window3textTitle">그런 사람이고 싶습니다.</p>
-                        ...
+                <div id="window6" class="window">
+                    <div id="window6text" class="article">
+                        <p class="windowTextTitle" id="window6textTitle">그런 사람이고 싶습니다.</p>
+                        나는 문득 그런 생각을 자주 하곤 합니다 ‘나는 오늘 어떤 사람이었을까?’ 오늘의 나는 당신에게 있어 어떤 사람이었나요...
                     </div>
                     <div class="readMore">마저 읽기</div>
                 </div>
