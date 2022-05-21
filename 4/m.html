@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
     문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
@@ -7,8 +8,8 @@
     nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
 
 <head>
-    <title>테두리, 우리 - 3호지</title>
-    <!--테두우리 3호지-->
+    <title>테두리, 우리 - 4호지</title>
+    <!--테두우리 4호지-->
     <meta name="author" content="eong-wook Joo, Roggi Hong and Junmin Kwon">
     <meta name="viewport" content="width=divice-width, initial-scale=1.0">
     <meta http-equiv="Content-Script-Type" content="text/javascript">
@@ -22,7 +23,7 @@
         var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(navigator.userAgent.toLowerCase()));
 
         if (!mobile) {
-            window.location.href = "/borderus/3";
+            window.location.href = "/borderus/4";
         }
     </script>
     <script>
@@ -53,22 +54,15 @@
         }
         
         body {
-            position: fixed;
             align-self: center;
         }
         
         #wall {
             z-index: 3;
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            top: 51%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
+            position: relative;
+            top: 0%;
+            left: 0%;
+            height: fit-content;
         }
         
         #iconImg {
@@ -88,6 +82,9 @@
             text-align: left;
             border: #818181 solid 3px;
             position: relative;
+            width: 2000pt;
+            height: fit-content;
+            padding-right: 8.5pt;
         }
         
         .shadow {
@@ -101,55 +98,43 @@
         }
         
         #shadow4 {
-            color: white;
-            background-color: rgba(255, 253, 225, 0.253);
-            bottom: 0;
-            left: 23vw;
-            width: 100vw;
-            padding-bottom: 11vh;
-            filter: blur(2px);
+            display: none;
         }
         
         #window1 {
             color: black;
             background-color: #6EADFF;
             width: 90%;
-            padding-bottom: 31vw;
         }
         
         #window2 {
             color: black;
             background-color: #6EADFF;
             width: 90%;
-            padding-bottom: 32vw;
         }
         
         #window3 {
             color: black;
             background-color: #dfd65e;
             width: 90%;
-            padding-bottom: 37vw;
         }
         
         #window4 {
             color: black;
             background-color: #dfd65e;
             width: 90%;
-            padding-bottom: 37vw;
         }
         
         #window5 {
             color: black;
             background-color: #dfd65e;
-            width: 90%;
-            padding-bottom: 37vw;
+            width: 100%;
         }
         
         #window6 {
             color: black;
             background-color: #dfd65e;
-            width: 90%;
-            padding-bottom: 37vw;
+            width: 100%;
         }
         
         .windowTextTitle {
@@ -157,17 +142,13 @@
             margin-bottom: 6pt;
         }
         
-        #window4 {
-            display: none;
-        }
-        
         .article {
             font-family: 'KyoboHandwriting2020A';
             font-weight: normal;
             font-style: normal;
-            position: absolute;
+            position: relative;
             padding: 2%;
-            max-width: 100%;
+            width: 100%;
             font-size: 4vw;
         }
         
@@ -186,10 +167,8 @@
         }
         
         #floor {
-            position: absolute;
-            scale: fixed;
-            bottom: 0%;
-            left: 0;
+            position: relative;
+            margin-top: 60pt;
             width: 100vw;
             height: 18vh;
             background-color: #66612C;
@@ -214,7 +193,7 @@
         }
         
         #toggleDot {
-            position: absolute;
+            position: fixed;
             z-index: 7;
             right: 9px;
             top: 1%;
@@ -355,7 +334,7 @@
 
 <body>
     <div id="toggle" onclick="toggle()">
-        3
+        4
     </div>
     <div id="toggleDot"></div>
     <div id="box"></div>
@@ -372,7 +351,7 @@
         <div id="windows">
             <div id="iconImg">
                 <a href="/borderus" target="_blank">
-                    <img id="logoImg" src='/borderus/xpednfl-ash-green.png'>
+                    <img id="logoImg" srcset='../xpednfl-ash-green.png 100w' sizes="1vh">
                 </a>
                 <!--
                 <img width="192/2" height="108/2" src='/borderus/xpednfl.png'>
@@ -388,7 +367,8 @@
                     <div id="window1" class="window">
                         <div id="window1text" class="article">
                             <p class="windowTextTitle" id="window1textTitle">밤과 새벽</p>
-                            ...
+                            나지막이 깔린 짙은 흑막,
+                            <br>안개 너머를 향해 걸음을 젖힌다...
                         </div>
                         <div class="readMore">마저 읽기</div>
                     </div>
@@ -397,7 +377,7 @@
                     <div id="window2" class="window">
                         <div id="window2text" class="article">
                             <p class="windowTextTitle" id="window1textTitle">22320116</p>
-                            ...
+                            "생일이 끝나서 서운하다"<br>생일이 끝나고 그의 심정을 압축적으로 묘사하는 그의 짧은 회고였다. 그 말 속에는 수만가지 감정이 녹아있음을 나는 느꼈다. 단어의 외형적인 생김새도 그런 인상을 묘하게 풍겼다...
                         </div>
                         <div class="readMore">마저 읽기</div>
                     </div>
