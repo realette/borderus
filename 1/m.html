@@ -338,13 +338,25 @@
     </div>
     <div id="toggleDot"></div>
     <div id="box"></div>
-
     <div id="modal">
-        <div id="oneho">1호지</div>
-        <div id="twoho">2호지</div>
-        <div id="threeho">3호지</div>
-        <div id="writerho">작가별</div>
-        <div id="allho">전체보기</div>
+        <a href="/borderus/writer" target="_self" class="ho">
+            <div id="writerho">작가별</div>
+        </a>
+        <a href="/borderus/allhoji" target="_self" class="ho">
+            <div id="allho">전체보기</div>
+        </a>
+        <a href="/borderus/1" target="_self" class="ho">
+            <div id="oneho">1호지</div>
+        </a>
+        <a href="/borderus/2" target="_self" class="ho">
+            <div id="twoho">2호지</div>
+        </a>
+        <a href="/borderus/3" target="_self" class="ho">
+            <div id="threeho">3호지</div>
+        </a>
+        <a href="/borderus/4" target="_self" class="ho">
+            <div id="fourho">4호지</div>
+        </a>
     </div>
     <div id="wall">
 
@@ -439,23 +451,6 @@
                 c = 1;
                 console.log(c);
             }
-        }
-
-
-        document.getElementById("oneho").onclick = function() {
-            self.location = "/borderus/1"
-        }
-        document.getElementById("twoho").onclick = function() {
-            self.location = "/borderus/2"
-        }
-        document.getElementById("threeho").onclick = function() {
-            self.location = "/borderus/3"
-        }
-        document.getElementById("writerho").onclick = function() {
-            self.location = "/borderus/writer"
-        }
-        document.getElementById("allho").onclick = function() {
-            self.location = "/borderus/allhoji"
         }
     </script>
 </body>

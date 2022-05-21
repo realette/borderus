@@ -218,95 +218,45 @@
             z-index: 6;
         }
         
-        #oneho {
-            font-family: 'GowunBatang-Bold';
-            font-weight: bolder;
-            font-style: normal;
-            position: relative;
-            left: 5%;
-            top: 0;
-            width: 8vh;
-            height: 5.5vh;
-            background-color: #afab7d;
-            font-size: 2.66vh;
-            text-align: center;
-            border-radius: 0.66vh;
-            z-index: 6;
-            line-height: 5.5vh;
-            margin-top: 0.5vh;
-            margin-bottom: 0.5vh;
-        }
-        
-        #twoho {
-            font-family: 'GowunBatang-Bold';
-            font-weight: bolder;
-            font-style: normal;
-            position: relative;
-            left: 5%;
-            top: 0;
-            width: 8vh;
-            height: 5.5vh;
-            background-color: #afab7d;
-            font-size: 2.66vh;
-            text-align: center;
-            border-radius: 0.66vh;
-            z-index: 6;
-            line-height: 5.5vh;
-            margin-bottom: 0.5vh;
-        }
-        
-        #threeho {
-            font-family: 'GowunBatang-Bold';
-            font-weight: bolder;
-            font-style: normal;
-            position: relative;
-            left: 5%;
-            top: 0;
-            width: 8vh;
-            height: 5.5vh;
-            background-color: #afab7d;
-            font-size: 2.66vh;
-            text-align: center;
-            border-radius: 0.66vh;
-            z-index: 6;
-            line-height: 5.5vh;
-            margin-bottom: 0.5vh;
-        }
-        
-        #writerho {
-            font-family: 'GowunBatang-Bold';
-            font-weight: bolder;
-            font-style: normal;
-            position: relative;
-            left: 5%;
-            top: 0;
-            width: 8vh;
-            height: 5.5vh;
-            background-color: #afab7d;
-            font-size: 2.5vh;
-            text-align: center;
-            border-radius: 0.66vh;
-            z-index: 6;
-            line-height: 5.5vh;
-            margin-bottom: 0.5vh;
-        }
-        
         #allho {
             font-family: 'GowunBatang-Bold';
             font-weight: bolder;
             font-style: normal;
             position: relative;
-            left: 5%;
-            top: 0;
-            width: 8vh;
-            height: 5.5vh;
-            background-color: #afab7d;
-            font-size: 2vh;
+            left: 12.5%;
+            top: 0vh;
+            width: 7vh;
+            height: 4vh;
+            background-color: rgb(140, 168, 203);
+            font-size: 1.9vh;
             text-align: center;
-            border-radius: 0.66vh;
+            border-radius: 0.3vh;
             z-index: 6;
-            line-height: 5.5vh;
-            margin-bottom: 0.5vh;
+            line-height: 4vh;
+            margin-bottom: 1.25vh;
+        }
+        
+        #oneho,
+        #twoho,
+        #threeho,
+        #fourho,
+        #writerho {
+            font-family: 'GowunBatang-Bold';
+            font-weight: bolder;
+            font-style: normal;
+            position: relative;
+            left: 12.5%;
+            top: 0;
+            width: 7vh;
+            height: 4vh;
+            background-color: rgb(140, 168, 203);
+            font-size: 2.2vh;
+            text-align: center;
+            border-radius: 0.3vh;
+            z-index: 6;
+            line-height: 4vh;
+            margin-top: 1.25vh;
+            margin-bottom: 1.25vh;
         }
         
         #bottomText {
@@ -338,15 +288,26 @@
     </div>
     <div id="toggleDot"></div>
     <div id="box"></div>
-
     <div id="modal">
-        <div id="oneho">1호지</div>
-        <div id="twoho">2호지</div>
-        <div id="threeho">3호지</div>
-        <div id="writerho">작가별</div>
-        <div id="allho">전체보기</div>
+        <a href="/borderus/writer" target="_self" class="ho">
+            <div id="writerho">작가별</div>
+        </a>
+        <a href="/borderus/allhoji" target="_self" class="ho">
+            <div id="allho">전체보기</div>
+        </a>
+        <a href="/borderus/1" target="_self" class="ho">
+            <div id="oneho">1호지</div>
+        </a>
+        <a href="/borderus/2" target="_self" class="ho">
+            <div id="twoho">2호지</div>
+        </a>
+        <a href="/borderus/3" target="_self" class="ho">
+            <div id="threeho">3호지</div>
+        </a>
+        <a href="/borderus/4" target="_self" class="ho">
+            <div id="fourho">4호지</div>
+        </a>
     </div>
-
     <div id="wall">
         <div id="windows">
             <div id="iconImg">
@@ -473,23 +434,6 @@
                         c = 1;
                         console.log(c);
                     }
-                }
-
-
-                document.getElementById("oneho").onclick = function() {
-                    self.location = "/borderus/1"
-                }
-                document.getElementById("twoho").onclick = function() {
-                    self.location = "/borderus/2"
-                }
-                document.getElementById("threeho").onclick = function() {
-                    self.location = "/borderus/3"
-                }
-                document.getElementById("writerho").onclick = function() {
-                    self.location = "/borderus/writer"
-                }
-                document.getElementById("allho").onclick = function() {
-                    self.location = "/borderus/allhoji"
                 }
             </script>
 </body>

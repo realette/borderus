@@ -146,6 +146,7 @@
             left: 0pt;
             right: 0pt;
             fill: none;
+            filter: contrast(0.6);
         }
         
         html {
@@ -185,7 +186,7 @@
             margin: 5pt;
             text-align: left;
             position: absolute;
-            border: #515151 solid 7px;
+            border: #583430 solid 7px;
         }
         
         .shadow {
@@ -298,7 +299,8 @@
             top: 1.75vh;
             left: 45vw;
             width: auto !important;
-            filter: invert(75%) drop-shadow(2px 2px 3px #706f6788);
+            border: #583430 solid 7px;
+            background-color: rgb(197, 222, 255);
         }
         
         #floor {
@@ -309,8 +311,8 @@
             bottom: 0%;
             left: 0%;
             width: 100vw;
-            height: 20vh;
-            background-color: #7ba434;
+            height: 20.7vh;
+            background-color: #688c2a;
             z-index: 2;
         }
         
@@ -323,7 +325,7 @@
             right: 0;
             width: 9vh;
             height: 6vh;
-            background-color: #EEE131;
+            background-color: rgb(197, 222, 255);
             font-size: 4vh;
             text-align: center;
             border-top-left-radius: 1vh;
@@ -348,86 +350,13 @@
             visibility: hidden;
             display: none;
             opacity: 0;
-            background-color: #eee131af;
+            background-color: rgba(197, 222, 255, 0.815);
             right: 0;
             top: 13%;
             width: 9vh;
             height: fit-content;
             border-radius: 1vh;
             z-index: 6;
-        }
-        
-        #oneho {
-            font-family: 'GowunBatang-Bold';
-            font-weight: bolder;
-            font-style: normal;
-            position: relative;
-            left: 12.5%;
-            top: 0;
-            width: 7vh;
-            height: 4vh;
-            background-color: #afab7d;
-            font-size: 2.2vh;
-            text-align: center;
-            border-radius: 0.3vh;
-            z-index: 6;
-            line-height: 4vh;
-            margin-top: 1.25vh;
-            margin-bottom: 1.25vh;
-        }
-        
-        #twoho {
-            font-family: 'GowunBatang-Bold';
-            font-weight: bolder;
-            font-style: normal;
-            position: relative;
-            left: 12.5%;
-            top: 0;
-            width: 7vh;
-            height: 4vh;
-            background-color: #afab7d;
-            font-size: 2.2vh;
-            text-align: center;
-            border-radius: 0.3vh;
-            z-index: 6;
-            line-height: 4vh;
-            margin-bottom: 1.25vh;
-        }
-        
-        #threeho {
-            font-family: 'GowunBatang-Bold';
-            font-weight: bolder;
-            font-style: normal;
-            position: relative;
-            left: 12.5%;
-            top: 0;
-            width: 7vh;
-            height: 4vh;
-            background-color: #afab7d;
-            font-size: 2.2vh;
-            text-align: center;
-            border-radius: 0.3vh;
-            z-index: 6;
-            line-height: 4vh;
-            margin-bottom: 1.25vh;
-        }
-        
-        #writerho {
-            font-family: 'GowunBatang-Bold';
-            font-weight: bolder;
-            font-style: normal;
-            position: relative;
-            left: 12.5%;
-            top: 0;
-            width: 7vh;
-            height: 4vh;
-            background-color: #afab7d;
-            font-size: 2.2vh;
-            text-align: center;
-            border-radius: 0.3vh;
-            z-index: 6;
-            line-height: 4vh;
-            margin-bottom: 1.25vh;
         }
         
         #allho {
@@ -439,12 +368,35 @@
             top: 0vh;
             width: 7vh;
             height: 4vh;
-            background-color: #afab7d;
+            background-color: rgb(140, 168, 203);
             font-size: 1.9vh;
             text-align: center;
             border-radius: 0.3vh;
             z-index: 6;
             line-height: 4vh;
+            margin-bottom: 1.25vh;
+        }
+        
+        #oneho,
+        #twoho,
+        #threeho,
+        #fourho,
+        #writerho {
+            font-family: 'GowunBatang-Bold';
+            font-weight: bolder;
+            font-style: normal;
+            position: relative;
+            left: 12.5%;
+            top: 0;
+            width: 7vh;
+            height: 4vh;
+            background-color: rgb(140, 168, 203);
+            font-size: 2.2vh;
+            text-align: center;
+            border-radius: 0.3vh;
+            z-index: 6;
+            line-height: 4vh;
+            margin-top: 1.25vh;
             margin-bottom: 1.25vh;
         }
         
@@ -471,11 +423,17 @@
 
 <body>
     <div id="toggle" onclick="toggle()" style="cursor: hand;">
-        3
+        4
     </div>
     <div id="toggleDot"></div>
-    <div id="box"><img src="./bg.jpg"></div>
+    <div id="box"><img src="borderus/4/bg.jpg"></div>
     <div id="modal">
+        <a href="/borderus/writer" target="_self" class="ho">
+            <div id="writerho">작가별</div>
+        </a>
+        <a href="/borderus/allhoji" target="_self" class="ho">
+            <div id="allho">전체보기</div>
+        </a>
         <a href="/borderus/1" target="_self" class="ho">
             <div id="oneho">1호지</div>
         </a>
@@ -485,17 +443,14 @@
         <a href="/borderus/3" target="_self" class="ho">
             <div id="threeho">3호지</div>
         </a>
-        <a href="/borderus/writer" target="_self" class="ho">
-            <div id="writerho">작가별</div>
-        </a>
-        <a href="/borderus/allhoji" target="_self" class="ho">
-            <div id="allho">전체보기</div>
+        <a href="/borderus/4" target="_self" class="ho">
+            <div id="fourho">4호지</div>
         </a>
     </div>
     <div id="wall">
         <div id="iconImg">
             <a href="/borderus" target="_blank">
-                <img id="logoImg" src='../xpednfl-ash-green.png'>
+                <img id="logoImg" src='../xpednfl.png'>
             </a>
             <!--
             <img width="192/2" height="108/2" src='/borderus/xpednfl.png'>
