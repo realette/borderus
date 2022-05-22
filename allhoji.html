@@ -18,12 +18,12 @@
     <meta http-equiv="imagetoolbar" content="no">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Pragma" content="no-cache">
-    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="./xpednfl-ico-file/001.png" sizes="192x192">
     <script>
         var favicon_images = [
-                '/borderus/xpednfl-ico-file/001.png',
-                '/borderus/xpednfl-ico-file/021.png',
-                '/borderus/xpednfl-ico-file/041.png',
+                './xpednfl-ico-file/001.png',
+                './xpednfl-ico-file/021.png',
+                './xpednfl-ico-file/041.png',
             ],
 
             image_counter = 0; // To keep track of the current image
@@ -104,6 +104,11 @@
             font-size: 3vh;
         }
         
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
         @media screen and (max-width: 768px) {
             #text {
                 font-family: 'GowunBatang-Bold';
@@ -143,55 +148,53 @@
                 font-style: normal;
                 font-size: 3vh;
             }
+            a {
+                text-decoration: none;
+                color: black;
+            }
         }
     </style>
 </head>
 
 <body>
     <div id="iconImg">
-        <a href="/borderus" target="_blank">
-            <img id="logoImg" src='/borderus/xpednfl-ash-green.png'>
+        <a href="./index.html" target="_blank">
+            <img id="logoImg" src='./xpednfl-ash-green.png'>
         </a>
         <!--
-        <img width="192/2" height="108/2" src='/borderus/xpednfl.png'>
-        <img width="192/2" height="108/2" src='/borderus/xpednfl-ash-green.png'>
-        <img width="192/2" height="108/2" src='/borderus/xpednfl-ash-red.png'>
-        <img width="192/2" height="108/2" src='/borderus/xpednfl-hot-pink.png'>
-        <img width="192/2" height="108/2" src='/borderus/xpednfl-pale-purple.png'>
-        <img width="192/2" height="108/2" src='/borderus/xpednfl-ash-purple.png'>
+        <img width="192/2" height="108/2" src='../xpednfl.png'>
+        <img width="192/2" height="108/2" src='../xpednfl-ash-green.png'>
+        <img width="192/2" height="108/2" src='../xpednfl-ash-red.png'>
+        <img width="192/2" height="108/2" src='../xpednfl-hot-pink.png'>
+        <img width="192/2" height="108/2" src='../xpednfl-pale-purple.png'>
+        <img width="192/2" height="108/2" src='../xpednfl-ash-purple.png'>
         -->
     </div>
     <div id="text">
         회차 모음 - 선택 페이지
     </div>
     <div id="chartHo">
-        <div class="ho" id="currentho">현재 회차</div>
 
-
-        <div class="ho" id="oneho">1호지</div>
-
-
-        <div class="ho" id="twoho">2호지</div>
-
-        <div class="ho" id="threeho">3호지</div>
-        <div class="ho" id="writer">작가별 모음</div>
+        <a href="./index.html" target="_self">
+            <div class="ho" id="currentho">현재 회차</div>
+        </a>
+        <a href="./writer/index.html" target="_self">
+            <div class="ho" id="writer">작가별 모음</div>
+        </a>
+        <a href="./1/index.html" target="_self">
+            <div class="ho" id="oneho">1호지</div>
+        </a>
+        <a href="./2/index.html" target="_self">
+            <div class="ho" id="twoho">2호지</div>
+        </a>
+        <a href="./3/index.html" target="_self">
+            <div class="ho" id="threeho">3호지</div>
+        </a>
+        <a href="./4/index.html" target="_self">
+            <div class="ho" id="fourho">4호지</div>
+        </a>
     </div>
     <script>
-        document.getElementById("currentho").onclick = function() {
-            self.location = "/borderus/"
-        }
-        document.getElementById("oneho").onclick = function() {
-            self.location = "/borderus/1"
-        }
-        document.getElementById("twoho").onclick = function() {
-            self.location = "/borderus/2"
-        }
-        document.getElementById("threeho").onclick = function() {
-            self.location = "/borderus/3"
-        }
-        document.getElementById("writer").onclick = function() {
-            self.location = "/borderus/writer"
-        }
     </script>
 </body>
 
