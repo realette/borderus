@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
     문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
@@ -7,9 +8,9 @@
     nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
 
 <head>
-    <title>테두리, 우리 - 3호지</title>
-    <!--테두우리 3호지-->
-    <meta name="author" content="eong-wook Joo, Roggi Hong and Junmin Kwon">
+    <title>테두리, 우리 - 4호지</title>
+    <!--테두우리 4호지-->
+    <meta name="author" content="Yeong-wook Joo, Park Seon-a, Jung Dnsoll and Yun Yeji">
     <meta name="viewport" content="width=divice-width, initial-scale=1.0">
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta http-equiv="Content-Style-Type" content="text/css">
@@ -18,32 +19,24 @@
     <meta http-equiv="imagetoolbar" content="no">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Pragma" content="no-cache">
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-    <script>
-        window.OneSignal = window.OneSignal || [];
-        OneSignal.push(function() {
-            OneSignal.init({
-                appId: "a2b5b861-86fe-4139-8da3-a9ff1e180f55",
-                safari_web_id: "",
-                notifyButton: {
-                    enable: true,
-                },
-            });
-        });
-    </script>
+    <meta property="og:title" content="테두리, 우리">
+    <meta property="og:image" content="https://realette.github.io/borderus/xpednfl.png">
+    <meta property="og:description" content="테두우리(테ㄷ우리), 테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.">
     <script>
         var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(navigator.userAgent.toLowerCase()));
 
         if (!mobile) {
-            window.location.href = "/borderus/";
+            window.location.href = "./4/index.html";
         }
     </script>
     <script>
         if (window.console != undefined) {
-            console.log('%c          ', 'font-size:400px; background:url(/borderus/xpednfl-min.png) no-repeat;');
+            console.log('%c          ', 'font-size:400px; background:url(./xpednfl-min.png) no-repeat;');
         }
     </script>
-    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="./xpednfl-ico-file/001.png" sizes="192x192">
 
     <style>
         @font-face {
@@ -61,46 +54,58 @@
         }
         
         html {
-            overflow: hidden;
-            background-color: #D1CFC2;
+            overflow: auto;
         }
         
         body {
+            left: 0;
+            margin: 0%;
+            height: 100vh;
+            width: 100%;
+            top: 0;
+        }
+        
+        #box {
+            z-index: 1;
             position: fixed;
-            align-self: center;
+            left: 0pt;
+            top: -12pt;
+            fill: none;
+            filter: contrast(0.6);
+            overflow: hidden;
         }
         
         #wall {
             z-index: 3;
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            top: 51%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
+            position: relative;
+            height: fit-content;
         }
         
         #iconImg {
+            width: fit-content;
             position: relative;
+            height: 7vh;
+            overflow: hidden;
+            border: #583430 solid 3px;
+            left: 50%;
+            margin-top: 12pt;
+            margin-bottom: 12pt;
+            transform: translateX(-8vh);
         }
         
-        #windows {
-            display: flex;
-            justify-content: space-around;
-            flex-direction: column;
-            flex-wrap: wrap;
-            align-items: center;
+        #logoImg {
+            width: auto !important;
+            background-color: rgb(197, 222, 255);
+            transform: translate(0, -15%);
         }
         
         .window {
-            margin: 1.5vw;
             text-align: left;
-            border: #818181 solid 3px;
+            border: #583430 solid 3px;
             position: relative;
+            height: fit-content;
+            margin: 3%;
+            padding-right: 15pt;
         }
         
         .shadow {
@@ -109,39 +114,55 @@
             transform: skew(33deg);
         }
         
-        #shadow1 {
-            display: none;
+        #shadows {
+            position: relative;
+            top: 12vh;
+            width: 100vw;
+            height: 12vh;
+            overflow: hidden;
         }
         
-        #shadow4 {
+        #shadow1 {
             color: white;
-            background-color: rgba(255, 253, 225, 0.253);
-            bottom: 0;
+            background-color: rgba(212, 245, 255, 0.24);
             left: 23vw;
             width: 100vw;
             padding-bottom: 11vh;
             filter: blur(2px);
         }
         
+        #shadow4 {
+            display: none;
+        }
+        
         #window1 {
             color: black;
-            background-color: #6EADFF;
-            width: 90%;
-            padding-bottom: 31vw;
+            background-color: rgb(197, 222, 255);
         }
         
         #window2 {
             color: black;
-            background-color: #6EADFF;
-            width: 90%;
-            padding-bottom: 32vw;
+            background-color: rgb(197, 222, 255);
         }
         
         #window3 {
             color: black;
-            background-color: #dfd65e;
-            width: 90%;
-            padding-bottom: 37vw;
+            background-color: rgb(197, 222, 255);
+        }
+        
+        #window4 {
+            color: black;
+            background-color: rgb(197, 222, 255);
+        }
+        
+        #window5 {
+            color: black;
+            background-color: rgb(197, 222, 255);
+        }
+        
+        #window6 {
+            color: black;
+            background-color: rgb(197, 222, 255);
         }
         
         .windowTextTitle {
@@ -149,17 +170,13 @@
             margin-bottom: 6pt;
         }
         
-        #window4 {
-            display: none;
-        }
-        
         .article {
             font-family: 'KyoboHandwriting2020A';
             font-weight: normal;
             font-style: normal;
-            position: absolute;
+            position: relative;
             padding: 2%;
-            max-width: 100%;
+            width: 100%;
             font-size: 4vw;
         }
         
@@ -172,19 +189,14 @@
             right: 1%;
         }
         
-        #logoImg {
-            width: auto !important;
-            filter: invert(75%) drop-shadow(2px 2px 3px #706f6788);
-        }
-        
         #floor {
-            position: absolute;
-            scale: fixed;
-            bottom: 0%;
-            left: 0;
+            top: -12vh;
+            position: relative;
+            margin-top: 60pt;
             width: 100vw;
             height: 18vh;
-            background-color: #66612C;
+            background-color: #688c2a;
+            filter: contrast(0.8);
             z-index: 2;
         }
         
@@ -195,25 +207,28 @@
             position: fixed;
             top: 3%;
             right: 0;
-            width: 9vh;
+            width: 9.5vh;
             height: 6vh;
-            background-color: #EEE131;
+            background-color: rgb(197, 222, 255);
             font-size: 4vh;
             text-align: center;
-            border-top-left-radius: 1vh;
-            border-bottom-left-radius: 1vh;
+            border: #583430 solid 3px;
+            border-right: 0;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
             z-index: 6;
         }
         
         #toggleDot {
-            position: absolute;
+            position: fixed;
             z-index: 7;
             right: 9px;
-            top: 1%;
+            top: 3%;
+            transform: translate(50%, -50%);
             background-color: red;
             color: red;
-            width: 9px;
-            height: 9px;
+            width: 12px;
+            height: 12px;
             border-radius: 1vh;
         }
         
@@ -222,86 +237,14 @@
             visibility: hidden;
             display: none;
             opacity: 0;
-            background-color: #eee131af;
+            background-color: rgba(197, 222, 255, 0.815);
             right: 0;
-            top: 10%;
+            top: 10.75%;
             width: 9vh;
             height: fit-content;
-            border-radius: 1vh;
+            border: #583430 solid 3px;
+            border-radius: 6px;
             z-index: 6;
-        }
-        
-        #oneho {
-            font-family: 'GowunBatang-Bold';
-            font-weight: bolder;
-            font-style: normal;
-            position: relative;
-            left: 5%;
-            top: 0;
-            width: 8vh;
-            height: 5.5vh;
-            background-color: #afab7d;
-            font-size: 2.66vh;
-            text-align: center;
-            border-radius: 0.66vh;
-            z-index: 6;
-            line-height: 5.5vh;
-            margin-top: 0.5vh;
-            margin-bottom: 0.5vh;
-        }
-        
-        #twoho {
-            font-family: 'GowunBatang-Bold';
-            font-weight: bolder;
-            font-style: normal;
-            position: relative;
-            left: 5%;
-            top: 0;
-            width: 8vh;
-            height: 5.5vh;
-            background-color: #afab7d;
-            font-size: 2.66vh;
-            text-align: center;
-            border-radius: 0.66vh;
-            z-index: 6;
-            line-height: 5.5vh;
-            margin-bottom: 0.5vh;
-        }
-        
-        #threeho {
-            font-family: 'GowunBatang-Bold';
-            font-weight: bolder;
-            font-style: normal;
-            position: relative;
-            left: 5%;
-            top: 0;
-            width: 8vh;
-            height: 5.5vh;
-            background-color: #afab7d;
-            font-size: 2.66vh;
-            text-align: center;
-            border-radius: 0.66vh;
-            z-index: 6;
-            line-height: 5.5vh;
-            margin-bottom: 0.5vh;
-        }
-        
-        #writerho {
-            font-family: 'GowunBatang-Bold';
-            font-weight: bolder;
-            font-style: normal;
-            position: relative;
-            left: 5%;
-            top: 0;
-            width: 8vh;
-            height: 5.5vh;
-            background-color: #afab7d;
-            font-size: 2.5vh;
-            text-align: center;
-            border-radius: 0.66vh;
-            z-index: 6;
-            line-height: 5.5vh;
-            margin-bottom: 0.5vh;
         }
         
         #allho {
@@ -309,28 +252,51 @@
             font-weight: bolder;
             font-style: normal;
             position: relative;
-            left: 5%;
-            top: 0;
-            width: 8vh;
-            height: 5.5vh;
-            background-color: #afab7d;
-            font-size: 2vh;
+            left: 12.5%;
+            top: 0vh;
+            width: 7vh;
+            height: 4vh;
+            background-color: rgb(140, 168, 203);
+            font-size: 1.9vh;
             text-align: center;
-            border-radius: 0.66vh;
+            border-radius: 0.3vh;
             z-index: 6;
-            line-height: 5.5vh;
-            margin-bottom: 0.5vh;
+            line-height: 4vh;
+            margin-bottom: 1.25vh;
+        }
+        
+        #oneho,
+        #twoho,
+        #threeho,
+        #fourho,
+        #writerho {
+            font-family: 'GowunBatang-Bold';
+            font-weight: bolder;
+            font-style: normal;
+            position: relative;
+            left: 12.5%;
+            top: 0;
+            width: 7vh;
+            height: 4vh;
+            background-color: rgb(140, 168, 203);
+            font-size: 2.2vh;
+            text-align: center;
+            border-radius: 0.3vh;
+            z-index: 6;
+            line-height: 4vh;
+            margin-top: 1.25vh;
+            margin-bottom: 1.25vh;
         }
         
         #bottomText {
-            font-size: small;
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
-            position: absolute;
-            bottom: 5vmin;
+            position: relative;
+            bottom: 22vh;
             z-index: 7;
             width: fit-content;
+            font-size: 5vw;
         }
         
         a {
@@ -347,135 +313,147 @@
 
 <body>
     <div id="toggle" onclick="toggle()">
-        3
+        4
     </div>
     <div id="toggleDot"></div>
-    <div id="box"></div>
-
+    <div id="box"><img srcset="./4/bg.jpg 100w" sizes="10vh"></div>
     <div id="modal">
-        <div id="oneho">1호지</div>
-        <div id="twoho">2호지</div>
-        <div id="threeho">3호지</div>
-        <div id="writerho">작가별</div>
-        <div id="allho">전체보기</div>
+        <a href="./writer/index.html" target="_self" class="ho">
+            <div id="writerho">작가별</div>
+        </a>
+        <a href="./allhoji.html" target="_self" class="ho">
+            <div id="allho">전체보기</div>
+        </a>
+        <a href="./1/index.html" target="_self" class="ho">
+            <div id="oneho">1호지</div>
+        </a>
+        <a href="./2/index.html" target="_self" class="ho">
+            <div id="twoho">2호지</div>
+        </a>
+        <a href="./3/index.html" target="_self" class="ho">
+            <div id="threeho">3호지</div>
+        </a>
+        <a href="./4/index.html" target="_self" class="ho">
+            <div id="fourho">4호지</div>
+        </a>
     </div>
-
     <div id="wall">
         <div id="windows">
             <div id="iconImg">
-                <a href="/borderus" target="_blank">
-                    <img id="logoImg" src='/borderus/xpednfl-ash-green.png'>
+                <a href="./index.html" target="_blank">
+                    <img id="logoImg" srcset='./xpednfl.png 100w' sizes="0.9vh">
                 </a>
                 <!--
-                <img width="192/2" height="108/2" src='/borderus/xpednfl.png'>
-                <img width="192/2" height="108/2" src='/borderus/xpednfl-ash-green.png'>
-                <img width="192/2" height="108/2" src='/borderus/xpednfl-ash-red.png'>
-                <img width="192/2" height="108/2" src='/borderus/xpednfl-hot-pink.png'>
-                <img width="192/2" height="108/2" src='/borderus/xpednfl-pale-purple.png'>
-                <img width="192/2" height="108/2" src='/borderus/xpednfl-ash-purple.png'>
+                <img width="192/2" height="108/2" src='./xpednfl.png'>
+                <img width="192/2" height="108/2" src='./xpednfl-ash-green.png'>
+                <img width="192/2" height="108/2" src='./xpednfl-ash-red.png'>
+                <img width="192/2" height="108/2" src='./xpednfl-hot-pink.png'>
+                <img width="192/2" height="108/2" src='./xpednfl-pale-purple.png'>
+                <img width="192/2" height="108/2" src='./xpednfl-ash-purple.png'>
                 -->
             </div>
-            <div id="window1" class="window">
-                <div id="window1text" class="article">
-                    <p class="windowTextTitle" id="window1textTitle">비행기 사람들</p>
-                    평화에 굴복한 적이 많았다. 그는. 그러나 그는 덜 굴복하던 사람들 중 하나였다. 그래서 그는 손쉽게 비정상으로 분류할 수 있는 인물이었다. 평화는 평화에 굴복한 이들이 행하는가?...
-                </div>
-                <div class="readMore">마저 읽기</div>
-            </div>
-            <div id="window2" class="window">
-                <div id="window2text" class="article">
-                    <p class="windowTextTitle" id="window1textTitle">대한민국은 아직 휴전국가이다</p>
-                    1953년 정전 협정을 맺은 이후 대한민국은 휴전국가이다. 휴전은 종전을 의미하는 것이 아니다. 정전 협정을 맺은지 어느새 70년이 다 되어간다. 전쟁의 기억을 가진 사람들이 점차 줄어들기 시작하면서...
-                </div>
-                <div class="readMore">마저 읽기</div>
-            </div>
-            <div id="window3" class="window">
-                <div id="window3text" class="article">
-                    <p class="windowTextTitle" id="window3textTitle">나는 키이우 시민이다</p>
-                    잔인할 수 있고, 시적이며 눈이 멀어있는 것. 그것은 정의와 평화다. 평화를 위해 핵무기가 있고, 정의를 위해 초월적인 힘이 있다. 사람들은 정의와 평화를 강요하지만, 그것들이 아직도 가치가 있을까? 우리는 핵무기를 '전쟁억제력'이라고 부르는 게 당연한 시대에...
-                </div>
-                <div class="readMore">마저 읽기</div>
-            </div>
-            <div id="window4" class="window">
-                <div id="window4text" class="article">
-                    <p class="windowTextTitle" id="window4textTitle"></p>
-                    ...
-                </div>
-                <div class="readMore">마저 읽기</div>
-            </div>
-            <div id="shadows">
-                <div id="shadow1" class="shadow">
+            <div id="windows">
+                <a href="./writer/JDS/4-1.html" target="_self">
+                    <div id="window1" class="window">
+                        <div id="window1text" class="article">
+                            <p class="windowTextTitle" id="window1textTitle">밤과 새벽</p>
+                            나지막이 깔린 짙은 흑막,
+                            <br>안개 너머를 향해 걸음을 젖힌다...
+                        </div>
+                        <div class="readMore">마저 읽기</div>
+                    </div>
+                </a>
+                <a href="./writer/JYW/4-7.html" target="_self">
+                    <div id="window2" class="window">
+                        <div id="window2text" class="article">
+                            <p class="windowTextTitle" id="window1textTitle">22320116</p>
+                            "생일이 끝나서 서운하다" 생일이 끝나고 그의 심정을 압축적으로 묘사하는 그의 짧은 회고였다. 그 말 속에는 수만가지 감정이 녹아있음을...
+                        </div>
+                        <div class="readMore">마저 읽기</div>
+                    </div>
+                </a>
+                <a href="./writer/JYW/4-9.html" target="_self">
+                    <div id="window3" class="window">
+                        <div id="window3text" class="article">
+                            <p class="windowTextTitle" id="window3textTitle">마지막 파괴</p>
+                            오늘, 한 인간이 세상을 등졌다. 나는 떨리는 마음으로 펜을 들고, 펜은 무거운 마음으로 종이에서 떨어지지 않는구나...
+                        </div>
+                        <div class="readMore">마저 읽기</div>
+                    </div>
+                </a>
+                <a href="./writer/JYW/4-12.html" target="_self">
+                    <div id="window4" class="window">
+                        <div id="window3text" class="article">
+                            <p class="windowTextTitle" id="window3textTitle">¶ 염세주의자의 찬가</p>
+                            창 밖을 보고 있었다. 어차피 지워버릴 거. 왜 쓰나. 어차피 무너뜨릴 거. 왜 쌓나. 어차피 죽어버릴 거. ...
+                        </div>
+                        <div class="readMore">마저 읽기</div>
+                    </div>
+                </a>
+                <a href="./writer/PSA/4-1.html" target="_self">
+                    <div id="window5" class="window">
+                        <div id="window3text" class="article">
+                            <p class="windowTextTitle" id="window3textTitle">내가 내어 줄 수 있는 것</p>
+                            사람마다 마음 속에 자신이 미래에 해보고 싶은 것들, 이른바 버킷리스트가 하나씩은 있을 것이다. 나 또한 내 버킷리스트가 있고...
+                        </div>
+                        <div class="readMore">마저 읽기</div>
+                    </div>
+                </a>
+                <a href="./writer/YYJ/4-1.html" target="_self">
+                    <div id="window6" class="window">
+                        <div id="window3text" class="article">
+                            <p class="windowTextTitle" id="window3textTitle">그런 사람이고 싶습니다.</p>
+                            나는 문득 그런 생각을 자주 하곤 합니다 ‘나는 오늘 어떤 사람이었을까?’ 오늘의 나는 당신에게 있어 어떤 사람이었나요...
+                        </div>
+                        <div class="readMore">마저 읽기</div>
+                    </div>
+                </a>
 
-                </div>
-                <div id="shadow4" class="shadow">
+                <div id="shadows">
+                    <div id="shadow1" class="shadow">
 
+                    </div>
+                    <div id="shadow4" class="shadow">
+
+                    </div>
                 </div>
+
             </div>
-            <div id="floor"></div>
-            <div id="bottomText"><strong><a href="/borderus/about" target="_blank">About - 우리와 테ㄷ우리에 대하여</a> <hr> <a href="/borderus/contact" target="_blank">Contact - 우리와 함께</a></strong></div>
         </div>
-        <script>
-            const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-            const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-            var box = document.getElementById("box");
-            box.style.width = width + 1;
-            box.style.height = height + 1;
-            var wall = document.getElementById("wall");
-            wall.style.width = width + 1;
-            wall.style.height = height + 1;
-            var logoImg = document.getElementById("logoImg");
-            logoImg.style.height = height / 10;
-            var windows = document.getElementById("windows");
-            document.getElementById("window1").onclick = function() {
-                self.location = "/borderus/writer/JYW/3-5"
-            }
-            document.getElementById("window2").onclick = function() {
-                self.location = "/borderus/writer/HRG/3-4"
-            }
-            document.getElementById("window3").onclick = function() {
-                self.location = "/borderus/writer/JYW/3-6"
-            }
+    </div>
+    <div id="floor"></div>
+    <div id="bottomText"><strong><a href="./about.html" target="_blank">About - 우리와 테ㄷ우리에 대하여</a> <hr> <a href="./contact.html" target="_blank">Contact - 우리와 함께</a></strong></div>
+    <script>
+        const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
+        var logoImg = document.getElementById("logoImg");
+        logoImg.style.height = height / 10;
+        var windows = document.getElementById("windows");
 
-            var d = 1;
+        var d = 1;
 
-            var c = 1;
+        var c = 1;
 
-            function toggle() {
-                if (c == 1) {
-                    document.getElementById("modal").style.visibility = 'visible';
-                    document.getElementById("modal").style.opacity = '1';
-                    document.getElementById("modal").style.display = 'block';
-                    document.getElementById("toggleDot").style.visibility = 'hidden'
-                    d = 0;
-                    c++;
-                    console.log(c);
-                } else if (c >= 2) {
-                    document.getElementById("modal").style.visibility = 'hidden';
-                    document.getElementById("modal").style.opacity = '0';
-                    document.getElementById("modal").style.display = 'none';
-                    c = 1;
-                    console.log(c);
-                }
+        function toggle() {
+            if (c == 1) {
+                document.getElementById("modal").style.visibility = 'visible';
+                document.getElementById("modal").style.opacity = '1';
+                document.getElementById("modal").style.display = 'block';
+                document.getElementById("toggleDot").style.visibility = 'hidden'
+                d = 0;
+                c++;
+                console.log(c);
+            } else if (c >= 2) {
+                document.getElementById("modal").style.visibility = 'hidden';
+                document.getElementById("modal").style.opacity = '0';
+                document.getElementById("modal").style.display = 'none';
+                c = 1;
+                console.log(c);
             }
+        }
+    </script>
 
-
-            document.getElementById("oneho").onclick = function() {
-                self.location = "/borderus/1"
-            }
-            document.getElementById("twoho").onclick = function() {
-                self.location = "/borderus/2"
-            }
-            document.getElementById("threeho").onclick = function() {
-                self.location = "/borderus/3"
-            }
-            document.getElementById("writerho").onclick = function() {
-                self.location = "/borderus/writer"
-            }
-            document.getElementById("allho").onclick = function() {
-                self.location = "/borderus/allhoji"
-            }
-        </script>
 </body>
 
 
