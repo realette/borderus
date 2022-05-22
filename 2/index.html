@@ -28,6 +28,19 @@
     <meta http-equiv="imagetoolbar" content="no">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Pragma" content="no-cache">
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: "a2b5b861-86fe-4139-8da3-a9ff1e180f55",
+                safari_web_id: "",
+                notifyButton: {
+                    enable: true,
+                },
+            });
+        });
+    </script>
     <script>
         var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(navigator.userAgent.toLowerCase()));
 

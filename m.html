@@ -24,6 +24,19 @@
     <meta property="og:description" content="테두우리(테ㄷ우리), 테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
     문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
     연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.">
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: "a2b5b861-86fe-4139-8da3-a9ff1e180f55",
+                safari_web_id: "",
+                notifyButton: {
+                    enable: true,
+                },
+            });
+        });
+    </script>
     <script>
         var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(navigator.userAgent.toLowerCase()));
 
