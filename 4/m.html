@@ -52,14 +52,22 @@
             overflow: auto;
         }
         
+        body {
+            left: 0;
+            margin: 0%;
+            height: 100vh;
+            width: 100%;
+            top: 0;
+        }
+        
         #box {
-            top: -6pt;
             z-index: 1;
             position: fixed;
             left: 0pt;
-            right: 0pt;
+            top: -12pt;
             fill: none;
             filter: contrast(0.6);
+            overflow: hidden;
         }
         
         #wall {
@@ -69,13 +77,15 @@
         }
         
         #iconImg {
-            position: relative;
             width: fit-content;
+            position: relative;
             height: 7vh;
             overflow: hidden;
             border: #583430 solid 3px;
-            left: 0%;
-            margin-right: auto;
+            left: 50%;
+            margin-top: 12pt;
+            margin-bottom: 12pt;
+            transform: translateX(-8vh);
         }
         
         #logoImg {
@@ -85,13 +95,11 @@
         }
         
         .window {
-            margin: 1.5vw;
             text-align: left;
             border: #583430 solid 3px;
             position: relative;
-            width: 2000pt;
             height: fit-content;
-            padding-right: 8.5pt;
+            margin: 3%;
         }
         
         .shadow {
@@ -102,10 +110,9 @@
         
         #shadows {
             position: relative;
-            left: -6pt;
-            top: 16vh;
+            top: 12vh;
             width: 100vw;
-            height: 15vh;
+            height: 12vh;
             overflow: hidden;
         }
         
@@ -125,37 +132,31 @@
         #window1 {
             color: black;
             background-color: rgb(197, 222, 255);
-            width: 92%;
         }
         
         #window2 {
             color: black;
             background-color: rgb(197, 222, 255);
-            width: 92%;
         }
         
         #window3 {
             color: black;
             background-color: rgb(197, 222, 255);
-            width: 92%;
         }
         
         #window4 {
             color: black;
             background-color: rgb(197, 222, 255);
-            width: 92%;
         }
         
         #window5 {
             color: black;
             background-color: rgb(197, 222, 255);
-            width: 92%;
         }
         
         #window6 {
             color: black;
             background-color: rgb(197, 222, 255);
-            width: 92%;
         }
         
         .windowTextTitle {
@@ -183,7 +184,6 @@
         }
         
         #floor {
-            left: -6pt;
             top: -12vh;
             position: relative;
             margin-top: 60pt;
@@ -283,7 +283,7 @@
             transform: translateX(-50%);
             text-align: center;
             position: relative;
-            top: -20vh;
+            bottom: 22vh;
             z-index: 7;
             width: fit-content;
         }
@@ -305,7 +305,7 @@
         4
     </div>
     <div id="toggleDot"></div>
-    <div id="box"><img srcset="../4/bg.jpg 100w" sizes="7.5vh"></div>
+    <div id="box"><img srcset="../4/bg.jpg 100w" sizes="10vh"></div>
     <div id="modal">
         <a href="/borderus/writer" target="_self" class="ho">
             <div id="writerho">작가별</div>
