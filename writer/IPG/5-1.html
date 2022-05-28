@@ -1,0 +1,187 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>
+    </title>
+    <!--테두우리 5호지 주영욱의 첫번째 글-->
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                '/borderus/xpednfl-ico-file/001.png',
+                '/borderus/xpednfl-ico-file/021.png',
+                '/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Iropke Batang';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+        }
+        
+        p {
+            margin-top: 50pt;
+            margin-bottom: 50pt;
+        }
+        
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 15pt;
+            padding-left: 25%;
+            padding-right: 25%;
+            padding-bottom: 20vw;
+        }
+        
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+        
+        u {
+            text-decoration: underline 0.5px;
+            text-underline-offset: -13.5pt;
+        }
+        
+        #titleU {
+            text-decoration: underline 2px;
+            text-underline-offset: -18.5pt;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+            width: fit-content;
+        }
+        
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Iropke Batang';
+                font-style: normal;
+                font-weight: 400;
+                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+            }
+            p {
+                margin-top: 50pt;
+                margin-bottom: 50pt;
+            }
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 150%;
+                font-family: 'Iropke Batang';
+                font-size: 12pt;
+                padding-left: 4%;
+                padding-right: 4%;
+                padding-bottom: 4vw;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+            u {
+                text-decoration: underline 0.7px;
+                text-underline-offset: -12pt;
+            }
+            #titleU {
+                text-decoration: underline 2px;
+                text-underline-offset: -18.5pt;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">
+    </h1>
+    <h4 id="writer"><a target="_blank" href="/borderus/writer/IPG">작성: 임필경</a></h4>
+    <div id="text">
+        <p id="1">나를 구속하는 모든 것으로부터 자유를!
+            <br>나를 구속하지 않는 모든 것들로부터 자유를!
+            <br>나로부터 자유를!
+        </p>
+        <p id="2">(241, 21031), (1202012, 53), (324, 212302), (11302, 214), (11332, 3232), (21213, 441), (242, 121031), (23, 2102), (333,32031)
+            <br>(133, 21031), (1203012, 342), (2411, 21041), (122120, 215), (233031, 444), (22422, 53013), (122141, 2324), (233, 111302), (121042, 2422), (676565557, 75767587), (122142, 2324), (63424, 3135241), (22254, 025242), (313, 21220), (24112, 22131)
+            <br>(333132, 43052), (425656, 5435353), (2234, 133031) (31201312, 364), (3334, 2033131), (433, 222031), (4234, 2123041), (142, 12031), (434, 1122302), (323402, 3335), (4433323232, 644553), (133, 11131), (3313012, 454), (252222, 242241)
+            <br>(10302, 222), (233, 111302), (121042, 2322), (425, 2122031), (241, 11113), (331, 12031), (233545, 443425), (00, 0), (3332, 2221031), (323312, 3335), (11, 2), (323333332, 24122244), (32332, 31351), (3132, 2124), (120312, 342)
+            <br>(2102, 23), (13242, 242031), (24, 21021), (132241, 23233), (23212, 12123), (1121323, 5152), (232, 12103), (423, 32031)
+            <br>(53503133, 234536), (6253, 11213323), (352, 210313), (232, 12103), (132231311, 6335), (2123021, 524), (31261445, 342845), (41222, 31331), (1422, 22203), (4231, 22303), (4322, 123131)
+            <br>(0120, 21), (1122, 2130), (321, 21021), (241, 21031), (12022, 331), (5350311, 234433), (133334 ,42542), (21230, 323), (1221120, 315), (1342, 31113), (331, 12031), (442123, 243223), (223, 20203), (325052444, 76447), (112021, 241), (43443,
+            423414), (2112, 33)
+            <br>(423012, 22314), (433121, 122234), (13141, 23203), (34321, 3325), (012021111, 54), (12130121, 452), (241, 11031), (112212111, 2211132), (132, 11130), (10301112, 342), (12031, 223), (232023, 23214), (12103, 232), (2221, 2302), (3233, 33041)
+            <br>(222434, 33425), (24422131, 32343211), (33113, 14141), (1210312, 243), (3412111, 45031), (232, 12103), (333, 32031)
+            <br>(241, 21031), (122141, 2324), (232, 12103), (455453335, 657568), (1210312, 253), (021302, 323), (2225434, 64444), (21230202, 534), (11111100, 2), (22533, 5301403), (333051, 43332), (3222, 2304), (121141, 2323), (4144545, 545625), (4432,
+            1421041), (232, 12103), (333, 32031)
+            <br>(331, 2203), (1223, 2141), (62667, 43454313), (1421, 12203), (3154345, 335626), (14333, 24223), (212021, 44), (1202012, 53), (1442, 221402), (544, 2220323), (3343, 213133), (1210302112, 265), (1342122, 15225), (223524243, 8648), (1331,
+            121031), (312, 1212), (3412111, 45031), (232, 12103), (423, 22203)
+        </p>
+    </div>
+</body>
+
+</html>
