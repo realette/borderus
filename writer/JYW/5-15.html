@@ -1,0 +1,176 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>-위대하다고 말하고 싶지는 않다네-</title>
+    <!--테두우리 5호지 주영욱의 두번째 글-->
+    <meta name="author" content="Yeong-wook Joo">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                '/borderus/xpednfl-ico-file/001.png',
+                '/borderus/xpednfl-ico-file/021.png',
+                '/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Iropke Batang';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+        }
+        
+        p {
+            margin-top: 50pt;
+            margin-bottom: 50pt;
+        }
+        
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 15pt;
+            padding-left: 25%;
+            padding-right: 25%;
+            padding-bottom: 20vw;
+        }
+        
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+        
+        u {
+            text-decoration: underline 0.5px;
+            text-underline-offset: -13.5pt;
+        }
+        
+        #titleU {
+            text-decoration: underline 2px;
+            text-underline-offset: -18.5pt;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+            width: fit-content;
+        }
+        
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Iropke Batang';
+                font-style: normal;
+                font-weight: 400;
+                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+            }
+            p {
+                margin-top: 50pt;
+                margin-bottom: 50pt;
+            }
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 150%;
+                font-family: 'Iropke Batang';
+                font-size: 12pt;
+                padding-left: 4%;
+                padding-right: 4%;
+                padding-bottom: 4vw;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+            u {
+                text-decoration: underline 0.7px;
+                text-underline-offset: -12pt;
+            }
+            #titleU {
+                text-decoration: underline 2px;
+                text-underline-offset: -18.5pt;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">-위대하다고 말하고 싶지는 않다네-</h1>
+    <h4 id="writer"><a target="_blank" href="/borderus/writer/JYW">작성: 주영욱</a></h4>
+    <div id="text">
+
+        <p id="1">
+            힘만 가득하던 곳 터져나와 반짝임을 품고, 거성의 조각 흩어져 외딴 곳의 티끌 이루니 응애 시끄럽고 아이는 자라 오도카니 서서 생각에 잠긴다.
+        </p>
+        <p id="2">
+            아이는 죽지 않을 것 같고 노인은 태어나지 않았던 것 같다.
+        </p>
+        <p id="3">노인은 먼 길 돌아 집에 돌아오고, 집은 그에게 말한다. "돌아가시게"
+        </p>
+    </div>
+</body>
+
+</html>
