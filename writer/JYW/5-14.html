@@ -1,0 +1,348 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>¶ 염세주의자의 찬가</title>
+    <!--테두우리 4호지 주영욱의 여섯번째 글-->
+    <meta name="author" content="Yeong-wook Joo">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <meta name="theme-color" content="#d5d2bf">
+
+    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        var page = 1;
+
+        onload = function() {
+            $("#prevp").css("visibility", "hidden");
+            $(".page").css("display", "none");
+            $("#p1").css("display", "block");
+        };
+    </script>
+    <script>
+        var favicon_images = [
+                '/borderus/xpednfl-ico-file/001.png',
+                '/borderus/xpednfl-ico-file/021.png',
+                '/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Iropke Batang';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+        }
+        
+        p {
+            margin-top: 50pt;
+            margin-bottom: 50pt;
+        }
+        
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 15pt;
+            padding-left: 25%;
+            padding-right: 25%;
+            padding-bottom: 20vw;
+        }
+        
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+        
+        u {
+            text-decoration: underline 0.5px;
+            text-underline-offset: -13.5pt;
+        }
+        
+        #titleU {
+            text-decoration: underline 2px;
+            text-underline-offset: -18.5pt;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+            width: fit-content;
+        }
+        
+        .rightalign {
+            text-align: right;
+        }
+        
+        .centeralign {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        q {
+            width: fit-content;
+            padding-left: 25%;
+            padding-right: 25%;
+            font-style: italic;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        #btnbar {
+            position: fixed;
+            height: 25pt;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            background-color: #d5d2bf;
+            z-index: 10;
+        }
+        
+        #prevp {
+            cursor: hand;
+            margin-right: 50pt;
+        }
+        
+        #nextp {
+            cursor: hand;
+            margin-left: 50pt;
+        }
+        
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Iropke Batang';
+                font-style: normal;
+                font-weight: 400;
+                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+            }
+            p {
+                margin-top: 50pt;
+                margin-bottom: 50pt;
+            }
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 150%;
+                font-family: 'Iropke Batang';
+                font-size: 12pt;
+                padding-left: 4%;
+                padding-right: 4%;
+                padding-bottom: 60pt;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+            u {
+                text-decoration: underline 0.7px;
+                text-underline-offset: -12pt;
+            }
+            #titleU {
+                text-decoration: underline 2px;
+                text-underline-offset: -18.5pt;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+                width: fit-content;
+            }
+            .rightalign {
+                text-align: right;
+            }
+            .centeralign {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            q {
+                padding-left: 2%;
+                padding-right: 2%;
+                width: fit-content;
+                font-style: italic;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            #btnbar {
+                position: fixed;
+                height: 30pt;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                background-color: #d5d2bf;
+                z-index: 10;
+            }
+            #barinnerbox {
+                width: fit-content;
+                position: relative;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            #prevp {
+                font-size: 15pt;
+                cursor: hand;
+                margin-right: 15pt;
+            }
+            #pagen {
+                font-size: 15pt;
+            }
+            #nextp {
+                font-size: 15pt;
+                cursor: hand;
+                margin-left: 15pt;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">¶ 염세주의자의 찬가</h1>
+    <h4 id="writer"><a target="_blank" href="/borderus/writer/JYW">작성: 주영욱</a></h4>
+    <div id="text">
+        <div id="btnbar">
+            <div id="barinnerbox" class="centeralign">
+                <span id="prevp">이전 페이지</span>
+                <span id="pagen">1</span>
+                <span id="nextp">다음 페이지</span>
+            </div>
+        </div>
+        <div id="p1" class="page">
+        </div>
+        <div id="p18" class="page">
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("nextp").onclick = function() {
+        page++;
+        self.location = "#title";
+        console.log(page);
+        if (page == -Infinity) {
+            $("#prevp").css("visibility", "hidden");
+            $("#nextp").css("visibility", "visible");
+        } else if (page == Infinity /*끝 페이지 번호 적기*/ ) {
+            $("#prevp").css("visibility", "visivle");
+            $("#nextp").css("visibility", "hidden");
+        } else {
+            $("#prevp").css("visibility", "visible");
+            $("#nextp").css("visibility", "visible");
+            if (page == -4) {
+                $("html").css("background-color", "black");
+                $("#writer").css("color", "white");
+                $("#title").css("color", "white");
+                $('meta[name=theme-color]').attr('content', '#000000');
+            } else if (page == -3) {
+                $("html").css("background-color", "#4682b4");
+                $("#title").css("color", "black");
+                $("#writer").css("color", "black");
+                $('meta[name=theme-color]').attr('content', '#4682b4');
+            } else {
+                $("html").css("background-color", "white");
+                $("#title").css("color", "black");
+                $("#writer").css("color", "black");
+                $('meta[name=theme-color]').attr('content', '#d5d2bf');
+            }
+        };
+        $("#pagen").text(page);
+        $(".page").css("display", "none");
+        $("#p" + page).css("display", "block");
+    };
+    document.getElementById("prevp").onclick = function() {
+        page--;
+        self.location = "#title";
+        console.log(page);
+        if (page == -Infinity) {
+            $("#prevp").css("visibility", "hidden");
+            $("#nextp").css("visibility", "visible");
+        } else if (page == Infinity /*끝 페이지 번호 적기*/ ) {
+            $("#prevp").css("visibility", "visivle");
+            $("#nextp").css("visibility", "hidden");
+        } else {
+            $("#prevp").css("visibility", "visible");
+            $("#nextp").css("visibility", "visible");
+            if (page == -4) {
+                $("html").css("background-color", "black");
+                $("#writer").css("color", "white");
+                $("#title").css("color", "white");
+                $('meta[name=theme-color]').attr('content', '#000000');
+            } else if (page == -3) {
+                $("html").css("background-color", "#4682b4");
+                $("#title").css("color", "black");
+                $("#writer").css("color", "black");
+                $('meta[name=theme-color]').attr('content', '#4682b4');
+            } else {
+                $("html").css("background-color", "white");
+                $("#title").css("color", "black");
+                $("#writer").css("color", "black");
+                $('meta[name=theme-color]').attr('content', '#d5d2bf');
+            }
+        };
+        $("#pagen").text(page);
+        $(".page").css("display", "none");
+        $("#p" + page).css("display", "block");
+    };
+</script>
+
+</html>
