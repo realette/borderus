@@ -1,0 +1,284 @@
+<html>
+
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>필구</title>
+    <meta name="author" content="PeelGu">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                '/borderus/xpednfl-ico-file/001.png',
+                '/borderus/xpednfl-ico-file/021.png',
+                '/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'GowunBatang-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        #text {
+            font-family: 'GowunBatang-Bold';
+            position: relative;
+            top: 10vmin;
+            transform: translateX(-50%);
+            left: 50%;
+            font-size: 3vmin;
+            width: fit-content;
+        }
+        
+        #logoImg {
+            position: absolute;
+            height: 72.8px;
+            left: 50%;
+            top: 1%;
+            transform: translateX(-50%);
+            width: auto !important;
+        }
+        
+        #chartSite {
+            position: relative;
+            top: 12vmin;
+            left: 50%;
+            transform: translateX(-50%);
+            width: fit-content;
+            text-align: center;
+            margin-bottom: 40vmin;
+        }
+        
+        .site {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 30vmin;
+            height: fit-content;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: #7DA89B;
+            font-family: 'GowunBatang-Bold';
+            font-weight: bolder;
+            font-style: normal;
+            font-size: 3vh;
+        }
+        
+        u {
+            text-decoration: underline 0.5px;
+            text-underline-offset: -13.5pt;
+        }
+        
+        #titleU {
+            text-decoration: underline 2px;
+            text-underline-offset: -18.5pt;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        #jump1 {
+            position: relative;
+            height: 72.8px;
+            left: 50%;
+            top: 1%;
+            transform: translateX(-50%);
+        }
+        
+        #leftsidedan {
+            position: absolute;
+            padding-left: 5%;
+            width: 30%;
+        }
+        
+        #desc {
+            padding-bottom: 10pt;
+            font-family: 'GowunBatang-Bold';
+            position: relative;
+            font-size: 3vmin;
+        }
+        
+        #writerimg {
+            position: relative;
+            padding-bottom: 10pt;
+            padding-right: 10pt;
+        }
+        
+        #flexbox {
+            display: flex;
+            font-family: 'GowunBatang-Bold';
+            font-size: 2.5vmin;
+        }
+        
+        @media screen and (max-width: 768px) {
+            #text {
+                font-family: 'GowunBatang-Bold';
+                position: relative;
+                transform: translateX(-50%);
+                left: 50%;
+                width: fit-content;
+                font-size: 5vmin;
+                margin-top: 40pt;
+            }
+            #logoImg {
+                position: absolute;
+                height: 72.8px;
+                left: 50%;
+                top: 1%;
+                transform: translateX(-50%);
+                width: auto !important;
+            }
+            #chartSite {
+                position: relative;
+                top: 18vmin;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+                width: 50%;
+                margin-bottom: 40vmin;
+            }
+            .site {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                width: 100%;
+                height: fit-content;
+                margin-top: 0px;
+                margin-bottom: 40px;
+                background-color: #7DA89B;
+                font-family: 'GowunBatang-Bold';
+                font-weight: bolder;
+                font-style: normal;
+                font-size: 3vh;
+            }
+            u {
+                text-decoration: underline 0.7px;
+                text-underline-offset: -12pt;
+            }
+            #titleU {
+                text-decoration: underline 2px;
+                text-underline-offset: -18.5pt;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            body {
+                margin-bottom: 40px
+            }
+            #jump1 {
+                display: none;
+            }
+            #leftsidedan {
+                position: relative;
+                top: 18vmin;
+                width: 94%;
+                padding: 10pt;
+                padding-left: 2%;
+                padding-right: 2%;
+            }
+            #desc {
+                font-family: 'GowunBatang-Bold';
+                position: relative;
+                transform: translateX(-50%);
+                left: 50%;
+                width: fit-content;
+                font-size: 5vmin;
+                padding: 0;
+                padding-bottom: 10pt;
+            }
+            #writerimg {
+                position: relative;
+                padding: 0;
+                padding-right: 7pt;
+            }
+            #flexbox {
+                display: flex;
+                font-size: 4vmin;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="iconImg">
+        <a href="/borderus" target="_blank">
+            <img id="logoImg" src='/borderus/xpednfl-ash-green.png'>
+        </a>
+        <!--
+        <img width="192/2" height="108/2" src='/borderus/xpednfl.png'>
+        <img width="192/2" height="108/2" src='/borderus/xpednfl-ash-green.png'>
+        <img width="192/2" height="108/2" src='/borderus/xpednfl-ash-red.png'>
+        <img width="192/2" height="108/2" src='/borderus/xpednfl-hot-pink.png'>
+        <img width="192/2" height="108/2" src='/borderus/xpednfl-pale-purple.png'>
+        <img width="192/2" height="108/2" src='/borderus/xpednfl-ash-purple.png'>
+        -->
+    </div>
+    <div id="leftsidedan">
+        <div id="jump1"></div>
+        <div id="desc">작가 소개</div>
+        <div id="flexbox">
+
+            <div>
+                이름: 필구<br><br>누구든 시인이 될수있다...
+            </div>
+        </div>
+    </div>
+    <div id="text">작가별 분류: 필구의 글 모음</div>
+    <div id="chartSite">
+        <a target="_blank" href="./5-1.html">
+            <div class="Site" id="1">검은 봉지</div>
+        </a>
+        <a target="_blank" href="./5-2.html">
+            <div class="Site" id="2">달님의 소망</div>
+        </a>
+        <a target="_blank" href="./5-3.html">
+            <div class="Site" id="3">" 첫 만남 "</div>
+        </a>
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>
