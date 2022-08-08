@@ -436,6 +436,17 @@
             <br>마시멜로를 베어냈다. 악취가 나고 뭔가 안에 거대한 음모가 숨겨진 듯한 움직임이 일었다. 나는 신호기를 그 속에 꽂아 넣고 가만히 지켜봤다. 곧 마시멜로가 들썩였다. 나는 끝내 마시멜로가 부풀고 검게 그을릴 때까지 지켜보았다.
             <br>계속해서 마시멜로를 구워냈다. 뒤편에서는 터지는 소리도 일었으나, 점점 가면 갈 수록 불이 잘 붙지도 않았다. 참을성없이 바로 꺼져버렸다. 나는 드디어. 드디어 도시에 왔구나. 그렇게 생각했다.
         </div>
+        <script>
+            function gatekeeper() {
+                $("#p19").css("display", "none");
+                $("#gatekeeper").css("display", "block");
+            }
+
+            function gatekeeperOff() {
+                $("#gatekeeper").css("diplay", "none");
+                $("#p19").css("display", "block");
+            }
+        </script>
         <div id="gatekeeper" class="page">
             문지기 이야기
             <br>"우리가 알고 있던 세계는 무너질거야" 나의 어머니는 그의 어머니에게서 그런 말을 들었고,
@@ -462,7 +473,8 @@
             <br>그러나 고개를 들어보니 그렇지는 않았다. 아까의 도시에서 가까운 도시에 도달했다. 하나 다른 점은 모두 파란색이었다는 것이다.
             <br>다른 빛은 거부되고, 그 파란 빛만 남겨진 차가운 도시였다. 신호기를 꺼내 불을 피우고 멍하니 바라봤다. 벌건 불빛도 거부되어 어두워보였다.
             <br>그 푸른 풍경에 넋을 잃고 바라보기만 했다. 정신을 차려보니 나는 기침을 하고 있었다. 이 아름다운 풍경은 이곳의 이상한 공기가 벌인 일인가?
-            <br>그렇게 생각할 때 뒤에서 <a id="gatekeeperBtn" onclick="function gatekeeper()" onblur="function gatekeeperOff()">밧줄을 든 남자</a>가 나타났다. 그리고 이렇게 말했다.
+            <br>그렇게 생각할 때 뒤에서
+            <a id="gatekeeperBtn" onclick="gatekeeper();">밧줄을 든 남자</a>가 나타났다. 그리고 이렇게 말했다.
             <br>
             <br>"어디로 그렇게 도망을 치시나? 그 곳에는 낙원이 없다는 거 알잖나"
             <br>
@@ -592,16 +604,6 @@
                 $("#writer").css("color", "black");
                 $('meta[name=theme-color]').attr('content', '#d5d2bf');
             }
-        };
-
-        function gatekeeper() {
-            $("#p" + page).css("visibility", "hidden");
-            $("#gatekeeper").css("visibility", "visible");
-            $("#gatekeeper").css("position", "absolute");
-        }
-
-        function gatekeeperOff() {
-            $("#gatekeeper").css("visibility", "hidden");
         }
 
         $("#pagen").text(page);
