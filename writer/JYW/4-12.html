@@ -158,6 +158,12 @@
             margin-left: 50pt;
         }
         
+        #numberInput {
+            font-size: 13pt;
+            width: 38pt;
+            height: 20pt;
+        }
+        
         @media screen and (max-width: 768px) {
             @font-face {
                 font-family: 'KyoboHandwriting2020A';
@@ -253,6 +259,11 @@
                 cursor: hand;
                 margin-left: 15pt;
             }
+            #numberInput {
+                font-size: 13pt;
+                width: 38pt;
+                height: 20pt;
+            }
         }
     </style>
 </head>
@@ -264,7 +275,7 @@
         <div id="btnbar">
             <div id="barinnerbox" class="centeralign">
                 <span id="prevp">이전 페이지</span>
-                <span id="pagen">1</span>
+                <span id="pagen"><input type="number" id="numberInput" min="1" value="1"></span>
                 <span id="nextp">다음 페이지</span>
             </div>
         </div>
@@ -628,7 +639,7 @@
                 $('meta[name=theme-color]').attr('content', '#d5d2bf');
             }
         };
-        $("#pagen").text(page);
+        $("#numberInput").prop("value", page);
         $(".page").css("display", "none");
         $("#p" + page).css("display", "block");
     };
@@ -662,10 +673,44 @@
                 $('meta[name=theme-color]').attr('content', '#d5d2bf');
             }
         };
-        $("#pagen").text(page);
+        $("#numberInput").prop("value", page);
         $(".page").css("display", "none");
         $("#p" + page).css("display", "block");
     };
+
+    document.getElementById("numberInput").onchange = function() {
+        page = document.getElementById("numberInput").value;
+        self.location = "#title";
+        console.log(page);
+        if (page == 1) {
+            $("#prevp").css("visibility", "hidden");
+            $("#nextp").css("visibility", "visible");
+        } else if (page == Infinity /*마지막 페이지 수*/ ) {
+            $("#prevp").css("visibility", "visivle");
+            $("#nextp").css("visibility", "hidden");
+        } else {
+            $("#prevp").css("visibility", "visible");
+            $("#nextp").css("visibility", "visible");
+            if (page == 12) {
+                $("html").css("background-color", "black");
+                $("#writer").css("color", "white");
+                $("#title").css("color", "white");
+                $('meta[name=theme-color]').attr('content', '#000000');
+            } else if (page == 13) {
+                $("html").css("background-color", "#4682b4");
+                $("#title").css("color", "black");
+                $("#writer").css("color", "black");
+                $('meta[name=theme-color]').attr('content', '#4682b4');
+            } else {
+                $("html").css("background-color", "white");
+                $("#title").css("color", "black");
+                $("#writer").css("color", "black");
+                $('meta[name=theme-color]').attr('content', '#d5d2bf');
+            }
+        };
+        $(".page").css("display", "none");
+        $("#p" + page).css("display", "block");
+    }
 </script>
 
 </html>

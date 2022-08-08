@@ -157,6 +157,17 @@
             margin-left: 50pt;
         }
         
+        .btn {
+            cursor: hand;
+            text-decoration: dotted underline 2px;
+        }
+        
+        #numberInput {
+            font-size: 13pt;
+            width: 38pt;
+            height: 20pt;
+        }
+        
         @media screen and (max-width: 768px) {
             @font-face {
                 font-family: 'KyoboHandwriting2020A';
@@ -252,8 +263,14 @@
                 cursor: hand;
                 margin-left: 15pt;
             }
-            #gatekeeperBtn {
+            .btn {
                 cursor: hand;
+                text-decoration: dotted underline 2px;
+            }
+            #numberInput {
+                font-size: 13pt;
+                width: 38pt;
+                height: 20pt;
             }
         }
     </style>
@@ -266,7 +283,8 @@
         <div id="btnbar">
             <div id="barinnerbox" class="centeralign">
                 <span id="prevp">이전 페이지</span>
-                <span id="pagen">1</span>
+                <span id="pagen"><input type="number" id="numberInput" max="40" value="1"></span>
+                <!--   max <-   여기다가 페이지 끝번호 입력-->
                 <span id="nextp">다음 페이지</span>
             </div>
         </div>
@@ -438,35 +456,60 @@
         </div>
         <script>
             function gatekeeper() {
-                $("#p19").css("display", "none");
+                $("#p" + page).css("display", "none");
                 $("#gatekeeper").css("display", "block");
+                self.location = "#title";
             }
 
             function gatekeeperOff() {
-                $("#gatekeeper").css("diplay", "none");
-                $("#p19").css("display", "block");
+                $("#gatekeeper").css("display", "none");
+                $("#p" + page).css("display", "block");
+                self.location = "#title";
             }
         </script>
         <div id="gatekeeper" class="page">
-            문지기 이야기
+            <button style="
+           color: black;
+            width: 100%;
+            border-width: 15px;
+            border-left-color: #f8f5ec;
+            border-top-color: #c2c0ba;
+            border-right-color: #f8f5ec;
+            border-bottom-color: #c2c0ba;
+            background: #D9D6CD;
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 12pt;
+            " disabled><br>
+            <br>문지기 이야기
+            <br>
             <br>"우리가 알고 있던 세계는 무너질거야" 나의 어머니는 그의 어머니에게서 그런 말을 들었고,
-            <br>나의 아버지는 그의 아버지에게 "이제 거기서 쭉 사셔야 해요. 대안은 없어." 그렇게 말했다.
-            <br>그렇게 자라 무너진 세계에서 나를 키웠고
-            <br>"우리가 알고 있던 세계는 이렇게 무너지는거야. 이제 너는 여기서 살아야 해" 아들의 부모는 죽어가며 그의 아들에게 그런 말을 들려줬다.
-            <br>죽음으로부터 도망칠 기회와 이유를 모두 저버린 나는 그때부터
-            <br>살아야 할 이유를 유예한 채 도망치는 이들을 여기 붙잡아 두었다.
-            <br>그들은 죽음이 부는 뿔피리, '공포'에 말라비틀어져 익어버렸다
-            <br>삶에의 의지를 가진 사람은 없었다. 모두 미루어두고 도망치기 바빴다.
-            <br>무엇으로부터?
-            <br>나는 여기서 이렇게 있는데?
-            <br>무너진 세계에 신을 데려오지 말라.
-            <br>의미를 건너뛰고 멋대로 끝을 막아버리지 말라.
-            <br>신은 이미 우리가 죽였잖는가.
-            <br>어떤 신을 데려와서 또 죽게 할 셈인가.
-            <br>어떤 세계를 또 부숴버릴 셈인가.
-            <br>나는 그들의 허접한 삶의 이유를 그들과 충돌시켜 버리고 쓰러진 그들을 그들이 두려워하는 것의 먹이로 던져버린다.
-            <br>그들은 그들이 믿어왔던 것이 그들의 성급한 도약이었거나 그들이 믿어왔던 것이 실은 존재하지 않는다는 것을 알게 될까봐 도망치는 것이고.
-            <br>그것이 결국 그들을 게걸스레 먹어치워 버린다. 그것은 사람이었던가? 라는 생각이 들 정도로, 그들은 부서진 상태이다.
+           나의 아버지는 그의 아버지에게 "이제 거기서 쭉 사셔야 해요. 대안은 없어." 그렇게 말했다.
+           그렇게 자라 무너진 세계에서 나를 키웠고
+           "우리가 알고 있던 세계는 이렇게 무너지는거야. 이제 너는 여기서 살아야 해" 아들의 부모는 죽어가며 그의 아들에게 그런 말을 들려줬다.
+          죽음으로부터 도망칠 기회와 이유를 모두 저버린 나는 그때부터
+           살아야 할 이유를 유예한 채 도망치는 이들을 여기 붙잡아 두었다.
+           그들은 죽음이 부는 뿔피리, '공포'에 말라비틀어져 익어버렸다
+            <br><br>삶에의 의지를 가진 사람은 없었다. 모두 미루어두고 도망치기 바빴다.
+            <br><br>무엇으로부터?
+            <br><br>나는 여기서 이렇게 있는데?
+            <br><br>무너진 세계에 신을 데려오지 말라.
+            <br><br>의미를 건너뛰고 멋대로 끝을 막아버리지 말라.
+            <br><br>신은 이미 우리가 죽였잖는가.
+            <br><br>어떤 신을 데려와서 또 죽게 할 셈인가.
+            <br><br>어떤 세계를 또 부숴버릴 셈인가.
+            <br><br>나는 그들의 허접한 삶의 이유를 그들과 충돌시켜 버리고 쓰러진 그들을 그들이 두려워하는 것의 먹이로 던져버린다.
+            <br><br>그들은 그들이 믿어왔던 것이 그들의 성급한 도약이었거나 그들이 믿어왔던 것이 실은 존재하지 않는다는 것을 알게 될까봐 도망치는 것이고.
+     그것이 결국 그들을 게걸스레 먹어치워 버린다. 그것은 사람이었던가? 라는 생각이 들 정도로, 그들은 몹시 산산히 부서진 상태로 전시된다.
+            <br>
+            <br>
+            <br>
+            </button>
+            <br>
+            <br>
+            <a class="btn centeralign" onclick="gatekeeperOff();">밖으로 돌아가기</a>
         </div>
         <div id="p19" class="page">
             한낮인데도 점점 어두워졌다. 폭풍이 결국 나를 따라잡은 것인가?
@@ -474,28 +517,29 @@
             <br>다른 빛은 거부되고, 그 파란 빛만 남겨진 차가운 도시였다. 신호기를 꺼내 불을 피우고 멍하니 바라봤다. 벌건 불빛도 거부되어 어두워보였다.
             <br>그 푸른 풍경에 넋을 잃고 바라보기만 했다. 정신을 차려보니 나는 기침을 하고 있었다. 이 아름다운 풍경은 이곳의 이상한 공기가 벌인 일인가?
             <br>그렇게 생각할 때 뒤에서
-            <a id="gatekeeperBtn" onclick="gatekeeper();">밧줄을 든 남자</a>가 나타났다. 그리고 이렇게 말했다.
+            <a class="btn" onclick="gatekeeper();">밧줄을 든 남자</a>가 나타났다. 그리고 이렇게 말했다.
             <br>
             <br>"어디로 그렇게 도망을 치시나? 그 곳에는 낙원이 없다는 거 알잖나"
             <br>
             <br>나는 바짝 긴장한 상태로 뒷걸음질 치며 태연한 척 대답했다.
             <br> "방향 없이 살다가 뭔가에 쫓겨 어딘가에 향하는 것보면
             <br> 그 무언가는 내게서 빼앗은 게 아니라 내게 뭔가를 준 거 잖나?
-            <br>너나 나나 표류하는 부표가 아니라 떠밀려 온 부표인거고 나도 그냥 그렇게 쓸려가고 있다네."
+            <br><a class="btn" onclick="gatekeeper();">너</a>나 나나 표류하는 부표가 아니라 떠밀려 온 부표인거고 나도 그냥 그렇게 쓸려가고 있다네."
             <br>
-            <br>그러자 그가 비꼬며 대답하기를 "웃기는군. 이 부표는 이제 곧 육지에 도착하는 건가? 도착하면, 너는 저 지푸라기 사일리지랑 다를 게 뭐지? 안은 썩고, 밖은 영원히 썩지 않을 비닐로 감싼, 저 사일리지랑 다를 게 뭐냐고."
+            <br>그러자 <a class="btn" onclick="gatekeeper();">그</a>가 비꼬며 대답하기를 "웃기는군. 이 부표는 이제 곧 육지에 도착하는 건가? 도착하면, 너는 저 지푸라기 사일리지랑 다를 게 뭐지? 안은 썩고, 밖은 영원히 썩지 않을 비닐로 감싼, 저 사일리지랑 다를 게 뭐냐고."
             <br>
-            <br>신호기를 한 손에 든 채로 다른 손으로는 총을 꺼낼 태세로. 이 자세는 생각보다 허술했다. 하여튼 나는 이런 자세로 말했다.
-            <br>"그럼 너는 어디로부터 도망쳐가는데? 그 도망은 성공했나? 그래서 자네는 여기 발이 묶여 있는 거고? 좋아 그렇다면 너도 저 마시멜로라는 거고..."
-            <br>총을 쏠 자신은 없어 주머니에 손만 얹어 두었고 엉거주춤한 자세로 신호기로 그의 옆구리를 지져버렸다. 나는 그가 선량한 시민인지, 약탈자인지 확신할 수 없었기 때문에 이것의 나의 최선의 선택이었고, 그래야만 한다고 생각하며 도망쳤다.
-            <br>그는 쓰러진 상태에서도 밧줄 고리를 휘둘렀다. 그것이 정말 닿을 것이라고 생각하지는 않았지만, 워낙 순식간에 일어난 일이었고... 결론적으로는 나는 묶여있었다.
+            <br>신호기를 한 손에 든 채로 다른 손으로는 총을 꺼낼 태세로. 이 자세는 아주 허술했다. 하여튼 나는 이런 자세로 말했다.
+            <br>"그럼 <a class="btn" onclick="gatekeeper();">너</a>는 어디로부터 도망쳐가는데? 그 도망은 성공했나? 그래서 자네는 여기 발이 묶여 있는 거고? 좋아 그렇다면 너도 저 마시멜로라는 거고..."
+            <br>총을 쏠 자신은 없어 주머니에 손만 얹어 두었고 엉거주춤한 자세로 신호기로 <a class="btn" onclick="gatekeeper();">그</a>의 옆구리를 지져버렸다. 나는 <a class="btn" onclick="gatekeeper();">그</a>가 선량한 시민인지, 약탈자인지 확신할 수 없었기 때문에 이것의 나의 최선의 선택이었고, 그래야만 한다고 생각하며 도망쳤다.
+            <br><a class="btn" onclick="gatekeeper();">그</a>는 쓰러진 상태에서도 밧줄 고리를 휘둘렀다. 그것이 정말 닿을 것이라고 생각하지는 않았지만, 워낙 순식간에 일어난 일이었고... 결론적으로는 나는 묶여있었다.
             <br>계속 뛰면 될 줄 알았다.
-            <br>계속 뛰면 될 줄 알았으나 내가 도망치면 도망칠 수록 줄은 더 세게 나를 조여올 뿐이었다. 당황한 나는 그대로 주머니에서 손을 빼며 총을 꺼내게 되었고 엉겁결에 그를 총으로 위협하게 되었다.
-            <br>그는 잠시 흠칫하더니 다시 무표정으로 밧줄을 당기기만 했다. 나는 그와 나를 잇는 선을 쏴버렸다. 그리고 총으로 위협하며 뛰었다. 그는 쓰러진 채 끊긴 줄을 힘없이 흔들 뿐 추격 의지는 없었다. 부상을 입은 그가 나를 잡을 수 있는 수단은 진작에 없어져 버렸다는 것을 잘 알고 있는 듯 싶었다.
-            <br>그러나 그는 쓰러진 채 의미 없는 밧줄을 꽉 쥐고 정신 없이 고함쳤다. 그의 줄도, 그의 말도 정리되지 않는 듯 꼬여있었고, 나는 나대로 도망치느라 정신이 없었다. 그래서 그의 소리를 들은 이는 두 명이었으나, 그의 말을 들은 사람은 아무도 없었다. 한참을 어버버하다 정리된 듯 조용해지더니 이렇게 말했다. 밧줄 또한 손에서 놓은 채로 말이다. "이제 곧 당신이 스스로를 찌르게 되겠네요. 화염은 당신을 잠식하고 그 스티로폼
-            마시멜로는 스스로 타다가 녹아버린다네."
+            <br>계속 뛰면 될 줄 알았으나 내가 도망치면 도망칠 수록 줄은 더 세게 나를 조여올 뿐이었다. 당황한 나는 그대로 주머니에서 손을 빼며 총을 꺼내게 되었고 엉겁결에 <a class="btn" onclick="gatekeeper();">그</a>를 총으로 위협하게 되었다.
+            <br><a class="btn" onclick="gatekeeper();">그</a>는 잠시 흠칫하더니 다시 무표정으로 밧줄을 당기기만 했다. 나는 <a class="btn" onclick="gatekeeper();">그</a>와 나를 잇는 선을 쏴버렸다. 그리고 총으로 위협하며 뛰었다. <a class="btn" onclick="gatekeeper();">그</a>는 쓰러진 채 끊긴 줄을 힘없이 흔들 뿐 추격 의지는 없었다.
+            부상을 입은 <a class="btn" onclick="gatekeeper();">그</a>가 나를 잡을 수 있는 수단은 진작에 없어져 버렸다는 것을 잘 알고 있는 듯 싶었다.
+            <br>그러나 <a class="btn" onclick="gatekeeper();">그</a>는 쓰러진 채 의미 없는 밧줄을 꽉 쥐고 정신 없이 고함쳤다. <a class="btn" onclick="gatekeeper();">그</a>의 줄도, <a class="btn" onclick="gatekeeper();">그</a>의 말도 정리되지 않는 듯 꼬여있었고, 나는 나대로 도망치느라 정신이 없었다. 그래서 <a class="btn"
+                onclick="gatekeeper();">그</a>의 소리를 들은 이는 두 명이었으나, <a class="btn" onclick="gatekeeper();">그</a>의 말을 들은 사람은 아무도 없었다. 한참을 어버버하다 정리된 듯 조용해지더니 이렇게 말했다. 밧줄 또한 손에서 놓은 채로 말이다. "이제 곧 당신이 스스로를 찌르게 되겠네요. 화염은 당신을 잠식하고 그 스티로폼 마시멜로는 스스로 타다가 녹아버린다네."
             <br>
-            <br>땀인지 식은땀인지 구별 되지는 않았다. 뭔가가 계속해서 흐를 뿐이었다. 나는 여러 이유로 그에게 목청껏 대답해주지 않았다. 숨이 차서이기도 했고, 그에게 반박할 만큼 논리적이지 않아서이기도 했다.
+            <br>땀인지 식은땀인지 구별 되지는 않았다. 뭔가가 계속해서 흐를 뿐이었다. 나는 여러 이유로 <a class="btn" onclick="gatekeeper();">그</a>에게 목청껏 대답해주지 않았다. 숨이 차서이기도 했고, <a class="btn" onclick="gatekeeper();">그</a>에게 반박할 만큼 논리적이지 않아서이기도 했다.
         </div>
         <div id="p00" class="page">벽에 빨갛게 마카로 칠해져 있었다.
             <br>흔한 낙서였다.
@@ -571,7 +615,7 @@
                 $('meta[name=theme-color]').attr('content', '#d5d2bf');
             }
         };
-        $("#pagen").text(page);
+        $("#numberInput").prop("value", page);
         $(".page").css("display", "none");
         $("#p" + page).css("display", "block");
     };
@@ -606,10 +650,44 @@
             }
         }
 
-        $("#pagen").text(page);
+        $("#numberInput").prop("value", page);
         $(".page").css("display", "none");
         $("#p" + page).css("display", "block");
     };
+
+    document.getElementById("numberInput").onchange = function() {
+        page = document.getElementById("numberInput").value;
+        self.location = "#title";
+        console.log(page);
+        if (page == -Infinity) {
+            $("#prevp").css("visibility", "hidden");
+            $("#nextp").css("visibility", "visible");
+        } else if (page == Infinity /*끝 페이지 번호 적기*/ ) {
+            $("#prevp").css("visibility", "visivle");
+            $("#nextp").css("visibility", "hidden");
+        } else {
+            $("#prevp").css("visibility", "visible");
+            $("#nextp").css("visibility", "visible");
+            if (page == -4) {
+                $("html").css("background-color", "black");
+                $("#writer").css("color", "white");
+                $("#title").css("color", "white");
+                $('meta[name=theme-color]').attr('content', '#000000');
+            } else if (page == -3) {
+                $("html").css("background-color", "#4682b4");
+                $("#title").css("color", "black");
+                $("#writer").css("color", "black");
+                $('meta[name=theme-color]').attr('content', '#4682b4');
+            } else {
+                $("html").css("background-color", "white");
+                $("#title").css("color", "black");
+                $("#writer").css("color", "black");
+                $('meta[name=theme-color]').attr('content', '#d5d2bf');
+            }
+        };
+        $(".page").css("display", "none");
+        $("#p" + page).css("display", "block");
+    }
 </script>
 
 </html>
