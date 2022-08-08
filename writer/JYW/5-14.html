@@ -252,6 +252,9 @@
                 cursor: hand;
                 margin-left: 15pt;
             }
+            #gatekeeperBtn {
+                cursor: hand;
+            }
         }
     </style>
 </head>
@@ -459,7 +462,7 @@
             <br>그러나 고개를 들어보니 그렇지는 않았다. 아까의 도시에서 가까운 도시에 도달했다. 하나 다른 점은 모두 파란색이었다는 것이다.
             <br>다른 빛은 거부되고, 그 파란 빛만 남겨진 차가운 도시였다. 신호기를 꺼내 불을 피우고 멍하니 바라봤다. 벌건 불빛도 거부되어 어두워보였다.
             <br>그 푸른 풍경에 넋을 잃고 바라보기만 했다. 정신을 차려보니 나는 기침을 하고 있었다. 이 아름다운 풍경은 이곳의 이상한 공기가 벌인 일인가?
-            <br>그렇게 생각할 때 뒤에서 <a mousedown="function gatekeeper();" mouseup="function gatekeeperOff();">밧줄을 든 남자</a>가 나타났다. 그리고 이렇게 말했다.
+            <br>그렇게 생각할 때 뒤에서 <a id="gatekeeperBtn" onclick="function gatekeeper()" onblur="function gatekeeperOff()">밧줄을 든 남자</a>가 나타났다. 그리고 이렇게 말했다.
             <br>
             <br>"어디로 그렇게 도망을 치시나? 그 곳에는 낙원이 없다는 거 알잖나"
             <br>
@@ -568,7 +571,7 @@
             $("#prevp").css("visibility", "hidden");
             $("#nextp").css("visibility", "visible");
         } else if (page == Infinity /*끝 페이지 번호 적기*/ ) {
-            $("#prevp").css("visibility", "visivle");
+            $("#prevp").css("visibility", "visible");
             $("#nextp").css("visibility", "hidden");
         } else {
             $("#prevp").css("visibility", "visible");
@@ -592,14 +595,15 @@
         };
 
         function gatekeeper() {
-            $("#p19").css("visibility", "hidden");
-            $("#gatekeeper").css("visibility", "visivle");
+            $("#p" + page).css("visibility", "hidden");
+            $("#gatekeeper").css("visibility", "visible");
+            $("#gatekeeper").css("position", "absolute");
         }
 
         function gatekeeperOff() {
             $("#gatekeeper").css("visibility", "hidden");
-            $("#p19").css("visibility", "visivle");
         }
+
         $("#pagen").text(page);
         $(".page").css("display", "none");
         $("#p" + page).css("display", "block");
