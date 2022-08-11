@@ -397,11 +397,22 @@
             margin-bottom: 1.25vh;
         }
         
-        #oneho,
-        #twoho,
-        #threeho,
-        #fourho,
-        #writerho {
+        #bottomText {
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            position: absolute;
+            bottom: 4vmin;
+            z-index: 7;
+            width: fit-content;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .ho {
             font-family: 'GowunBatang-Bold';
             font-weight: bolder;
             font-style: normal;
@@ -419,25 +430,6 @@
             margin-top: 1.25vh;
             margin-bottom: 1.25vh;
         }
-        
-        #bottomText {
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            position: absolute;
-            bottom: 4vmin;
-            z-index: 7;
-            width: fit-content;
-        }
-        
-        a {
-            text-decoration: none;
-            color: black;
-        }
-        
-        .ho {
-            color: black;
-        }
     </style>
 </head>
 
@@ -448,23 +440,23 @@
     <div id="toggleDot"></div>
     <div id="box"><img src="./bg.jpg"></div>
     <div id="modal">
-        <a href="../writer/index.html" target="_self" class="ho">
-            <div id="writerho">작가별</div>
+        <a href="../writer/index.html" target="_self" style="color: black;">
+            <div id="writerho" class="ho">작가별</div>
         </a>
-        <a href="../allhoji.html" target="_self" class="ho">
-            <div id="allho">전체보기</div>
+        <a href="../allhoji.html" target="_self" style="color: black;">
+            <div id="allho" class="ho">전체보기</div>
         </a>
-        <a href="../1/index.html" target="_self" class="ho">
-            <div id="oneho">1호지</div>
+        <a href="../1/index.html" target="_self" style="color: black;">
+            <div id="oneho" class="ho">1호지</div>
         </a>
-        <a href="../2/index.html" target="_self" class="ho">
-            <div id="twoho">2호지</div>
+        <a href="../2/index.html" target="_self" style="color: black;">
+            <div id="twoho" class="ho">2호지</div>
         </a>
-        <a href="../3/index.html" target="_self" class="ho">
-            <div id="threeho">3호지</div>
+        <a href="../3/index.html" target="_self" style="color: black;">
+            <div id="threeho" class="ho">3호지</div>
         </a>
-        <a href="../4/index.html" target="_self" class="ho">
-            <div id="fourho">4호지</div>
+        <a href="../4/index.html" target="_self" style="color: black;">
+            <div id="fourho" class="ho">4호지</div>
         </a>
     </div>
     <div id="wall">
@@ -482,56 +474,55 @@
             -->
         </div>
         <div id="windows">
-            <a href="../writer/JDS/4-1.html" target="_self">
+            <a href="../writer/IPG/5-1.html" target="_self">
                 <div id="window1" class="window">
                     <div id="window1text" class="article">
-                        <p class="windowTextTitle" id="window1textTitle">밤과 새벽</p>
-                        나지막이 깔린 짙은 흑막, 안개 너머를 향해 걸음을 젖힌다...
+                        나를 구속하는 모든 것으로부터 자유를! 나를 구속하지 않는 모든 것들로부터 자유를! 나로부터 자유를!...
                     </div>
                     <div class="readMore">마저 읽기</div>
                 </div>
             </a>
-            <a href="../writer/JYW/4-7.html" target="_self">
+            <a href="../writer/JYW/5-15.html" target="_self">
                 <div id="window2" class="window">
                     <div id="window2text" class="article">
-                        <p class="windowTextTitle" id="window1textTitle">22320116</p>
-                        "생일이 끝나서 서운하다" 생일이 끝나고 그의 심정을 압축적으로 묘사하는 그의 짧은 회고였다. 그 말 속에는 수만가지 감정이 녹아있음을...
+                        <p class="windowTextTitle" id="window1textTitle">-위대하다고 말하고 싶지는 않다네-</p>
+                        힘만 가득하던 곳 터져나와 반짝임을 품고, 거성의 조각 흩어져 외딴 곳의 티끌 이루니...
                     </div>
                     <div class="readMore">마저 읽기</div>
                 </div>
             </a>
-            <a href="../writer/JYW/4-9.html" target="_self">
+            <a href="../writer/PG/5-1.html" target="_self">
                 <div id="window3" class="window">
                     <div id="window3text" class="article">
-                        <p class="windowTextTitle" id="window3textTitle">마지막 파괴</p>
-                        오늘, 한 인간이 세상을 등졌다. 나는 떨리는 마음으로 펜을 들고, 펜은 무거운 마음으로 종이에서 떨어지지 않는구나...
+                        <p class="windowTextTitle" id="window3textTitle">달님의 소망 ①</p>
+                        그래서 달님은 소망합니다. 작은 우주를...
                     </div>
                     <div class="readMore">마저 읽기</div>
                 </div>
             </a>
-            <a href="../writer/JYW/4-12.html" target="_self">
+            <a href="../writer/PG/5-2.html" target="_self">
                 <div id="window4" class="window">
                     <div id="window4text" class="article">
-                        <p class="windowTextTitle" id="window4textTitle">¶ 염세주의자의 찬가</p>
+                        <p class="windowTextTitle" id="window4textTitle">" 첫 만남 " ②</p>
                         창 밖을 보고 있었다. 어차피 지워버릴 거. 왜 쓰나. 어차피...
                     </div>
                     <div class="readMore">마저 읽기</div>
                 </div>
             </a>
-            <a href="../writer/PSA/4-1.html" target="_self">
+            <a href="../writer/PG/5-3.html" target="_self">
                 <div id="window5" class="window">
                     <div id="window5text" class="article">
-                        <p class="windowTextTitle" id="window5textTitle">내가 내어 줄 수 있는 것</p>
-                        사람마다 마음 속에 자신이 미래에 해보고 싶은 것들, 이른바 버킷리스트가 하나씩은 있을 것이다. 나 또한 내 버킷리스트가 있고...
+                        <p class="windowTextTitle" id="window5textTitle">검은 봉지</p>
+                        딱딱한 교실에 딱딱한 칠판 딱딱한 교탁 딱딱한 책상 딱딱한 의자....
                     </div>
                     <div class="readMore">마저 읽기</div>
                 </div>
             </a>
-            <a href="../writer/YYJ/4-1.html" target="_self">
+            <a href="../writer/HRG/5-5.html" target="_self">
                 <div id="window6" class="window">
                     <div id="window6text" class="article">
-                        <p class="windowTextTitle" id="window6textTitle">그런 사람이고 싶습니다.</p>
-                        나는 문득 그런 생각을 자주 하곤 합니다 ‘나는 오늘 어떤 사람이었을까?’ 오늘의 나는 당신에게 있어 어떤 사람이었나요...
+                        <p class="windowTextTitle" id="window6textTitle">고백해야지</p>
+                        애틋한 추억 그 계절에 새겨진 아기자기한 기억들 긴긴 밤 지새우던 나에게 짧막한 영화는 막이 내리고...
                     </div>
                     <div class="readMore">마저 읽기</div>
                 </div>
