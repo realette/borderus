@@ -139,6 +139,15 @@
             background-size: 1000px
         }
         
+        #title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40pt;
+            margin: 30pt;
+            background-color: beige;
+        }
+        
         #mainBox {
             position: relative;
             top: 50pt;
@@ -278,12 +287,31 @@
             color: inherit;
         }
         
+        #bgcopyright {
+            position: absolute;
+            bottom: 0;
+        }
+        
         @media screen and (max-width: 768px) {
             html {
+                margin: 0;
                 background-image: url("./wood.jpg");
                 background-repeat: repeat;
                 background-position: 50pt;
-                background-size: 1200px
+                background-size: 1200px;
+                width: 100%;
+            }
+            body {
+                margin: 0;
+            }
+            #title {
+                left: 50%;
+                width: 75%;
+                text-align: center;
+                font-size: 20pt;
+                margin: 0;
+                margin-top: 15pt;
+                background-color: beige;
             }
             #mainBox {
                 position: relative;
@@ -295,7 +323,7 @@
                 justify-content: space-evenly;
             }
             .book {
-                padding: 12px;
+                padding: 11px;
                 width: 120px;
                 height: fit-content;
                 margin: 12px;
@@ -303,19 +331,115 @@
                 margin-bottom: 24px;
                 font-size: 14px;
             }
-            .trans {
-                color: transparent;
+            .book::after {
+                content: '';
+                width: 106.5pt;
+                height: 10px;
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                background-color: hsl(50, 5%, 75%);
+                -webkit-transform: skew(35deg);
+                -webkit-transform-origin: top;
+                -moz-transform: skew(35deg);
+                -moz-transform-origin: top;
+                -ms-transform: skew(35deg);
+                -ms-transform-origin: top;
+                -o-transform: skew(35deg);
+                -o-transform-origin: top;
+                transform: skew(35deg);
+                transform-origin: top;
             }
-            a {
-                text-decoration: none;
+            .book::before {
+                content: '';
+                width: 7px;
+                height: 200px;
+                position: absolute;
+                top: 5px;
+                right: -7px;
+                background-color: hsl(42, 100%, 97%);
+                -webkit-transform: skewY(55deg);
+                -webkit-transform-origin: top;
+                -moz-transform: skewY(55deg);
+                -moz-transform-origin: top;
+                -ms-transform: skewY(55deg);
+                -ms-transform-origin: top;
+                -o-transform: skewY(55deg);
+                -o-transform-origin: top;
+                transform: skewY(55deg);
+                transform-origin: top;
+            }
+            #book1 {
+                height: 190pt;
+                background-color: rgb(85, 85, 85);
+                color: white;
+                box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+            }
+            #book1::before {
+                content: '';
+                height: 275.5px;
+            }
+            #book2 {
+                height: 230pt;
+                background-color: #a53533;
+                color: white;
+                box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+            }
+            #book2::before {
+                content: '';
+                height: 329.5px;
+            }
+            #book3 {
+                height: 150pt;
+                background-color: rgb(247, 193, 0);
+                color: black;
+                box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+            }
+            #book3::before {
+                content: '';
+                height: 222px;
+            }
+            #book4 {
+                height: 160pt;
+                background-color: rgb(2, 126, 0);
+                color: white;
+                box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+            }
+            #book4::before {
+                content: '';
+                height: 235px;
+            }
+            #book5 {
+                height: 150pt;
+                background-color: rgb(165, 165, 165);
+                color: black;
+                box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+            }
+            #book5::before {
+                content: '';
+                height: 222px;
+            }
+            #book6 {
+                height: 200pt;
+                background-color: rgb(158, 62, 62);
+                color: white;
+                box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+            }
+            #book6::before {
+                content: '';
+                height: 289.5px;
+            }
+            #bgcopyright {
+                position: relative;
+                bottom: -100px;
             }
         }
     </style>
 </head>
 
 <body>
-    <title>테두리, 우리 5호지</title>
-    <div id="title">테두리, 우리 5호지</div>
+    <title>테두리, 우리 - 5호지</title>
+    <div id="title">테두리, 우리 - 5호지</div>
     <div id="mainBox">
         <div class="flex">
             <a href="../writer/IPG/5-1.html" target="_blank">
@@ -363,7 +487,7 @@
             </div>
         </div>
     </div>
-    <a href="https://www.vecteezy.com/free-vector/illustrator-wood-grain-brush" style="position: absolute; bottom: 0px;">Illustrator Wood Grain Brush Vectors by Vecteezy</a>
+    <a id="bgcopyright" href="https://www.vecteezy.com/free-vector/illustrator-wood-grain-brush" style="position: relative; bottom: -30px;">Illustrator Wood Grain Brush Vectors by Vecteezy</a>
     <script>
         var nowb1LengPx = $("#book1").css("width")
         let nowb1Leng = nowb1LengPx.replace(/px/gi, " ");

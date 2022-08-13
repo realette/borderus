@@ -1,0 +1,693 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>스티로폼 마시멜로</title>
+    <!--테두우리 5호지 주영욱의 첫번째 글-->
+    <meta name="author" content="Yeong-wook Joo">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <meta name="theme-color" content="#6bb7c4">
+
+    <link rel="icon" type="image/png" href="../../xpednfl-ico-file/001.png" sizes="192x192">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        var page = 1;
+
+        onload = function() {
+            $(".page").css("display", "none");
+            $("#p1").css("display", "block");
+        };
+    </script>
+    <script>
+        var favicon_images = [
+                '../../xpednfl-ico-file/001.png',
+                '../../xpednfl-ico-file/021.png',
+                '../../xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Iropke Batang';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+        }
+        
+        p {
+            margin-top: 50pt;
+            margin-bottom: 50pt;
+        }
+        
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 15pt;
+            padding-left: 25%;
+            padding-right: 25%;
+            padding-bottom: 20vw;
+        }
+        
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+        
+        u {
+            text-decoration: underline 0.5px;
+            text-underline-offset: -13.5pt;
+        }
+        
+        #titleU {
+            text-decoration: underline 2px;
+            text-underline-offset: -18.5pt;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+            width: fit-content;
+        }
+        
+        .rightalign {
+            text-align: right;
+        }
+        
+        .centeralign {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        q {
+            width: fit-content;
+            padding-left: 25%;
+            padding-right: 25%;
+            font-style: italic;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        #btnbar {
+            position: fixed;
+            height: 25pt;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            background-color: #6bb7c4;
+            z-index: 10;
+        }
+        
+        #prevp {
+            cursor: hand;
+            margin-right: 50pt;
+        }
+        
+        #nextp {
+            cursor: hand;
+            margin-left: 50pt;
+        }
+        
+        .btn {
+            cursor: hand;
+            text-decoration: dotted underline 2px;
+        }
+        
+        #numberInput {
+            font-size: 13pt;
+            width: 38pt;
+            height: 20pt;
+        }
+        
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Iropke Batang';
+                font-style: normal;
+                font-weight: 400;
+                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+            }
+            p {
+                margin-top: 50pt;
+                margin-bottom: 50pt;
+            }
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 150%;
+                font-family: 'Iropke Batang';
+                font-size: 12pt;
+                padding-left: 4%;
+                padding-right: 4%;
+                padding-bottom: 60pt;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+            u {
+                text-decoration: underline 0.7px;
+                text-underline-offset: -12pt;
+            }
+            #titleU {
+                text-decoration: underline 2px;
+                text-underline-offset: -18.5pt;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+                width: fit-content;
+            }
+            .rightalign {
+                text-align: right;
+            }
+            .centeralign {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            q {
+                padding-left: 2%;
+                padding-right: 2%;
+                width: fit-content;
+                font-style: italic;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            #btnbar {
+                position: fixed;
+                height: 30pt;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                background-color: #6bb7c4;
+                z-index: 10;
+            }
+            #barinnerbox {
+                width: fit-content;
+                position: relative;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            #prevp {
+                font-size: 15pt;
+                cursor: hand;
+                margin-right: 15pt;
+            }
+            #pagen {
+                font-size: 15pt;
+            }
+            #nextp {
+                font-size: 15pt;
+                cursor: hand;
+                margin-left: 15pt;
+            }
+            .btn {
+                cursor: hand;
+                text-decoration: dotted underline 2px;
+            }
+            #numberInput {
+                font-size: 13pt;
+                width: 38pt;
+                height: 20pt;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">마시멜로 스티로폼</h1>
+    <h4 id="writer"><a target="_blank" href="../../writer/JYW">작성: 주영욱</a></h4>
+    <div id="text">
+        <div id="btnbar">
+            <div id="barinnerbox" class="centeralign">
+                <span id="prevp">이전 페이지</span>
+                <span id="pagen"><input type="number" id="numberInput" max="40" value="1"></span>
+                <!--   max <-   여기다가 페이지 끝번호 입력-->
+                <span id="nextp">다음 페이지</span>
+            </div>
+        </div>
+        <div id="p-5" class="page">
+            아침... 아침... 아침... 아침... 아침... 아침...
+
+        </div>
+        <div id="p1" class="page">
+            그리고 또 하나의 아침이었다.
+            <br>이 곳의 영원한 안개는 아침 안개로 사라진다.
+            <br>
+            <br>내 앞에 펼쳐진 세계와 마주했다.
+            <br>온전히 받아들일 용기가 없어 그 앞에 삐뚜름하게 비껴섰다.
+            <br>
+            <br>청회색 구름이 살구색 빛의 웅장함을 억누르지 못하는 모양새로 빛은
+            <br>펼쳐지고 있었다.
+            <br>
+            <br>구름이 자리를 비운 곳은 어김없이,
+            <br>구름결 통하여 토해지며,
+            <br>아침이 빛으로 된 창을 두르고 세계를 강점했다.
+            <br>
+            <br>천지가 개벽하고 있었다.
+            <br>
+            <br>
+            <br>나는 그곳에 서있었다.
+        </div>
+        <div id="p2" class="page">
+            나는 꼼짝없이 아침의 인질이었다.
+            <br>빛으로 된 창들이 파도처럼 산산이 깨지고,
+            <br>파편 조각들이 튀어 사방으로 흩어졌다.
+            <br>자꾸만 그 조각들이 눈에 들어가서 손으로 눈을 비비지 않을 수 없었다.
+            <br>내 앞의 바다도 좀처럼 삼키지 못하는 모양새가 마치 파편이 목에 걸릴까 걱정하는 듯 싶었다.
+            <br>
+            <br>우린 모두 아침의 인질이었고, 개벽의 목격자였다.
+        </div>
+        <div id="p3" class="page">
+            바다는 빛을 머금고 있었다.
+            <br>바닷결 통해 빛을 토해내고 있는 것 같기도 했다.
+            <br>
+            <br>바다는 단순히 청록색이 아니었다.
+            <br>
+            <br>바위에 맞아 깨진, 파괴된 파도는 희고, 바다의 푸르름에서 약간 벗어난 곳에서 사그라든다.
+            <br>마치 늙은 사자가 무리를 떠나 죽음을 맞듯이.
+            <br>
+            <br>그러나 오늘의 이 바다는 좀 달랐다.
+            <br>둘을 섞은 듯한 오묘한 색채가 먼발치 바다에서 감돌았다.
+            <br>청록과 하양. 그 사이서 부서지고, 떠오르는. 그런 바다였다.
+        </div>
+        <div id="p4" class="page">
+            아
+            <br>비가,
+            <br>
+            <br>비가
+            <br>내리는구나.
+            <br>
+            <br>
+            <br>그 바다의 색은 끊임없이 만들어지고 부서지는 색이었다.
+            <br>
+            <br>아침비도 결국 아침이었나 보다.
+            <br>먹구름도 태양처럼 파편을 흩어 뿌리니, 눈을 뜰 수가 없었다.
+            <br>빛줄기도, 빗줄기도 모두 눈부시게 왔다.
+            <br>
+            <br>아침은 인질에게 고개를 숙이라고 말한다.
+            <br>머리를 조아리라고 그렇게 말한다.
+            <br>그리고 또, 양손으로 경례하도록 명령한다.
+        </div>
+        <div id="p5" class="page">
+            아침의 여우비는 미소를 남기고 모든 구름이 걷혔다.
+            <br>잿빛으로 춥던 도시에 파랑이 다가오고 있었다.
+            <br>후근한 바람이 불었다.
+            <br>마지막 파란을 일으키며 파랑을 불러왔다.
+        </div>
+
+        <div id="p6" class="page">
+            "파랑은 결국 짓밟히는 색인가?"
+            <br>
+            <br>혼자였지만 크게 소리내어 말하지는 않았다.
+            <br>볼품없는 현관을 열어젖혀놓고 나는 가방에 보이는대로 모두 집어넣기 시작했다. 물, 몇 개 남지 않은 영양바 상자, 불꽃신호기는 보이는 만큼, 그 시기에 겨우 밀수했던 권총은, 다양도 나이프와 펜과 같이 양쪽 주머니에 나누어 넣었다. 노래 불륨을 최대로 올려서 현관 앞에 들고 섰다.
+            <br>'그것이 휩쓸려 따라오게 될 지도 모르니까 말이지.'
+
+            <br>라고 생각하며 그 곳에 내려놓고 뒤돌았다.
+            <br>내 자신에게 말을 거는데, 집엔 아무도 없고.
+            <br>그저 스스로를 속이며 살 수는 있겠지.
+            <br><br>
+            <q>♪ You came in this world alone ... ♬</q><br><q>Alone...</q>
+            <br>
+            <br>
+            <br>십년 넘게 방치된 자동차에 올라타보았다. 시동이 걸리지 않을 거라는 것을 알고는 있었지만, 주인으로서 마지막으로 거는 희망, 기대라도 주고 싶었다. 그냥 작별인사로 말이다. 공허한 파도 소리 속에 묻힌 채 오래 앉아있을 수는 없어 몸을 일으켰다.
+            <br>신호기 하나를 피워 차 밑에 던져두고 차 바닥을 향해 한 발을 쐈다. 예포는 조총이 되고 그것을 죽음을 축복하며 축복으로 죽였다.
+            <br>
+            <br>
+            <br>잡아먹히지 않으려 갖가지 것들을 챙겼으나 삶이 무상하니 그저 천천히 도망치게 되었다. 죽음 앞에서는 대놓고 도망을 치지만 삶 앞에서는 눈치를 보니 참 웃긴 장면 아닌가. 그러다가도 죽음은 눈 뜬 채 있고, 삶은 눈 감은 채 있으니 당연하기도 하다고 생각했다.
+        </div>
+        <div id="p7" class="page">
+            해변에서 많이 떨어지지 않은 곳에 언덕이 있었다. 언덕을 내려가니 논이 있던 흔적이 있었고 그 중앙의 길을 따랐다. 풀은 무성히도 자랐으나 그들이 아주 오래 전 심은 곡식의 흔적을 찾을 수는 없다. 그들은 연약하다.
+            <br><br><q>♪ Cause I see the storm getting closer ♬</q>
+            <br><br>
+            <div class="centeralign">나는 이 도시의 구름을 모두 부수고</div>
+            <br><br><q>♪ And the waves they get so high ♬</q>
+            <br><br>
+            <div class="centeralign">표류하던 부표를 흩어버리려 오는</div>
+            <br><br><q>♪ Seems everything we've ever known's here ♬</q>
+            <br><br>
+            <div class="centeralign">폭풍을 인도한다. 부표는 기꺼이</div>
+            <br><br><q>♪ Why must it drift away and die ♬</q>
+            <br><br>
+            <div class="centeralign">부서지기 위해 떠밀려 오리라.</div>
+        </div>
+        <div id="p8" class="page">부표는 계속해서 걸었다.
+            <br>
+            <br>걸었다.
+            <br>
+            <br>걷다가,
+            <br>
+            <br>지루하게 걷다가,
+            <br>
+            <br>상념에 빠져 걷다가,
+            <br>
+            <br>하얀 마시멜로들을 멀리서 보았다.
+            <br>'아무래도 저기에 기대야겠다.' 그렇게 생각했다.
+            <br>
+            <br>그때 나의 납치범은, 나의 신은, 저 위에서 다시 희미해지고 있었다.
+            <br>
+            <br>나는 앙상하게 마른 풀잎대들을 헤쳐 신호기 하나를 다시 꺼냈다. 손목에 울리는 진동과 함께 피어오르는 연기.
+            <br>회색 구름이 결국 검은 구름을 불러왔다. 운명적으로 나는 나의 신을 죽이게 될 것이다.
+        </div>
+        <div id="p9" class="page">불을 피우는 것을 한 태양에서 벗어나기 위해서다. 하나의 태양에서 벗어나려면 결국 또 하나의 태양을 품어야 한다.
+            <br><br>우리는 우리가 만든 것을 가짜라고 부르지 않는다. 가짜는 항상 나의 것이 아니다. 내가 만든 것을 가짜라고 부르는 자는 두 부류다. 갈망하는 자이거나, 익살꾼.
+            <br><br>그래서 불이 가짜 태양이라고 불리지 않는 것이다. 또한 그래서 달이 가짜라고 생각됨이라.
+            <br><br>그러나 결국 가짜를 만들어내는, 그것을 원초적으로 이미 계속 인지하고 있었음에도 그렇게 하는, 또 해야하는 이들은 무슨 마음일까. 무슨 생각일까.
+            <br><br>우리는 태양의 인질이었기에 구름 속에 그가 가려져도 우린 스스로를 감시했다. 그리고 새로운 주인을 만들어냈다.
+            <br>나는, 우리는 그것이 진짜라고 믿는다. 간절하게 믿는다.
+        </div>
+        <div id="p10" class="page">
+            점점 밝아지고 있었다. 분명히. 그러나 나는 어째서인지 어두워져서 일어났다. '나는 폭풍의 예인선, 떠내려가는 부표였었지.'
+            <br>다시 마음을 고쳐 먹고 일어났다. 그러나 내가 언제 이 상황에서 다리 뻗고 졸고 있었는지는 이해할 수 없었다. 누구 말처럼, 나는 정말 불가해한 괴물이었다.
+            <br>
+            <br>그 괴물 앞은 깊은 초록이었다. 심연의 색은 틀림없이 이 색일 수 밖에는 없다. 그 울창한 어둠에, 그 두려움에 떨지 않을 자 없었다. 그 숲에서 걷다보면 나는 나와 세계 사이의 접점을 찾지 못하고 방황하게될 그런 어둠이었다.
+        </div>
+        <div id="p11" class="page">
+            나는 그때의 밤과 같이 절망했다. 허무 속에서 노래하고 몸부림쳤다. 점잖게 죽은 척하며 뇌를 염세 속에 절이기도 했다. 짙은 숲 바로 앞에 섰을 때, 그 긴 벽이 나를 마주보고 있을 때, 나를 포위하고 있었을 때, 나는 더더욱 그렇게 생각했고, 무엇을 생각하든 그렇게만 생각하게 되었을 것이다. 마침내 그곳에 마주 서서 전율했으나, 결국 나는 나뒹구는 부표에 불과했고, 바람이, 구름이 떠미는 대로 흘러들어갔다. 그때의 장엄한 밤이 알려준 것은 결국
+            아침이 온다는 것이었다. 그것도 매일 온다는 것. 아침은 내가 절망하는 것이 나의 절망에 비해 한없이 작은 것일 뿐이라는 것을 보여줬다. 터무니없이 우스꽝스럽게 전시하며 비웃고 이죽댔다. 그것이 나를 절망스럽게 했다. 결국 나는 패배했으니 나를 굴복시킨 것은 진리이고, 자연이고, 절대적인 어떤 것이어야 하는 것 아닌가. 나는 그리고 그 절대자를 숭배했다. 그러나 그것은 너무 작았다. 그래서 나는 또 한 번 패배했다. 다시 오는
+            아침에. 또 다시 오는 아침에. 그 다시 온 아침에게 복종을 맹세했다. 그렇지만 다시 일어나보니 폭풍 구름이 아침을 뒤덮고 반란을 꾀한 것이 아니겠나. 그리고 나는 이렇게 또 새로운 신을 숭배하게 되었는가?
+            <br>당신들처럼?
+            <br>
+            <br>숲에 들어가자마자 내가 제일 먼저 봤던 것은 무엇이었을까?
+            <br>그 어둡게 풍성한 나무와 수풀에 들어가서 제일 먼저 본 것은 밝고 앙상한 나무이다. 빛은 나무들 사이로 나무처럼 서있었다. 어두운 나무와 밝은 나무가 번갈아 서있는 듯이 보였다. 아침이 보여준 것은 결국 다시 아침이 온다는 것이고, 숲은 결국 어디선가 날아온 빛을 심었다. 들어가자마자 출구를 찾았고 빛의 숲을 찾아 발걸음을 부지런히 옮겼다.
+        </div>
+        <div id="p12" class="page">
+            빛이 보이긴 했다만 짧은 길이의 숲은 아니었다. 사방이 나무로 가득 차 소리 질러도 공허할 것 같았다. 그 사이에 있으면 그냥 모든 곳이 그런 것처럼 느껴진다. 사람이라는 것은 전혀 존재한 적도 없다는 듯이 군다는 뜻이다. 물론 실제로도 소리 질러 들을 만한 거리에 사람이 있을 리가 없다. 정말 그 숲에서 많은 잡념들을 말동무 삼아 지나갔다. '나와 세계는 직접적으로 관계되지 않는다. 그것은 오로지 표상으로서만 관측되고 관측될 가능성이 없는 것은
+            존재하지 않는 것이다.' 등등의, 오래 전의 과학과 구식의 철학을 엮어 망상을 이어가다보니 빛이 비추고 바닥에는 철로가 보였다.
+        </div>
+        <div id="p13" class="page">
+            철로 옆에는 기다란 관이 기둥 몇 개로 들어올려져 지면과 거리를 유지했다. 아니, 음... "하려 했다"라고 해야할까? 왜냐면 그 관은 기둥 하나가 무너져 고꾸라져 있었기 때문이다. 아마 혼란기 때 망가진 것 같다. 다만 철로는 멀쩡했다. 아무도 관심을 주지 않은 사이 그냥 그대로 유지된 것 같았다. 분명 기차는 사람이 제어하는 운송기구라고 들었는데 이곳에 사람이 있을리는 없었다. 절대로 없었는데, 없었는데... 철로에서 진동이 느껴졌다. 사람이
+            있을 지도 모른다는, 그 인위적인 진동에, 그 기쁨에 좌우를 살폈다. 오른쪽이었다. 멀리서 잠깐 봤지만 멀리서 보기에도 빠른 속도였다. 듣기로는 기차는 분명 역에서 멈춘다고 했다. 하지만 나를 본 것인지 기차는 내 앞에서 서서히 속도를 늦췄고, 나는 사람을 기대했다.
+        </div>
+        <div id="p14" class="page">
+            기차가 정차하고 기차 앞유리는 나에게 무언가를 말하려고 했다. 알 수 없는 소리들이 몇 초간 지나가고 한국어가 들려왔다. "한국 도시 행 열차입니다." 곧이어서는 영어가 들려왔다. "This is train to Korea city." 앞유리창에는 'KORC', '한국 도시 행 열차'외에는 뜻을 알 수 없는 기호들이 가득했다. 잠시 고민했다. 어디로 갈지도 몰랐고, 어디론가 간다고 말했어도 어디일지 아마 몰랐을 것이다. 한국이 도시라고 불릴 때부터
+            나는 이전에 들은 것들을 응용할 생각은 진작에 버렸다. 나는 폭풍을 핑계 삼아 등떠밀린 셈치고 불확실성에 몸을 실었다. 뭐, 어차피 타나 안 타나 비슷했을 것이다. 인간의 인생 앞에는 항상 불투명한 미래가 있기 때문에 그 위에 마음껏 그릴 수 있는 것 아니겠는가. 희뿌연 구름 위에 우리는 각자의 필기구를 꺼내든다. ... 라는 생각을 하며 좌석 아무 곳에나 앉았다. '그러나 우리가 발견하는 것은 허공에 휘저으며 망상하는 인간
+            뿐이니 어떻게 우리가 절망하지 않을 수 있겠는가.' 그렇게 또 나는 생각했다. 기차에 오르니 마음이 한결 편안했다. 줄곧 도망쳐오다가 여행을 떠난 기분이 들어왔다. 그리고 나는 또 삶의 번뇌 속에서 짧은 죽음을 맞이했고 작은 아침을 맞았다. 하하 인간이란 참 웃긴 존재가 아닐 수가 없겠다. 번뇌와 잠, 아침을 반복하니 말이다. 내가 일어났을 때 기차는 터널을 뒤로 하고 있었다. 더 깊은 숲도 아래로 보이고, 위에는 아주 굵고
+            끝이 안 보이는 관이 땅 위를 가로 지르고 있었다. 폭풍은 절대 따라잡을 수가 없었으니, 나는 이런 식으로 신성모독을 오늘 하루에도 몇 번이나 반복해버린 셈이었다.
+        </div>
+        <div id="p15" class="page">
+            알 수 없는 소리가 몇 초간 들리다가 한국어가 나왔다. "전방의 선로 이상으로 한국 도시 행 열차는 반대편으로 운행합니다." 포장도로가 크고 곧게 나 있고, 양옆으로 논이 위치했다. 나는 가방에서 신호기를 하나 꺼내면서 내릴 준비를 했다. 내릴 때에야 각 좌석에 디스플레이로 도착지에 대한 안내 방송이 나온다는 것을 깨달았다. 내가 본 단어는 프리즘이었는데, 이렇게 읽는 게 맞는지도 모르겠다. 급하게 내리느라 자세히 보지는 못했다. 감옥? 분광기?
+            글쎄, 잘 모르겠다. 속으로 되뇌이며 읽은 소리만 내 속에서 울려퍼졌기에 그 소리의 모양만 기억에 남고 글자는 사라졌다. 바닥에 발을 딛으니 열기가 올라오고, 관리가 안 되어 잡초만 무성한 논과 심지어는 아무 것도 나지 않은 황폐한 논도 쭉 펼쳐져 있었다. 당신이 여기 있었다면 아마도 멸망.. 이라고 되뇌였을 게 뻔하다. 길고 긴 황폐 속에 멀리 보이는 하얀 저건 나처럼 떠밀려 온, 떠밀려 옮 속에 숨은 부표이거나, 마시멜로겠지?
+            나는 신호기에 불을 붙이고 가까이 다가갔다.
+            <br>마시멜로를 베어냈다. 악취가 나고 뭔가 안에 거대한 음모가 숨겨진 듯한 움직임이 일었다. 나는 신호기를 그 속에 꽂아 넣고 가만히 지켜봤다. 곧 마시멜로가 들썩였다. 나는 끝내 마시멜로가 부풀고 검게 그을릴 때까지 지켜보았다.
+            <br>계속해서 마시멜로를 구워냈다. 뒤편에서는 터지는 소리도 일었으나, 점점 가면 갈 수록 불이 잘 붙지도 않았다. 참을성없이 바로 꺼져버렸다. 나는 드디어. 드디어 도시에 왔구나. 그렇게 생각했다.
+        </div>
+        <script>
+            function gatekeeper() {
+                $("#p" + page).css("display", "none");
+                $("#gatekeeper").css("display", "block");
+                self.location = "#title";
+            }
+
+            function gatekeeperOff() {
+                $("#gatekeeper").css("display", "none");
+                $("#p" + page).css("display", "block");
+                self.location = "#title";
+            }
+        </script>
+        <div id="gatekeeper" class="page">
+            <button style="
+           color: black;
+            width: 100%;
+            border-width: 15px;
+            border-left-color: #f8f5ec;
+            border-top-color: #c2c0ba;
+            border-right-color: #f8f5ec;
+            border-bottom-color: #c2c0ba;
+            background: #D9D6CD;
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 12pt;
+            " disabled><br>
+            <br>문지기 이야기
+            <br>
+            <br>"우리가 알고 있던 세계는 무너질거야" 나의 어머니는 그의 어머니에게서 그런 말을 들었고,
+           나의 아버지는 그의 아버지에게 "이제 거기서 쭉 사셔야 해요. 대안은 없어." 그렇게 말했다.
+           그렇게 자라 무너진 세계에서 나를 키웠고
+           "우리가 알고 있던 세계는 이렇게 무너지는거야. 이제 너는 여기서 살아야 해" 아들의 부모는 죽어가며 그의 아들에게 그런 말을 들려줬다.
+          죽음으로부터 도망칠 기회와 이유를 모두 저버린 나는 그때부터
+           살아야 할 이유를 유예한 채 도망치는 이들을 여기 붙잡아 두었다.
+           그들은 죽음이 부는 뿔피리, '공포'에 말라비틀어져 익어버렸다
+            <br><br>삶에의 의지를 가진 사람은 없었다. 모두 미루어두고 도망치기 바빴다.
+            <br><br>무엇으로부터?
+            <br><br>나는 여기서 이렇게 있는데?
+            <br><br>무너진 세계에 신을 데려오지 말라.
+            <br><br>의미를 건너뛰고 멋대로 끝을 막아버리지 말라.
+            <br><br>신은 이미 우리가 죽였잖는가.
+            <br><br>어떤 신을 데려와서 또 죽게 할 셈인가.
+            <br><br>어떤 세계를 또 부숴버릴 셈인가.
+            <br><br>나는 그들의 허접한 삶의 이유를 그들과 충돌시켜 버리고 쓰러진 그들을 그들이 두려워하는 것의 먹이로 던져버린다.
+            <br><br>그들은 그들이 믿어왔던 것이 그들의 성급한 도약이었거나 그들이 믿어왔던 것이 실은 존재하지 않는다는 것을 알게 될까봐 도망치는 것이고.
+     그것이 결국 그들을 게걸스레 먹어치워 버린다. 그것은 사람이었던가? 라는 생각이 들 정도로, 그들은 몹시 산산히 부서진 상태로 전시된다.
+            <br>
+            <br>
+            <br>
+            </button>
+            <br>
+            <br>
+            <a class="btn centeralign" onclick="gatekeeperOff();">밖으로 돌아가기</a>
+        </div>
+        <div id="p19" class="page">
+            한낮인데도 점점 어두워졌다. 폭풍이 결국 나를 따라잡은 것인가?
+            <br>그러나 고개를 들어보니 그렇지는 않았다. 아까의 도시에서 가까운 도시에 도달했다. 하나 다른 점은 모두 파란색이었다는 것이다.
+            <br>다른 빛은 거부되고, 그 파란 빛만 남겨진 차가운 도시였다. 신호기를 꺼내 불을 피우고 멍하니 바라봤다. 벌건 불빛도 거부되어 어두워보였다.
+            <br>그 푸른 풍경에 넋을 잃고 바라보기만 했다. 정신을 차려보니 나는 기침을 하고 있었다. 이 아름다운 풍경은 이곳의 이상한 공기가 벌인 일인가?
+            <br>그렇게 생각할 때 뒤에서
+            <a class="btn" onclick="gatekeeper();">밧줄을 든 남자</a>가 나타났다. 그리고 이렇게 말했다.
+            <br>
+            <br>"어디로 그렇게 도망을 치시나? 그 곳에는 낙원이 없다는 거 알잖나"
+            <br>
+            <br>나는 바짝 긴장한 상태로 뒷걸음질 치며 태연한 척 대답했다.
+            <br> "방향 없이 살다가 뭔가에 쫓겨 어딘가에 향하는 것보면
+            <br> 그 무언가는 내게서 빼앗은 게 아니라 내게 뭔가를 준 거 잖나?
+            <br><a class="btn" onclick="gatekeeper();">너</a>나 나나 표류하는 부표가 아니라 떠밀려 온 부표인거고 나도 그냥 그렇게 쓸려가고 있다네."
+            <br>
+            <br>그러자 <a class="btn" onclick="gatekeeper();">그</a>가 비꼬며 대답하기를 "웃기는군. 이 부표는 이제 곧 육지에 도착하는 건가? 도착하면, 너는 저 지푸라기 사일리지랑 다를 게 뭐지? 안은 썩고, 밖은 영원히 썩지 않을 비닐로 감싼, 저 사일리지랑 다를 게 뭐냐고."
+            <br>
+            <br>신호기를 한 손에 든 채로 다른 손으로는 총을 꺼낼 태세로. 이 자세는 아주 허술했다. 하여튼 나는 이런 자세로 말했다.
+            <br>"그럼 <a class="btn" onclick="gatekeeper();">너</a>는 어디로부터 도망쳐가는데? 그 도망은 성공했나? 그래서 자네는 여기 발이 묶여 있는 거고? 좋아 그렇다면 너도 저 마시멜로라는 거고..."
+            <br>총을 쏠 자신은 없어 주머니에 손만 얹어 두었고 엉거주춤한 자세로 신호기로 <a class="btn" onclick="gatekeeper();">그</a>의 옆구리를 지져버렸다. 나는 <a class="btn" onclick="gatekeeper();">그</a>가 선량한 시민인지, 약탈자인지 확신할 수 없었기 때문에 이것의 나의 최선의 선택이었고, 그래야만 한다고 생각하며 도망쳤다.
+            <br><a class="btn" onclick="gatekeeper();">그</a>는 쓰러진 상태에서도 밧줄 고리를 휘둘렀다. 그것이 정말 닿을 것이라고 생각하지는 않았지만, 워낙 순식간에 일어난 일이었고... 결론적으로는 나는 묶여있었다.
+            <br>계속 뛰면 될 줄 알았다.
+            <br>계속 뛰면 될 줄 알았으나 내가 도망치면 도망칠 수록 줄은 더 세게 나를 조여올 뿐이었다. 당황한 나는 그대로 주머니에서 손을 빼며 총을 꺼내게 되었고 엉겁결에 <a class="btn" onclick="gatekeeper();">그</a>를 총으로 위협하게 되었다.
+            <br><a class="btn" onclick="gatekeeper();">그</a>는 잠시 흠칫하더니 다시 무표정으로 밧줄을 당기기만 했다. 나는 <a class="btn" onclick="gatekeeper();">그</a>와 나를 잇는 선을 쏴버렸다. 그리고 총으로 위협하며 뛰었다. <a class="btn" onclick="gatekeeper();">그</a>는 쓰러진 채 끊긴 줄을 힘없이 흔들 뿐 추격 의지는 없었다.
+            부상을 입은 <a class="btn" onclick="gatekeeper();">그</a>가 나를 잡을 수 있는 수단은 진작에 없어져 버렸다는 것을 잘 알고 있는 듯 싶었다.
+            <br>그러나 <a class="btn" onclick="gatekeeper();">그</a>는 쓰러진 채 의미 없는 밧줄을 꽉 쥐고 정신 없이 고함쳤다. <a class="btn" onclick="gatekeeper();">그</a>의 줄도, <a class="btn" onclick="gatekeeper();">그</a>의 말도 정리되지 않는 듯 꼬여있었고, 나는 나대로 도망치느라 정신이 없었다. 그래서 <a class="btn"
+                onclick="gatekeeper();">그</a>의 소리를 들은 이는 두 명이었으나, <a class="btn" onclick="gatekeeper();">그</a>의 말을 들은 사람은 아무도 없었다. 한참을 어버버하다 정리된 듯 조용해지더니 이렇게 말했다. 밧줄 또한 손에서 놓은 채로 말이다. "이제 곧 당신이 스스로를 찌르게 되겠네요. 화염은 당신을 잠식하고 그 스티로폼 마시멜로는 스스로 타다가 녹아버린다네."
+            <br>
+            <br>땀인지 식은땀인지 구별 되지는 않았다. 뭔가가 계속해서 흐를 뿐이었다. 나는 여러 이유로 <a class="btn" onclick="gatekeeper();">그</a>에게 목청껏 대답해주지 않았다. 숨이 차서이기도 했고, <a class="btn" onclick="gatekeeper();">그</a>에게 반박할 만큼 논리적이지 않아서이기도 했다.
+        </div>
+        <div id="p00" class="page">벽에 빨갛게 마카로 칠해져 있었다.
+            <br>흔한 낙서였다.
+            <br> 볼품없고 천박한 X자 낙서였다.
+            <br>
+            <br>그러나 왜 'X'가 아니라 '𝔁'였나.
+            <br>이 글자는 나를 크게 혼란스럽게 했다.
+            <br>
+            <br>하나의 미지수. 덩그러니 놓인 𝔁.
+            <br>부정(不定).
+            <br>
+            <br>나는 왜 존재하는가?
+            <br>나는 왜 태어났나?
+            <br>나는 왜 나로 존재하게 되었는가?
+            <br>언제부터?
+            <br>왜 이렇게 살아가고 있는가?
+            <br>짧은 순간에 문장들이 그를 베고 지나갔다.
+            <br> 그의 머리가 곤두서고 그는 몸을 부르르 떨었다. 귀가 잠시 찡긋했다.
+            <br>
+            <br>왜 살아야하는가? 당신을 지탱하던 기둥이 사라졌다. 나는 동시에 당신이 자유로워졌다고 말한다. 당신은 전적으로 자유롭다. 당신은 그냥 존재한다. 그래서 자유롭다.
+        </div>
+        <div id="p00" class="page">우리의 존재는 뒤얽혀있다.</div>
+
+        <div id="p00" class="page">파란색 도시. 모든 인쇄물은 표백되었다. 파란 대기 사이에 솟아 있는 깃발들은 모두 파란색이었다. 한 칸 밀린 채로 (키보드를 통해) 작성된 글귀. 엔터키 위치, 백스페이스 위치도 밀려서 그가 지우려한 글자까지 기록되었다. 남갼나ㅠ굼 누ㅏㅏ더 낚뭄더,\\\\\\\\\\\\\\\\\\\\'' 머뭄창뇸볻나저,
+        </div>
+        <div id="p00" class="page">난파 때문에 그들은 약속의 땅에 닿을 수 있었다.</div>
+        <div id="p00" class="page">
+            너는 묶여있다.
+            <br>너는 모든 것에 묶여있다.
+            <br>동시에 너는 모든 것을 지탱한다.
+            <br>이 세계 모든 숭고함은 너의 것이다.
+            <br>태양은 너를 중심으로 돈다.
+            <br>나를 중심으로 돈다.
+        </div>
+        <div id="p00" class="page">
+            나에게 비어있는 억지논리를 팔아라.
+            <br>실컷 사주마.
+            <br>그럼 너는 경멸 어린 조소를 사게 될테니.
+        </div>
+        <div id="p00" class="page">
+
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("nextp").onclick = function() {
+        page++;
+        self.location = "#title";
+        console.log(page);
+        if (page == -Infinity) {
+            $("#prevp").css("visibility", "hidden");
+            $("#nextp").css("visibility", "visible");
+        } else if (page == Infinity /*끝 페이지 번호 적기*/ ) {
+            $("#prevp").css("visibility", "visivle");
+            $("#nextp").css("visibility", "hidden");
+        } else {
+            $("#prevp").css("visibility", "visible");
+            $("#nextp").css("visibility", "visible");
+            if (page == -4) {
+                $("html").css("background-color", "black");
+                $("#writer").css("color", "white");
+                $("#title").css("color", "white");
+                $('meta[name=theme-color]').attr('content', '#000000');
+            } else if (page == -3) {
+                $("html").css("background-color", "#4682b4");
+                $("#title").css("color", "black");
+                $("#writer").css("color", "black");
+                $('meta[name=theme-color]').attr('content', '#4682b4');
+            } else {
+                $("html").css("background-color", "white");
+                $("#title").css("color", "black");
+                $("#writer").css("color", "black");
+                $('meta[name=theme-color]').attr('content', '#d5d2bf');
+            }
+        };
+        $("#numberInput").prop("value", page);
+        $(".page").css("display", "none");
+        $("#p" + page).css("display", "block");
+    };
+    document.getElementById("prevp").onclick = function() {
+        page--;
+        self.location = "#title";
+        console.log(page);
+        if (page == -Infinity) {
+            $("#prevp").css("visibility", "hidden");
+            $("#nextp").css("visibility", "visible");
+        } else if (page == Infinity /*끝 페이지 번호 적기*/ ) {
+            $("#prevp").css("visibility", "visible");
+            $("#nextp").css("visibility", "hidden");
+        } else {
+            $("#prevp").css("visibility", "visible");
+            $("#nextp").css("visibility", "visible");
+            if (page == -4) {
+                $("html").css("background-color", "black");
+                $("#writer").css("color", "white");
+                $("#title").css("color", "white");
+                $('meta[name=theme-color]').attr('content', '#000000');
+            } else if (page == -3) {
+                $("html").css("background-color", "#4682b4");
+                $("#title").css("color", "black");
+                $("#writer").css("color", "black");
+                $('meta[name=theme-color]').attr('content', '#4682b4');
+            } else {
+                $("html").css("background-color", "white");
+                $("#title").css("color", "black");
+                $("#writer").css("color", "black");
+                $('meta[name=theme-color]').attr('content', '#d5d2bf');
+            }
+        }
+
+        $("#numberInput").prop("value", page);
+        $(".page").css("display", "none");
+        $("#p" + page).css("display", "block");
+    };
+
+    document.getElementById("numberInput").onchange = function() {
+        page = document.getElementById("numberInput").value;
+        self.location = "#title";
+        console.log(page);
+        if (page == -Infinity) {
+            $("#prevp").css("visibility", "hidden");
+            $("#nextp").css("visibility", "visible");
+        } else if (page == Infinity /*끝 페이지 번호 적기*/ ) {
+            $("#prevp").css("visibility", "visivle");
+            $("#nextp").css("visibility", "hidden");
+        } else {
+            $("#prevp").css("visibility", "visible");
+            $("#nextp").css("visibility", "visible");
+            if (page == -4) {
+                $("html").css("background-color", "black");
+                $("#writer").css("color", "white");
+                $("#title").css("color", "white");
+                $('meta[name=theme-color]').attr('content', '#000000');
+            } else if (page == -3) {
+                $("html").css("background-color", "#4682b4");
+                $("#title").css("color", "black");
+                $("#writer").css("color", "black");
+                $('meta[name=theme-color]').attr('content', '#4682b4');
+            } else {
+                $("html").css("background-color", "white");
+                $("#title").css("color", "black");
+                $("#writer").css("color", "black");
+                $('meta[name=theme-color]').attr('content', '#d5d2bf');
+            }
+        };
+        $(".page").css("display", "none");
+        $("#p" + page).css("display", "block");
+    }
+</script>
+
+</html>
