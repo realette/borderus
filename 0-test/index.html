@@ -136,21 +136,26 @@
         html {
             background-image: url("./wood.jpg");
             background-repeat: repeat;
-            background-size: 1000px
+            background-size: 765px;
+            font-size: 9pt;
+        }
+        
+        h2 {
+            font-size: 13pt;
         }
         
         #title {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 40pt;
-            margin: 30pt;
+            font-size: 30pt;
+            margin: 22.5pt;
             background-color: beige;
         }
         
         #mainBox {
             position: relative;
-            top: 50pt;
+            top: 37.5pt;
         }
         
         .flex {
@@ -160,18 +165,18 @@
         }
         
         .book {
-            padding: 17pt;
-            width: 150pt;
+            padding: 12.75pt;
+            width: 112.5pt;
             height: fit-content;
-            margin: 30pt;
+            margin: 22.5pt;
         }
         
         .book::after {
             content: '';
-            width: 184pt;
-            height: 10px;
+            width: 138pt;
+            height: 7.5px;
             position: absolute;
-            bottom: -10px;
+            bottom: -7.5px;
             left: 0;
             background-color: hsl(50, 5%, 75%);
             -webkit-transform: skew(35deg);
@@ -188,11 +193,11 @@
         
         .book::before {
             content: '';
-            width: 7px;
-            height: 260px;
+            width: 5.25px;
+            height: 195px;
             position: absolute;
-            top: 5px;
-            right: -7px;
+            top: 3.75px;
+            right: -5.25px;
             background-color: hsl(42, 100%, 97%);
             -webkit-transform: skewY(55deg);
             -webkit-transform-origin: top;
@@ -207,31 +212,31 @@
         }
         
         #book1 {
-            height: 210pt;
+            height: 157.5pt;
             background-color: rgb(85, 85, 85);
             color: white;
-            box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+            box-shadow: 9pt 9pt 9pt rgb(30, 30, 30);
         }
         
         #book1::before {
             content: '';
-            height: 325.25px;
+            height: 243px;
         }
         
         #book2 {
-            height: 230pt;
+            height: 172.5pt;
             background-color: #a53533;
             color: white;
-            box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+            box-shadow: 9pt 9pt 9pt rgb(30, 30, 30);
         }
         
         #book2::before {
             content: '';
-            height: 351.25px;
+            height: 263.4375px;
         }
         
         #book3 {
-            height: 180pt;
+            height: 130pt;
             background-color: rgb(247, 193, 0);
             color: black;
             box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
@@ -239,23 +244,23 @@
         
         #book3::before {
             content: '';
-            height: 285.25px;
+            height: 206px;
         }
         
         #book4 {
-            height: 180pt;
+            height: 135pt;
             background-color: rgb(2, 126, 0);
             color: white;
-            box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+            box-shadow: 9pt 9pt 9pt rgb(30, 30, 30);
         }
         
         #book4::before {
             content: '';
-            height: 285.25px;
+            height: 213.9375px;
         }
         
         #book5 {
-            height: 150pt;
+            height: 112.5pt;
             background-color: rgb(165, 165, 165);
             color: black;
             box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
@@ -263,19 +268,19 @@
         
         #book5::before {
             content: '';
-            height: 244.5px;
+            height: 183.375px;
         }
         
         #book6 {
-            height: 200pt;
+            height: 150pt;
             background-color: rgb(158, 62, 62);
             color: white;
-            box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+            box-shadow: 9pt 9pt 9pt rgb(30, 30, 30);
         }
         
         #book6::before {
             content: '';
-            height: 311.5px;
+            height: 233.625px;
         }
         
         .trans {
@@ -491,8 +496,8 @@
     <script>
         var nowb1LengPx = $("#book1").css("width")
         let nowb1Leng = nowb1LengPx.replace(/px/gi, " ");
-        var b1X = Math.floor((Math.random() * 100 - 50));
-        var b1Y = Math.floor((Math.random() * 100 - 50));
+        var b1X = Math.floor((Math.random() * 60 - 30));
+        var b1Y = Math.floor((Math.random() * 60 - 30));
         var b1r = Math.floor((Math.random() * 40 - 20));
         $("#book1").css("position", "relative");
         if (nowb1Leng > 140) {
@@ -582,6 +587,7 @@
         }
         $("#book6").css("transform", "rotate(" + b6r + "deg)");
     </script>
+
 </body>
 
 </html>
