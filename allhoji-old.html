@@ -1,0 +1,201 @@
+<html>
+
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>테두리, 우리 - 모든 회차 모음</title>
+    <meta name="author" content="Yeong-wook Joo">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="./xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                './xpednfl-ico-file/001.png',
+                './xpednfl-ico-file/021.png',
+                './xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'GowunBatang-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        #text {
+            font-family: 'GowunBatang-Bold';
+            position: relative;
+            top: 10vmin;
+            transform: translateX(-50%);
+            left: 50%;
+            font-size: 3vmin;
+            width: fit-content;
+            height: fit-content;
+        }
+        
+        #logoImg {
+            position: absolute;
+            height: 72.8px;
+            left: 50%;
+            top: 1%;
+            transform: translateX(-50%);
+            width: auto !important;
+        }
+        
+        #chartHo {
+            position: relative;
+            top: 12vmin;
+            left: 50%;
+            transform: translateX(-50%);
+            width: fit-content;
+            text-align: center;
+        }
+        
+        .ho {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 15vmin;
+            height: 5vmin;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: #7DA89B;
+            font-family: 'GowunBatang-Bold';
+            font-weight: bolder;
+            font-style: normal;
+            font-size: 3vh;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        @media screen and (max-width: 768px) {
+            #text {
+                font-family: 'GowunBatang-Bold';
+                position: relative;
+                top: 18vmin;
+                transform: translateX(-50%);
+                left: 50%;
+                width: fit-content;
+                font-size: 5vmin;
+            }
+            #logoImg {
+                position: absolute;
+                height: 72.8px;
+                left: 50%;
+                top: 1%;
+                transform: translateX(-50%);
+                width: auto !important;
+            }
+            #chartHo {
+                position: relative;
+                top: 18vmin;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+                width: 50%;
+            }
+            .ho {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                width: 100%;
+                height: fit-content;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                background-color: #7DA89B;
+                font-family: 'GowunBatang-Bold';
+                font-weight: bolder;
+                font-style: normal;
+                font-size: 3vh;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="iconImg">
+        <a href="./index.html" target="_blank">
+            <img id="logoImg" src='./xpednfl-ash-green.png'>
+        </a>
+        <!--
+        <img width="192/2" height="108/2" src='../xpednfl.png'>
+        <img width="192/2" height="108/2" src='../xpednfl-ash-green.png'>
+        <img width="192/2" height="108/2" src='../xpednfl-ash-red.png'>
+        <img width="192/2" height="108/2" src='../xpednfl-hot-pink.png'>
+        <img width="192/2" height="108/2" src='../xpednfl-pale-purple.png'>
+        <img width="192/2" height="108/2" src='../xpednfl-ash-purple.png'>
+        -->
+    </div>
+    <div id="text">
+        회차 모음 - 선택 페이지
+    </div>
+    <div id="chartHo">
+
+        <a href="./index.html" target="_self">
+            <div class="ho" id="currentho">현재 회차</div>
+        </a>
+        <a href="./writer/index.html" target="_self">
+            <div class="ho" id="writer">작가별 모음</div>
+        </a>
+        <a href="./1/index.html" target="_self">
+            <div class="ho" id="oneho">1호지</div>
+        </a>
+        <a href="./2/index.html" target="_self">
+            <div class="ho" id="twoho">2호지</div>
+        </a>
+        <a href="./3/index.html" target="_self">
+            <div class="ho" id="threeho">3호지</div>
+        </a>
+        <a href="./4/index.html" target="_self">
+            <div class="ho" id="fourho">4호지</div>
+        </a>
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>
