@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
@@ -8,7 +9,7 @@
     nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
 
 <head>
-    <title>테두리, 우리 - 작가 모음</title>
+    <title>테두리, 우리 - 작가별 분류 코너</title>
     <meta name="author" content="Yeong-wook Joo">
     <meta name="viewport" content="width=divice-width, initial-scale=1.0">
     <meta http-equiv="Content-Script-Type" content="text/javascript">
@@ -18,12 +19,12 @@
     <meta http-equiv="imagetoolbar" content="no">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Pragma" content="no-cache">
-    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="../xpednfl-ico-file/001.png" sizes="192x192">
     <script>
         var favicon_images = [
-                '/borderus/xpednfl-ico-file/001.png',
-                '/borderus/xpednfl-ico-file/021.png',
-                '/borderus/xpednfl-ico-file/041.png',
+                '../xpednfl-ico-file/001.png',
+                '../xpednfl-ico-file/021.png',
+                '../xpednfl-ico-file/041.png',
             ],
 
             image_counter = 0; // To keep track of the current image
@@ -47,182 +48,126 @@
         }, 1000);
     </script>
     <style>
-        @font-face {
-            font-family: 'KyoboHandwriting2020A';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #cdcdcb;
+            overflow: hidden;
         }
         
-        @font-face {
-            font-family: 'GowunBatang-Bold';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Bold.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-        
-        #text {
-            font-family: 'GowunBatang-Bold';
-            position: relative;
-            top: 10vmin;
-            transform: translateX(-50%);
-            left: 50%;
-            font-size: 3vmin;
-            width: fit-content;
-            height: fit-content;
-        }
-        
-        #logoImg {
-            position: absolute;
-            height: 72.8px;
-            left: 50%;
-            top: 1%;
-            transform: translateX(-50%);
-            width: auto !important;
-        }
-        
-        #chartWriter {
-            position: relative;
-            top: 12vmin;
-            left: 50%;
-            transform: translateX(-50%);
-            width: fit-content;
-            text-align: center;
+        #entire {
+            margin: 0;
+            padding: 0;
+            border: black solid 0.25vw;
+            width: 99.5vw;
+            height: 99.0vh;
         }
         
         .writer {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            width: 15vmin;
-            height: 5vmin;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            background-color: #7DA89B;
-            font-family: 'GowunBatang-Bold';
-            font-weight: bolder;
-            font-style: normal;
-            font-size: 3vh;
-        }
-        
-        u {
-            text-decoration: underline 0.5px;
-            text-underline-offset: -13.5pt;
-        }
-        
-        #titleU {
-            text-decoration: underline 2px;
-            text-underline-offset: -18.5pt;
+            font-size: 15pt;
+            width: 130pt;
+            height: fit-content;
+            padding: 20pt;
+            background-color: #944c2b;
+            text-align: center;
         }
         
         a {
+            color: inherit;
             text-decoration: none;
-            color: black;
+            margin: 0;
+            padding: 0;
         }
         
-        @media screen and (max-width: 768px) {
-            #text {
-                font-family: 'GowunBatang-Bold';
-                position: relative;
-                top: 18vmin;
-                transform: translateX(-50%);
-                left: 50%;
-                width: fit-content;
-                font-size: 5vmin;
-            }
-            #logoImg {
-                position: absolute;
-                height: 72.8px;
-                left: 50%;
-                top: 1%;
-                transform: translateX(-50%);
-                width: auto !important;
-            }
-            #chartWriter {
-                position: relative;
-                top: 18vmin;
-                left: 50%;
-                transform: translateX(-50%);
-                text-align: center;
-                width: 50%;
-            }
-            .writer {
-                padding-top: 10px;
-                padding-bottom: 10px;
-                width: 100%;
-                height: fit-content;
-                margin-top: 20px;
-                margin-bottom: 20px;
-                background-color: #7DA89B;
-                font-family: 'GowunBatang-Bold';
-                font-weight: bolder;
-                font-style: normal;
-                font-size: 3vh;
-            }
-            u {
-                text-decoration: underline 0.5px;
-                text-underline-offset: -13.5pt;
-            }
-            #titleU {
-                text-decoration: underline 2px;
-                text-underline-offset: -18.5pt;
-            }
-            a {
-                text-decoration: none;
-                color: black;
-            }
+        #mainBox {
+            position: absolute;
+            width: 80vw;
+            display: flex;
+            flex-wrap: wrap;
+            top: 100pt;
+            left: 50%;
+            transform: translateX(-50%);
+            justify-content: space-around;
+            gap: 40pt 100pt;
+        }
+        
+        #doorEnt {
+            position: absolute;
+            top: 15pt;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            height: 75pt;
+            width: 200pt;
+            background-color: #cdcdcb;
+        }
+        
+        #door {
+            position: absolute;
+            cursor: pointer;
+            top: 15pt;
+            height: 75pt;
+            left: 0.1vw;
+            width: auto;
+        }
+        
+        #exitrun {
+            position: absolute;
+            cursor: pointer;
+            top: 27.5pt;
+            height: 50pt;
+            left: 45pt;
+            width: auto;
         }
     </style>
 </head>
 
 <body>
-    <div id="iconImg">
-        <a href="/borderus" target="_blank">
-            <img id="logoImg" src='/borderus/xpednfl-ash-green.png'>
-        </a>
-        <!--
-        <img width="192/2" height="108/2" src='/borderus/xpednfl.png'>
-        <img width="192/2" height="108/2" src='/borderus/xpednfl-ash-green.png'>
-        <img width="192/2" height="108/2" src='/borderus/xpednfl-ash-red.png'>
-        <img width="192/2" height="108/2" src='/borderus/xpednfl-hot-pink.png'>
-        <img width="192/2" height="108/2" src='/borderus/xpednfl-pale-purple.png'>
-        <img width="192/2" height="108/2" src='/borderus/xpednfl-ash-purple.png'>
-        -->
-    </div>
-    <div id="text">작가별 보기: 선택 페이지</div>
-    <div id="chartWriter">
-        <a target="_blank" href="./JYW/">
-            <div class="writer" id="JYW">주영욱</div>
-        </a>
+    <div id="entire">
+        <div id="doorEnt"></div>
+        <img id="door" src="./door.png" onclick="exit()">
+        <img id="exitrun" src="./out.png" onclick="exit()">
+        <div id="mainBox">
 
-        <a target="_blank" href="./HRG/">
-            <div class="writer" id="HRG">홍록기</div>
-        </a>
+            <a target="_blank" href="./JYW/index.html">
+                <div class="writer" id="JYW">주영욱</div>
+            </a>
 
-        <a target="_blank" href="./KJM/">
-            <div class="writer" id="KJM">권준민</div>
-        </a>
+            <a target="_blank" href="./HRG/index.html">
+                <div class="writer" id="HRG">홍록기</div>
+            </a>
 
-        <a target="_blank" href="./PSA/">
-            <div class="writer" id="PSA">박선아</div>
-        </a>
+            <a target="_blank" href="./KJM/index.html">
+                <div class="writer" id="KJM">권준민</div>
+            </a>
 
-        <a target="_blank" href="./JDS/">
-            <div class="writer" id="JDS">정든솔</div>
-        </a>
+            <a target="_blank" href="./PSA/index.html">
+                <div class="writer" id="PSA">박선아</div>
+            </a>
 
-        <a target="_blank" href="./YYJ/">
-            <div class="writer" id="YYJ">윤예지</div>
-        </a>
+            <a target="_blank" href="./JDS/index.html">
+                <div class="writer" id="JDS">정든솔</div>
+            </a>
 
-        <a target="_blank" href="./IPG/">
-            <div class="writer" id="IPG">임필경</div>
-        </a>
+            <a target="_blank" href="./YYJ/index.html">
+                <div class="writer" id="YYJ">윤예지</div>
+            </a>
 
-        <a target="_blank" href="./PG/">
-            <div class="writer" id="PG">필구</div>
-        </a>
+            <a target="_blank" href="./IPG/index.html">
+                <div class="writer" id="IPG">임필경</div>
+            </a>
+
+            <a target="_blank" href="./PG/index.html">
+                <div class="writer" id="PG">필구</div>
+            </a>
+
+            <div class="writer" id="?" style="visibility:hidden;"></div>
+        </div>
     </div>
     <script>
+        function exit() {
+            self.close();
+        }
     </script>
 </body>
 
