@@ -339,10 +339,23 @@
             background-color: rgba(0, 0, 0, 0.6);
         }
         
-        #desc {
+        #descContainer {
             position: absolute;
-            top: 11pt;
+            top: 20pt;
             left: 100pt;
+            background-color: #b7bbbf;
+            padding: 3pt;
+            width: fit-content;
+            height: fit-content;
+        }
+        
+        #desc {
+            width: fit-content;
+            height: fit-content;
+            position: absolute;
+            background-color: #b7bbbf;
+            padding: 5pt;
+            border: solid 1px black;
         }
         
         @media screen and (max-width: 768px) {
@@ -449,9 +462,10 @@
             <div id="exit" class="markBoxFill" style="background-color: #df4f4c;">책장 나가기</div>
         </div>
     </div>
-
-    <div id="desc">
-        작가의 말: 누구나 시인이 될수있다...
+    <div id="descContainer">
+        <div id="desc">
+            작가의 말: 누구나 시인이 될수있다...
+        </div>
     </div>
 
     <div id="text">작가별 분류: 필구의 글 모음</div>
