@@ -1,0 +1,399 @@
+<html>
+
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>주영욱</title>
+    <meta name="author" content="Yeong-wook Joo">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                '/borderus/xpednfl-ico-file/001.png',
+                '/borderus/xpednfl-ico-file/021.png',
+                '/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'GowunBatang-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        body {
+            background-color: #944c2b;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        
+        #text {
+            font-family: 'GowunBatang-Bold';
+            position: relative;
+            top: 11vmin;
+            transform: translateX(-50%);
+            left: 50%;
+            font-size: 3vmin;
+            width: fit-content;
+        }
+        
+        .site {
+            width: fit-content;
+            writing-mode: vertical-rl;
+        }
+        
+        #borderus5 {
+            top: -12.5pt;
+            width: 15vw;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 22;
+            animation: bell 1.5s 2;
+            animation-delay: 2s;
+            transform-origin: top;
+        }
+        
+        #blockerTop {
+            position: absolute;
+            width: 100%;
+            height: 12.5pt;
+            z-index: 23;
+        }
+        
+        #blockerBot {
+            position: absolute;
+            width: 100%;
+            top: 58pt;
+            height: 50pt;
+            z-index: 23;
+        }
+        
+        .shelf {
+            background-color: #5e3624;
+            height: 190pt;
+            width: 40%;
+            margin-left: 1%;
+            display: flex;
+            align-items: flex-end;
+        }
+        
+        .book {
+            display: flex;
+            width: 23pt;
+            justify-content: center;
+        }
+        
+        #flex-box {
+            display: flex;
+            flex-wrap: wrap;
+            position: absolute;
+            top: 100pt;
+            height: fit-content;
+            width: 100%;
+            gap: 2vw 0;
+            justify-content: center;
+        }
+        
+        #book-one {
+            background-color: rgb(71, 185, 75);
+            padding-top: 1rem;
+            padding-bottom: 2.5rem;
+            bottom: 0;
+        }
+        
+        #book-two {
+            background-color: rgb(71, 185, 160);
+            padding-top: 1.5rem;
+            padding-bottom: 4rem;
+            bottom: 0;
+        }
+        
+        #book-three {
+            background-color: rgb(50, 49, 48);
+            color: rgb(255, 221, 0);
+            padding-top: 1.5rem;
+            padding-bottom: 4rem;
+            bottom: 0;
+        }
+        
+        #book-four {
+            background-color: rgb(255, 244, 227);
+            padding-top: 1.5rem;
+            padding-bottom: 3rem;
+            bottom: 0;
+        }
+        
+        #book-five {
+            background-color: rgb(10, 222, 255);
+            color: white;
+            padding-top: 1.5rem;
+            padding-bottom: 4rem;
+            bottom: 0;
+        }
+        
+        #book-six {
+            background-color: rgb(255, 226, 3);
+            padding-top: 1.5rem;
+            padding-bottom: 2rem;
+            bottom: 0;
+        }
+        
+        #book-seven {
+            background-color: rgb(255, 244, 227);
+            padding-top: 1.5rem;
+            padding-bottom: 4rem;
+            bottom: 0;
+        }
+        
+        #book-eight {
+            background-color: rgb(255, 244, 227);
+            padding-top: 1.5rem;
+            padding-bottom: 4rem;
+            bottom: 0;
+        }
+        
+        #book-nine {
+            background-color: rgb(255, 244, 227);
+            padding-top: 1.5rem;
+            padding-bottom: 4rem;
+            bottom: 0;
+        }
+        
+        #book-ten {
+            background-color: rgb(255, 244, 227);
+            padding-top: 1.5rem;
+            padding-bottom: 4rem;
+            bottom: 0;
+        }
+        
+        #book-eleven {
+            background-color: rgb(255, 244, 227);
+            padding-top: 1.5rem;
+            padding-bottom: 4rem;
+            bottom: 0;
+        }
+        
+        #book-twelve {
+            background-color: rgb(255, 244, 227);
+            padding-top: 1.5rem;
+            padding-bottom: 4rem;
+            bottom: 0;
+        }
+        
+        #book-thirteen {
+            background-color: rgb(255, 244, 227);
+            padding-top: 1.5rem;
+            padding-bottom: 4rem;
+            bottom: 0;
+        }
+        
+        #book-fifteen {
+            background-color: rgb(255, 244, 227);
+            padding-top: 1.5rem;
+            padding-bottom: 4rem;
+            bottom: 0;
+        }
+        
+        u {
+            text-decoration: overline 0.5px;
+        }
+        
+        #titleU {
+            text-decoration: underline 1.5px;
+            text-underline-offset: -0pt;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+            width: fit-content;
+            height: fit-content;
+        }
+        
+        .prism {
+            background-color: dodgerblue;
+        }
+        
+        @media screen and (max-width: 768px) {
+            #text {
+                font-family: 'GowunBatang-Bold';
+                position: relative;
+                top: 18vmin;
+                transform: translateX(-50%);
+                left: 50%;
+                width: fit-content;
+                font-size: 5vmin;
+            }
+            #logoImg {
+                position: absolute;
+                height: 72.8px;
+                left: 50%;
+                top: 1%;
+                transform: translateX(-50%);
+                width: auto !important;
+            }
+            .shelf {}
+            u {
+                text-decoration: underline 0.7px;
+                text-underline-offset: -12pt;
+            }
+            #titleU {
+                text-decoration: underline 2px;
+                text-underline-offset: -18.5pt;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+                width: fit-content;
+                height: fit-content;
+            }
+            body {
+                margin-bottom: 40px
+            }
+            .prism {
+                background-color: dodgerblue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="blockerTop"></div>
+    <img id="borderus5" src="../../xpednfl-black-mark.png" onclick="markBox()" style="cursor:pointer;">
+    <div id="blockerBot"></div>
+    <div id="text">작가별 분류: 주영욱의 글 모음</div>
+    <div id="flex-box">
+        <div id="shelf-one" class="shelf">
+            <a target="_blank" href="./1-1.html">
+                <div class="book" id="book-one">
+                    <div class="site">시작하며... (창간사)</div>
+                </div>
+            </a>
+
+            <a target="_blank" href="./1-2.html">
+                <div class="book" id="book-two">
+                    <div class="site">창과 도끼</div>
+                </div>
+            </a>
+
+            <a target="_blank" href="./2-3.html">
+                <div class="book" id="book-three">
+                    <div class="site">정보 민주주의</div>
+                </div>
+            </a>
+
+            <a target="_blank" href="./2-4.html">
+                <div class="book" id="book-four">
+                    <div class="site">창과 삶에 대한 수기</div>
+                </div>
+            </a>
+
+            <a target="_blank" href="./3-5.html">
+                <div class="book" id="book-five">
+                    <div class="site">비행기 사람들</div>
+                </div>
+            </a>
+
+            <a target="_blank" href="./3-6.html">
+                <div class="book" id="book-six">
+                    <div class="site">나는 키이우 사람이다</div>
+                </div>
+            </a>
+
+            <a target="_blank" href="./4-7.html">
+                <div class="book" id="book-seven">
+                    <div class="site"><u id="titleU">22320116</u></div>
+                </div>
+            </a>
+        </div>
+        <div id="shelf-two" class="shelf">
+            <a target="_blank" href="./4-8.html">
+                <div class="book" id="book-eight">
+                    <div class="site">방랑자에게 보내는 편지</div>
+                </div>
+            </a>
+
+            <a target="_blank" href="./4-9.html">
+                <div class="book" id="book-nine">
+                    <div class="site">마지막 파괴</div>
+                </div>
+            </a>
+
+            <a target="_blank" href="./4-10.html">
+                <div class="book" id="book-ten">
+                    <div class="site">우리는 생각하고 있는가? - 자유의지에 관한 글</div>
+                </div>
+            </a>
+
+            <a target="_blank" href="./4-11.html">
+                <div class="book" id="book-eleven">
+                    <div class="site">시안</div>
+                </div>
+            </a>
+
+            <a target="_blank" href="./4-12.html">
+                <div class="book" id="book-twelve">
+                    <div class="site prism">¶ 염세주의자의 찬가</div>
+                </div>
+            </a>
+
+            <a target="_blank" href="./4-13.html">
+                <div class="book" id="book-thirteen">
+                    <div class="site">형식이 내용에 기여하는 방법</div>
+                </div>
+            </a>
+
+            <a target="_blank" href="./5-15.html">
+                <div class="book" id="book-fifteen">
+                    <div class="site">-위대하다고 말하고 싶지는 않다네-</div>
+                </div>
+            </a>
+        </div>
+        <div id="shelf-three" class="shelf"></div>
+        <div id="shelf-four" class="shelf"></div>
+    </div>
+</body>
+
+</html>

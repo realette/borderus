@@ -63,47 +63,98 @@
         
         body {
             background-color: #944c2b;
+            margin: 0;
+            overflow-x: hidden;
         }
         
         #text {
             font-family: 'GowunBatang-Bold';
             position: relative;
-            top: 10vmin;
+            top: 11vmin;
             transform: translateX(-50%);
             left: 50%;
             font-size: 3vmin;
             width: fit-content;
         }
         
-        #logoImg {
+        .site {
+            width: fit-content;
+            writing-mode: vertical-rl;
+        }
+        
+        #borderus5 {
+            top: -12.5pt;
+            width: 15vw;
             position: absolute;
-            height: 72.8px;
             left: 50%;
-            top: 1%;
             transform: translateX(-50%);
-            width: auto !important;
+            z-index: 22;
+            animation: bell 1.5s 2;
+            animation-delay: 2s;
+            transform-origin: top;
+        }
+        
+        #blockerTop {
+            position: absolute;
+            width: 100%;
+            height: 12.5pt;
+            z-index: 23;
+        }
+        
+        #blockerBot {
+            position: absolute;
+            width: 100%;
+            top: 58pt;
+            height: 50pt;
+            z-index: 23;
         }
         
         .shelf {
-            position: absolute;
             background-color: #5e3624;
-            height: 300pt;
+            height: 190pt;
             width: 40%;
+            margin-left: 1%;
+            display: flex;
+        }
+        
+        .book {
+            display: flex;
+            width: 23pt;
+            justify-content: center;
+        }
+        
+        #flex-box {
+            display: flex;
+            flex-wrap: wrap;
+            position: absolute;
+            top: 100pt;
+            height: fit-content;
+            width: 100%;
+            gap: 2vw 0;
+            justify-content: center;
+        }
+        
+        #book-one {
+            background-color: rgb(71, 185, 75);
+            padding-top: 1rem;
+            padding-bottom: 2.5rem;
+            bottom: 0;
         }
         
         u {
-            text-decoration: underline 0.5px;
-            text-underline-offset: -13.5pt;
+            text-decoration: overline 0.5px;
         }
         
         #titleU {
-            text-decoration: underline 2px;
-            text-underline-offset: -18.5pt;
+            text-decoration: underline 1.5px;
+            text-underline-offset: -0pt;
         }
         
         a {
             text-decoration: none;
             color: black;
+            width: fit-content;
+            height: fit-content;
         }
         
         .prism {
@@ -140,6 +191,8 @@
             a {
                 text-decoration: none;
                 color: black;
+                width: fit-content;
+                height: fit-content;
             }
             body {
                 margin-bottom: 40px
@@ -153,77 +206,99 @@
 
 <body>
 
-    <div id="iconImg">
-        <a href="/borderus" target="_blank">
-            <img id="logoImg" src='/borderus/xpednfl-ash-green.png'>
-        </a>
-        <!--
-        <img width="192/2" height="108/2" src='/borderus/xpednfl.png'>
-        <img width="192/2" height="108/2" src='/borderus/xpednfl-ash-green.png'>
-        <img width="192/2" height="108/2" src='/borderus/xpednfl-ash-red.png'>
-        <img width="192/2" height="108/2" src='/borderus/xpednfl-hot-pink.png'>
-        <img width="192/2" height="108/2" src='/borderus/xpednfl-pale-purple.png'>
-        <img width="192/2" height="108/2" src='/borderus/xpednfl-ash-purple.png'>
-        -->
-    </div>
+    <div id="blockerTop"></div>
+    <img id="borderus5" src="../xpednfl-black-mark.png" onclick="markBox()" style="cursor:pointer;">
+    <div id="blockerBot"></div>
     <div id="text">작가별 분류: 주영욱의 글 모음</div>
-    <div id="shelf-one" class="shelf">
-        <a target="_blank" href="./1-1.html">
-            <div class="site" id="1">시작하며... (창간사)</div>
-        </a>
+    <div id="flex-box">
+        <div id="shelf-one" class="shelf">
+            <a target="_blank" href="./1-1.html">
+                <div class="book" id="book-one">
+                    <div class="site">시작하며... (창간사)</div>
+                </div>
+            </a>
 
-        <a target="_blank" href="./1-2.html">
-            <div class="site" id="2">창과 도끼</div>
-        </a>
+            <a target="_blank" href="./1-2.html">
+                <div class="book" id="book-two">
+                    <div class="site">창과 도끼</div>
+                </div>
+            </a>
 
-        <a target="_blank" href="./2-3.html">
-            <div class="site" id="3">정보 민주주의</div>
-        </a>
+            <a target="_blank" href="./2-3.html">
+                <div class="book" id="book-three">
+                    <div class="site">정보 민주주의</div>
+                </div>
+            </a>
 
-        <a target="_blank" href="./2-4.html">
-            <div class="site" id="4">창과 삶에 대한 수기</div>
-        </a>
+            <a target="_blank" href="./2-4.html">
+                <div class="book" id="book-four">
+                    <div class="site">창과 삶에 대한 수기</div>
+                </div>
+            </a>
 
-        <a target="_blank" href="./3-5.html">
-            <div class="site" id="5">비행기 사람들</div>
-        </a>
+            <a target="_blank" href="./3-5.html">
+                <div class="book" id="book-five">
+                    <div class="site">비행기 사람들</div>
+                </div>
+            </a>
 
-        <a target="_blank" href="./3-6.html">
-            <div class="site" id="6">나는 키이우 사람이다</div>
-        </a>
+            <a target="_blank" href="./3-6.html">
+                <div class="book" id="book-six">
+                    <div class="site">나는 키이우 사람이다</div>
+                </div>
+            </a>
 
-        <a target="_blank" href="./4-7.html">
-            <div class="site" id="7"><u id="titleU">22320116</u></div>
-        </a>
-    </div>
-    <div id="shelf-two" class="shelf">
-        <a target="_blank" href="./4-8.html">
-            <div class="site" id="8">방랑자에게 보내는 편지</div>
-        </a>
+            <a target="_blank" href="./4-7.html">
+                <div class="book" id="book-seven">
+                    <div class="site"><u id="titleU">22320116</u></div>
+                </div>
+            </a>
+        </div>
+        <div id="shelf-two" class="shelf">
+            <a target="_blank" href="./4-8.html">
+                <div class="book" id="book-eight">
+                    <div class="site">방랑자에게 보내는 편지</div>
+                </div>
+            </a>
 
-        <a target="_blank" href="./4-9.html">
-            <div class="site" id="9">마지막 파괴</div>
-        </a>
+            <a target="_blank" href="./4-9.html">
+                <div class="book" id="book-nine">
+                    <div class="site">마지막 파괴</div>
+                </div>
+            </a>
 
-        <a target="_blank" href="./4-10.html">
-            <div class="site" id="10">우리는 생각하고 있는가? - 자유의지에 관한 글</div>
-        </a>
+            <a target="_blank" href="./4-10.html">
+                <div class="book" id="book-ten">
+                    <div class="site">우리는 생각하고 있는가? - 자유의지에 관한 글</div>
+                </div>
+            </a>
 
-        <a target="_blank" href="./4-11.html">
-            <div class="site" id="11">시안</div>
-        </a>
+            <a target="_blank" href="./4-11.html">
+                <div class="book" id="book-eleven">
+                    <div class="site">시안</div>
+                </div>
+            </a>
 
-        <a target="_blank" href="./4-12.html">
-            <div class="site prism" id="12">¶ 염세주의자의 찬가</div>
-        </a>
+            <a target="_blank" href="./4-12.html">
+                <div class="book" id="book-twelve">
+                    <div class="site prism">¶ 염세주의자의 찬가</div>
+                </div>
+            </a>
 
-        <a target="_blank" href="./4-13.html">
-            <div class="site" id="13">형식이 내용에 기여하는 방법</div>
-        </a>
+            <a target="_blank" href="./4-13.html">
+                <div class="book" id="book-thirteen">
+                    <div class="site">형식이 내용에 기여하는 방법</div>
+                </div>
+            </a>
 
-        <a target="_blank" href="./5-15.html">
-            <div class="site" id="15">-위대하다고 말하고 싶지는 않다네-</div>
-        </a>
+            <a target="_blank" href="./5-15.html">
+                <div class="book" id="book-fifteen">
+                    <div class="site">-위대하다고 말하고 싶지는 않다네-</div>
+                </div>
+            </a>
+        </div>
+        <div id="shelf-three" class="shelf"></div>
+        <div id="shelf-four" class="shelf"></div>
     </div>
 </body>
 
