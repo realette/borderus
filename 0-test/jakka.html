@@ -61,6 +61,10 @@
             font-style: normal;
         }
         
+        body {
+            background-color: #944c2b;
+        }
+        
         #text {
             font-family: 'GowunBatang-Bold';
             position: relative;
@@ -80,28 +84,11 @@
             width: auto !important;
         }
         
-        #chartSite {
-            position: relative;
-            top: 12vmin;
-            left: 50%;
-            transform: translateX(-50%);
-            width: fit-content;
-            text-align: center;
-            margin-bottom: 40vmin;
-        }
-        
-        .site {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            width: 30vmin;
-            height: fit-content;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            background-color: #7DA89B;
-            font-family: 'GowunBatang-Bold';
-            font-weight: bolder;
-            font-style: normal;
-            font-size: 3vh;
+        .shelf {
+            position: absolute;
+            background-color: #5e3624;
+            height: 300pt;
+            width: 40%;
         }
         
         u {
@@ -141,28 +128,7 @@
                 transform: translateX(-50%);
                 width: auto !important;
             }
-            #chartSite {
-                position: relative;
-                top: 18vmin;
-                left: 50%;
-                transform: translateX(-50%);
-                text-align: center;
-                width: 50%;
-                margin-bottom: 40vmin;
-            }
-            .site {
-                padding-top: 10px;
-                padding-bottom: 10px;
-                width: 100%;
-                height: fit-content;
-                margin-top: 20px;
-                margin-bottom: 20px;
-                background-color: #7DA89B;
-                font-family: 'GowunBatang-Bold';
-                font-weight: bolder;
-                font-style: normal;
-                font-size: 3vh;
-            }
+            .shelf {}
             u {
                 text-decoration: underline 0.7px;
                 text-underline-offset: -12pt;
@@ -203,7 +169,7 @@
     <div id="text">작가별 분류: 주영욱의 글 모음</div>
     <div id="shelf-one" class="shelf">
         <a target="_blank" href="./1-1.html">
-            <div class="Site" id="1">시작하며... (창간사)</div>
+            <div class="site" id="1">시작하며... (창간사)</div>
         </a>
 
         <a target="_blank" href="./1-2.html">
@@ -229,8 +195,8 @@
         <a target="_blank" href="./4-7.html">
             <div class="site" id="7"><u id="titleU">22320116</u></div>
         </a>
-</div>
-<div id="shelf-two" class="shelf">
+    </div>
+    <div id="shelf-two" class="shelf">
         <a target="_blank" href="./4-8.html">
             <div class="site" id="8">방랑자에게 보내는 편지</div>
         </a>
