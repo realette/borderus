@@ -1,0 +1,192 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>우정 ③</title>
+    <!--테두우리 6호지 필구의 첫번째 글-->
+    <meta name="author" content="PeelGu">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                '/borderus/xpednfl-ico-file/001.png',
+                '/borderus/xpednfl-ico-file/021.png',
+                '/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Iropke Batang';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+        }
+        
+        p {
+            margin-top: 0pt;
+            margin-bottom: 40pt;
+        }
+        
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 15pt;
+            padding-left: 20%;
+            padding-right: 20%;
+            padding-bottom: 20vw;
+        }
+        
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+        
+        u {
+            text-decoration: underline 0.5px;
+            text-underline-offset: -13.5pt;
+        }
+        
+        #titleU {
+            text-decoration: underline 2px;
+            text-underline-offset: -18.5pt;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+            width: fit-content;
+        }
+        
+        .centeralign {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Iropke Batang';
+                font-style: normal;
+                font-weight: 400;
+                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+            }
+            p {
+                margin-top: 0pt;
+                margin-bottom: 30pt;
+            }
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 150%;
+                font-family: 'Iropke Batang';
+                font-size: 12pt;
+                padding-left: 4%;
+                padding-right: 4%;
+                padding-bottom: 4vw;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+            u {
+                text-decoration: underline 0.7px;
+                text-underline-offset: -12pt;
+            }
+            #titleU {
+                text-decoration: underline 2px;
+                text-underline-offset: -18.5pt;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+                width: fit-content;
+            }
+            .centeralign {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">우정 ③</h1>
+    <h4 id="writer"><a target="_blank" href="./index.html">작성: 필구</a></h4>
+    <div id="text">
+        <div class="centeralign">
+            다 털어 놓고도
+            <br>모자라 서운한 얘기는
+            <br>
+            <br>이상하리 만큼
+            <br>큰 고민도 너 앞에선
+            <br>하찮은 푸념에 지나지 않는다.
+            <br>
+            <br>강한척 하려해도
+            <br>여려지는 난
+            <br>너에게서
+            <br>우정을 느끼는 걸까?
+
+        </div>
+    </div>
+</body>
+
+</html>
