@@ -172,7 +172,7 @@
         #text {
             font-family: 'GowunBatang-Bold';
             position: relative;
-            top: 11vmin;
+            top: 12vmin;
             transform: translateX(-50%);
             left: 50%;
             font-size: 3vmin;
@@ -185,8 +185,8 @@
         }
         
         #borderus5 {
-            top: 12pt;
-            width: 12vw;
+            top: 11pt;
+            width: 13vw;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
@@ -262,7 +262,7 @@
         #book-five {
             font-family: 'GangwonEduPowerExtraBoldA';
             letter-spacing: 0.5em;
-            background-color: rgb(10, 222, 255);
+            background-color: #f4a9c1;
             color: white;
             width: 23pt;
             padding-top: 1.5rem;
@@ -422,6 +422,9 @@
         <a target="_blank" href="./writer/index.html">
             <div id="divideByWriterCent" class="markBoxFill">작가별 분류 코너</div>
         </a>
+        <div onclick="exit()">
+            <div id="exit" class="markBoxFill" style="background-color: #df4f4c;">나가기</div>
+        </div>
     </div>
 
     <div id="text">작가별 분류: 홍록기의 글 모음</div>
@@ -477,6 +480,10 @@
                 $("#darkGlass").css("display", "none");
                 $("body").css("overflow-y", "scroll");
             }
+        }
+
+        function exit() {
+            window.history.back();
         }
     </script>
 </body>
