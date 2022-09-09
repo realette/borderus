@@ -196,6 +196,23 @@
             transform-origin: top;
         }
         
+        @keyframes bell {
+            0%,
+            60% {
+                transform: rotate(0deg) translateX(-50%);
+            }
+            10%,
+            30%,
+            50% {
+                transform: rotate(3deg) translateX(-50%);
+            }
+            20%,
+            40%,
+            60% {
+                transform: rotate(-3deg) translateX(-50%);
+            }
+        }
+        
         .shelf {
             background-color: #5e3624;
             height: 190pt;
