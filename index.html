@@ -645,11 +645,13 @@
             if (j == 0) {
                 j = j + 1;
                 $("#markBox").css("display", "block");
-                $("#darkGlass").css("display", "block")
+                $("#darkGlass").css("display", "block");
+                $("body").css("overflow", "hidden");
             } else {
                 j = j - 1;
                 $("#markBox").css("display", "none");
-                $("#darkGlass").css("display", "none")
+                $("#darkGlass").css("display", "none");
+                $("body").css("overflow-y", "scroll");
             }
         }
 

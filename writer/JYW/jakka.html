@@ -18,6 +18,10 @@
     <meta http-equiv="imagetoolbar" content="no">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Pragma" content="no-cache">
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
     <script>
         var favicon_images = [
@@ -47,6 +51,13 @@
         }, 1000);
     </script>
     <style>
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+        
         @font-face {
             font-family: 'KyoboHandwriting2020A';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
@@ -246,7 +257,7 @@
         
         #book-three {
             font-family: 'establishRetrosansOTF';
-            letter-spacing: 0.2em;
+            letter-spacing: 0.5em;
             word-spacing: 0.06em;
             background-color: rgb(50, 49, 48);
             color: rgb(255, 221, 0);
@@ -338,7 +349,7 @@
         #book-twelve {
             font-family: 'ChosunCentennial';
             background-color: rgb(255, 244, 227);
-            width: 26pt;
+            width: 33pt;
             padding-top: 1.2rem;
             padding-bottom: 1.6rem;
             bottom: 0;
@@ -378,6 +389,39 @@
             color: black;
             width: fit-content;
             height: fit-content;
+        }
+        
+        #markBox {
+            display: none;
+            position: absolute;
+            top: 90pt;
+            width: 20vw;
+            height: fit-content;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 24;
+            background-color: #b9b4a391;
+        }
+        
+        .markBoxFill {
+            padding: 3.5pt;
+            margin: 5.5pt;
+            font-size: 15pt;
+            font-family: 'Pretendard-Regular';
+            background-color: #ccc19d;
+        }
+        
+        #darkGlass {
+            position: absolute;
+            display: none;
+            z-index: 20;
+            width: 200%;
+            height: 200%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.6);
         }
         
         @media screen and (max-width: 768px) {
@@ -424,6 +468,17 @@
                 justify-content: center;
                 padding-bottom: 2vh;
             }
+            #book-three {
+                font-family: 'establishRetrosansOTF';
+                letter-spacing: 0.2em;
+                word-spacing: 0.06em;
+                background-color: rgb(50, 49, 48);
+                color: rgb(255, 221, 0);
+                width: 24pt;
+                padding-top: 1.5rem;
+                padding-bottom: 3rem;
+                bottom: 0;
+            }
             u {
                 text-decoration: overline 0.5px;
             }
@@ -440,6 +495,24 @@
             body {
                 margin-bottom: 40px
             }
+            #markBox {
+                display: none;
+                position: absolute;
+                top: 60pt;
+                width: 62vw;
+                height: fit-content;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+                z-index: 24;
+                background-color: #b9b4a391;
+            }
+            .markBoxFill {
+                padding: 3.5pt;
+                margin: 3.5pt;
+                font-size: 12pt;
+                background-color: #ccc19d;
+            }
         }
     </style>
 </head>
@@ -449,6 +522,24 @@
     <div id="blockerTop"></div>
     <img id="borderus5" src="../../xpednfl-black-mark.png" onclick="markBox()" style="cursor:pointer;">
     <div id="blockerBot"></div>
+
+    <div id="darkGlass" onclick="markBox()"></div>
+
+    <div id="markBox">
+        <a target="_blank" href="./about.html">
+            <div id="inforCent" class="markBoxFill">머릿돌</div>
+        </a>
+        <a target="_blank" href="./contact.html">
+            <div id="contactCent" class="markBoxFill">작품 투고 상담실</div>
+        </a>
+        <a target="_blank" href="./allhoji.html">
+            <div id="oldBorderusCent" class="markBoxFill">지난호 모음 코너</div>
+        </a>
+        <a target="_blank" href="./writer/index.html">
+            <div id="divideByWriterCent" class="markBoxFill">작가별 분류 코너</div>
+        </a>
+    </div>
+
     <div id="text">작가별 분류: 주영욱의 글 모음</div>
     <div id="flex-box">
         <div id="shelf-one" class="shelf">
@@ -542,6 +633,23 @@
         </div>
         <div id="shelf-four" class="shelf"></div>
     </div>
+    <script>
+        var j = 0;
+
+        function markBox() {
+            if (j == 0) {
+                j = j + 1;
+                $("#markBox").css("display", "block");
+                $("#darkGlass").css("display", "block");
+                $("body").css("overflow", "hidden");
+            } else {
+                j = j - 1;
+                $("#markBox").css("display", "none");
+                $("#darkGlass").css("display", "none");
+                $("body").css("overflow-y", "scroll");
+            }
+        }
+    </script>
 </body>
 
 </html>
