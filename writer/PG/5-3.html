@@ -124,7 +124,7 @@
                 src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
             }
             p {
-                margin-top: 0pt;
+                margin: 0pt;
                 margin-bottom: 30pt;
             }
             #text {
@@ -160,9 +160,10 @@
                 width: fit-content;
             }
             .centeralign {
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 90%;
             }
         }
     </style>

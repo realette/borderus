@@ -339,23 +339,27 @@
             background-color: rgba(0, 0, 0, 0.6);
         }
         
-        #descContainer {
-            position: absolute;
-            top: 20pt;
-            left: 100pt;
-            background-color: #b7bbbf;
-            padding: 3pt;
-            width: fit-content;
-            height: fit-content;
+        #desc {
+            font-family: 'SF_HambakSnow';
+            font-size: 13pt;
+            background-color: #868a8d;
+            padding: 5pt;
+            clip-path: polygon(5pt 0, calc(100% - 5pt) 0, 100% 5pt, 100% calc(100% - 5pt), calc(100% - 5pt) 100%, 5pt 100%, 0 calc(100% - 5pt), 0 5pt);
         }
         
-        #desc {
+        #descMed {
+            padding: 6pt;
+        }
+        
+        #descContainer {
+            position: absolute;
+            top: 52pt;
+            left: 10%;
             width: fit-content;
             height: fit-content;
-            position: absolute;
-            background-color: #b7bbbf;
-            padding: 5pt;
-            border: solid 1px black;
+            background: radial-gradient(circle at top left, transparent 6pt, #b7bbbf 0) top left, radial-gradient(circle at top right, transparent 6pt, #b7bbbf 0)top right, radial-gradient(circle at bottom right, transparent 6pt, #b7bbbf 0) bottom right, radial-gradient(circle at bottom left, transparent 6pt, #b7bbbf 0) bottom left;
+            background-size: 51% 51%;
+            background-repeat: no-repeat;
         }
         
         @media screen and (max-width: 768px) {
@@ -375,6 +379,7 @@
                 left: 50%;
                 width: fit-content;
                 font-size: 5vmin;
+                margin-bottom: 7pt;
             }
             #borderus5 {
                 top: 12pt;
@@ -393,8 +398,8 @@
             #flex-box {
                 display: flex;
                 flex-wrap: wrap;
-                position: absolute;
-                top: 100pt;
+                position: relative;
+                top: 75pt;
                 left: 0;
                 height: fit-content;
                 width: 99.5%;
@@ -436,6 +441,18 @@
                 font-size: 12pt;
                 background-color: #ccc19d;
             }
+            #desc {
+                position: relative;
+            }
+            #descMed {
+                position: relative;
+            }
+            #descContainer {
+                position: relative;
+                top: 65pt;
+                transform: translateX(-50%);
+                left: 50%;
+            }
         }
     </style>
 </head>
@@ -462,13 +479,17 @@
             <div id="exit" class="markBoxFill" style="background-color: #df4f4c;">책장 나가기</div>
         </div>
     </div>
+
+    <div id="text">작가별 분류: 필구의 글 모음</div>
+
     <div id="descContainer">
-        <div id="desc">
-            작가의 말: 누구나 시인이 될수있다...
+        <div id="descMed">
+            <div id="desc">
+                작가의 말: 누구나 시인이 될 수 있다...
+            </div>
         </div>
     </div>
 
-    <div id="text">작가별 분류: 필구의 글 모음</div>
     <div id="flex-box">
         <div id="shelf-one" class="shelf">
 
