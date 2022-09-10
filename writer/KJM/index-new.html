@@ -8,8 +8,8 @@
     nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
 
 <head>
-    <title>궍준민</title>
-    <meta name="author" content="Roggi Hong">
+    <title>권준민</title>
+    <meta name="author" content="Jun-min Kwon">
     <meta name="viewport" content="width=divice-width, initial-scale=1.0">
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta http-equiv="Content-Style-Type" content="text/css">
@@ -215,7 +215,7 @@
         
         .shelf {
             background-color: #5e3624;
-            height: 190pt;
+            height: 300pt;
             width: 40%;
             margin-left: 1%;
             display: flex;
@@ -239,12 +239,31 @@
             justify-content: center;
         }
         
+        .cd {
+            z-index: 10;
+            height: 370;
+            width: 45;
+            position: absolute;
+        }
+        
         #book-one {
+            position: relative;
             font-family: 'GowunBatang-Bold';
-            background-color: rgb(71, 185, 75);
-            padding-top: 1rem;
-            padding-bottom: 2.5rem;
+            border: inset transparent 3pt;
             bottom: 0;
+            width: fit-content;
+            height: fit-content;
+            font-size: 12pt;
+        }
+        
+        #site-one {
+            position: relative;
+            background-color: rgb(98, 180, 100);
+            padding: 4px;
+            z-index: 1;
+            height: 351px;
+            margin: 3px;
+            text-align: center;
         }
         
         u {
@@ -323,7 +342,6 @@
             }
             .shelf {
                 background-color: #5e3624;
-                height: 190pt;
                 width: 96%;
                 display: flex;
                 align-items: flex-end;
@@ -374,6 +392,29 @@
                 font-size: 12pt;
                 background-color: #ccc19d;
             }
+            .cd {
+                height: 370;
+                width: 45;
+                position: absolute;
+            }
+            #book-one {
+                position: relative;
+                font-family: 'GowunBatang-Bold';
+                border: inset transparent 3pt;
+                bottom: 0;
+                width: fit-content;
+                height: fit-content;
+                font-size: 12pt;
+            }
+            #site-one {
+                position: relative;
+                background-color: rgb(98, 180, 100);
+                padding: 6px;
+                z-index: 1;
+                height: 355px;
+                text-align: center;
+                margin: 0;
+            }
         }
     </style>
 </head>
@@ -407,15 +448,17 @@
     <div id="text">작가별 분류: 권준민의 글 모음</div>
     <div id="flex-box">
         <div id="shelf-one" class="shelf">
+
             <a target="_blank" href="./2-1.html">
                 <div class="book" id="book-one">
-                    <div class="site" id="1">문과의 시간에 대한 음악</div>
+                    <img class="cd" src="../soso1123.png" height="350">
+                    <div class="site" id="site-one">문과의 시간에 대한 음악</div>
                 </div>
             </a>
         </div>
-        <div id="shelf-two" class="shelf"> </div>
-        <div id="shelf-three" class="shelf"> </div>
-        <div id="shelf-four" class="shelf"></div>
+        <div id="shelf-two " class="shelf "> </div>
+        <div id="shelf-three " class="shelf "> </div>
+        <div id="shelf-four " class="shelf "></div>
     </div>
     <script>
         var j = 0;
@@ -423,14 +466,14 @@
         function markBox() {
             if (j == 0) {
                 j = j + 1;
-                $("#markBox").css("display", "block");
-                $("#darkGlass").css("display", "block");
-                $("body").css("overflow", "hidden");
+                $("#markBox ").css("display ", "block ");
+                $("#darkGlass ").css("display ", "block ");
+                $("body ").css("overflow ", "hidden ");
             } else {
                 j = j - 1;
-                $("#markBox").css("display", "none");
-                $("#darkGlass").css("display", "none");
-                $("body").css("overflow-y", "scroll");
+                $("#markBox ").css("display ", "none ");
+                $("#darkGlass ").css("display ", "none ");
+                $("body ").css("overflow-y ", "scroll ");
             }
         }
 
@@ -442,7 +485,7 @@
 
             // 히스토리가 없으면,
             else {
-                location.href = "../index.html";
+                location.href = "../index.html ";
             }
         }
     </script>
