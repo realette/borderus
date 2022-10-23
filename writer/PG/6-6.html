@@ -1,0 +1,294 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>오고 있다</title>
+    <!--테두우리 6호지 필구의 세번째 글-->
+    <meta name="author" content="PeelGu">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                '/borderus/xpednfl-ico-file/001.png',
+                '/borderus/xpednfl-ico-file/021.png',
+                '/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Iropke Batang';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+        }
+        
+        p {
+            margin-top: 0pt;
+            margin-bottom: 40pt;
+        }
+        
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 15pt;
+            padding-left: 20%;
+            padding-right: 20%;
+            padding-bottom: 20vw;
+        }
+        
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+        
+        u {
+            text-decoration: underline 0.5px;
+            text-underline-offset: -13.5pt;
+        }
+        
+        #titleU {
+            text-decoration: underline 2px;
+            text-underline-offset: -18.5pt;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+            width: fit-content;
+        }
+        
+        .centeralign {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Iropke Batang';
+                font-style: normal;
+                font-weight: 400;
+                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+            }
+            p {
+                margin-top: 0pt;
+                margin-bottom: 30pt;
+            }
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 150%;
+                font-family: 'Iropke Batang';
+                font-size: 12pt;
+                padding-left: 4%;
+                padding-right: 4%;
+                padding-bottom: 4vw;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+            u {
+                text-decoration: underline 0.7px;
+                text-underline-offset: -12pt;
+            }
+            #titleU {
+                text-decoration: underline 2px;
+                text-underline-offset: -18.5pt;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+                width: fit-content;
+            }
+            .centeralign {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">오고 있다</h1>
+    <h4 id="writer"><a target="_blank" href="./index.html">작성: 필구</a></h4>
+    <div id="text">
+        오고 있다...
+        <br>새벽이
+        <br>아니지...
+        <br>밤이 지나 간거겠지
+        <br>난 눈을떴다
+        <br>새벽이였는지 아직 밤인지 모를 그 언저리에서 깊은 한숨이 안개가되어 되돌아왔다
+        <br>먼 발치에서 끽끽 소리를내며 굴러가는 자전거 소리
+        <br>싸늘한 공기는 더욱 차갑게 그를 막아서는듯 힘겹게 지나가고 있었다
+        <br>누군지 모를 그의 새벽은 바삐 가는건지 오는건지 그렇게 멀어져 가고있었다
+        <br>아침은 따스한 햇살을 시작 하기라도 하듯 서서히 빛을 발하기 시작했고
+        <br>난 삐걱이는 침대에서 커튼을 바라보고 앉아있었다
+        <br>첫사랑은 그런 거였다
+        <br>문득 생각나고 바라보고 싶은것...
+        <br>커튼 사이에 비친 환한 한줄기 빛
+        <br>무대 뒤 주인공이되어 커튼을 저치고 무대에 올라야할것 같은 두근거림
+        <br>커튼을 치고 바라본 눈부심은 한동안 움직일수없는 느낌에 제자리를 지키고 있을때쯤 왠지 모를 다른 세계로 빠져드는것 같았다
+        <br>뚱뚱하고 어리숙한 아이가 콧물을 흘리며 한곳을 바라보고 있었다
+        <br>분홍색 드레스는 더러운것과 어울리지않고 누런색 티셔츠는 그의 생활을 말해주는 법이니까
+        <br>누군가를 동경할수 밖에 없는 현실이 가끔은 ...모든 것에 공평할수 있다고 말할수 있을까?
+        <br>무능력해지는 느낌
+        <br>대학생이 된 지금도 그는 변두리 삶에서 벗어나질 못했다
+        <br>누군가에게도 찿아온다는 그 행운도 그에겐 그 조차도 없이 그렇게 세월을 보냈다
+        <br>이성 친구란 그렇다
+        <br>동성 친구보다 어렵지만 편한 얘기가 오고가는 그런 관계
+        <br>난 그런 이성 친구도 없다
+        <br>이성 친구는 어떤 느낌일지 궁금하다
+        <br>커피숍에 들러 멋내기용 아이스 아메리카노를 사서 나오려는데 그녀 얼굴을 스쳐 지나가게 되었다
+        <br>앗...
+        <br>그 분홍색 드레스
+        <br>말주변이없는 내가 아는체는 있을수 없는 일이였다
+        <br>"아 저기 너 00아니니?"
+        <br>"나 민희야 민희"
+        <br>난 벌써 처음부터 알고있었다
+        <br>"오랜만이다 벌써 10년이 넘었지?"
+        <br>"어..."
+        <br>난 대답인지 아닌지 인기척 정도만 냈을뿐
+        <br>내 두근거림을 그 누구도 알수없게 하는게 급선무였다
+        <br>어쩌다보니 우린 같은 테이블에 마주앉아 그녀의 입술만 바라보고 있었다
+        <br>전화번호 교환이 이루어졌고
+        <br>난 분홍색이라 했다가 드레스라고 했다가 지우길 반복하다가 희라고 폰에 등록했다
+        <br>그녀를 마주보고 앉아 몇분이 지나 그녀가 제안을했다
+        <br>"내일 이곳에서 또 볼래?"
+        <br>나는 밍숭밍숭한 얼굴로 고개를 끄덕거렸다
+        <br>그때의 아이스 아메리카노는 어떤 맛이였는지 알지 못한채 각 얼음만 소리를내며 투명한 얼굴을했다
+        <br>또다시 새벽이 오려나보다
+        <br>어두운 푸른 어른거림이 어쩌다 햇살의 그림자로 남았는지
+        <br>새벽을 바라보며 아침은 또 그렇게 새벽을 눌려버렸다
+        <br>그녀와 약속한 시간이 가까워지자 먼저 가서 기다려 볼 마음으로 일찍감치 머리를 감고 드라이를했다
+        <br>평상시 잘 쓰지않았던게 문제였는지 머리카락은 붕붕 살아 움직이는것 같았다
+        <br>다시 물을 묻혀 가라앉히길 반복하다가 거울 속 멍청한 나를 발견하고 더 이상 필요없음을 알게되었다
+        <br>뚱뚱했던 어린시절 누런 티셔츠의 아이...
+        <br>거울엔 뚱뚱하진 않지만 아직도 그 아이는 거기에 있었다
+        <br>옷장에 걸린 검은색 혹은 어두운 티셔츠들
+        <br>아마도 어린시절 누런 티셔츠를 지우고 싶어서였을것이다
+        <br>그 중 가장 새거인듯한 검은색을 걸쳐입고
+        <br>맛없는 아이스 아메리카노를 또 시켜야 하나 하는 고민을하며 복잡한 심정으로 약속 장소에 도착했을때였다
+        <br>아... 벌써 그녀가 앉아있는게 보였다
+        <br>떨림이 올라왔지만 나도 모르게 느릿느릿 발걸음을하며 그녀 곁에 다가섰다
+        <br>"왔어? 반가워"
+        <br>"어.."
+        <br>난 대답을하고 곧 그녀의 앞자리에 앉았다
+        <br>고민은 무슨 난 그녀와 같은 아메리카노를 시켰고
+        <br>아마도 나도 모르는 사이 아메리카노는 온데간데 없이 사라져 투명한 각 얼음만 그녀는 우리가 보냈던 그 시절이 그립다고 한다
+        <br>난 그렇다고 한번도 생각해 본적없지만
+        <br>그녀가 있었던 그 시절에 내가 있었고 함께라기보다는
+        <br>한 공간에 느꼈던 온도는 분명 달랐을것이다
+        <br>그래도 그녀의 끈이 나에게 닿아있기 때문에 우린 이렇게 마주앉아 있는게 아닌가
+        <br>그녀는 자신이 저 모퉁이를 돌면 보이는 큰 아파트 근처 주택에 산다고했다
+        <br>난 그 아파트 106동 3층에 살고있다
+        <br>아...어릴적 그녀와 한 공간 한 시대를 지냈으며 지금도 가까운 곳에 살고있다는 말에 신기한듯 느껴졌다
+        <br>운명의 끈이 있는건 아닌지 연결고리를 맞춰가고 싶었다
+        <br>요즘 그녀의 관심은 자전거라고했다
+        <br>자전거를 배우긴 했는데 잘 타지못해 혼자 타는 연습을하고 있다고했다
+        <br>뚱뚱했던 어린시절의 난 자전거를 무척 좋아했다
+        <br>자전거로 건강한 다이어트를 했다고해도 과언이 아니다
+        <br>그녀의 얘기를 듣고있자니 그녀의 앙증맞은 입술이 오똑한 코에 쌍꺼풀 눈이 더욱더 지적으로 다가왔다
+        <br>그렇게 열심히 자전거를 타고나면 30분 정도는 꼭 안마의자에 앉아야한다고...
+        <br>그리고는 낄낄 웃어가며 긴장한탓에 안마를 받지않으면 오후에 아무것도 할수없을거라고 재미있어했다
+        <br>그렇게 그녀는 바쁘게 하루를 설계하고 있었다
+        <br>늘 공주같이 살줄 알았는데...
+        <br>아침 일찍 그것도 새벽부터 자전거 삼매경이라니...
+        <br>앗...
+        <br>갑자기 머릿속에서 땡그랑 소리가났다
+        <br><br>혹... 시...
+        <br>그 새벽이라면...
+        <br>나의 내벽을 깨우는 내 귓가에 느껴지는 끽끽거리는 자전거 소리가 그녀였을까?
+        <br>나도 모르게 당황하게 되었다
+        <br>밤이 지나가고 새벽이오고 아침이 마지막을 장식하지만 그리도 슬펐던 내 모습을 닮아서였을까
+        <br>침대 속에서 그 소리는 달갑게 느껴지지않고 인상을쓰며 시작했던 바로 그 소리
+        <br>나의 새벽을 깨웠다고 미안해할까봐 나는 아무말도 하지않았다
+        <br>그녀의 지적인 말 솜씨는 나에게 너무 황홀감으로 다가왔지만
+        <br>그 자전거가 그녀였는지 빨리 확인하고 싶었다
+        <br>그녀와의 만남을 뒤로하고 난 집에 돌아와 밤이 오길 기다렸고
+        <br>새벽이 오길 기다렸다
+        <br>드디어 어슴프레한 새벽이 날 마주하는 순간
+        <br>멀찍감치 떨어진 곳에서 자전거 한대가 내 가슴 속에 들어오고있었다
+        <br>하얀 운동화에 굳어있는 몸짓
+        <br>그녀였다
+        <br>며칠이 지나서야 그녀를 마주할수 있었고 그녀는 반갑게 나에게 인사해 주었다
+        <br>난 그녀가 자전거를 잘 탈수 있을때까지 매번 새벽에 일어나 그녀와 함께했으며
+        <br>그녀의 큰 눈동자에 나의 얼굴이 드리우고 있었다
+        <br>함께였던 시간
+        <br>나도 그녀처럼 수다쟁이는 아니여도 함께 페달을 밟으며 발 맞춰 가고있었다
+        <br>보이지 않는 내 등 뒤의 끈으로 그녀와 연결되어 있고
+        <br>다시 짧아진 끈이 더욱더 사랑스럽게 다가와 그녀로인해 세상이 환하고 밝음을 인지할수 있었다
+        <br>나의 사랑은 핑크빛이였는지 알수없지만
+        <br>지금와 나의 새벽은 어슴프레 했던거였는지
+        <br>아침을 더 환하게 할 등불 존재였는지 알수없다
+        <br>난 또다시 나의 예쁜 사랑이 오길 기대하고 있다
+        <br>첫사랑은 분홍빛 짝사랑은 아이보리
+        <br>세상 모두가 그렇게 흘러가고 있다
+        <br>
+        <br>오늘도 새벽이 오고있다
+        <br>빛나게 환한 아침 전주곡
+        <br>오고있다 새벽이 나의 사랑이
+    </div>
+    </div>
+</body>
+
+</html>
