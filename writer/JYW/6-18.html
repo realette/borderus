@@ -1,0 +1,177 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>학교민주주의</title>
+    <!--테두우리 6호지 주영욱의 네번째 글-->
+    <meta name="author" content="Yeong-wook Joo">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                '/borderus/xpednfl-ico-file/001.png',
+                '/borderus/xpednfl-ico-file/021.png',
+                '/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Iropke Batang';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+        }
+        
+        p {
+            margin-top: 5pt;
+            margin-bottom: 5pt;
+        }
+        
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 15pt;
+            padding-left: 30%;
+            padding-right: 30%;
+            padding-bottom: 30vw;
+        }
+        
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+            width: fit-content;
+        }
+        
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Iropke Batang';
+                font-style: normal;
+                font-weight: 400;
+                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+            }
+            p {
+                margin-top: 5pt;
+                margin-bottom: 5pt;
+            }
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 150%;
+                font-family: 'Iropke Batang';
+                font-size: 12pt;
+                padding-left: 4%;
+                padding-right: 4%;
+                padding-bottom: 4vw;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">학교민주주의</h1>
+    <h4 id="writer"><a target="_blank" href="./index.html">작성: 주영욱</a></h4>
+    <div id="text">
+
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;글을 시작하기에 앞서 먼저 저희 회장단의 선거 캐치프라이드였던 ‘투명, 민주, 참여’의 가치에 대해, 제가 생각한 뜻을 설명드리고자 합니다. 제가 ‘투명, 민주, 참여’라는 캐치프라이드를 걸자고 한 것은 그것이 단순히 저희가 뽑혀야 하는 당위를 제공하기 때문이 아니라, 또, 학생들로 하여금 뽑을 만한 가치를 제공하기 때문이 아니라, 그래서 학생 자치가 존재하는 것이라고 생각하기 때문이었습니다.
+            저는 기존의 학생 자치에 대해 매우 불만이 높았던 사람이었습니다. ‘투명, 민주, 참여’는 기존의 학생자치 – 저는 학생자치가 이전에는 존재하지조차 않았다는 표현을 종종 사용하는데, 이것이 제가 바라본 기존의 학생자치의 모습이라고 생각하시면 될 것 같습니다. 더 첨언하자면, 의지의 여부를 넘어서 가능한 여건이 아니었던 것 같습니다. - 의 문제 상황을 해결하는 해결책으로서 등장시킨 것입니다. 이 캐치프라이드는 사실, ‘투명,
+            참여, 민주’의 순서였어야한다고 생각합니다. 먼저 ‘투명’성을 확보하여 학교에서의 의사결정 사항들에 대해 적어도 알 수라도 있는 환경이 우선적으로 주어져야 한다고 봤습니다. 그 다음은, 적극적인 주체가 아니더라도, 학생이 ‘참여’할 수 있는 환경이 주어져야 하고, 학생이 참여해야 한다고 봤습니다. 이 과정이 꽤나 성숙하게 진행되어 어느 정도 이상의 수준이 주어졌을 때, 비로소 학생과 학교에 대한 실질적 권한을 갖는 분들 –
+            교장 선생님을 비롯한 선생님들이 되겠지요 – 간의 상호 신뢰가 이루어지고 더 적극적인 참여가 가능해져, 진정한 학생 주체적 학교 ‘민주’주의가 실현될 수 있다고 생각했습니다. 결국 제가 말하는 ‘투명, 민주, 참여’는 민주적 토대가 전혀 없는 곳에서부터 민주를 향한 길에 대한 것입니다. </p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;민주주의를 하자!”라고 이야기했을 때 반대하는 사람은 거의 없습니다. 하지만, 그것을 제대로 이해하고 있는 사람이 많지 않을 뿐 아니라, 제대로 알고 있더라도 각자가 생각하는 각각의 민주주의들은 매우 상이합니다. 세상에는 민주주의라는 개념으로 묶인 많은 방법과 개념이 있습니다. 그 중 제가 말하고자 했고, 또 이루고자 했던 궁극적 방향은 대의민주주의에 주로 바탕을 둔 숙의민주주의입니다. 대표자들을
+            통해서 민주를 실현하자는 것이 대의민주주의이고, 숙의민주주의는 투표를 통해 다수결로 의사를 결정하는 것을 궁극적 목표로 두는 것이 아니라, 토론과 합의를 통해 의사를 결정하는 것을 목표로 하는 형식입니다. 제가 숙의민주주의로서의 학교 민주를 주장하는 이유는 숙의민주주의가 생긴 이유와 큰 관련이 있습니다. 숙의민주주의가 생긴 것은 다수결 민주주의의 문제점으로부터 기인합니다. “다수의 의견을 무조건 수용하는 것이 민주주의인가?”라는
+            질문이 이를 관통하는 질문이라고 할 수 있겠습니다. 실제로, 민중 전체는 쉽게 분위기에 휩쓸리고, 단시안적인 시선을 갖는 경향이 있습니다. 개개인으로서는 훌륭한 사람이 많지만 말입니다. 이로 인해 발생하는 문제에 대해 이야기할 때 보통 “포퓰리즘에 빠졌다”라고 표현합니다. 포퓰리즘에 대한 좋은 표현을 인용하자면, 부산교대의 한 교수는 포퓰리즘을 "일반 대중의 인기에 영합하는 정치행태"로, "정책의 현실성이나 가치 판단, 옳고
+            그름 등의 목적을 외면하고 인기에 영합해 정책의 일관성과 실효를 망각하는 정치 행태"라고 말하는데, 이것이 제가 말하는 다수결 민주주의의 문제 중 하나입니다. 다수의 의견은 단순히 대중의 ‘인기’를 반영할 수 있어서 무조건 옳지 않을 수 있다는 것입니다. 다수결 민주주의는 이러한 포퓰리즘으로 빠지기 취약한 구조입니다. 저는 다수의 의견을 무비판적으로 수용하는 것은 옳지 않다고 봤고 이와 비슷한 생각을 가진 사람들이 숙의민주주의의
+            개념을 세운 것입니다.
+        </p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;물론 숙의민주주의를 현재 우리 학교에 정착시키는 것은 큰 어려움이 있습니다. 현재 우리 학교는 그것을 할 만큼 민주적으로 성숙하지 않습니다. 그것은 학생들의 역량 부족일 뿐 아니라, 학교 차원의 미진한 협조에 있습니다. 그러나 저는 이것을 우리의 이상향으로 삼아야 한다고 생각했습니다. 민주주의란 참 귀찮고 시간이 오래 걸리는 것이라는 의견에 동의합니다. 그렇지만 꼭 해야 하는 숙제라는 말에도
+            동의하지 않을 수 없습니다. </p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;다음으로는, 학교에서 대의민주주의에 입각한 숙의민주주의를 하게 될 때 나타날 수 있는 문제점에 대해서입니다. 대표자 몇 명으로 공동체의 의사를 수렴할 때, 문제는, 학교가 너무 좁은 사회라는 것입니다. 포퓰리즘을 벗어나기 위해 만든 숙의민주주의이지만, 대표자의 수준이 민중의 수준을 뛰어넘을 만큼 높다고 하기도 어렵습니다. 대표자라고 해서 특별히 교육을 받거나 다른 인식을 가진 것이 아니기
+            때문입니다. 그렇지만, 모든 의사결정에서 모든 학생을 참여시키는 것은 어렵습니다, 특히 숙의민주주의에서는 더더욱 어렵습니다. 모든 학생이 참여하는 공론장을 만들기는 어렵기 때문입니다. 따라서 대의민주주의에 입각한 숙의민주주의 시의 문제점 역시 포퓰리즘 경향입니다. 또한, 앞서 서술한 것과 같이, 숙의민주주의를 학교에 바로 적용할 수 있는 것도 아니며 아직 학교는 그것을 할 만큼의 수준에 이르지 못했다고 봅니다. 결국 저는 ‘투명’에서부터
+            시작해서, ‘참여’로, 참여에서 학생과 교사 간 상호 신뢰를 얻고 숙의‘민주’주의로 나아가야 한다고 보고 있습니다.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;그렇다면 “이제 무엇을 해야 하는가?”에 대한 이야기를 해야 할 차례입니다. 제 입장에서는 자치회 수준의 투명성에서 벗어나 학교 전체의 사안에 대한 실질적 투명성을 해결해야 한다고 봅니다. 이 과정에서 제시한 것이 바로 학교 위키입니다. - 투명성에 대한 내용은 저의 다른 글 중에서 ‘정보민주주의’라는 글과 큰 관련이 있기에 관심이 있으시다면 읽어보시면 좋을 것 같습니다. 실질적 투명성이라는
+            단어를 선택한 것은 정보들이 일반 학생들에게 열람 가능하게 되어있어도 이 정보들의 위치를 모르거나 정보들의 존재 유무를 알지 못해 실질적으로 학생들이 이 정보에 접근하지 못하게 될 때, 그것은 투명하지 못한 정보와 다를 바가 없기에 ‘실질적 투명성’이라는 단어를 사용했습니다. 학교 위키를 통해 이미 모두에게 접근 가능하게 풀린 정보들을 손쉽게 얻을 수 있게 되기를 바랐습니다. 또한, 접근이 불가능한 정보들 – 실제로는 대부분은
+            학생들에게 공개할 이유를 찾지 못해 알려주지 않은 정보들일 것으로 예상합니다 – 을 공개하도록 학교 측에 요구해야 할 것입니다. 그리고 그 정보들에 접근할 필요 또한 제공해주는 것이 좋습니다. 따라서 교과 수업에서 이를 적극적으로 찾아보도록 하는 것은 어떨까 하는 아이디어가 있습니다. - 수행평가나, 통계를 활용하는 수업 등에서 말입니다. 또한, 민주적 참여 인식을 함양할 필요가 있습니다. 이 과정이 가장 어렵다고 생각합니다.
+            먼저, 민주적 참여의 중요성을 인식하게 하는 것이 중요하다고 생각합니다. 이런 일을 할 때, 보통 학교 차원에서 선택하는 것은 캠페인인데, 가장 손쉬운 방법은 피켓을 드는 것입니다만, 딱히 효과가 없습니다. 민주의식 함양 교육은 민주 교육 선진국의 교육 방식을 벤치마킹하는 방법도 생각하고 있고, 충격요법을 사용하는 것은 어떨까에 대해서도 생각하고 있습니다. 독일이 민주 교육의 선두주자인 이유는 나치 독일의 충격 때문입니다.
+            평범한 시민들이 한 순간에 전쟁범죄를 지지한 전체주의자들이 되었다는 그 공포와 충격 속에 그들은 기꺼이 그들의 모든 정치적 체제와 인식 기반을 재검토했습니다. 하지만 독일과 한국, 특히 한국 학교에서의 의식은 다릅니다. 정치 참여 인식이 부족하다는 것이 차이점 중 하나인데, 참여하지 않는 이유는 ‘시간이 없어서’가 가장 큰 이유입니다. 또한 투표민주주의에만 찌들어 있습니다. 오직 그들의 대표자를 뽑는 것으로 그들의 소임은 끝입니다.
+            더 이상의 참여는 없습니다. 제가 토론회 때 준비한 마무리 발언 또한 이에 대한 비판입니다. - 첨언하자면 실제로는 시간이 부족해 하지 못했던 부분입니다. ‘민주주의의 꽃은 투표이지만, 한국은 꽃만 꺾어왔다’는 것이 제가 인용하고자 한 제 마무리 발언 일부분의 주요한 논지입니다. 그래서 투표만 하고 정치적 과정에 참여하지 않으면 어떻게 되는지 극단적 예시를 보여주는 것으로 충격을 주는 것은 어떨까 생각합니다. 그리고 그 직후
+            참여할 수 있는 공청회를 열어서 참여하는 경험을 주는 것입니다. 바로 모든 의사결정에 개입시키기는 어렵고, 단계적으로 천천히 진행하는 방법은 어떨까 생각하고 있습니다. 예컨대, 검토만 부탁한다거나, 회의 과정을 볼 수만 있게 하는 식으로 말입니다.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;마치며 글을 되돌아보면 학생을 대표하는 일종의 정치인으로서 쓰는 글치고는 분석적인 측면이 강했던 것 같습니다. 제 글의 특성이라고 할 수도 있겠습니다. 정치인이란 결국 문제를 해결하고 합의를 보고 결정을 내리는 사람인데, 이 글은 지나치게 학자스러운 느낌이 강하여 읽는 여러분에게 ‘분석만 계속하고 결론은 뭐 어떻게 하자는 거야?’하는 생각이 들게 했을 것 같다는 생각이 듭니다. 사실 이 글을
+            통해 어떤 결론을 전달하려는 것은 아니었습니다. 저는 제 생각, 정치철학의 틀을 설명하여 여러분에게 이해시키기 위해서뿐 아니라 우리의 공론장을 열기 위해 이 글을 쓴 것입니다. 긴 글 읽어줘서 감사합니다. </p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;부록 – 직접민주주의의 가능성
+            <br> 제가 생각한 ‘학교 민주의 궁극적 방향은 대의민주주의에 ‘주로’ 바탕을 둔 숙의민주주의’이라고 이야기 한 이유는 대의민주주의로서의 한계 역시 존재하기 때문입니다. 대의민주주의는 모두가 직접 민주적 의사결정에 참여하는 직접민주주의가 가능하지 않아서 만들어진 형식입니다. 하지만, 좁은 사회인 학교에서는 직접민주주의가 국가와 같은 큰 집단에 비해 수월한 측면이 있습니다. 또한, 저는 기술을 적극적으로 활용하자고 이야기하는
+            입장에서, 기술의 발전으로 대의민주주의의 한계를 보완한 대안으로 등장한 전자민주주의도 지지하고 있습니다. 전자민주주의란, 정보통신기술을 기반으로 하는 형태의 민주주의를 지칭합니다. 인터넷을 통한 여론 수렴, 사이버상의 선거 캠페인 및 홍보, 온라인 투표, 전자 의회, 전자공청회 등이 여기에 해당된다고 말할 수 있습니다.</p>
+    </div>
+</body>
+
+</html>
