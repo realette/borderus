@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>테두리, 우리 - 6호지</title>
+    <!--테두우리 6호지-->
+
+    <meta name="author" content="Yeong-wook Joo, Park Seon-a, Jung Dnsoll and Yun Yeji">
+    <meta name="description" content="테두우리(테ㄷ우리), 테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.">
+    <meta name="keywords" content="테두우리, 텓우리, 테ㄷ우리, borderus, 테두리, 우리, 동인지, 동인잡지, 예술플랫폼, WEBZINE, 주영욱, 홍록기">
+    <meta property="og:title" content="테두리, 우리">
+    <meta property="og:image" content="https://realette.github.io/borderus/xpednfl.png">
+    <meta property="og:description" content="테두우리(테ㄷ우리), 테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.">
+
+    <meta name="theme-color" content="#b47a55">
+
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: "a2b5b861-86fe-4139-8da3-a9ff1e180f55",
+                safari_web_id: "",
+                notifyButton: {
+                    enable: true,
+                },
+            });
+        });
+    </script>
+    <script>
+        if (window.console != undefined) {
+            console.log('%c          ', 'font-size:400px; background:url(../xpednfl-min.png) no-repeat;');
+        }
+    </script>
+    <link rel="icon" type="image/png" href="../xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                '../xpednfl-ico-file/001.png',
+                '../xpednfl-ico-file/002.png',
+                '../xpednfl-ico-file/003.png',
+                '../xpednfl-ico-file/004.png',
+                '../xpednfl-ico-file/005.png',
+                '../xpednfl-ico-file/006.png',
+                '../xpednfl-ico-file/007.png',
+                '../xpednfl-ico-file/008.png',
+                '../xpednfl-ico-file/009.png',
+                '../xpednfl-ico-file/010.png',
+                '../xpednfl-ico-file/011.png',
+                '../xpednfl-ico-file/012.png',
+                '../xpednfl-ico-file/013.png',
+                '../xpednfl-ico-file/014.png',
+                '../xpednfl-ico-file/015.png',
+                '../xpednfl-ico-file/016.png',
+                '../xpednfl-ico-file/017.png',
+                '../xpednfl-ico-file/018.png',
+                '../xpednfl-ico-file/019.png',
+                '../xpednfl-ico-file/020.png',
+                '../xpednfl-ico-file/021.png',
+                '../xpednfl-ico-file/022.png',
+                '../xpednfl-ico-file/023.png',
+                '../xpednfl-ico-file/024.png',
+                '../xpednfl-ico-file/025.png',
+                '../xpednfl-ico-file/026.png',
+                '../xpednfl-ico-file/027.png',
+                '../xpednfl-ico-file/028.png',
+                '../xpednfl-ico-file/029.png',
+                '../xpednfl-ico-file/030.png',
+                '../xpednfl-ico-file/031.png',
+                '../xpednfl-ico-file/032.png',
+                '../xpednfl-ico-file/033.png',
+                '../xpednfl-ico-file/034.png',
+                '../xpednfl-ico-file/035.png',
+                '../xpednfl-ico-file/036.png',
+                '../xpednfl-ico-file/037.png',
+                '../xpednfl-ico-file/038.png',
+                '../xpednfl-ico-file/039.png',
+                '../xpednfl-ico-file/040.png',
+                '../xpednfl-ico-file/041.png',
+                '../xpednfl-ico-file/042.png',
+                '../xpednfl-ico-file/043.png',
+                '../xpednfl-ico-file/044.png',
+                '../xpednfl-ico-file/045.png',
+                '../xpednfl-ico-file/046.png',
+                '../xpednfl-ico-file/047.png',
+                '../xpednfl-ico-file/048.png',
+                '../xpednfl-ico-file/049.png',
+                '../xpednfl-ico-file/050.png',
+                '../xpednfl-ico-file/051.png',
+                '../xpednfl-ico-file/052.png',
+                '../xpednfl-ico-file/053.png',
+                '../xpednfl-ico-file/054.png',
+                '../xpednfl-ico-file/055.png',
+                '../xpednfl-ico-file/056.png',
+                '../xpednfl-ico-file/057.png',
+                '../xpednfl-ico-file/058.png',
+                '../xpednfl-ico-file/059.png'
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 67);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        html {
+            background-image: url("./wood.jpg");
+            background-repeat: repeat;
+            background-size: 765px;
+            font-size: 9pt;
+        }
+        
+        h2 {
+            font-size: 13pt;
+        }
+        
+        #borderus5 {
+            top: 14pt;
+            width: 20vw;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 22;
+            animation: bell 1.5s 2;
+            animation-delay: 5s;
+            transform-origin: top;
+        }
+        
+        @keyframes bell {
+            0%,
+            60% {
+                transform: rotate(0deg) translateX(-50%);
+            }
+            10%,
+            30%,
+            50% {
+                transform: rotate(3deg) translateX(-50%);
+            }
+            20%,
+            40%,
+            60% {
+                transform: rotate(-3deg) translateX(-50%);
+            }
+        }
+        
+        #title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 30pt;
+            margin: 22.5pt;
+            background-color: beige;
+        }
+        
+        #mainBox {
+            position: relative;
+            top: 37.5pt;
+        }
+        
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        
+        .book {
+            width: 138pt;
+            height: fit-content;
+            margin: 22.5pt;
+        }
+        
+        .book::after {
+            content: '';
+            width: 138pt;
+            height: 7.5px;
+            position: absolute;
+            bottom: -7.5px;
+            left: 0;
+            background-color: hsl(50, 5%, 75%);
+            -webkit-transform: skew(35deg);
+            -webkit-transform-origin: top;
+            -moz-transform: skew(35deg);
+            -moz-transform-origin: top;
+            -ms-transform: skew(35deg);
+            -ms-transform-origin: top;
+            -o-transform: skew(35deg);
+            -o-transform-origin: top;
+            transform: skew(35deg);
+            transform-origin: top;
+        }
+        
+        .book::before {
+            content: '';
+            width: 5.25px;
+            height: 195px;
+            position: absolute;
+            top: 3.75px;
+            right: -5.25px;
+            background-color: hsl(42, 100%, 97%);
+            -webkit-transform: skewY(55deg);
+            -webkit-transform-origin: top;
+            -moz-transform: skewY(55deg);
+            -moz-transform-origin: top;
+            -ms-transform: skewY(55deg);
+            -ms-transform-origin: top;
+            -o-transform: skewY(55deg);
+            -o-transform-origin: top;
+            transform: skewY(55deg);
+            transform-origin: top;
+        }
+        
+        #book1 {
+            height: 157.5pt;
+            background-color: rgb(85, 85, 85);
+            color: white;
+            box-shadow: 9pt 9pt 9pt rgb(30, 30, 30);
+        }
+        
+        #book1::before {
+            content: '';
+            height: 210px;
+        }
+        
+        #book2 {
+            height: 185pt;
+            background-color: #a53533;
+            color: white;
+            box-shadow: 9pt 9pt 9pt rgb(30, 30, 30);
+        }
+        
+        #book2::before {
+            content: '';
+            height: 245.5px;
+        }
+        
+        #book3 {
+            height: 130pt;
+            background-color: rgb(247, 193, 0);
+            color: black;
+            box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+        }
+        
+        #book3::before {
+            content: '';
+            height: 173px;
+        }
+        
+        #book4 {
+            height: 150pt;
+            background-color: rgb(2, 126, 0);
+            color: white;
+            box-shadow: 9pt 9pt 9pt rgb(30, 30, 30);
+        }
+        
+        #book4::before {
+            content: '';
+            height: 199.5px;
+        }
+        
+        #book5 {
+            height: 140pt;
+            background-color: rgb(165, 165, 165);
+            color: black;
+            box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+        }
+        
+        #book5::before {
+            content: '';
+            height: 185.5px;
+        }
+        
+        #book6 {
+            height: 169pt;
+            background-color: rgb(158, 62, 62);
+            color: white;
+            box-shadow: 9pt 9pt 9pt rgb(30, 30, 30);
+        }
+        
+        #book6::before {
+            content: '';
+            height: 225px;
+        }
+        
+        .trans {
+            color: transparent;
+        }
+        
+        .bookAnchor {
+            display: block;
+            padding: 13pt;
+            height: fit-content;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        #bgcopyright {
+            position: absolute;
+            bottom: 0;
+        }
+        
+        #markBox {
+            display: none;
+            position: absolute;
+            top: 90pt;
+            width: 20vw;
+            height: fit-content;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 24;
+            background-color: #b9b4a391;
+        }
+        
+        #blockerTop {
+            position: absolute;
+            width: 100%;
+            height: 20pt;
+            z-index: 23;
+        }
+        
+        #blockerBot {
+            position: absolute;
+            width: 100%;
+            top: 90pt;
+            height: 50pt;
+            z-index: 23;
+        }
+        
+        .markBoxFill {
+            padding: 3.5pt;
+            margin: 5.5pt;
+            font-size: 15pt;
+            font-family: 'Pretendard-Regular';
+            background-color: #ccc19d;
+        }
+        
+        #darkGlass {
+            position: absolute;
+            display: none;
+            z-index: 20;
+            width: 200%;
+            height: 200%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        
+        @media screen and (max-width: 768px) {
+            html {
+                margin: 0;
+                background-image: url("./wood.jpg");
+                background-repeat: repeat;
+                background-position: 50pt;
+                background-size: 1200px;
+                width: 100%;
+            }
+            body {
+                margin: 0;
+            }
+            #borderus5 {
+                top: -14pt;
+                width: 65vw;
+                position: absolute;
+                left: 52%;
+                transform: translateX(-50%);
+            }
+            #title {
+                left: 50%;
+                width: 75%;
+                text-align: center;
+                font-size: 20pt;
+                margin: 0;
+                margin-top: 15pt;
+                background-color: beige;
+            }
+            #mainBox {
+                position: relative;
+                top: 75px;
+            }
+            .flex {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+            .book {
+                width: 143.5px;
+                height: fit-content;
+                margin: 12px;
+                margin-top: 24px;
+                margin-bottom: 24px;
+                font-size: 14px;
+            }
+            .book::after {
+                content: '';
+                width: 106.5pt;
+                height: 10px;
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                background-color: hsl(50, 5%, 75%);
+                -webkit-transform: skew(35deg);
+                -webkit-transform-origin: top;
+                -moz-transform: skew(35deg);
+                -moz-transform-origin: top;
+                -ms-transform: skew(35deg);
+                -ms-transform-origin: top;
+                -o-transform: skew(35deg);
+                -o-transform-origin: top;
+                transform: skew(35deg);
+                transform-origin: top;
+            }
+            .book::before {
+                content: '';
+                width: 7px;
+                height: 200px;
+                position: absolute;
+                top: 5px;
+                right: -7px;
+                background-color: hsl(42, 100%, 97%);
+                -webkit-transform: skewY(55deg);
+                -webkit-transform-origin: top;
+                -moz-transform: skewY(55deg);
+                -moz-transform-origin: top;
+                -ms-transform: skewY(55deg);
+                -ms-transform-origin: top;
+                -o-transform: skewY(55deg);
+                -o-transform-origin: top;
+                transform: skewY(55deg);
+                transform-origin: top;
+            }
+            #book1 {
+                height: 200pt;
+                background-color: rgb(85, 85, 85);
+                color: white;
+                box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+            }
+            #book1::before {
+                content: '';
+                height: 267.5px;
+            }
+            #book2 {
+                height: 240pt;
+                background-color: #a53533;
+                color: white;
+                box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+            }
+            #book2::before {
+                content: '';
+                height: 320.5px;
+            }
+            #book3 {
+                height: 155pt;
+                background-color: rgb(247, 193, 0);
+                color: black;
+                box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+            }
+            #book3::before {
+                content: '';
+                height: 207.5px;
+            }
+            #book4 {
+                height: 165pt;
+                background-color: rgb(2, 126, 0);
+                color: white;
+                box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+            }
+            #book4::before {
+                content: '';
+                height: 220.5px;
+            }
+            #book5 {
+                height: 163pt;
+                background-color: rgb(165, 165, 165);
+                color: black;
+                box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+            }
+            #book5::before {
+                content: '';
+                height: 218px;
+            }
+            #book6 {
+                height: 215pt;
+                background-color: rgb(158, 62, 62);
+                color: white;
+                box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+            }
+            #book6::before {
+                content: '';
+                height: 288px;
+            }
+            #bgcopyright {
+                position: relative;
+                bottom: -100px;
+            }
+            #markBox {
+                display: none;
+                position: absolute;
+                top: 68pt;
+                width: 61vw;
+                height: fit-content;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+                z-index: 21;
+                background-color: #b9b4a391;
+            }
+            #blockerTop {
+                position: absolute;
+                width: 100%;
+                height: 16pt;
+            }
+            #blockerBot {
+                position: absolute;
+                width: 100%;
+                top: 63pt;
+                height: 60pt;
+            }
+            .markBoxFill {
+                padding: 3.5pt;
+                margin: 3.5pt;
+                font-size: 12pt;
+                background-color: #ccc19d;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <title>테두리, 우리 - 6호지</title>
+
+    <div id="blockerTop"></div>
+    <img id="borderus5" src="../xpednfl-black-mark.png" onclick="markBox()" style="cursor:pointer;">
+    <div id="blockerBot"></div>
+
+    <div id="darkGlass" onclick="markBox()"></div>
+
+    <div id="markBox">
+        <a target="_blank" href="../about.html">
+            <div id="inforCent" class="markBoxFill">머릿돌</div>
+        </a>
+        <a target="_blank" href="../contact.html">
+            <div id="contactCent" class="markBoxFill">작품 투고 상담실</div>
+        </a>
+        <a target="_blank" href="../allhoji.html">
+            <div id="oldBorderusCent" class="markBoxFill">지난호 모음 코너</div>
+        </a>
+        <a target="_blank" href="../writer/index.html">
+            <div id="divideByWriterCent" class="markBoxFill">작가별 분류 코너</div>
+        </a>
+    </div>
+
+    <div id="mainBox">
+        <div class="flex">
+
+            <div id="book1" class="book" style="z-index: 5;">
+                <a class="bookAnchor" href="../writer/IPG/5-1.html" target="_blank" style="display: block;">
+                    <h2 class="trans">선언</h3><br>나를 구속하는 모든 것으로부터 자유를! 나를 구속하지 않는 모든 것들로부터 자유를! 나로부터 자유를!...
+                        <br><br>
+                        <div>작성: 임필경</div>
+                </a>
+            </div>
+            <div id="book2" class="book" style="z-index: 5;">
+                <a class="bookAnchor" href="../writer/JYW/5-15.html" target="_blank">
+                    <h2>-위대하다고 말하고 싶지는 않다네-</h3><br>힘만 가득하던 곳 터져나와 반짝임을 품고, 거성의 조각 흩어져 외딴 곳의 티끌 이루니...<br>
+                        <br><br>
+                        <div>작성: 주영욱</div>
+                </a>
+            </div>
+            <div id="book3" class="book" style="z-index: 5;">
+                <a class="bookAnchor" href="../writer/PG/5-1.html" target="_blank">
+                    <h2>달님의 소망 ①</h3>그래서 달님은 소망합니다. 작은 우주를...
+                        <br><br>
+                        <div>작성: 필구</div>
+                </a>
+            </div>
+            <div id="book4" class="book" style="z-index: 5;">
+                <a class="bookAnchor" href="../writer/PG/5-2.html" target="_blank">
+                    <h2>" 첫 만남 " ②</h3>딱딱한 교실에 딱딱한 칠판 딱딱한 교탁 딱딱한 책상 딱딱한 의자....
+                        <br><br>
+                        <div>작성: 필구</div>
+                </a>
+            </div>
+            <div id="book5" class="book" style="z-index: 5;">
+                <a class="bookAnchor" href="../writer/PG/5-3.html" target="_blank">
+                    <h2>검은 봉지</h3>호기심은 엉뚱 그 자체다. 누군가에게는 미래를 향한 날개짓일지 모를일 아닌가...
+                        <br><br>
+                        <div>작성: 필구</div>
+                </a>
+            </div>
+
+            <div id="book6" class="book" style="z-index: 5;">
+                <a class="bookAnchor" href="../writer/HRG/5-5.html" target="_blank">
+                    <h2>고백해야지</h3><br>애틋한 추억 그 계절에 새겨진 아기자기한 기억들 긴긴 밤 지새우던 나에게 짧막한 영화는 막이 내리고...
+                        <br><br><br>
+                        <div>작성: 홍록기</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <a id="bgcopyright" href="https://www.vecteezy.com/free-vector/illustrator-wood-grain-brush">Illustrator Wood Grain Brush Vectors by Vecteezy</a>
+    <script>
+        var j = 0;
+
+        function markBox() {
+            if (j == 0) {
+                j = j + 1;
+                $("#markBox").css("display", "block");
+                $("#darkGlass").css("display", "block")
+            } else {
+                j = j - 1;
+                $("#markBox").css("display", "none");
+                $("#darkGlass").css("display", "none")
+            }
+        }
+
+        var nowb1LengPx = $("#book1").css("width")
+        let nowb1Leng = nowb1LengPx.replace(/px/gi, " ");
+        var b1X = Math.floor((Math.random() * 60 - 30));
+        var b1Y = Math.floor((Math.random() * 60 - 30));
+        var b1r = Math.floor((Math.random() * 40 - 20));
+        $("#book1").css("position", "relative");
+        if (nowb1Leng > 180) {
+            $("#book1").css("left", b1X);
+            $("#book1").css("top", (b1Y + 80) * 3);
+        } else {
+            $("#book1").css("left", b1X * 2 / 5);
+            $("#book1").css("top", b1Y * 4 / 5);
+        }
+        $("#book1").css("transform", "rotate(" + b1r + "deg)");
+
+        var nowb2LengPx = $("#book2").css("width")
+        let nowb2Leng = nowb2LengPx.replace(/px/gi, " ");
+        var b2X = Math.floor((Math.random() * 100 - 50));
+        var b2Y = Math.floor((Math.random() * 100 - 50));
+        var b2r = Math.floor((Math.random() * 40 - 20));
+        $("#book2").css("position", "relative");
+        if (nowb2Leng > 180) {
+            $("#book2").css("left", b2X);
+            $("#book2").css("top", (b2Y + 80) * 3);
+        } else {
+            $("#book2").css("left", b2X * 2 / 5);
+            $("#book2").css("top", b2Y * 4 / 5);
+        }
+        $("#book2").css("transform", "rotate(" + b2r + "deg)");
+
+        var nowb3LengPx = $("#book3").css("width")
+        let nowb3Leng = nowb3LengPx.replace(/px/gi, " ");
+        var b3X = Math.floor((Math.random() * 100 - 50));
+        var b3Y = Math.floor((Math.random() * 100 - 50));
+        var b3r = Math.floor((Math.random() * 40 - 20));
+        $("#book3").css("position", "relative");
+        if (nowb3Leng > 180) {
+            $("#book3").css("left", b3X);
+            $("#book3").css("top", (b3Y + 80) * 3);
+        } else {
+            $("#book3").css("left", b3X * 2 / 5);
+            $("#book3").css("top", b3Y * 4 / 5);
+        }
+        $("#book3").css("transform", "rotate(" + b3r + "deg)");
+
+
+        var nowb4LengPx = $("#book4").css("width")
+        let nowb4Leng = nowb4LengPx.replace(/px/gi, " ");
+        var b4X = Math.floor((Math.random() * 100 - 50));
+        var b4Y = Math.floor((Math.random() * 100 - 50));
+        var b4r = Math.floor((Math.random() * 40 - 20));
+        $("#book4").css("position", "relative");
+        if (nowb4Leng > 180) {
+            $("#book4").css("left", b4X);
+            $("#book4").css("top", (b4Y + 80) * 3);
+        } else {
+            $("#book4").css("left", b4X * 2 / 5);
+            $("#book4").css("top", b4Y * 4 / 5);
+        }
+        $("#book4").css("transform", "rotate(" + b4r + "deg)");
+
+
+        var nowb5LengPx = $("#book5").css("width")
+        let nowb5Leng = nowb5LengPx.replace(/px/gi, " ");
+        var b5X = Math.floor((Math.random() * 100 - 50));
+        var b5Y = Math.floor((Math.random() * 100 - 50));
+        var b5r = Math.floor((Math.random() * 40 - 20));
+        $("#book5").css("position", "relative");
+        if (nowb5Leng > 180) {
+            $("#book5").css("left", b5X);
+            $("#book5").css("top", (b5Y + 80) * 3);
+        } else {
+            $("#book5").css("left", b5X * 2 / 5);
+            $("#book5").css("top", b5Y * 4 / 5);
+        }
+        $("#book5").css("transform", "rotate(" + b5r + "deg)");
+
+
+        var nowb6LengPx = $("#book6").css("width")
+        let nowb6Leng = nowb6LengPx.replace(/px/gi, " ");
+        var b6X = Math.floor((Math.random() * 100 - 50));
+        var b6Y = Math.floor((Math.random() * 100 - 50));
+        var b6r = Math.floor((Math.random() * 40 - 20));
+        $("#book6").css("position", "relative");
+        if (nowb6Leng > 180) {
+            $("#book6").css("left", b6X);
+            $("#book6").css("top", (b6Y + 80) * 3);
+        } else {
+            $("#book6").css("left", b6X * 2 / 5);
+            $("#book6").css("top", b6Y * 4 / 5);
+        }
+        $("#book6").css("transform", "rotate(" + b6r + "deg)");
+    </script>
+
+</body>
+
+</html>

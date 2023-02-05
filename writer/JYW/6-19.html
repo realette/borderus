@@ -1,0 +1,220 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>눈물의 온도</title>
+    <!--테두우리 6호지 주영욱의 다섯번째 글-->
+    <meta name="author" content="Yeong-wook Joo">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                '/borderus/xpednfl-ico-file/001.png',
+                '/borderus/xpednfl-ico-file/021.png',
+                '/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Iropke Batang';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+        }
+        
+        p {
+            margin-top: 50pt;
+            margin-bottom: 50pt;
+        }
+        
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 15pt;
+            padding-left: 25%;
+            padding-right: 25%;
+            padding-bottom: 20vw;
+        }
+        
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+        
+        u {
+            text-decoration: underline 0.5px;
+            text-underline-offset: -13.5pt;
+        }
+        
+        #titleU {
+            text-decoration: underline 2px;
+            text-underline-offset: -18.5pt;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+            width: fit-content;
+        }
+        
+        .centeralign {
+            text-align: center;
+        }
+        
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Iropke Batang';
+                font-style: normal;
+                font-weight: 400;
+                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+            }
+            p {
+                margin-top: 50pt;
+                margin-bottom: 50pt;
+            }
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 150%;
+                font-family: 'Iropke Batang';
+                font-size: 12pt;
+                padding-left: 4%;
+                padding-right: 4%;
+                padding-bottom: 4vw;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+            u {
+                text-decoration: underline 0.7px;
+                text-underline-offset: -12pt;
+            }
+            #titleU {
+                text-decoration: underline 2px;
+                text-underline-offset: -18.5pt;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+                width: fit-content;
+            }
+            .centeralign {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">눈물의 온도</h1>
+    <h4 id="writer"><a target="_blank" href="/borderus/writer/JYW">작성: 주영욱</a></h4>
+    <div id="text">
+        &nbsp;&nbsp;너는 새벽에 눈을 떴다. 뒤척이지도 않고 바로 말이다. 글쎄, 너의 표정은 조용한 집에서 웅-하고 울려대는 냉장고 소리 같았달까, 혹은 뭐... 늘 아무 것도 해결하지 못하는 무의미한 헛기침만큼의 쓸쓸함. 그 정도를 보여주는 표정. 그뿐이었다.
+        <br>&nbsp;&nbsp;아무렴, 그냥 보이는대로만 말하는 것이다. 그렇게 보이는 것에는 딱히 문제가 없으니까. 뭐... 그렇게 생각할 수 있으니까. 아차, 너는 그래서 그 다음에 침대 밖으로 발을 힘겹게 던져놓고 그 상태로 걸터앉는다. 평소대로라면 그대로 다시 누웠을텐데 서서히 침대를 딛고 일어섰다. 너는 어쩌면,,, 어지럽다고 느꼈던 것 같다. 그러고 보니, 다른 날보다 얼굴이 더 붉은 것 같았다. 멀리에서는 제대로 구별되는
+        것이 없으니 그러려니 한다.
+        <br>&nbsp;&nbsp;너는 이제 뭘 하려나. 음 너는 손으로 얼굴을 쓰러내리며 화장실에 갔다. 음... 이 부분은 항상 상상해볼 수 밖에는 없었다. 그냥 변기에 앉아 고개를 숙이고 있는 모습을 종종 생각한다. 오늘은 머리를 부여잡고 그렇게 했을 것이다. 오늘은 안에서 좀 늦는구나. 아마 그럴 것이다. 너가 사 붙인 시계가 보이지 않는 방향에 붙어있어 얼마나 늦었는지 모르겠지만, 그랬을 것이다. 너는 다행히도 집에 있는 걸 좋아한다.
+        너는 그렇지만 친구들도 종종 데려오는데, 그럴 때에도 얼굴에는 항상 헛기침만큼은 쓸쓸함이 슬쩍 묻어있다. 너는 누구를 필요로 하는 듯 보인다.
+        <br>&nbsp;&nbsp;음 생각해보니 커튼은 걷어올린지 얼마 안 됐는데 너가 일어났다. 너는 이상하게도 일찍 일어났다. 너는 아마 뭔가에 들떴을거야. 하지만 너의 발자국을 곱씹어보면 푹푹 꺼졌던 것 같은데. 너가 나온다. 음, 잘 안 보이는데. 아마, 좀 너는 짜증나는 기분이지? 뭔가 안 좋은 걸 알게 된 게 틀림없어.
+        <br>&nbsp;&nbsp;그리고는 너는 거실에 주저 앉았다. 얼굴을 찡그리면서, 인상을 찌푸리면서 빈 공간을 응시한다. 너의 눈을 뭔가를 향하고 있긴 하지만, 보고 있지는 않고 있었다. 너는 눈 앞에 있지 않은 것을 보고 있구나. 너는 그 짜증나는 것을 보고 있다. 그렇지?
+        <br>&nbsp;&nbsp;너가 이 쪽을 바라본다. 너는 이 쪽에 있는... 해를 보고 짜증을 냈을 것이다. 너는 비틀거리며 일어난다. 이 쪽을 응시하면서. 이렇게 오래 마주 보는 건 처음인데. 너는 창으로 다가와서 손으로 얼굴을 가리더니 커튼을 내려버린다. 오 안 돼. 놀람이 분노가 되는 것은 그리 오랜 시간을 필요로 하지 않는다.
+        <br>...
+        <br>나도 화가 나서 커튼을 내려버리고 불을 꺼버렸다. 낮에 불을 꺼보는 건 처음이다. 너가 망쳐버린거야. 나는 일어나자마자 커튼을 걷고 아침해와 함께 시야에 떠오르는 너를 본다고. 해가 지면 불을 끄고, 너가 집에 들어오면 너만을 바라봤어. 그런데 너가... 아, 근데 왜 너를 만나진 않느냐고? 글쎄, 나에게 너는 결국 어떻게든 너인걸. 어떻게 생각해도 너고, 어떻게 생각해도 너잖아.
+        <br>&nbsp;&nbsp;글쎄, 어떻게 보면 나는 나의 방식대로 너를 소유하고 있었는데, 그렇지 않다는 세상의 입을 꿰매어 붙들어 놓고 그냥 그렇게 살았는데. 오늘의 너는 참 설명되지 않는 기분이구나.
+        <br>
+        <br>이런 ██, 이런 ██! 왜 불이 켜져있지? ██, ██.
+        <br>...
+        <br>아니야 그럴 리 없어. 하지만 망할 불이 계속 켜져 있었잖아. 동도 트지 않은 새벽에! 내 모습이 보이잖아! 반사되어 겹쳐보였을 거잖아!
+        <div class="centeralign"> 나였던가? 너였던가? </div>
+        &nbsp;&nbsp;나라는 오직 하나의 체계로만 짜여진 나의 의식은 몹시 깨어져야하는 그 무엇일까? 하지만 나를 욕하는 그들이 믿는 것은 되도 않는 도덕, 법, 합리, 시장, 사회가 뒤섞인 개죽이 아니던가? 도덕과 법이 일으키는 균열을 들여다보고 있으면 정말이지 몸서리가 쳐진다. 그들은 그것을 필사적으로 보지 않으려하는, 비참한 자들이 아닌가? 그렇다고, 요즘 것들은 다른가? 관습의 해체인 양 떠들어대도, 결국 나를 버리고 수치가 납득시켜주는,
+        수치가 그 스스로 순환하는 그 체계에 몸 떠안 고 눈 딱&nbsp;&nbsp;감&nbsp;&nbsp;&nbsp;은&nbsp;&nbsp;&nbsp;&nbsp;것&nbsp;&nbsp;아 닌가? 비겁자들이여?
+        <br>&nbsp;&nbsp;그런데 나를 이해 못 해? 난들 댁들을 이해한 적이 있겠소? 결국에는 이렇게 있는 것이지. 근데 왜 그 유일한 '나'를 나에게서 가져가려 하는가? 너는 무엇이냐. 정신의 환상이냐? 계몽을 외치는 이성의 정신이냐? 나를 정신병자로 만드는 그 무엇이냐?
+        <br>&nbsp;&nbsp;나는 커튼을 올렸다. 너도 커튼을 올리고 있었다. 너는 눈물을 흘리고 있었다. 나는 그 감정을 전혀 이해할 수 없었다. 그것은 처음 보는, 그런 것이었다. 눈코입의 감정이 정말이지 조화를 이루지 못 해, 나로서는 어떻게든 설명될 수 없는 감정이었다. 그것은 정말이지 불가해했다. 너의 눈물이 붉은 볼을 따라 흐른다.
+        <br>&nbsp;&nbsp;눈물이 내 발등 위에 떨어진다. 나는 눈물을 닦았다. 눈물은 생각보다 차가웠다. 눈알은 정말이지 작열하는 듯 싶었으면서도, 눈빛은 글쎄, 슬퍼보이는 것 같으면서도 눈매는 그 슬픔 앞에서도 의연한 환희를 띄는 것 같았다.
+        <div class="centeralign"> 정말 내가 너를 읽은 걸까?<br>읽어서 잃어버린 걸까? 해석하려 들어서?</div>
+        &nbsp;&nbsp;이제 너는 보이지 않는다. 저 너머에는 어떤 사람이 있을 뿐이다. 너를 볼 수 없었다. 너로 볼 수 없었다. 더 이상은, 내 환상과 현실이 섞여 만들어진 무엇이었던 것 같다. 그런 생각이, 그런 생각 속에 너를 잃어버렸다.
+        <br>&nbsp;&nbsp;너는 흩어져 경계도 보이지 않는다. 껍데기, 조각도 보이지 않는다. 이름도 보이지 않는다. 그저 하나의 몸짓이 된다. 그저 잡초가 된다. 그 무엇도 아닌 눈짓이 된다.
+        <br>&nbsp;&nbsp;집 밖을 나섰다. 너가 흩어진 세계를 보려고. 집 밖을 나섰다.
+        <br>-
+        <br>-
+        <br>-쏴아-...
+        <br>-부르르//빠앙- /부우우웅
+        <br>-터벅텁.텁/텁.../터업......
+        <br>-째애&nbsp;ㅇㅐ&nbsp;ㅇㅐ&nbsp;ㄱ&nbsp;&nbsp;&nbsp;ㅈㅈ&nbsp;&nbsp;&nbsp;ㅐ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ㅇ&nbsp;&nbsp;ㅐ
+        <br>-/...한때 '나'라고 불린 사내가.../
+        <br>-/...'세상'이라 불리던 이미지를 감상한다.../
+        <br>-/...구분되지 않은 세계. 분절되고, 해석되고 갇히지 않은 세계.../
+        <br>-/....../
+        <br>-ㅈㅈ ㅐ 애 애액 짹짹/빠아아<span style="margin:0;padding:0;font-size:16pt;">아</span><span style="margin:0;padding:0;font-size:17pt;">아</span><span style="margin:0;padding:0;font-size:19pt;">아</span><span style="margin:0;padding:0;font-size:23pt;">앙</span>
+        <span style="margin:0;padding:0;font-size:20pt;">위</span><span style="margin:0;padding:0;font-size:17pt;">웅</span>
+        <br>-/...망할.../
+        <br>-망할
+        <br>-/...'해석되지 않은' 이라니.../
+        <br>-'해석되지 않은' 이라니.../
+        <br>-/...
+        <br>-
+        <br>&nbsp;&nbsp;쏴아아... 백색소음이 잔상에 남아 울려퍼지며 인식의 둘레를 때린다. 구토가 나올 것 같았다. 나는 나였고, 세계는 미친 듯이 찬미로웠고, 찬미로운 세계를 나는 보고 있다. 그 세계는 내 시선에 의해 조각된다. 세계는 결국 해석이다. 기만 떨지 말고 부르자. '나'라고.
+        <br>&nbsp;&nbsp;그래, 나는.
+        <br>&nbsp;&nbsp;그래. 나는, 궁금해졌다.
+        <br>네 눈물의 온도가.
+</body>
+
+</html>
