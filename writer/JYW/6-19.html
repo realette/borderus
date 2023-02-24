@@ -63,30 +63,28 @@
             src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
         }
         
-        body {
-            overflow-x: hidden;
-        }
-        
         body:after {
             content: "";
-            position: absolute;
+            position: relative;
+            top: -80%;
             left: -5%;
-            height: 50%;
+            height: 100%;
             width: 110%;
             transition: all 2.5s ease-out;
             background-image: linear-gradient(to bottom, white, blue);
             opacity: 0;
             display: block;
+            z-index: -1;
+        }
+        
+        body {
+            overflow-x: hidden;
+            background-color: transparent;
+            height: fit-content;
         }
         
         body.active:after {
-            content: "";
-            position: absolute;
-            height: 50%;
-            width: 110%;
-            background-image: linear-gradient(to bottom, white, blue);
             opacity: 1;
-            display: block;
         }
         
         p {
@@ -269,7 +267,7 @@
         <br>&nbsp;&nbsp;그 무엇이라면 어쩔 것인가.
 
 
-        <div style="padding-left: 20pt;">기만 떨지 말고 '나'라고 부르자.</div>
+        <div style="padding-left: 20pt;">교만 떨지 말고 '나'라고 부르자.</div>
 
         &nbsp;&nbsp;조각난 것들은 적막하다.
         <br>&nbsp;&nbsp;적막한 것은 미쳐버릴 듯한 자유.
@@ -288,15 +286,33 @@
 
         <br>&nbsp;그래. 나는, 궁금해졌다.
         <br>네 눈물의 온도가.
-
+    </div>
+    <div id="dont-show" style="height: 0; position: relative; top: 20%;"></div>
 </body>
 <script>
-    body = document.querySelector("body");
-    var a = 1
-    window.onscroll = function(ev) {
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            // you're at the bottom of the page
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            var element = $("#dont-show").offset().top;
+            var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+            var top_of_screen = $(window).scrollTop();
+            if ((bottom_of_screen > element * 1.95)) {
+                // the element is visible, do something
+                var leng = (bottom_of_screen - element * 1.95);
+                console.log("bottomOfScreen", bottom_of_screen);
+                console.log("topOF", top_of_screen);
+                console.log("element", element);
+                console.log("len", leng)
+                $(window).scrollTop(top_of_screen - leng)
+            }
+        });
+    });
 
+
+    body = document.querySelector("body");
+    var a = 1;
+    window.onscroll = function(ev) {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 770) {
+            // you're at the bottom of the page
             MakeBlue();
         } else {
             TurnBack();
