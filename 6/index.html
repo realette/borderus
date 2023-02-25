@@ -139,6 +139,27 @@
             font-style: normal;
         }
         
+        @font-face {
+            font-family: 'UhBeeSeulvely';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSeulvely.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'SuseongHyejeong';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205-2@1.0/SuseongHyejeong.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'KyoboHand';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
         html {
             background-image: url("./wood.jpg");
             background-repeat: repeat;
@@ -259,9 +280,10 @@
         
         #book2 {
             height: 185pt;
-            background-color: #a53533;
-            color: white;
+            background-color: #f4d9a9;
+            color: rgb(55, 54, 54);
             box-shadow: 9pt 9pt 9pt rgb(30, 30, 30);
+            font-weight: bolder;
         }
         
         #book2::before {
@@ -269,23 +291,36 @@
             height: 245.5px;
         }
         
+        #book2>.bookAnchor>h2 {
+            font-family: 'KyoboHand';
+            font-size: large;
+            color: rgb(55, 54, 54);
+        }
+        
         #book3 {
-            height: 130pt;
-            background-color: rgb(247, 193, 0);
+            height: 170pt;
+            background-color: #91ff00;
             color: black;
             box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+            font-weight: bolder;
         }
         
         #book3::before {
             content: '';
-            height: 173px;
+            height: 225.6px;
+        }
+        
+        #book3>.bookAnchor>h2 {
+            font-family: 'KyoboHand';
+            font-size: large;
         }
         
         #book4 {
             height: 150pt;
-            background-color: rgb(2, 126, 0);
-            color: white;
+            background-color: #58e3ff;
+            color: black;
             box-shadow: 9pt 9pt 9pt rgb(30, 30, 30);
+            font-weight: bolder;
         }
         
         #book4::before {
@@ -293,11 +328,17 @@
             height: 199.5px;
         }
         
+        #book4>.bookAnchor>h2 {
+            font-family: 'KyoboHand';
+            font-size: large;
+        }
+        
         #book5 {
             height: 140pt;
-            background-color: rgb(165, 165, 165);
-            color: black;
+            background: linear-gradient(to bottom, #e5920e, #163fd4);
+            color: white;
             box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
+            font-weight: bolder;
         }
         
         #book5::before {
@@ -305,16 +346,25 @@
             height: 185.5px;
         }
         
+        #book5>.bookAnchor>h2 {
+            font-family: 'UhBeeSeulvely';
+        }
+        
         #book6 {
             height: 169pt;
-            background-color: rgb(158, 62, 62);
-            color: white;
+            background-color: #d5d2c0;
+            color: #144309;
             box-shadow: 9pt 9pt 9pt rgb(30, 30, 30);
+            font-weight: bolder;
         }
         
         #book6::before {
             content: '';
             height: 225px;
+        }
+        
+        #book6>.bookAnchor>h2 {
+            font-family: 'SuseongHyejeong';
         }
         
         .trans {
@@ -593,46 +643,57 @@
         <div class="flex">
 
             <div id="book1" class="book" style="z-index: 5;">
-                <a class="bookAnchor" href="../writer/IPG/5-1.html" target="_blank" style="display: block;">
-                    <h2 class="trans">선언</h3><br>나를 구속하는 모든 것으로부터 자유를! 나를 구속하지 않는 모든 것들로부터 자유를! 나로부터 자유를!...
-                        <br><br>
-                        <div>작성: 임필경</div>
+                <a class="bookAnchor" href="../writer/IPG/6-2.html" target="_blank" style="display: block;">
+                    <h2>못 박힌 대한민국</h2><br>좋은 아침, 모두들. 절멸의 아침이로구나...
+                    <br><br>
+                    <div>작성: 임필경</div>
                 </a>
             </div>
             <div id="book2" class="book" style="z-index: 5;">
-                <a class="bookAnchor" href="../writer/JYW/5-15.html" target="_blank">
-                    <h2>-위대하다고 말하고 싶지는 않다네-</h3><br>힘만 가득하던 곳 터져나와 반짝임을 품고, 거성의 조각 흩어져 외딴 곳의 티끌 이루니...<br>
-                        <br><br>
-                        <div>작성: 주영욱</div>
+                <a class="bookAnchor" href="../writer/HRG/6-6.html" target="_blank">
+                    <h2>가을책방</h2><br>맑았다.
+                    <br>그저 맑았다.
+                    <br>한없이 맑기만 했다.
+                    <br>
+                    <br>
+                    <br>
+
+                    <div>작성: 홍록기</div>
                 </a>
             </div>
             <div id="book3" class="book" style="z-index: 5;">
-                <a class="bookAnchor" href="../writer/PG/5-1.html" target="_blank">
-                    <h2>달님의 소망 ①</h3>그래서 달님은 소망합니다. 작은 우주를...
-                        <br><br>
-                        <div>작성: 필구</div>
+                <a class="bookAnchor" href="../writer/PG/6-10.html" target="_blank">
+                    <h2>약속 ⑧</h2>약속 했어
+                    <br>연인 사이가 되기로
+                    <br>
+                    <br>그리고...
+                    <br><br>
+                    <br>
+                    <br>
+                    <div>작성: 필구</div>
                 </a>
             </div>
             <div id="book4" class="book" style="z-index: 5;">
-                <a class="bookAnchor" href="../writer/PG/5-2.html" target="_blank">
-                    <h2>" 첫 만남 " ②</h3>딱딱한 교실에 딱딱한 칠판 딱딱한 교탁 딱딱한 책상 딱딱한 의자....
-                        <br><br>
-                        <div>작성: 필구</div>
+                <a class="bookAnchor" href="../writer/PG/6-11.html" target="_blank">
+                    <h2>그(약속) 후의 만남 ⑨</h2>날 보며 어색해 하는 너에게
+                    <br>떠들어 대는 난
+                    <br>수다쟁이
+                    <br><br>
+                    <div>작성: 필구</div>
                 </a>
             </div>
             <div id="book5" class="book" style="z-index: 5;">
-                <a class="bookAnchor" href="../writer/PG/5-3.html" target="_blank">
-                    <h2>검은 봉지</h3>호기심은 엉뚱 그 자체다. 누군가에게는 미래를 향한 날개짓일지 모를일 아닌가...
-                        <br><br>
-                        <div>작성: 필구</div>
+                <a class="bookAnchor" href="../writer/JYW/6-19.html" target="_blank">
+                    <h2>눈물의 온도</h2>집 밖을 나섰다. 너가 흩어진 세계를 보려고. 집 밖으로 나섰다.
+                    <br><br>
+                    <div>작성: 주영욱</div>
                 </a>
             </div>
 
             <div id="book6" class="book" style="z-index: 5;">
                 <a class="bookAnchor" href="../writer/HRG/5-5.html" target="_blank">
-                    <h2>고백해야지</h3><br>애틋한 추억 그 계절에 새겨진 아기자기한 기억들 긴긴 밤 지새우던 나에게 짧막한 영화는 막이 내리고...
-                        <br><br><br>
-                        <div>작성: 홍록기</div>
+                    <h2>퇴고 (1주년사)</h2><br>경계를 탐닉한다. 선을 시험한다. 가치를 밀어내고 테두리를 두드린다.<br><br>
+                    <div>작성: 주영욱</div>
                 </a>
             </div>
         </div>

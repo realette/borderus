@@ -62,8 +62,8 @@
         }
         
         p {
-            margin-top: 50pt;
-            margin-bottom: 50pt;
+            margin-top: 0pt;
+            margin-bottom: 40pt;
         }
         
         #text {
@@ -72,8 +72,8 @@
             line-height: 150%;
             font-family: 'Iropke Batang';
             font-size: 15pt;
-            padding-left: 25%;
-            padding-right: 25%;
+            padding-left: 20%;
+            padding-right: 20%;
             padding-bottom: 20vw;
         }
         
@@ -88,10 +88,27 @@
             padding-left: 2%;
         }
         
+        u {
+            text-decoration: underline 0.5px;
+            text-underline-offset: -13.5pt;
+        }
+        
+        #titleU {
+            text-decoration: underline 2px;
+            text-underline-offset: -18.5pt;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+            width: fit-content;
+        }
+        
         .centeralign {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
+            width: 40%;
         }
         
         @media screen and (max-width: 768px) {
@@ -108,8 +125,8 @@
                 src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
             }
             p {
-                margin-top: 50pt;
-                margin-bottom: 50pt;
+                margin-top: 0pt;
+                margin-bottom: 30pt;
             }
             #text {
                 letter-spacing: 1pt;
@@ -130,11 +147,23 @@
                 font-family: 'KyoboHandwriting2020A';
                 padding-left: 2%;
             }
+            u {
+                text-decoration: underline 0.7px;
+                text-underline-offset: -12pt;
+            }
+            #titleU {
+                text-decoration: underline 2px;
+                text-underline-offset: -18.5pt;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+                width: fit-content;
+            }
             .centeralign {
-                display: flex;
-                align-items: center;
-                flex-wrap: wrap;
-                width: 90%;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
     </style>
@@ -142,15 +171,9 @@
 
 <body>
     <h1 id="title">가을책장</h1>
-    <h4 id="writer">작성: 홍록기</h4>
-    <div id="text" class="centeralign">
-        맑았다.
-        <br>그저 맑았다.
-        <br>한없이 맑기만 했다.
-        <br>가지런히 내리쬐는 햇낯은 여름의 책장을 넘기기에 충분했으며 어디선가 불어오는 싱글싱글한 바람은 오늘의 맑음을 올려다 보게 했다.
-        <br>그렇게 이 해의 여름이 갔으면,
-        <br>실은, 영원히 머물렀으면 했다.
-        <br>그렇게 가을이 왔다.
+    <h4 id="writer"><a target="_blank" href="./index.html">작성: 홍록기</a></h4>
+    <div id="text" class="centeralign">맑았다. <br>그저 맑았다. <br>한없이 맑기만 했다. <br>가지런히 내리쬐는 햇낯은 여름의 책장을 넘기기에 충분했으며 어디선가 불어오는 싱글싱글한 바람은 오늘의 맑음을 올려다 보게 했다. <br>그렇게 이 해의 여름이 갔으면,
+        <br>실은, 영원히 머물렀으면 했다. <br>그렇게 가을이 왔다.
     </div>
 </body>
 
