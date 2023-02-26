@@ -161,9 +161,10 @@
         }
         
         html {
-            background-image: url("./wood.jpg");
+            background-image: url("./ai.png");
             background-repeat: repeat;
-            background-size: 765px;
+            background-size: 1300px;
+            background-position: 200% 110%;
             font-size: 9pt;
         }
         
@@ -171,7 +172,7 @@
             font-size: 13pt;
         }
         
-        #borderus5 {
+        #borderus6 {
             top: 14pt;
             width: 20vw;
             position: absolute;
@@ -438,17 +439,14 @@
         @media screen and (max-width: 768px) {
             html {
                 margin: 0;
-                background-image: url("./wood.jpg");
-                background-repeat: repeat;
-                background-position: 50pt;
-                background-size: 1200px;
+                background: #a45634;
                 width: 100%;
             }
             body {
                 margin: 0;
             }
-            #borderus5 {
-                top: -14pt;
+            #borderus6 {
+                top: 14pt;
                 width: 65vw;
                 position: absolute;
                 left: 52%;
@@ -520,8 +518,6 @@
             }
             #book1 {
                 height: 200pt;
-                background-color: rgb(85, 85, 85);
-                color: white;
                 box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
             }
             #book1::before {
@@ -529,39 +525,31 @@
                 height: 267.5px;
             }
             #book2 {
-                height: 240pt;
-                background-color: #a53533;
-                color: white;
+                height: 200pt;
                 box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
             }
             #book2::before {
                 content: '';
-                height: 320.5px;
+                height: 267px;
             }
             #book3 {
-                height: 155pt;
-                background-color: rgb(247, 193, 0);
-                color: black;
+                height: 190pt;
                 box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
             }
             #book3::before {
                 content: '';
-                height: 207.5px;
+                height: 254.5px;
             }
             #book4 {
-                height: 165pt;
-                background-color: rgb(2, 126, 0);
-                color: white;
+                height: 180pt;
                 box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
             }
             #book4::before {
                 content: '';
-                height: 220.5px;
+                height: 241px;
             }
             #book5 {
                 height: 163pt;
-                background-color: rgb(165, 165, 165);
-                color: black;
                 box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
             }
             #book5::before {
@@ -570,8 +558,6 @@
             }
             #book6 {
                 height: 215pt;
-                background-color: rgb(158, 62, 62);
-                color: white;
                 box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
             }
             #book6::before {
@@ -619,7 +605,7 @@
     <title>테두리, 우리 - 6호지</title>
 
     <div id="blockerTop"></div>
-    <img id="borderus5" src="../xpednfl-black-mark.png" onclick="markBox()" style="cursor:pointer;">
+    <img id="borderus6" src="../xpednfl-black-mark-six.png" onclick="markBox()" style="cursor:pointer;">
     <div id="blockerBot"></div>
 
     <div id="darkGlass" onclick="markBox()"></div>
@@ -651,7 +637,7 @@
             </div>
             <div id="book2" class="book" style="z-index: 5;">
                 <a class="bookAnchor" href="../writer/HRG/6-6.html" target="_blank">
-                    <h2>가을책방</h2><br>맑았다.
+                    <h2>가을책장</h2><br>맑았다.
                     <br>그저 맑았다.
                     <br>한없이 맑기만 했다.
                     <br>
@@ -698,7 +684,6 @@
             </div>
         </div>
     </div>
-    <a id="bgcopyright" href="https://www.vecteezy.com/free-vector/illustrator-wood-grain-brush">Illustrator Wood Grain Brush Vectors by Vecteezy</a>
     <script>
         var j = 0;
 
