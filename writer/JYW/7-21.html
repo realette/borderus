@@ -1,0 +1,191 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>퇴고</title>
+    <!--테두우리 6호지 주영욱의 다섯번째 글-->
+    <meta name="author" content="Yeong-wook Joo">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                '/borderus/xpednfl-ico-file/001.png',
+                '/borderus/xpednfl-ico-file/021.png',
+                '/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Iropke Batang';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+        }
+        
+        p {
+            margin-top: 50pt;
+            margin-bottom: 50pt;
+        }
+        
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 15pt;
+            padding-left: 25%;
+            padding-right: 25%;
+            padding-bottom: 20vw;
+        }
+        
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+        
+        u {
+            text-decoration: underline 0.5px;
+            text-underline-offset: -13.5pt;
+        }
+        
+        #titleU {
+            text-decoration: underline 2px;
+            text-underline-offset: -18.5pt;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+            width: fit-content;
+        }
+        
+        .centeralign {
+            text-align: center;
+        }
+        
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Iropke Batang';
+                font-style: normal;
+                font-weight: 400;
+                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+            }
+            p {
+                margin-top: 50pt;
+                margin-bottom: 50pt;
+            }
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 150%;
+                font-family: 'Iropke Batang';
+                font-size: 12pt;
+                padding-left: 4%;
+                padding-right: 4%;
+                padding-bottom: 4vw;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+            u {
+                text-decoration: underline 0.7px;
+                text-underline-offset: -12pt;
+            }
+            #titleU {
+                text-decoration: underline 2px;
+                text-underline-offset: -18.5pt;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+                width: fit-content;
+            }
+            .centeralign {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">가제: 다이달로스 신화</h1>
+    <h4 id="writer"><a target="_blank" href="/borderus/writer/JYW">작성: 주영욱</a></h4>
+    <div id="text">&nbsp;&nbsp;&nbsp;&nbsp;나는 세계를 인식하는 행위를, '조각한다'고 즐겨 부르곤 한다. 한 세계를 대면하는 것은 곧 세계를 창조하는 것이다
+        우리는 그 세계를 이해할 수 없고, 그래서 우리가 볼 수 있는 수준으로 깎아내린다. 그리고 우리가 통제할 수 있는 범위로 가둔다.
+        우리는 감옥이라는 세계를 조각한다.
+        
+        얼마나 많은 천재들이 바보로 조각되어졋을까
+그저 시대를 잘못 태어난이유로, 환경을 잘못 탄 이유로.
+천재와 바보가 종이 한 장 차이로 보이는 이유는
+우리가 그들의 진가를 보지 못하는 면으로 손실 압축하여 그들을 바라보기 때문이다.
+우리가 멍청하기 때문이다.
+
+우리의 시선은 그들을 바라보는 우리의 창을 조각하고, 그들을 그 조각으로 생각하게 한다.
+이것은, 이 의미 구분 짓기, 조각하기, 바라보기는 우리의 의식이 존재하는 한, 그리고 무언가를 바라보는 한 필연적으로 일어난다.
+우리의 조각 속에 그들을 가둘 때 우리는 악마가 되고, 그들은 지옥에 떨어진다, 감옥에 가둬진다. 이것이 사르트르가 "타인은 지옥이다"라고 말하는 지점이다. 또한 우리가 타인을 지옥으로 여기는 이유이다. 이곳이 용암이 펄펄 끓고 뜨겁고 메스껍고, 숨이 턱 막히는 언덕과 굴려야 할 태산 같은 바위가 있는 그 지옥이다.
+
+감옥 조각가들이여, 왜 저 아이가 당신을 지옥으로 생각하게두는가, 왜 그를 제한하고 가두는가. 아이는 어리둥절하며 낄낄 웃는다. 아이는 당신이 만든 그 틀을 부수지도 않고 통과해버린다. 당신은 두 눈을 의심하며 가까이 보려 다가서고, 그제서야 당신의 창에 부딪힌다. 이제 당신은 당신 스스로에게 지옥인가?
+
+우리는 우리 인식의 감옥에 갇혀 있다. 마치 다이달로스가 자신이 만든 미궁에 갇혔듯이. 우리에게는 아리아드네의 실이 없다. 우리는 필연적으로 감옥 조각자이다. 원죄를 저질러 감옥살이를 하는 죄수 하나이다. 
+    </div>
+
+</body>
+
+</html>
