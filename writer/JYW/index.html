@@ -191,6 +191,13 @@
             font-style: normal;
         }
         
+        @font-face {
+            font-family: 'Orbit-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
         body {
             background-color: #944c2b;
             margin: 0;
@@ -472,6 +479,30 @@
             padding-bottom: 1rem;
             bottom: 0;
             transform: translate(90pt, 0pt);
+        }
+        
+        #book-twentythree {
+            font-family: 'SuseongHyejeong';
+            font-size: 13pt;
+            width: 19pt;
+            background-color: #e2caaa;
+            color: #000000;
+            padding-top: 1.2rem;
+            padding-bottom: 2.2rem;
+            bottom: 0;
+        }
+        
+        #book-twentyfour {
+            font-family: 'Orbit-Regular';
+            font-size: 11pt;
+            width: 17pt;
+            background-color: #9cb5d5;
+            color: #000000;
+            letter-spacing: -0.35em;
+            word-spacing: -0.05em;
+            padding-top: 0.5rem;
+            padding-bottom: 1rem;
+            bottom: 0;
         }
         
         u {
@@ -759,6 +790,18 @@
 
         </div>
         <div id="shelf-three" class="shelf">
+            <a target="_blank" href="./7-23.html">
+                <div class="book" id="book-twentythree">
+                    <div class="site">신풍우문</div>
+                </div>
+            </a>
+            <a target="_blank" href="./7-24.html">
+                <div class="book" id="book-twentyfour">
+                    <div class="site">의사가 두 명이라 고칠 수 없는 병</div>
+                </div>
+            </a>
+        </div>
+        <div id="shelf-four" class="shelf">
             <a target="_blank" href="./4-12.html">
                 <div class="book" id="book-twelve">
                     <div class="site">¶ 염세주의자의 찬가</div>
@@ -770,7 +813,6 @@
                 </div>
             </a>
         </div>
-        <div id="shelf-four" class="shelf"></div>
     </div>
     <script>
         var j = 0;
