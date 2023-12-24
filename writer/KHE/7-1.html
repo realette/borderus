@@ -1,0 +1,185 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>무중력</title>
+    <!--테두우리 7호지 주영욱의 첫번째 글-->
+    <meta name="author" content="Yeong-wook Joo">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                '/borderus/xpednfl-ico-file/001.png',
+                '/borderus/xpednfl-ico-file/021.png',
+                '/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Iropke Batang';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+        }
+        
+        p {
+            margin-top: 50pt;
+            margin-bottom: 50pt;
+        }
+        
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 15pt;
+            padding-left: 25%;
+            padding-right: 25%;
+            padding-bottom: 20vw;
+        }
+        
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+        
+        u {
+            text-decoration: underline 0.5px;
+            text-underline-offset: -13.5pt;
+        }
+        
+        #titleU {
+            text-decoration: underline 2px;
+            text-underline-offset: -18.5pt;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+            width: fit-content;
+        }
+        
+        .centeralign {
+            text-align: center;
+        }
+        
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Iropke Batang';
+                font-style: normal;
+                font-weight: 400;
+                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+            }
+            p {
+                margin-top: 50pt;
+                margin-bottom: 50pt;
+            }
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 150%;
+                font-family: 'Iropke Batang';
+                font-size: 12pt;
+                padding-left: 4%;
+                padding-right: 4%;
+                padding-bottom: 4vw;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+            u {
+                text-decoration: underline 0.7px;
+                text-underline-offset: -12pt;
+            }
+            #titleU {
+                text-decoration: underline 2px;
+                text-underline-offset: -18.5pt;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+                width: fit-content;
+            }
+            .centeralign {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">무중력</h1>
+    <h4 id="writer"><a target="_blank" href="/borderus/writer/KHE">작성: 김하은</a></h4>
+    <div id="text">
+        <div class="trans">&nbsp;&nbsp;&nbsp;&nbsp;너를 생각하며 보내지 않은 봄은 처음이어서 그런지. 내 수많은 봄과 그 꽃들 사이에는 꼭 네가 숨었었거든. 올해도 과연 네가 꽃을 피워내려나.
+            <br>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;이건 단순히 문장으로 표현할 수 있는 감정들이 아냐. 내 말을, 내 맘을 형용할 수 있는 단어는 아마 적어도 이 지구라는 행성에는 없지 않을까 싶어. 웃기지 참. 내가 다시 너를 생각하며 글을 쓰는 날이 있을 거라고는 생각도 못 했거든.
+            <br>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;참 모순적이지 않니. 날 버리고, 날 잃을수록 네가 반짝인다는 사실이. 어쩌면 너와 나는 지구와 달 같은 존재인가봐. 달은 지구의 중력에 이끌리지. 그리고 지구를 몇 번이고 맴돌아. 스스로 몇 번이나 그 곁을 맴도는지 자각조차 할 수가 없어. 중력이란 힘으로 지구가 달을 붙잡아두지 않으면 달은 지구의 곁에 있을 이유가 없는데. 맹목적으로 지구만을 바라는 달이 참 애석하지도 않니.
+            <br>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;그런데 달은 지구로부터 점점 멀어지고 있대. 언젠가는 지구를 향해서 크고 작은 파편으로 갈라져 날아올 거라고도 하더라.
+            <br>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;그게 얄팍한 사랑으로 날 붙잡아두는 너 같아서. 그 얇은 애처로움에 내 전부를 걸고 몇 번이나 너를 바라는 나의 사랑이 저 잿빛 달과도 참 닮아서. 내가 점점 네 곁에서 희미해지고 있다는 사실을 알기나 하니. 네가 반짝일 수 있는 이유는 나인데. 정작 나는 잿빛 세상이고 운석 구덩이들이 가득해. 그런데 모르지. 이렇게 너에게서 점점 멀어지는 내가 언젠가는 산더미만한 파편이 되어서
+            네게 돌아올지.
+        </div>
+
+</body>
+
+</html>
