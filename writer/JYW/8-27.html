@@ -1,0 +1,269 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>우리는 역겨운 세상에 살고 있다. 결의 하나.</title>
+    <!--테두우리 8호지 주영욱의 세번째 글-->
+    <meta name="author" content="Yeong-wook Joo">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                '/borderus/xpednfl-ico-file/001.png',
+                '/borderus/xpednfl-ico-file/021.png',
+                '/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Iropke Batang';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+        }
+        
+        p {
+            margin-top: 50pt;
+            margin-bottom: 50pt;
+        }
+        
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 15pt;
+            padding-left: 25%;
+            padding-right: 25%;
+            padding-bottom: 20vw;
+        }
+        
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+        
+        u {
+            text-decoration: underline 0.5px;
+            text-underline-offset: -13.5pt;
+        }
+        
+        #titleU {
+            text-decoration: underline 2px;
+            text-underline-offset: -18.5pt;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+            width: fit-content;
+        }
+        
+        .centeralign {
+            text-align: center;
+        }
+        
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Iropke Batang';
+                font-style: normal;
+                font-weight: 400;
+                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+            }
+            p {
+                margin-top: 50pt;
+                margin-bottom: 50pt;
+            }
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 150%;
+                font-family: 'Iropke Batang';
+                font-size: 12pt;
+                padding-left: 4%;
+                padding-right: 4%;
+                padding-bottom: 4vw;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+            u {
+                text-decoration: underline 0.7px;
+                text-underline-offset: -12pt;
+            }
+            #titleU {
+                text-decoration: underline 2px;
+                text-underline-offset: -18.5pt;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+                width: fit-content;
+            }
+            .centeralign {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">우리는 역겨운 세상에 살고 있다. 결의 하나.</h1>
+    <h4 id="writer"><a target="_blank" href="/borderus/writer/JYW">작성: 주영욱</a></h4>
+    <div id="text">그는 냉전의 산물이다.
+        <br>그는 시대착오적인 괴물이다.
+        <br>
+        <br>우리는 우리에게 맞는 괴물을 만났다.
+        <br>그것은 성찰의 빈곤이며, 분석의 부재이자, 혐오의 정치이며, 가능의 의존이다.
+        <br>그 괴물은 과잉결정되어 너무도 분명한 적으로 드러났다.
+        <br>하지만 시대보다 더 큰 적은 있을 수 없다. 그는 한낱 괴물에 불과하고, 그는 언젠가 죽는다.
+        <br>그러고나면 우리는 보이지도 않는 적과 싸워야 한다. 이에 준엄하게 묻는다. 나는 나보다도 더 큰 질문을 던져야한다.
+        <br>이 나라의 민주주의는 얼마나 심각하게 망가져 있는가?
+        <br>대의란 무엇이며, 무엇을 대신하는가?
+        <br>소통이란 무엇이며, 무엇을 전달하는가?
+        <br>국민은 어떻게 정치 현실에서 배제되고, 국민은 어떻게 분열하며, 합의란 어떻게 말살되는가?
+        <br>
+        <br>
+        <br>이것은 끝이어서는 안 되고, 오직 시작이어야만 한다.
+        <br>
+        <br>나는 가능에 대해 항의한다.
+        <br>이 시대 정치 권력들은 가능에 의존해왔다. 법률상 가능, 정치적 가능, 헌법상 가능, 권한 내 활동...
+        <br>가능에 의한 정치에서 협치란 존재하지 않는다. 협치 없는 갈등에서는 모든 것이 극단적으로 과잉결정되어 드러난다. 차악을 뽑고, 그 차악은 계속해서 지독해진다. 다르지도 않은 빈곤한 이념으로 냉전처럼 싸운다.
+        <br>
+        <br>가능에 의존하는 이들은 힘에 굴종한다.
+        <br>권위만 잡으면 가능한 만큼 행동한다.
+        <br>그는 권위주의의 괴물이고,
+        <br>그 권위주의적인 괴물은 다름 아닌 우리다.
+        <br>우리가 곧 그이다.
+        <br>그가 우리의 증명이다.
+        <br>
+        <br>우리는 강한 절차적 민주주의와 시민 혁명으로 대통령을 뽑고, 또 뽑아내버렸다. 몇 년만에 반복될 것이다. 또 반복될 것이다. 또 반복될 것이다.
+        <br>한국의 민주주의는 강하다. 그리고 조만간 우리는 또 강해야만 할 것이다. 또 강해야만 할 것이고, 또 강해야만 할 것이다. 
+        <br>
+        <br>그는 완전히 윤리적, 법적, 사회적, 군사적 정당성을 모두 잃었다. 그는 내란의 죄로 다스려져야 한다. 그는 가능으로 모든 것을 압제하려 든다.
+        <br>그는 사라져야 한다.
+        <br>그러나, 우리가 그를 세웠다. 우리의 정치 형식이, 우리 정치 의식이 그를 세웠다. 누가 뽑았는가, 미루지 마라! 떠밀지 마라! 우리가 그를 세웠다. 우리가 그를 세웠다. 우리가 그를 세웠다.
+        <br>우리가 과정이고 그가 결과다.
+        <br>이 정치적 현실을 이겨내지 못하면, 우리는 또 세워야 하고, 또 세워야 하고, 또 세워야 하고,
+        <br>또 강해야만 하고, 또 강해야만 하고, 또 강해야만 하고,
+        <br>우리는 또 뽑아내야 하고, 또 뽑아내야 하고, 또 뽑아내야 한다.
+        <br>
+        <br>참사는 반복될 것이다.
+        <br>역겨운 인간은 또 만들어질 것이다.
+        <br>우리는 역겨운 세상에 살고 있기 때문이다.
+        <br>
+        <br>그는 절대로 미치지 않았다!
+        <br>그 역겨운 인간마저 내적으로 합리적인 존재이다.
+        <br>그 인간은 가능에 대해 생각한다.
+        <br>할 수 있는 것 중 무엇이 남았는지 고민한다.
+        <br>
+        <br>남은 곳엔 도덕적 비판만이 부유한다.
+        <br>물론 그가 잘못되었다고 지적할 수 있어야 한다. 하지만 근본적인 병폐는 바로 당신이다, 우리다.
+        <br>우리는 냉전의 산물이다. 우리는 시대착오적인 괴물이다.
+        <br>
+        <br>
+        <br>우리가 무언가를 볼 때, 무언가는 볼 수 없게 된다.
+        <br>나는 이것이 오히려 심히 걱정스럽다. 확실한 적은 시선을 왜곡한다.
+        <br>확실한 적은 시선을 왜곡하고, 우리는 우리 스스로 인지하지 못할 과오를 저지른다.
+        <br>명확한 적만큼 명확한 이념도 두렵다.
+        <br>절대 이념은 사고를 통제하고, 스스로를 감시하며 검열한다. 우리는 우리가 저지른 과오를 숨겼다.
+        <br>
+        <br>신은 죽었다, 신은 죽어있다, 우리가 그를 죽였다.
+        <br>살인자 중에 살인자인 우리는 어떻게 스스로를 위로할 것인가?
+        <br>우리는 악마와 신 없이는 살 수 없는가?
+        <br>그 후광에 가려진 모든 것을 무시하고 살아야만 하는가?
+        <br>이미 온 사방에서 악취가 진동하는데, 이미 온 세상이 참을 수 없을 만큼 역겨운데, 악마의 시체를 치울 필요가 있는가?
+        <br>그리고 그 역겨움 덩어리에서 다시 악마가 태어날 텐데, 그것이 우리의 결과물인데, 우리는 또 생겨날 그 시체를 치울 필요가 있는가?
+        <br>
+        <br>그렇다. 마땅히 치워야 한다. 마땅히 치워야 한다. 마땅히 치워야 한다.
+        <br>몇 번이고 치워야 한다. 몇 번이고 치워야 한다. 몇 번이고 치워야 한다.
+        <br>시대착오적인 괴물, 무찔러라, 사라져라.
+        <br>더 크게 외쳐라, 저항해라, 깃발을 들어라!
+        <br>
+        <br>자 이제 우리 차례다.
+        <br>이제 우리 역겨운 세상이 벌을 받아야 한다.
+        <br>괴물을 죽인 후에는 괴물의 형틀을 분쇄해야 한다.
+        <br>괴물을 죽인 후에는 괴물의 여집합을 조각내야 한다.
+        <br>
+        <br>도덕적 비판은 한 번으로 족하다.
+        <br>공허한 말들이여 안녕.
+        <br>이제 어떻게 할 것인가?
+        <br>우리는 스스로를 어떻게 할 것인가?
+        <br>죽일 것인가?
+        <br>괴물과 싸우다 결국 괴물이 될 것인가?
+        <br>
+        <br>우리는 나아가야 한다.
+        <br>우리는 나아가야 한다.
+        <br>우리는 나아가야 한다.
+        <br>
+        <br>우리는 나아져야 한다.
+        <br>우리는 나아져야 한다.
+        <br>우리는 나아져야 한다.
+        <br>
+        <br>이것은 공허한 말을 묻기 위한 또 하나의 공허한 말.
+        <br>그러나 이것은 이만하면 되었다고 끝내지 말자는 결의.
+        <br>타는 목마름으로 나아가자는 결의, 끝내 해소되지 않을 갈망을 통해 나아지자는 결의.
+        
+        
+    </div>
+
+</body>
+
+</html>

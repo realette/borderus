@@ -1,0 +1,204 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>가능에 대한 항의</title>
+    <!--테두우리 8호지 주영욱의 첫번째 글-->
+    <meta name="author" content="Yeong-wook Joo">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                '/borderus/xpednfl-ico-file/001.png',
+                '/borderus/xpednfl-ico-file/021.png',
+                '/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Iropke Batang';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+        }
+        
+        p {
+            margin-top: 50pt;
+            margin-bottom: 50pt;
+        }
+        
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 15pt;
+            padding-left: 25%;
+            padding-right: 25%;
+            padding-bottom: 20vw;
+        }
+        
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+        
+        u {
+            text-decoration: underline 0.5px;
+            text-underline-offset: -13.5pt;
+        }
+        
+        #titleU {
+            text-decoration: underline 2px;
+            text-underline-offset: -18.5pt;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+            width: fit-content;
+        }
+        
+        .centeralign {
+            text-align: center;
+        }
+
+        .rightalign {
+                text-align: right;
+            }
+        
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Iropke Batang';
+                font-style: normal;
+                font-weight: 400;
+                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+            }
+            p {
+                margin-top: 50pt;
+                margin-bottom: 50pt;
+            }
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 150%;
+                font-family: 'Iropke Batang';
+                font-size: 12pt;
+                padding-left: 4%;
+                padding-right: 4%;
+                padding-bottom: 4vw;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+            u {
+                text-decoration: underline 0.7px;
+                text-underline-offset: -12pt;
+            }
+            #titleU {
+                text-decoration: underline 2px;
+                text-underline-offset: -18.5pt;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">가능에 대한 항의</h1>
+    <h4 id="writer"><a target="_blank" href="/borderus/writer/JYW">작성: 주영욱</a></h4>
+    <div id="text">
+        파워 스트러글.
+<br>우연한 계기로 24년 여름, 민주화 운동 당시 계엄사 문서의 일부를 보게 되었다. 끔찍했다. 자료들이 첨삭된 흔적들이 적나라하게 드러났고, 그 수정들이 과연 무엇을 숨기려고 했는지, 그것이 실제로 숨겨졌는지를 따라가느라 내용은 때때로 내 머릿속에서 점멸했다. 그 검열된 신문 속에서 외신 반응을 전하는 부분이 있었는데, 거기 표현이 이랬다. 파워 스트러글. 그러니까, 힘겨루기. 권력 분투.
+<br>나는 이 말이 당시 한국의 정국을 적나라하게 보여준다고 여겼다. 나는 그래서 불현듯 이끌려서 노트에 파워 스트러글... 하고 옮겼다. 이 표현을 잊고 싶지 않아서. 그리고 동시에 이 말을 노트에 옮기던 이 나날의 한국도 관통하고 있음을 느꼈다. 파워 스트러글. 목적이 소외되고 수단이 주는 권한이 정당성을 잃어버린 채 행사되던 그 때. 그리고 지금. 우리는 무슨 말을 할 수 있는가? 해야 하는가? 그런 말을 하길 바랐던 이들이 우리 대신 어떤 싸움을 벌이고 있는가?
+<br>
+<br>24년 2월, 당시 상황을 나는 종종 '저급함'이라고 표현했다. 저급함이란 무엇인가? 28일에는 "이것은 '척'하는 행위이지 않을까?"라고 썼다. 목적에 다가가는 척하는 기만. 현상에만 머무르고 전혀 본질로 나아가고자 하지 않는 것이라고 생각한다. 그리고 그것이 바로 툭하면 시대정신을 외치는 이들이 결여하는 점이다. 시대정신이라는 말은, 그따위로 쓸 수 있는 게 아니다. 역겨움. 매일 아침 커튼을 걷어 프랑스 혁명군을 기다리던 헤겔도 그렇게 느꼈을 것이다. 절대정신이라는 본질이 자기운동하여 표출적으로 변증법적으로 세계를 이끌어 갈, 그런 정신이고 믿음이다. 하지만 여기 정신이 어디에 있는가? 피에 절여지고 증오에 눈이 먼 총구뿐이다.
+<br>
+<br><a href="8-25.html">가능에 대한 항의</a>에서, 조악하게 만든 지도는 땅을 모두 대변하지 않는다. 조악하게 만든 지도에서 알아볼 수 있는 것은 대로뿐이다. 조악하게 만든 지도는 땅의 상징이고, 조악하게 만든 지도만으로는 자세히 길을 찾을 수 없다. 조악하게 만든 지하철 노선도로는, 맛집을 찾아갈 수도, 국회를 찾아갈 수도 없다. 그 근처 어디엔가 내릴 수 있을지 몰라도 지하철을 벗어나면 일그러져 쓸모가 거의 없어져 버린다. 본질은 지하철로 길을 찾기 위한 것이다. 지하철만으로는 집에 갈 수 없다. 역은 삶이 아니기 때문이다. 역은 그저 거쳐가는 하나에 길에 불과하기 때문이다.
+<br>
+<br>마찬가지다. 권력 구조, 사회 구조, 법률, 체계는 모두 현실의 개선에 대한 것이다. 하지만 그것들은 완전하지 않아서, 자주 손봐야하고, 자주 고쳐야한다. 우리는 법률보다는 정의에 대한 존경심을 바탕으로, 상징보다는 의미에 대한 존경심을 바탕으로, 상징을 손봐야한다. 목적을 위한 수단을 목적으로 삼는 것이 목적을 달성하기에 쉬워보인다. 그러나 목적이 된 수단과, 진짜 목적 사이에서 우리는 길을 잃는다.
+<br>상징에 의해 의미가 변할 수도 있다. 하지만 우리가 가야할 길은, 길이다. 지도 위의 길이 아니다. 길은 변할 수 있다. 지도에 의하여서도 변할 수 있다. 하지만 결국 우리가 종이 위에서 걷지는 않는다. 목적을 위한 수단이 목적이 될 때, 우리는 미끄러졌는지도 모르고 미끄러진다. 길을 잃어버린지도 모르고 길을 잃는다. 우리는 단지 길을 잃고 그 자리에서 주저 앉아 울어버릴 뿐이다.
+<br>
+<br>불완전한 정치 구조가 주는 권한(할 수 있음)이 정당함을 주는 것이 아니며, 축약되고 압축된 수단이 주는 권한(할 수 있음)이 목적(해야함)을 항상 충족하지 않는다. '소외'다.
+권력을 휘두르는 것이, 그에게 그럴 권한이 있다는 것이, 그렇게 행동해도 된다는 의미인지 의심이 들어 나는 일찌감치 이러한 글을 써두었다. 박 대령 사건과 이를 비롯한 윤석열의 '법률상 가능'이, 그 뻣뻣함과 당당함이, 법률에 대한 존경으로 결집된 한국인의 이성 사이에서 마찰을 빚고 있음이 참으로 안타까웠다. 그래서 [[가능에 대한 항의]]는 시작되었다. 그리고 끔찍하게도, 더 적절한 시기가 마련되어서 세상에 나올 수 있게 되었다.
+<br>
+<br><a href="8-25.html">가능에 대한 항의</a>는 앞으로도 계속될 것이다. 더 끔찍한 점은, 어떻게든 우리 안에 내재하며 사라지지 않을 것이다. 더 끔찍한 점은 우리 안에 내재하고 있었고 그것이 드러난 것이라는 점이다. 독일의 극작가 브레히트는 이렇게 말했다. "파시즘이 남긴 최악의 유산은 파시즘과 싸운 자들의 내면에 파시즘을 남기고 사라진다는 것이다." ​우리 속에 얼마나 많은 역겨운 문법들이 있을까? 가능이라는 문법은 한국인의 권위주의적 성격에 내재한다고 생각한다. 붙어있는 것은 닮는다. 최소한 한 가지의 통일성을 가지고 있어야 붙어있을 수 있는 것이다. 그렇지 못하면 하나가 되고 말았을 것이다. 마찬가지로 북한의 권위주의적 사회주의 질서에 맞춰 세워진 남한의 권위주의적 자본주의는 똑같이 야수적이다. 그리고 이 점이 폭로되고 있다. 할 수 있으면 120시간 일하고, 바른 음식을 먹을 수 없는 사람들을 위해서 불량한 음식을 주는 사회. 누가 칼 들고 협박한 것도 아니니까, 모든 것은 개인의 책임으로 두고 남겨진 외로움과 슬픔은 비웃음으로 전환하는 끔찍함. 웃을 것이 아니다. 이 전반에 남겨진 모든 것들에 당신도 있다. 붙어있는 것을 닮았을 테니까. 하지만 나는 그것조차 당신 책임이라고 할 수는 없다. 그렇다, 당신 책임이지만, 내 책임이지만. 특히 그걸 내세워온 누구 책임이라고 할지라도, 그럴지라도. 나는 당신을 탓할 수 없다.
+<br>그렇다고 '어둠을 조금 내몰고 시대처럼 올 아침'을 기다릴 수도 없다. 우리는 우리 속으로 침잠해야 한다. 우리는 어둠 속으로 더 들어가야 한다. 우리 존재의 끔찍함으로 역겨움으로 몸을 던지자. 나는 그것이 절대로 완전하게 가능할 것이라고 생각하지는 않는다. 그것은 또 하나의 기만이 될지 모른다. 아니, 아마 하나의 기만이 되고 말 것이다. 그렇지만, 그래서, 그래도 더 나은 기만을 위하여서라도 스스로에 대한 분석이 필요하다. 우리는 우리 스스로와 싸워본 적이 없다. 늘 분명한 적과 싸워왔다. 적은 늘 외부에 있었고 이를 통해 스스로가 규정되어 오고, 강화되었다. 일제강점기에 적은 일제였고, 우리는 한민족이었다. 투쟁의 방법은 민족주의였다. 상태가 완화되고 내부에서는 균열이 일어났다. 결론적으로 분단되었고, 한 번 더 쑥대밭이 되어, 새로운 적을 얻었다. 그 적은 스스로를 유지하기 위해서 가상적으로 강화되고 강조되었다. 붙어있는 것들은 적어도 한 요소는 공유해야한다. 동시에 어떤 하나의 요소는 완전히 반대여야 한다. 그 차이는 이데올로기적이다. 적으로서 타자는 스스로의 존재조건이기 때문이다. 그리고 그 적의 가상적 강화로서 스스로를 강화하는 모순적인 일이 반복된다. 즉, 공산주의는 북한보다 어쩌면 남한에게 더 가까운 이념이다. 동시에, 스스로에 대한 안티테제로 세워진 이념은 일그러지기 마련이다. 우리에게 공산주의가 돌파구가 전혀되지 못한 이유도 그것이다. 우리는 우리의 존재를 증명하기 위해 북한을 마음대로 구부리고 늘려 우리의 외벽으로 삼았다. 우리가 아는 북한은 허구적이다. 우리가 아는 북한은 북한스럽기보다, 남한의 반전된 상에 가깝다. 그리고 반전된 상 속에서는 실제 상이 비쳐 적나라하게 보인다. 그 속에 우리가 있다.
+<br>우리는 우리 스스로를 이해하기 위해서, 모순점을 가리기 위해서 온갖 것들을 끌어다 쓰느라 제대로 보는 게 없다. 우리는 이제 스스로와 싸워야 하는 전쟁의 앞에 서있다. 우리가 스스로를 규정한 주형틀을, 그 테두리를 제대로 떼어내지 못하면 우리는 계속 스스로를 재생산하게 될 것이다. 우리가 스스로의 이데올로기를 바꿀 수 있냐는 질문에 서 있다. 그리고 지배적인 이데올로기를 재생산하는 이데올로기적 장치, 요소들을 하나씩 제거해나갈 수 있냐는 질문에 마주해 있다. 진지전이다. 주형틀의 요소를 하나씩 바꿔서 나를 바꿀 수 있는가? 그리고 그 과정에서 무엇이 필요하며, 우리는 연속적으로 바뀔 수 있는지, 또는 단절적으로 바뀔 수 있는지. 우리는 우리 자신과 싸울 수 있는지. 나는 나라는 괴물과 싸울 수 있는지.
+<br>그리고 책임이라는 질문. 주체는 그만. 이런 싸움에서, 자기자신이라는 싸움에서, 이제 주체는 그만. 잘잘못을 가리는 것은 이제 우리 손에서 점차 놓아주어야 한다. 사법 권력의 손으로 떠나보내자. 누구의 잘못인가, 그것은 출발점이 될 수 있을지언정 더 이상 결과가 되어서는 안 된다. 책임을 규정하는 일은 곧 책임을 부정해야 한다. 목적을 완수하고 사라져야 한다. 올라간 다음 그 사다리를 던져버려야 한다. 벌하자! 그것이 곧 출발점이다. 탓하자! 그것이 곧 문제 의식이다. 그리고 곧 성찰하자. “내 탓이오, 내 탓이오, 내 큰 탓이로소이다.” 규정은 곧 부정이니, 그것은 철저한 자기 반성으로 무화되어야 한다. 책임을 져야할 개인의 손으로 벌인 모든 일들은, 곧 책임 여하를 따질 수 없게 과잉결정된 사회의 일이다. 그리고 사회의 주체는 과잉결정되어서는 안 된다. 어떤 사회가, 집단이 하나의 주체로 과잉결정되어서는 안 된다. 그것은 위험하다. 그래서 세대론을 비판한다. 그래서 성별비난을 비판한다. 하지만 주체화하지 않고 어떻게 문제를 해결할 수 있을 것인가? 분명 핵심적인 질문이다. 그렇지만 우리는 주체를 결국 떠나보내야 한다. 그래서 올라간 후 사다리를 던져버리기 위해 어떻게 사다리를 사용할 것인지 분명 고민해야 한다. 자기자신과 어떻게 싸워 나가야할 것인지, 자기자신과 둘러싼 관계들을 어떻게 바꾸어 나갈 수 있을 것인지에 대한 고민이 남는다.
+<br>
+<br>'할 수 있음과 해야 함'이라는 질문은 결국 정치적인 것이다. 그리고 정치적이지 않은 것은 하나도 없다. 나와 나 자신의 관계, 나를 둘러싼 타자들로 이루어진 세계와의 이데올로기적 관계. 규정과 부정, 이데올로기라는 복잡한 문제들이 잔존한다. 하지만 말만 번지르르한 모든 것들을 비판한다. 그 비판의 대상은 곧 나의 글이기도 하다. 그래서 우리는 우리 속에 실천이라는 미완의 노트를 품어야만 한다. 동시에 이상이라는 미완의 노트도 함께 품어야 한다.
+<br>이쯤에서 다시 한 번 가슴에 새긴다. "현실주의자가 되자, 하지만 마음 속엔 불가능한 이상을 품자." 할수있음-가능을 갖고, 해야함-이상적목적을 향하여.
+<br>포이어바흐 11번 테제를 향하여. "철학자들은 줄곧 세계를 해석해오기만 했다. 하지만 중요한 것은 세계를 변혁하는 것이다." 해야함-해석에서 할수있음-변혁과 실천을 향하여.
+<br>
+<br>
+<p class="rightalign">
+<br>2024년의 끝자락 어느 겨울, 할 수 있음과 해야 함 사이에서.
+<br>주 영 욱
+</p>
+    </div>
+
+</body>
+
+</html>
