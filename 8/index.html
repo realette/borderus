@@ -194,6 +194,13 @@
             font-weight: normal;
             font-style: normal;
         }
+
+        @font-face {
+    font-family: 'ChosunCentennial';
+    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/ChosunCentennial.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
         
         html {
             background-image: url("./f.jpg");
@@ -304,7 +311,7 @@
         
         #book1 {
             height: 157.5pt;
-            background-color: #e57cc3;
+            background-color: #e0bd9e;
             box-shadow: 9pt 9pt 9pt rgb(30, 30, 30);
         }
         
@@ -320,7 +327,7 @@
         
         #book2 {
             height: 185pt;
-            background-color: #e2caaa;
+            background-color: #f6a132;
             box-shadow: 9pt 9pt 9pt rgb(30, 30, 30);
             font-weight: bolder;
         }
@@ -337,9 +344,10 @@
         
         #book3 {
             height: 170pt;
-            background-color: #9cb5d5;
+            background-color: #313131;
+            color: rgb(237, 228, 228);
             box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
-            font-weight: bolder;
+            font-weight: thin;
         }
         
         #book3::before {
@@ -349,14 +357,15 @@
         
         #book3>.bookAnchor>h2 {
             font-family: 'Orbit-Regular';
-            font-size: large;
+            font-size:medium;
         }
         
         #book4 {
             height: 150pt;
-            background-color: #48925c;
+            background-color: #001a4d;
+            color: rgb(234, 234, 234);
             box-shadow: 9pt 9pt 9pt rgb(30, 30, 30);
-            font-weight: bolder;
+            font-weight:500;
         }
         
         #book4::before {
@@ -366,12 +375,13 @@
         
         #book4>.bookAnchor>h2 {
             font-family: 'TiquiTaca-Regular';
-            font-size: large;
+            font-size: 130%;
+            font-weight: 300;
         }
         
         #book5 {
             height: 180pt;
-            background: #f7dcd9;
+            background: #397e00;
             box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
             font-weight: bolder;
         }
@@ -382,7 +392,7 @@
         }
         
         #book5>.bookAnchor>h2 {
-            font-family: 'GoryeongStrawberry';
+            font-family: 'ChosunCentennial';
         }
         
         #book6 {
@@ -552,13 +562,15 @@
                 transform: skewY(55deg);
                 transform-origin: top;
             }
+
+            /* book 곱하기 1.33 = book::before */
             #book1 {
-                height: 200pt;
+                height: 220pt;
                 box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
             }
             #book1::before {
                 content: '';
-                height: 267.5px;
+                height: 292.6px;
             }
             #book2 {
                 height: 200pt;
@@ -569,12 +581,12 @@
                 height: 267px;
             }
             #book3 {
-                height: 220pt;
+                height: 235pt;
                 box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
             }
             #book3::before {
                 content: '';
-                height: 294.5px;
+                height: 312.55px;
             }
             #book4 {
                 height: 180pt;
@@ -691,7 +703,7 @@
                     <h2>결의 하나, 결의 둘</h2>
                     그러나 이것은 이만하면 되었다고 끝내지 말자는 결의.
                     <br>그을리고 빛바랜 기만으로부터는, 차라리 태워주겠다는 약속.
-                    <br><br>
+                    <br>
                     <br>
                     <div>작성: 주영욱</div>
                 </a>
@@ -699,8 +711,7 @@
             <div id="book4" class="book" style="z-index: 5;">
                 <a class="bookAnchor" href="../writer/JYW/8-26.html" target="_blank">
                     <h2>그나마 솔직한 외로움</h2>
-                    <br>
-                    <br>이 시대 낭만주의자들은 웃는다. 사랑하는 자들은 울음을 터트린다.
+                    이 시대 낭만주의자들은 웃는다. 사랑하는 자들은 울음을 터트린다.
                     <br>
                     <br>
                     <div>작성: 주영욱</div>
@@ -710,21 +721,14 @@
                 <a class="bookAnchor" href="../writer/JYW/8-30.html" target="_blank">
                     <h2>할 수 있음과 해야 함 사이에서</h2>
                     <br>가능에 대한 항의는 앞으로도 계속될 것이다.
-                    <br>더 끔찍한 점은, 어떻게든 우리 안에 내재하며 사라지지 않을 것이다
+                    <br>더 끔찍한 점은, 어떻게든 우리 안에 내재하며 사라지지 않을 것이라는 점이다.
                     <br>
                     <br>
                     <div>작성: 주영욱</div>
                 </a>
             </div>
 
-            <div id="book6" class="book" style="z-index: 5;">
-                <a class="bookAnchor" href="../writer/LEJ/" target="_blank">
-                    <h2>몫이 없는 자를 위한 몫</h2>
-                    <br><br> ---
-                    <br><br><br><br>
-                    <div>작성: ---</div>
-                </a>
-            </div>
+            
         </div>
     </div>
     <script>
