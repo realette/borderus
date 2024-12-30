@@ -202,14 +202,25 @@
     font-style: normal;
 }
         
-        html {
-            background-image: url("./f.jpg");
-            background-repeat: repeat;
-            background-size: 1600px 1200px;
-            background-position: 0% 7%;
-            font-size: 9pt;
-        }
-        
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: radial-gradient(circle at 50% 100%, /* 해의 중앙을 하단 중앙에 배치 */
+    #ff3300 15%,    /* 강렬한 붉은색 */
+    #ff4d00 25%,    /* 붉은색에 가까운 주황색 */
+    #ff8000 35%,    /* 밝은 주황색 */
+    #ffcc33 40%,    /* 조금 더 차분한 노란색 */
+    #2f87b7 50%,    /* 세련된 푸른색 */
+    #1e3c72 75%,    /* 남색 (어두운 푸른색) */
+    #000000 100%    /* 깊은 검은색 */
+  );
+  background-size: 105% 105%;       /* 배경 크기 확장 */
+  background-position: center;      /* 중앙 정렬 */
+  background-repeat: no-repeat;     /* 반복 방지 */
+  font-size: 9pt;                   /* 글꼴 크기 설정 */
+}
+       
         h2 {
             font-size: 13pt;
         }
@@ -481,13 +492,25 @@
         
         @media screen and (max-width: 768px) {
             html {
-                background-image: url("./r.jpeg");
-                background-size: 600px;
-                background-repeat: repeat;
-                background-position: 15% 0%;
-                margin: 0;
-                width: 100%;
-            }
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: radial-gradient(circle at 50% 105%, /* 해를 바닥으로 더 내려 설정 */
+    #ff3300 15%,    /* 강렬한 붉은색 */
+    #ff4d00 25%,    /* 붉은색에 가까운 주황색 */
+    #ff8000 35%,    /* 밝은 주황색 */
+    #ffcc33 40%,    /* 조금 더 차분한 노란색 */
+    #2f87b7 50%,    /* 세련된 푸른색 */
+    #1e3c72 75%,    /* 남색 (어두운 푸른색) */
+    #000000 100%    /* 깊은 검은색 */
+  );
+  background-size: 130% 130%;       /* 배경 크기 130%로 확장 */
+  background-position: center;      /* 중앙 정렬 */
+  background-repeat: no-repeat;     /* 반복 방지 */
+  background-attachment: fixed;     /* 배경 고정 */
+  font-size: 6pt;                   /* 글꼴 크기 설정 */
+}
+
             body {
                 margin: 0;
             }
@@ -720,7 +743,7 @@
             <div id="book5" class="book" style="z-index: 5;">
                 <a class="bookAnchor" href="../writer/JYW/8-30.html" target="_blank">
                     <h2>할 수 있음과 해야 함 사이에서</h2>
-                    <br>가능에 대한 항의는 앞으로도 계속될 것이다.
+                    가능에 대한 항의는 앞으로도 계속될 것이다.
                     <br>더 끔찍한 점은, 어떻게든 우리 안에 내재하며 사라지지 않을 것이라는 점이다.
                     <br>
                     <br>

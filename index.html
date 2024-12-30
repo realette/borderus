@@ -5,7 +5,7 @@
     <title>테두리, 우리 - 7호지</title>
     <!--테두우리 7호지-->
 
-    <meta name="author" content="Yeong-wook Joo, Pillgu and Unicornhangmoonjundosa">
+    <meta name="author" content="Yeong-wook Joo, Roggi Hong, Pillgu and Unicornhangmoonjundosa">
     <meta name="description" content="테두우리(테ㄷ우리), 테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
     문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
     연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.">
@@ -194,15 +194,33 @@
             font-weight: normal;
             font-style: normal;
         }
+
+        @font-face {
+    font-family: 'ChosunCentennial';
+    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/ChosunCentennial.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
         
-        html {
-            background-image: url("./f.jpg");
-            background-repeat: repeat;
-            background-size: 1600px 1200px;
-            background-position: 0% 7%;
-            font-size: 9pt;
-        }
-        
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: radial-gradient(circle at 50% 100%, /* 해의 중앙을 하단 중앙에 배치 */
+    #ff3300 15%,    /* 강렬한 붉은색 */
+    #ff4d00 25%,    /* 붉은색에 가까운 주황색 */
+    #ff8000 35%,    /* 밝은 주황색 */
+    #ffcc33 40%,    /* 조금 더 차분한 노란색 */
+    #2f87b7 50%,    /* 세련된 푸른색 */
+    #1e3c72 75%,    /* 남색 (어두운 푸른색) */
+    #000000 100%    /* 깊은 검은색 */
+  );
+  background-size: 105% 105%;       /* 배경 크기 확장 */
+  background-position: center;      /* 중앙 정렬 */
+  background-repeat: no-repeat;     /* 반복 방지 */
+  font-size: 9pt;                   /* 글꼴 크기 설정 */
+}
+       
         h2 {
             font-size: 13pt;
         }
@@ -304,7 +322,7 @@
         
         #book1 {
             height: 157.5pt;
-            background-color: #e57cc3;
+            background-color: #e0bd9e;
             box-shadow: 9pt 9pt 9pt rgb(30, 30, 30);
         }
         
@@ -320,7 +338,7 @@
         
         #book2 {
             height: 185pt;
-            background-color: #e2caaa;
+            background-color: #f6a132;
             box-shadow: 9pt 9pt 9pt rgb(30, 30, 30);
             font-weight: bolder;
         }
@@ -337,9 +355,10 @@
         
         #book3 {
             height: 170pt;
-            background-color: #9cb5d5;
+            background-color: #313131;
+            color: rgb(237, 228, 228);
             box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
-            font-weight: bolder;
+            font-weight: thin;
         }
         
         #book3::before {
@@ -349,14 +368,15 @@
         
         #book3>.bookAnchor>h2 {
             font-family: 'Orbit-Regular';
-            font-size: large;
+            font-size:medium;
         }
         
         #book4 {
             height: 150pt;
-            background-color: #48925c;
+            background-color: #001a4d;
+            color: rgb(234, 234, 234);
             box-shadow: 9pt 9pt 9pt rgb(30, 30, 30);
-            font-weight: bolder;
+            font-weight:500;
         }
         
         #book4::before {
@@ -366,12 +386,13 @@
         
         #book4>.bookAnchor>h2 {
             font-family: 'TiquiTaca-Regular';
-            font-size: large;
+            font-size: 130%;
+            font-weight: 300;
         }
         
         #book5 {
             height: 180pt;
-            background: #f7dcd9;
+            background: #397e00;
             box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
             font-weight: bolder;
         }
@@ -382,7 +403,7 @@
         }
         
         #book5>.bookAnchor>h2 {
-            font-family: 'GoryeongStrawberry';
+            font-family: 'ChosunCentennial';
         }
         
         #book6 {
@@ -471,13 +492,25 @@
         
         @media screen and (max-width: 768px) {
             html {
-                background-image: url("./r.jpeg");
-                background-size: 600px;
-                background-repeat: repeat;
-                background-position: 15% 0%;
-                margin: 0;
-                width: 100%;
-            }
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: radial-gradient(circle at 50% 105%, /* 해를 바닥으로 더 내려 설정 */
+    #ff3300 15%,    /* 강렬한 붉은색 */
+    #ff4d00 25%,    /* 붉은색에 가까운 주황색 */
+    #ff8000 35%,    /* 밝은 주황색 */
+    #ffcc33 40%,    /* 조금 더 차분한 노란색 */
+    #2f87b7 50%,    /* 세련된 푸른색 */
+    #1e3c72 75%,    /* 남색 (어두운 푸른색) */
+    #000000 100%    /* 깊은 검은색 */
+  );
+  background-size: 130% 130%;       /* 배경 크기 130%로 확장 */
+  background-position: center;      /* 중앙 정렬 */
+  background-repeat: no-repeat;     /* 반복 방지 */
+  background-attachment: fixed;     /* 배경 고정 */
+  font-size: 6pt;                   /* 글꼴 크기 설정 */
+}
+
             body {
                 margin: 0;
             }
@@ -552,13 +585,15 @@
                 transform: skewY(55deg);
                 transform-origin: top;
             }
+
+            /* book 곱하기 1.33 = book::before */
             #book1 {
-                height: 200pt;
+                height: 220pt;
                 box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
             }
             #book1::before {
                 content: '';
-                height: 267.5px;
+                height: 292.6px;
             }
             #book2 {
                 height: 200pt;
@@ -569,12 +604,12 @@
                 height: 267px;
             }
             #book3 {
-                height: 220pt;
+                height: 235pt;
                 box-shadow: 12pt 12pt 12pt rgb(30, 30, 30);
             }
             #book3::before {
                 content: '';
-                height: 294.5px;
+                height: 312.55px;
             }
             #book4 {
                 height: 180pt;
@@ -638,7 +673,7 @@
 </head>
 
 <body>
-    <title>테두리, 우리 - 7호지</title>
+    <title>테두리, 우리 - 8호지</title>
 
     <div id="blockerTop"></div>
     <img id="borderus7" src="./xpednfl-black-mark-all.png" onclick="markBox()" style="cursor:pointer;">
@@ -665,23 +700,19 @@
         <div class="flex">
 
             <div id="book1" class="book" style="z-index: 5;">
-                <a class="bookAnchor" href="./writer/PG/7-14.html" target="_blank" style="display: block;">
-                    <h2>그게 너(you)야 ⑫</h2>
-                    <br><br>가슴이 터질것같이
-                    <br>뛰게하는 사랑은 아니지만
-                    <br>순수한 애틋함이
-                    <br>쌓여있습니다
+                <a class="bookAnchor" href="./writer/HRG/8-7.html" target="_blank" style="display: block;">
+                    <h2>삶의 전반에 영향을 끼치는 자존감</h2>
+                    <br>나는 늘 자존감과 씨름해 왔다. 청소년기, 또래 친구들보다 굴곡진 시간을 보내온 나였는데...
                     <br>
                     <br>
-                    <br>
-                    <div>작성: 필구</div>
+                    <div>작성: 홍록기</div>
                 </a>
             </div>
             <div id="book2" class="book" style="z-index: 5;">
-                <a class="bookAnchor" href="./writer/JYW/7-23.html" target="_blank">
-                    <h2>신풍우문</h2>
+                <a class="bookAnchor" href="./writer/JYW/8-25.html" target="_blank">
+                    <h2>가능에 대한 항의</h2>
                     <br>
-                    <br>나는 부푼 마음을 안고 구름이 너풀너풀 흩어지듯 무너져 내리는 것을 지켜보리오.
+                    <br>역 밖에도 길이 있다.
                     <br>
                     <br>
                     <br>
@@ -691,52 +722,36 @@
                 </a>
             </div>
             <div id="book3" class="book" style="z-index: 5;">
-                <a class="bookAnchor" href="./writer/JYW/7-24.html" target="_blank">
-                    <h2>의사가 두 명이라 고칠 수 없는 병</h2>
-                    <br> 나의 늙은 의사는 젊은이의 병을 모른다...
-                    <br>나의 늙은 의사는 젊은이의 자리에 누울 수 있을까?
-                    <br><br>
+                <a class="bookAnchor" href="./writer/JYW/8-27,28.html" target="_blank">
+                    <h2>결의 하나, 결의 둘</h2>
+                    그러나 이것은 이만하면 되었다고 끝내지 말자는 결의.
+                    <br>그을리고 빛바랜 기만으로부터는, 차라리 태워주겠다는 약속.
+                    <br>
                     <br>
                     <div>작성: 주영욱</div>
                 </a>
             </div>
             <div id="book4" class="book" style="z-index: 5;">
-                <a class="bookAnchor" href="./writer/PG/7-12.html" target="_blank">
-                    <h2>X-mas ⑩</h2>
-                    <br> 항상 그랬듯
-                    <br>
-                    <br>왁자지껄
-                    <br>소란한 친구들 사이에서
-                    <br>우린 만났다
+                <a class="bookAnchor" href="./writer/JYW/8-26.html" target="_blank">
+                    <h2>그나마 솔직한 외로움</h2>
+                    이 시대 낭만주의자들은 웃는다. 사랑하는 자들은 울음을 터트린다.
                     <br>
                     <br>
-                    <div>작성: 필구</div>
+                    <div>작성: 주영욱</div>
                 </a>
             </div>
             <div id="book5" class="book" style="z-index: 5;">
-                <a class="bookAnchor" href="./writer/PG/7-13.html" target="_blank">
-                    <h2>생일 ⑪</h2>
-                    <br> 술잔에 기분도 몽롱하고
-                    <br>노래방에서 노래도 크게 불렀습니다
-                    <br>
-                    <br>그런데
-                    <br>신나지 않습니다
-                    <br>
-                    <br>왜일까...
+                <a class="bookAnchor" href="./writer/JYW/8-30.html" target="_blank">
+                    <h2>할 수 있음과 해야 함 사이에서</h2>
+                    가능에 대한 항의는 앞으로도 계속될 것이다.
+                    <br>더 끔찍한 점은, 어떻게든 우리 안에 내재하며 사라지지 않을 것이라는 점이다.
                     <br>
                     <br>
-                    <div>작성: 필구</div>
+                    <div>작성: 주영욱</div>
                 </a>
             </div>
 
-            <div id="book6" class="book" style="z-index: 5;">
-                <a class="bookAnchor" href="./writer/UHJ/7-1.html" target="_blank">
-                    <h2>무중력</h2>
-                    <br><br> 올해도 과연 네가 꽃을 피워내려나.
-                    <br><br><br><br>
-                    <div>작성: 유니콘항문전도사</div>
-                </a>
-            </div>
+            
         </div>
     </div>
     <script>
