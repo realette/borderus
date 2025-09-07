@@ -1,0 +1,257 @@
+<html>
+<!--테두우리는 주영욱과 홍록기가 만든 웹기반 동인 잡지로,
+    문학/영상/웹/음악에 걸친 다양한 시도와 실험을 하고 원하는 작품을 창작하고
+    연재하는 플랫폼이 되길 희망하는 마음에서 만들었다.-->
+
+<!--만약 당신이 우리와 함께 하길 원한다면 https://open.kakao.com/me/kieukette 또는
+    nether423@outlook.com 이곳으로 연락주길 바랍니다.-->
+
+<head>
+    <title>할 수 있음과 해야 함 사이에서</title>
+    <!--테두우리 9호지 주영욱의 첫번째 글-->
+    <meta name="author" content="Yeong-wook Joo">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Reply-To" content="nether423@outlook.com">
+    <meta http-equiv="Email" content="nether423@outlook.com">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="/borderus/xpednfl-ico-file/001.png" sizes="192x192">
+    <script>
+        var favicon_images = [
+                '/borderus/xpednfl-ico-file/001.png',
+                '/borderus/xpednfl-ico-file/021.png',
+                '/borderus/xpednfl-ico-file/041.png',
+            ],
+
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function() {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 1000);
+    </script>
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2020A';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Iropke Batang';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+        }
+
+        p {
+            margin-top: 50pt;
+            margin-bottom: 50pt;
+        }
+
+        #text {
+            letter-spacing: 1pt;
+            word-spacing: -1pt;
+            line-height: 150%;
+            font-family: 'Iropke Batang';
+            font-size: 15pt;
+            padding-left: 25%;
+            padding-right: 25%;
+            padding-bottom: 20vw;
+        }
+
+        #title {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+
+        #writer {
+            font-family: 'KyoboHandwriting2020A';
+            padding-left: 2%;
+        }
+
+        u {
+            text-decoration: underline 0.5px;
+            text-underline-offset: -13.5pt;
+        }
+
+        #titleU {
+            text-decoration: underline 2px;
+            text-underline-offset: -18.5pt;
+        }
+
+        a {
+            text-decoration: underline wavy 0.75px rgb(0, 20, 170);
+            color: rgb(0, 20, 170);
+            width: fit-content;
+        }
+
+        .centeralign {
+            text-align: center;
+        }
+
+        .rightalign {
+                text-align: right;
+            }
+
+        @media screen and (max-width: 768px) {
+            @font-face {
+                font-family: 'KyoboHandwriting2020A';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Iropke Batang';
+                font-style: normal;
+                font-weight: 400;
+                src: url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff') format('woff');
+            }
+            p {
+                margin-top: 50pt;
+                margin-bottom: 50pt;
+            }
+            #text {
+                letter-spacing: 1pt;
+                word-spacing: -1pt;
+                line-height: 150%;
+                font-family: 'Iropke Batang';
+                font-size: 12pt;
+                padding-left: 4%;
+                padding-right: 4%;
+                padding-bottom: 4vw;
+            }
+            #title {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+                padding-top: 2%;
+            }
+            #writer {
+                font-family: 'KyoboHandwriting2020A';
+                padding-left: 2%;
+            }
+            u {
+                text-decoration: underline 0.7px;
+                text-underline-offset: -12pt;
+            }
+            #titleU {
+                text-decoration: underline 2px;
+                text-underline-offset: -18.5pt;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">기사도 선언<small>Chivalry Manifesto<small></h1>
+    <h4 id="writer"><a target="_blank" href="/borderus/writer/JYW">작성: 주영욱</a></h4>
+    <div id="text">몸을 입은 자여
+<br>해방을 탐하지 말라
+<br>눈 없이 볼 수 없나니
+<br>귀 없이 들을 수 없나니
+<br>
+<br>세계를 품은 자여
+<br>전복을 탐하지 말라
+<br>길 없이 갈 수 없나니
+<br>말 없이 말할 수 없나니
+<br>
+<br>생을 얻은 자여
+<br>구속을 택하지 말라
+<br>말 없이 입을 가질 수 없나니
+<br>길 없이 눈을 가질 수 없나니
+<br>
+<br>세계를 사는 자여
+<br>무지를 택하지 말라
+<br>귀 없이 말할 수 없나니
+<br>눈 없이 갈 수 없나니
+<br>
+<br>몸으로 세계를 걷는 자여
+<br>굴종을 택하지 말라
+<br>눈 없이 길을 가질 수 없나니
+<br>입 없이 말을 가질 수 없나니
+<br>
+<br>몸 밖에서 몸을 볼 수 없나니
+<br>길 밖에서 길을 갈 수 없나니 
+<br>말 밖에서 말을 할 수 없나니
+<br>세계 밖에 세계는 없노라
+<br>
+<br>오지 않은 세계는 오래 있나니
+<br>나타나 있는 세계는 뜬 채 흐르나니
+<br>지나 간 세계는 가라앉아 일렁이노라
+<br>
+<br>
+<br>슬픈 천명은 흐르는 것들을 붙잡아,
+<br>붙잡아 두고서 사이로 빠져 흐르는 것들을,
+<br>흐르는 것들을 잡아두려고 시를 쓰는,
+<br>등불을 밝히는 밤 중의 기사의 것일지도,
+<br>작가의 것일지도 모르겠다.
+<br>
+<br>흐르는 땅에 발을 딛고서,
+<br>발을 딛고서 칼을 박고서,
+<br>펜을 쥐고서 꽉 쥐고서,
+<br>꽉 쥐고서 그조차 떠밀리지 않게,
+<br>떠밀리지 않게 휩쓸리지 않게,
+<br>휩쓸리지 않게 변하지 않게,
+<br>변하지 않게 또 부정하지 않게,
+<br>부정하지 않게 거스르지 않게,
+<br>거스르지 않게 뽑아야 할 때 뽑을 수 있게,
+<br>뽑을 수 있게 말할 수 있게 들을 수 있게,
+<br>들을 수 있게 나아갈 수 있게,
+<br>나아갈 수 있게 헤치고 갈라 나아갈 수 있게.
+<br>
+<br>그렇게 뽑아들 때면 가라 앉아 비치는 일렁임을 건져,
+<br>흐르고 또 흘러버리는 물결을 타고,
+<br>오래될 아침으로, 아침으로.
+<br>
+<br>그러니 가만히 침전해
+<br>뽑아 올릴 것을 박아둘
+<br>그 최후의 기사는
+<br>그 아침을 볼 수 없는
+<br>슬픈 천명이오라
+<br>
+<br>그러나 그의 눈은 그 속에 달을 가지고 있다, 해를 가지고 있다. 
+<br>그의 귀는 부엉이와 산새를 품고 있다.
+<br>그의 입은 이미 너의, 우리의 말을 담고 있다.
+<br>
+<br><br>내 속에 그의 일부가 얽혀 있다. 
+그러니 뽑아들어라
+<br>먼저 간 자를 위하여
+<br>그러니 꽂아두어라
+<br>이제 찾아올 자를 위하여
+<br>
+<br>이것이 네 몸에 타고 흐르는 대속과 소명.
+<br>홀로 선 타자의 남겨진 책임.
+<br>무한우주에 흐르는 역사의 영원회귀.
+<br>
+<p class="rightalign">
+<br>2025년 여름의 중앙과 끝에서
+<br>주 영 욱
+</p>
+    </div>
+
+</body>
+
+</html>
